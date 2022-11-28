@@ -16,7 +16,7 @@ class DeviceListItem : public QWidget
 
 public:
     DeviceListItem(std::vector<ControllerZone*>, bool has_direct);
-    ~DeviceListItem();    
+    ~DeviceListItem();
     void SetEnabled(bool);
     void SetReverse(bool);
 
@@ -33,6 +33,7 @@ signals:
     void SelectionChanged();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_enable_toggled(bool);
     void on_reverse_toggled(bool);
     void on_brightness_valueChanged(int);

@@ -29,6 +29,9 @@ private:
     double time = 1000.0;
 
     RGBColor GetColor(float, float, float, float, bool);
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // SPIRAL_H

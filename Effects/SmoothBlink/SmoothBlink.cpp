@@ -38,6 +38,14 @@ SmoothBlink::~SmoothBlink()
     delete ui;
 }
 
+void SmoothBlink::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void SmoothBlink::Defaults()
 {
     ui->interval->setValue(default_interval);
@@ -98,7 +106,7 @@ void SmoothBlink::StepEffect(std::vector<ControllerZone*> controller_zones)
     default: break;
     }
 
-    time += 1.0 / (float) FPS;    
+    time += 1.0 / (float) FPS;
     random_fade_timer += 1.0 / (float) FPS;
 
     if(time >= total_effect_duration)

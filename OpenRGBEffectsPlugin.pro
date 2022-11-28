@@ -12,6 +12,8 @@ QT +=                                                                           
 
 DEFINES += OPEN_RGB_EFFECTS_PLUGIN_LIBRARY
 TEMPLATE = lib
+CONFIG  += lrelease                                                                            \
+           embed_translations                                                                  \
 
 #-----------------------------------------------------------------------------------------------#
 # Build Configuration                                                                           #
@@ -498,6 +500,19 @@ FORMS +=                                                                        
     Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui                                              \
     Effects/Wavy/Wavy.ui                                                                        \
     Effects/ZigZag/ZigZag.ui                                                                    \
+
+TRANSLATIONS +=                                                                                 \
+    i18n/OpenRGB_EffectsEngine_de.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_en.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_en_AU.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_en_GB.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_es.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_fr.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_ms_MY.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_ru.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_pt_BR.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_zh.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_zh_TW.ts                                                         \
 
 #-----------------------------------------------------------------------------------------------#
 # Windows  Configuration                                                                        #

@@ -30,6 +30,14 @@ MovingPanes::~MovingPanes()
     delete ui;
 }
 
+void MovingPanes::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void MovingPanes::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)

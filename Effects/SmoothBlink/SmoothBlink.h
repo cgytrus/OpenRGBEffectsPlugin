@@ -27,7 +27,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-
+    void changeEvent(QEvent *event);
     void on_interval_valueChanged(double);
     void on_pulses_valueChanged(int);
     void on_pulse_duration_valueChanged(double);
@@ -38,7 +38,7 @@ private slots:
     void on_cy_valueChanged(int);
 
 private:
-    Ui::SmoothBlink *ui;    
+    Ui::SmoothBlink *ui;
 
     void Defaults();
 

@@ -33,7 +33,7 @@ Shaders::Shaders(QWidget *parent) :
         shader_renderer->SetProgram(program);
     });
 
-    connect(shader_renderer, &ShaderRenderer::Image, [this](const QImage& image){        
+    connect(shader_renderer, &ShaderRenderer::Image, [this](const QImage& image){
         image_mutex.lock();
         this->image = image;
         QMetaObject::invokeMethod(ui->preview, "setPixmap", Qt::QueuedConnection, Q_ARG(QPixmap, QPixmap::fromImage(image)));
@@ -50,7 +50,7 @@ Shaders::Shaders(QWidget *parent) :
     QStringList shader_list;
 
     while (it.hasNext())
-    {        
+    {
         shader_list << it.next();
     }
 
@@ -107,7 +107,7 @@ void Shaders::SetFPS(unsigned int value)
 
 void Shaders::EffectState(bool state)
 {
-    EffectEnabled = state;    
+    EffectEnabled = state;
 
     if(state)
     {
@@ -126,7 +126,7 @@ void Shaders::EffectState(bool state)
         {
             StopAudio();
         }
-    }    
+    }
 }
 
 void Shaders::StartAudio()
@@ -142,6 +142,14 @@ void Shaders::StopAudio()
     if(audio_settings_struct.audio_device >= 0)
     {
         AudioManager::get()->UnRegisterClient(audio_settings_struct.audio_device, this);
+    }
+}
+
+void Shaders::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
     }
 }
 

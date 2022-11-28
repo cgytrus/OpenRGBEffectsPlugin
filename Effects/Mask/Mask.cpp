@@ -21,6 +21,14 @@ Mask::~Mask()
     delete ui;
 }
 
+void Mask::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Mask::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)

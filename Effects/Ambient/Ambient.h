@@ -36,6 +36,7 @@ public:
     void EffectState(bool) override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_select_screen_clicked();
     void on_select_rectangle_clicked();
     void on_left_valueChanged(int);

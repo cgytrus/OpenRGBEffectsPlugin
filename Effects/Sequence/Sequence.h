@@ -29,6 +29,9 @@ private:
     Ui::Sequence *ui;
 
     double progress = 0.f;
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // SEQUENCE_H

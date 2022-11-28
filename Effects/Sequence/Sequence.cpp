@@ -28,6 +28,14 @@ Sequence::~Sequence()
     delete ui;
 }
 
+void Sequence::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Sequence::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     std::vector<RGBColor> colors = ui->colorsPicker->Colors();

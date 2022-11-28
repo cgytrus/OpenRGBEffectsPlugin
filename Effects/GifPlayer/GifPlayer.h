@@ -38,6 +38,7 @@ private:
     void Load(QString);
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_choose_gif_file_clicked();
 };
 

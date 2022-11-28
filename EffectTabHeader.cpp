@@ -42,6 +42,14 @@ EffectTabHeader::~EffectTabHeader()
     delete ui;
 }
 
+void EffectTabHeader::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void EffectTabHeader::on_close_clicked()
 {
     emit CloseRequest();

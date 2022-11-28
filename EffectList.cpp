@@ -119,6 +119,14 @@ EffectList::~EffectList()
     delete ui;
 }
 
+void EffectList::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void EffectList::on_start_stop_all_button_clicked()
 {
     emit ToggleAllEffectsState();

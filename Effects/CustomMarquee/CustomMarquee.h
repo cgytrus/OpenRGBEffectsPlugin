@@ -30,6 +30,8 @@ private:
     RGBColor GetColor(unsigned int);
     double progress = 0.0;
 
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // CUSTOMMARQUEE_H

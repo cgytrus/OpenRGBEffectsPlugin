@@ -32,6 +32,14 @@ RotatingBeam::~RotatingBeam()
     delete ui;
 }
 
+void RotatingBeam::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 QLineF RotatingBeam::Rotate()
 {
     QPointF p1, p2;

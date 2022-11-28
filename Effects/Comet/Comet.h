@@ -33,6 +33,8 @@ private:
 
     hsv_t tmp;
 
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // COMET_H

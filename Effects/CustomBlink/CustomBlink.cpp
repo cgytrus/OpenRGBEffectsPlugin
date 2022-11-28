@@ -40,6 +40,14 @@ CustomBlink::~CustomBlink()
     delete ui;
 }
 
+void CustomBlink::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void CustomBlink::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     if(selected_patterns_model->stringList().isEmpty())

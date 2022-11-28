@@ -44,6 +44,14 @@ DeviceListItem::~DeviceListItem()
     delete ui;
 }
 
+void DeviceListItem::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void DeviceListItem::SetupZonesListItems()
 {
     for(unsigned int i = 0; i < controller_zones.size(); i++)
@@ -142,7 +150,7 @@ void DeviceListItem::OnZoneListItemReversed(bool state, int index)
 {
     controller_zones[index]->reverse = state;
 
-    RunGlobalCheckVerification();    
+    RunGlobalCheckVerification();
 
     emit SelectionChanged();
 }

@@ -50,6 +50,14 @@ AudioSine::~AudioSine()
     delete ui;
 }
 
+void AudioSine::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void AudioSine::EffectState(const bool state)
 {
     EffectEnabled = state;

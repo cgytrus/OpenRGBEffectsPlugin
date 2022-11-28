@@ -26,6 +26,14 @@ ZoneListItem::~ZoneListItem()
     delete ui;
 }
 
+void ZoneListItem::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 ControllerZone* ZoneListItem::GetControllerZone()
 {
     return controller_zone;

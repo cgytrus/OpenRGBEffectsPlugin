@@ -34,6 +34,7 @@ signals:
     void Remove();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_composer_fn_currentIndexChanged(int);
     void on_remove_clicked();
     void on_edit_clicked();
@@ -43,7 +44,7 @@ private:
     void PopulateCombos();
 
     std::vector<ControllerZone*> assigned_zones;
-    bool state = false;    
+    bool state = false;
     ColorBlendFn composer_fn = MULTIPLY;
 
     RGBEffect* effect;

@@ -33,6 +33,14 @@ RadialRainbow::~RadialRainbow()
     delete ui;
 }
 
+void RadialRainbow::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void RadialRainbow::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     float cx_shift_mult = cx_shift / 100.f;
@@ -81,7 +89,7 @@ void RadialRainbow::StepEffect(std::vector<ControllerZone*> controller_zones)
 
 
 RGBColor RadialRainbow::GetColor(unsigned int x, unsigned int y, double cx, double cy, bool reverse)
-{    
+{
     hsv_t hsv;
     float width = Slider2Val * 0.5f;
     double distance;

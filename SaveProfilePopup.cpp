@@ -44,6 +44,14 @@ SaveProfilePopup::~SaveProfilePopup()
     delete ui;
 }
 
+void SaveProfilePopup::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 QString SaveProfilePopup::Filename()
 {
     return ui->filename->text().trimmed();

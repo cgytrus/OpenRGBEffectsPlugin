@@ -1,6 +1,8 @@
 #ifndef OPENRGBEFFECTTAB_H
 #define OPENRGBEFFECTTAB_H
 
+#include <QTranslator>
+
 #include "ui_OpenRGBEffectTab.h"
 #include "RGBEffect.h"
 #include "EffectList.h"
@@ -32,8 +34,9 @@ public slots:
     void StopAll();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_device_list_SelectionChanged();
-    void on_EffectTabs_currentChanged(int);    
+    void on_EffectTabs_currentChanged(int);
 
     void OnStopEffects();
     void SaveProfileAction();
@@ -45,6 +48,9 @@ private:
     Ui::OpenRGBEffectTab *ui;
     EffectList* effect_list = nullptr;
     QMenu* load_profile_menu;
+
+    std::string current_i18n_file = "default";
+    QTranslator translator;
 
     std::string latest_loaded_profile = "";
 

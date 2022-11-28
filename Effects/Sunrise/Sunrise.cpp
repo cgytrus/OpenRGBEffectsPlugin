@@ -32,6 +32,14 @@ Sunrise::~Sunrise()
     delete ui;
 }
 
+void Sunrise::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Sunrise::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     QGradientStops stops;

@@ -125,6 +125,8 @@ private:
 
     RGBColor GetColor(float, float, float, float);
 
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // MOTIONPOINTS_H

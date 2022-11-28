@@ -162,6 +162,13 @@ GLSLCodeEditor::~GLSLCodeEditor()
     delete ui;
 }
 
+void GLSLCodeEditor::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
 
 void GLSLCodeEditor::on_styles_currentIndexChanged(int)
 {

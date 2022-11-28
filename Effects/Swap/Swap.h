@@ -39,6 +39,8 @@ private:
     bool dir = 0;
     bool old_dir = 0;
 
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // SWAP_H

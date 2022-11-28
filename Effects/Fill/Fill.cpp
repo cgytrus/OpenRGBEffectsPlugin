@@ -27,6 +27,14 @@ Fill::~Fill()
     delete ui;
 }
 
+void Fill::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Fill::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)
@@ -77,7 +85,7 @@ void Fill::StepEffect(std::vector<ControllerZone*> controller_zones)
 }
 
 RGBColor Fill::GetColor(unsigned int idx, unsigned int width)
-{    
+{
     RGBColor color = RandomColorsEnabled ? random : UserColors[0];
     if(((long) floorf(time)) % 2 == 1)
     {

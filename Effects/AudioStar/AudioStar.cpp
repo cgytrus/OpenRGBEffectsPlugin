@@ -44,6 +44,14 @@ AudioStar::~AudioStar()
     delete ui;
 }
 
+void AudioStar::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void AudioStar::EffectState(const bool state)
 {
     EffectEnabled = state;

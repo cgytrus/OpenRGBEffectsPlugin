@@ -30,6 +30,14 @@ FractalMotion::~FractalMotion()
     delete ui;
 }
 
+void FractalMotion::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void FractalMotion::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)

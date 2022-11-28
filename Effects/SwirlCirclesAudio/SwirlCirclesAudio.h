@@ -34,6 +34,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_radius_valueChanged(int);
     void on_audio_settings_clicked();
     void OnAudioDeviceChanged(int);

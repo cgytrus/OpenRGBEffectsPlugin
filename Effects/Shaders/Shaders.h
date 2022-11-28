@@ -44,6 +44,7 @@ public:
 
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_show_rendering_stateChanged(int);
     void on_use_audio_stateChanged(int);
     void on_shaders_currentIndexChanged(int);

@@ -19,6 +19,14 @@ ColorsPicker::~ColorsPicker()
     delete ui;
 }
 
+void ColorsPicker::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 ColorPicker* ColorsPicker::CreatePicker(int i)
 {
     ColorPicker* picker = new ColorPicker();

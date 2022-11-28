@@ -27,6 +27,7 @@ public:
     void UpdateStyle(QSyntaxStyle*);
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_choose_texture_clicked();
 
 private:

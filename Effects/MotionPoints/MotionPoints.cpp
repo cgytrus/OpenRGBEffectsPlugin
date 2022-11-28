@@ -29,6 +29,14 @@ MotionPoints::~MotionPoints()
     delete ui;
 }
 
+void MotionPoints::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void MotionPoints::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     UpdatePoints();

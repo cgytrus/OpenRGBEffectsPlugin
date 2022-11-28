@@ -21,6 +21,14 @@ ColorPicker::~ColorPicker()
     delete ui;
 }
 
+void ColorPicker::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void ColorPicker::SetQColor(QColor color)
 {
     current_color = color;
@@ -33,7 +41,7 @@ void ColorPicker::SetRGBColor(RGBColor color)
 }
 
 void ColorPicker::on_button_clicked()
-{    
+{
     QColorDialog *colorDialog = new QColorDialog(this);
     colorDialog->setAttribute(Qt::WA_DeleteOnClose);
     colorDialog->setCurrentColor(current_color);

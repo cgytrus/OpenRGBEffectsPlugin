@@ -31,6 +31,9 @@ private:
     bool growing = true;
     RGBColor randomColor = ColorUtils::RandomRGBColor();
     RGBColor GetColor(float, float, float, float);
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // BREATHINGCIRCLE_H

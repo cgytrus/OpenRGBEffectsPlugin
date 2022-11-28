@@ -18,7 +18,7 @@ public:
     ~DeviceList();
 
     void Clear();
-    void InitControllersList();    
+    void InitControllersList();
 
     void DisableControls();
     void EnableControls();
@@ -31,6 +31,7 @@ signals:
     void SelectionChanged();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_toggle_select_all_clicked();
     void on_toggle_reverse_clicked();
     void on_toggle_brightness_clicked();

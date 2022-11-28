@@ -32,6 +32,7 @@ signals:
     void ToggleAllEffectsState();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_start_stop_all_button_clicked();
     void AddEffect(std::string);
 

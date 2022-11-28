@@ -43,6 +43,14 @@ AudioVUMeter::~AudioVUMeter()
     delete ui;
 }
 
+void AudioVUMeter::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void AudioVUMeter::EffectState(const bool state)
 {
     EffectEnabled = state;

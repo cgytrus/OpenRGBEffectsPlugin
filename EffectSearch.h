@@ -21,6 +21,7 @@ public:
     void FocusSearch();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_search_textChanged(const QString&);
     void on_results_itemClicked(QListWidgetItem*);
 

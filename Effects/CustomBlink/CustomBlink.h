@@ -43,6 +43,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_add_clicked();
     void on_clear_clicked();
     void on_remove_clicked();

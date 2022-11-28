@@ -25,6 +25,14 @@ ZigZag::~ZigZag()
     delete ui;
 }
 
+void ZigZag::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void ZigZag::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)
@@ -67,7 +75,7 @@ void ZigZag::StepEffect(std::vector<ControllerZone*> controller_zones)
 
 
 RGBColor ZigZag::GetColor(float x, float y, float w, float h)
-{       
+{
     float total_leds = w * h;
     float current_led_position = ((int) x % 2 == 0 ? y : h - y - 1 ) + x * h;
     float current_led_percent = current_led_position/total_leds;

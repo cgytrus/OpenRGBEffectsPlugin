@@ -23,6 +23,14 @@ Clock::~Clock()
     delete ui;
 }
 
+void Clock::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 #ifdef WIN32
 #define localtime_r(_Time, _Tm) localtime_s(_Tm, _Time)
 #endif

@@ -37,6 +37,14 @@ void BouncingBallEffect::SetDefaults()
     ui->spectrum_velocity_slider->setValue(10);
 }
 
+void BouncingBallEffect::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void BouncingBallEffect::StepEffect(std::vector<ControllerZone*> controllerZones)
 {
     for (unsigned int i = 0; i < controllerZones.size(); i++)

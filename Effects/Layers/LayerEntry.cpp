@@ -45,6 +45,14 @@ LayerEntry::~LayerEntry()
     delete ui;
 }
 
+void LayerEntry::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void LayerEntry::PopulateCombos()
 {
     ui->composer_fn->blockSignals(true);

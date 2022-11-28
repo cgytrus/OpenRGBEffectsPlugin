@@ -190,6 +190,14 @@ Rain::~Rain()
     delete ui;
 }
 
+void Rain::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Rain::LoadCustomSettings(json settings)
 {
     if (settings.contains("size"))

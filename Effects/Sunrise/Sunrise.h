@@ -26,12 +26,13 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-   void on_max_intensity_valueChanged(int);
-   void on_intensity_speed_valueChanged(int);
-   void on_radius_valueChanged(int);
-   void on_grow_speed_valueChanged(int);
-   void on_motion_stateChanged(int);
-   void on_run_once_stateChanged(int);
+    void changeEvent(QEvent *event);
+    void on_max_intensity_valueChanged(int);
+    void on_intensity_speed_valueChanged(int);
+    void on_radius_valueChanged(int);
+    void on_grow_speed_valueChanged(int);
+    void on_motion_stateChanged(int);
+    void on_run_once_stateChanged(int);
 
 private:
     Ui::Sunrise *ui;

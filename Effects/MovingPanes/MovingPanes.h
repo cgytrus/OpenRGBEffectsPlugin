@@ -28,6 +28,9 @@ private:
 
     double time = 0.0;
     RGBColor GetColor(float, float, float, float, bool);
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // MOVINGPANES_H

@@ -35,6 +35,14 @@ LayerGroupEntry::~LayerGroupEntry()
     delete ui;
 }
 
+void LayerGroupEntry::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void LayerGroupEntry::AddLayerEntry(LayerEntry* layer_entry)
 {
     connect(layer_entry, &LayerEntry::Remove, [=](){

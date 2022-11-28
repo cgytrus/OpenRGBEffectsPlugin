@@ -34,7 +34,7 @@ enum
     VISUALIZER_PATTERN_SOLID_BLUE,
     VISUALIZER_PATTERN_SOLID_PURPLE,
     VISUALIZER_PATTERN_SOLID_ELECTRIC_AQUAMARINE,
-    //Static Color Patterns    
+    //Static Color Patterns
     VISUALIZER_PATTERN_STATIC_RED_BLUE,
     VISUALIZER_PATTERN_STATIC_CYAN_ORANGE,
     VISUALIZER_PATTERN_STATIC_CYAN_PURPLE,
@@ -67,7 +67,7 @@ const char* const visualizer_pattern_labels[VISUALIZER_NUM_PATTERNS] =
     "Green",
     "Cyan",
     "Blue",
-    "Purple",    
+    "Purple",
     "Electric Aquamarine",
     "Red/Blue",
     "Cyan/Orange",
@@ -167,6 +167,7 @@ private slots:
     \*-------------*/
     void Update();
     void OnAudioDeviceChanged(int);
+    void changeEvent(QEvent *event);
 
     void on_spinBox_Background_Brightness_valueChanged(int);
     void on_doubleSpinBox_Animation_Speed_valueChanged(double);

@@ -90,6 +90,14 @@ Ambient::~Ambient()
     delete ui;
 }
 
+void Ambient::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     if(controller_zones.empty())
@@ -142,7 +150,7 @@ void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)
                 QImage scaled = image.scaled(width, height);
 
                 for(unsigned int i = 0; i < width; i++)
-                {                   
+                {
                     QColor color = scaled.pixelColor(reverse ? leds_count - i - 1 : i, 0);
                     RGBColor previous_color = controller_zone->controller->GetLED(i);
 

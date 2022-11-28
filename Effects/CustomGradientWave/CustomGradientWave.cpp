@@ -73,6 +73,14 @@ CustomGradientWave::~CustomGradientWave()
     delete ui;
 }
 
+void CustomGradientWave::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void CustomGradientWave::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)
@@ -96,7 +104,7 @@ void CustomGradientWave::StepEffect(std::vector<ControllerZone*> controller_zone
             int rows = controller_zone->matrix_map_height();
 
             for (int col_id = 0; col_id < cols; col_id++)
-            { 
+            {
                 for (int row_id = 0; row_id < rows; row_id++)
                 {
                     RGBColor color = GetColor(reverse ? cols - col_id - 1: col_id, row_id, cols, rows);

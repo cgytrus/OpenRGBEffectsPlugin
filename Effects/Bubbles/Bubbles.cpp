@@ -8,7 +8,7 @@ Bubbles::Bubbles(QWidget *parent) :
     RGBEffect(parent),
     ui(new Ui::Bubbles)
 {
-    ui->setupUi(this); 
+    ui->setupUi(this);
 
     EffectDetails.EffectName = "Bubbles";
     EffectDetails.EffectClassName = ClassName();
@@ -25,6 +25,14 @@ Bubbles::~Bubbles()
     delete ui;
 }
 
+void Bubbles::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Bubbles::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone : controller_zones)
@@ -32,7 +40,7 @@ void Bubbles::StepEffect(std::vector<ControllerZone*> controller_zones)
         zone_type ZT = controller_zone->type();
 
         if (ZT == ZONE_TYPE_LINEAR || ZT == ZONE_TYPE_SINGLE)
-        {            
+        {
             int leds_count = controller_zone->leds_count();
 
             for (int LedID = 0; LedID < leds_count; LedID++)

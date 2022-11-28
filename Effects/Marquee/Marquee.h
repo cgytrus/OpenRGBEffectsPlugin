@@ -30,6 +30,9 @@ private:
     double progress = 0.0;
 
     hsv_t random;
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // MARQUEE_H

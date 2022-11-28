@@ -122,6 +122,14 @@ void AudioVisualizer::OnAudioDeviceChanged(int value)
     }
 }
 
+void AudioVisualizer::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void AudioVisualizer::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
 

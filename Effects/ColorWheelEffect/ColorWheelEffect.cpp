@@ -27,6 +27,14 @@ ColorWheelEffect::~ColorWheelEffect()
     delete ui;
 }
 
+void ColorWheelEffect::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void ColorWheelEffect::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     float cx_shift_mult = cx_shift / 100.f;

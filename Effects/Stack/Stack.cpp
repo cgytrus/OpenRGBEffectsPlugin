@@ -3,7 +3,7 @@
 
 REGISTER_EFFECT(Stack);
 
-Stack::Stack(QWidget *parent) :    
+Stack::Stack(QWidget *parent) :
     RGBEffect(parent),
     ui(new Ui::Stack)
 {
@@ -28,8 +28,16 @@ Stack::~Stack()
     delete ui;
 }
 
+void Stack::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Stack::StepEffect(std::vector<ControllerZone*> controller_zones)
-{    
+{
     unsigned int size = controller_zones.size();
 
     if(reset)

@@ -29,6 +29,9 @@ private:
 
     double time = 0.;
     double progress = 0.;
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // ZIGZAG_H

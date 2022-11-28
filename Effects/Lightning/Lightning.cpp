@@ -30,6 +30,14 @@ Lightning::~Lightning()
     delete ui;
 }
 
+void Lightning::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 RGBColor Lightning::TriggerLightning(ControllerZone* z, int n)
 {
     int Decay = Slider2Val;

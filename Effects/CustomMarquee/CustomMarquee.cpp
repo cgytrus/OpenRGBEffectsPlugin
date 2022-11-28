@@ -26,6 +26,14 @@ CustomMarquee::~CustomMarquee()
     delete ui;
 }
 
+void CustomMarquee::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void CustomMarquee::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone: controller_zones)

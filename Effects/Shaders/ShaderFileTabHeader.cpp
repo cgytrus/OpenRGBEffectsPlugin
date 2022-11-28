@@ -19,3 +19,11 @@ ShaderFileTabHeader::~ShaderFileTabHeader()
 {
     delete ui;
 }
+
+void ShaderFileTabHeader::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}

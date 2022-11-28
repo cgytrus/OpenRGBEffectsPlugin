@@ -21,6 +21,14 @@ EffectSearch::~EffectSearch()
     delete ui;
 }
 
+void EffectSearch::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void EffectSearch::on_search_textChanged(const QString& search)
 {
     ui->results->clear();

@@ -10,13 +10,15 @@
 #include "GlobalSettings.h"
 
 #include <QAction>
+#include <QComboBox>
 #include <QDialog>
 #include <QFile>
 #include <QInputDialog>
-#include <QTabBar>
-#include <QTimer>
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QString>
+#include <QTabBar>
+#include <QTimer>
 
 OpenRGBEffectTab::OpenRGBEffectTab(QWidget *parent):
     QWidget(parent),
@@ -60,12 +62,57 @@ OpenRGBEffectTab::OpenRGBEffectTab(QWidget *parent):
         {
             LoadProfile(QString::fromStdString(startup_profile));
         }
-    });   
+    });
 }
 
 OpenRGBEffectTab::~OpenRGBEffectTab()
 {
     delete ui;
+}
+
+void OpenRGBEffectTab::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        QString new_file;
+        bool loaded             = false;
+        QApplication* app       = static_cast<QApplication *>(QApplication::instance());
+
+        for(QWidget *w : app->topLevelWidgets())
+        {
+            if (QMainWindow* mainWin = qobject_cast<QMainWindow*>(w))
+            {
+                QComboBox* language     = mainWin->findChild<QComboBox *>("ComboBoxLanguage");
+                new_file                = language->currentData().toString();
+                new_file                = new_file.replace("OpenRGB","OpenRGB_EffectsEngine");
+                break;
+            }
+        }
+
+        if(new_file.toStdString() != current_i18n_file)
+        {
+            app->removeTranslator(&translator);
+
+            if(new_file == "default")
+            {
+                QLocale locale = QLocale(QLocale::system());
+                QLocale::setDefault(locale);
+
+                loaded = translator.load(":/i18n/" + QString("OpenRGB_EffectsEngine_%1.qm").arg(locale.name()));
+            }
+            else
+            {
+                loaded = translator.load(new_file);
+            }
+
+            if(loaded)
+            {
+                app->installTranslator(&translator);
+                current_i18n_file = new_file.toStdString();
+                ui->retranslateUi(this);
+            }
+        }
+    }
 }
 
 void OpenRGBEffectTab::InitEffectTabs()
@@ -89,7 +136,7 @@ void OpenRGBEffectTab::InitEffectTabs()
     QAction* plugin_info = new QAction("About", this);
     connect(plugin_info, &QAction::triggered, this, &OpenRGBEffectTab::PluginInfoAction);
 
-    effect_list->AddMenu(manage_profile_menu);    
+    effect_list->AddMenu(manage_profile_menu);
     effect_list->AddEffectsMenus();
     effect_list->AddAction(global_settings);
     effect_list->AddAction(plugin_info);
@@ -202,7 +249,7 @@ void OpenRGBEffectTab::LoadProfileList()
 
         load_profile_menu->addAction(profile_action);
 
-    } 
+    }
 
     emit ProfileListUpdated();
 }

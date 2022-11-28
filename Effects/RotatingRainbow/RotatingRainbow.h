@@ -38,6 +38,9 @@ private:
     double color_speed = 1.f;
 
     RGBColor GetColor(float, float, float, float, bool);
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // ROTATINGRAINBOW_H

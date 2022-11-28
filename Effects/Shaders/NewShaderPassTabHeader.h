@@ -17,6 +17,7 @@ public:
     ~NewShaderPassTabHeader();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_add_clicked();
 
 private:

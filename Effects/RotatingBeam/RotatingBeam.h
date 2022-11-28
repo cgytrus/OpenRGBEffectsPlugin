@@ -30,6 +30,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_mode_currentIndexChanged(int);
     void on_thickness_valueChanged(int);
 

@@ -26,6 +26,14 @@ CrossingBeams::~CrossingBeams()
     delete ui;
 }
 
+void CrossingBeams::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void CrossingBeams::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     sine_x = sin( 0.01 * h_speed * progress);

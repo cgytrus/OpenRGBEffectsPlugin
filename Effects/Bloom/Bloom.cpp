@@ -26,6 +26,14 @@ Bloom::~Bloom()
     delete ui;
 }
 
+void Bloom::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Bloom::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(unsigned int i = 0; i < controller_zones.size(); i++)

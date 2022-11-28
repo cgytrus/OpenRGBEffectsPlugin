@@ -31,6 +31,9 @@ private:
     RGBColor random;
 
     RGBColor GetColor(unsigned int, unsigned int);
+
+private slots:
+    void changeEvent(QEvent *event);
 };
 
 #endif // FILL_H

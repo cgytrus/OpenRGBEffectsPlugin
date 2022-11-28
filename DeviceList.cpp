@@ -25,6 +25,14 @@ DeviceList::~DeviceList()
     delete ui;
 }
 
+void DeviceList::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void DeviceList::Clear()
 {
     device_items.clear();
@@ -34,7 +42,7 @@ void DeviceList::Clear()
     while ((child = ui->devices->layout()->takeAt(0)) != 0)
     {
         delete child->widget();
-    }   
+    }
 }
 
 void DeviceList::InitControllersList()

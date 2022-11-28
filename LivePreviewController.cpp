@@ -60,6 +60,14 @@ LivePreviewController::~LivePreviewController()
     }
 }
 
+void LivePreviewController::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void LivePreviewController::SetupZone(std::string name, zone_type zt, unsigned int width, unsigned int height)
 {
     lock.lock();

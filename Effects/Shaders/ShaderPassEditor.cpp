@@ -28,6 +28,14 @@ ShaderPassEditor::~ShaderPassEditor()
     delete ui;
 }
 
+void ShaderPassEditor::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void ShaderPassEditor::UpdateStyle(QSyntaxStyle* style)
 {
     if(pass->GetType() == ShaderPass::BUFFER)

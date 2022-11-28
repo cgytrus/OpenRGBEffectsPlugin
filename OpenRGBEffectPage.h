@@ -31,13 +31,14 @@ signals:
     void EffectState(bool);
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_preview_clicked();
     void on_SpeedSlider_valueChanged(int value);
     void on_Slider2_valueChanged(int value);
     void on_FPS_slider_valueChanged(int value);
     void on_Brightness_slider_valueChanged(int value);
     void on_RandomCheckbox_clicked();
-    void on_OnlyFirst_clicked();    
+    void on_OnlyFirst_clicked();
     void on_toggle_info_clicked();
     void on_Temperature_valueChanged(int value);
     void on_Tint_valueChanged(int value);
@@ -65,7 +66,7 @@ private:
 
     ControllerZone* preview_zone;
 
-    QHBoxLayout* colors_layout = nullptr;    
+    QHBoxLayout* colors_layout = nullptr;
 
     json ToJson();
 

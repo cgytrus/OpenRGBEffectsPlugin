@@ -29,6 +29,14 @@ GifPlayer::~GifPlayer()
     delete ui;
 }
 
+void GifPlayer::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void GifPlayer::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     if(!movie)

@@ -47,6 +47,14 @@ SwirlCirclesAudio::~SwirlCirclesAudio()
     delete ui;
 }
 
+void SwirlCirclesAudio::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void SwirlCirclesAudio::EffectState(const bool state)
 {
     EffectEnabled = state;

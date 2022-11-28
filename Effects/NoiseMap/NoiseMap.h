@@ -25,7 +25,7 @@ class NoiseMap : public RGBEffect
 
 public:
     explicit NoiseMap(QWidget *parent = nullptr);
-    ~NoiseMap();    
+    ~NoiseMap();
 
     EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new NoiseMap;});
 
@@ -35,6 +35,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_amplitude_valueChanged(int);
     void on_frequency_valueChanged(int);
     void on_lacunarity_valueChanged(int);

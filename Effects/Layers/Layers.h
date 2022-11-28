@@ -32,6 +32,7 @@ public:
 
 
 private slots:
+    void changeEvent(QEvent *event);
     void OnAddGroupClicked();
 
 private:

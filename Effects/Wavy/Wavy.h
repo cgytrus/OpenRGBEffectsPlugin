@@ -48,6 +48,7 @@ private:
     void GenerateRandomColors();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_wave_freq_slider_valueChanged(int);
     void on_wave_speed_slider_valueChanged(int);
     void on_oscillation_speed_slider_valueChanged(int);

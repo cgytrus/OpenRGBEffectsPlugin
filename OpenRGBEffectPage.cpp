@@ -84,8 +84,16 @@ OpenRGBEffectPage::~OpenRGBEffectPage()
     delete ui;
 }
 
+void OpenRGBEffectPage::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void OpenRGBEffectPage::InitUi()
-{    
+{
     colors_layout = new QHBoxLayout();
     ui->Colors->setLayout(colors_layout);
 

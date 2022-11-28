@@ -23,6 +23,14 @@ PluginInfo::~PluginInfo()
     delete ui;
 }
 
+void PluginInfo::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void PluginInfo::on_open_plugin_folder_clicked()
 {
     filesystem::path config_dir = OpenRGBEffectsPlugin::RMPointer->GetConfigurationDirectory() / "plugins";

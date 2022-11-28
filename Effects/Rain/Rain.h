@@ -37,6 +37,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_size_valueChanged(int);
 
 private:

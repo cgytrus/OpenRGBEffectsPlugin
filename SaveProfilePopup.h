@@ -26,6 +26,7 @@ signals:
     void Reject();
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_save_clicked();
     void on_cancel_clicked();
 

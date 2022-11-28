@@ -34,6 +34,14 @@ Wavy::~Wavy()
     delete ui;
 }
 
+void Wavy::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Wavy::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(ControllerZone* controller_zone : controller_zones)
@@ -41,7 +49,7 @@ void Wavy::StepEffect(std::vector<ControllerZone*> controller_zones)
         zone_type ZT = controller_zone->type();
 
         if (ZT == ZONE_TYPE_LINEAR)
-        {            
+        {
             int leds_count = controller_zone->leds_count();
 
             for (int LedID = 0; LedID < leds_count; LedID++)
@@ -79,7 +87,7 @@ void Wavy::StepEffect(std::vector<ControllerZone*> controller_zones)
         else
         {
             Dir = false;
-            SineProgress -= 0.01 * OscillationSpeed / FPS;           
+            SineProgress -= 0.01 * OscillationSpeed / FPS;
         }
 
     }
@@ -93,7 +101,7 @@ void Wavy::StepEffect(std::vector<ControllerZone*> controller_zones)
         else
         {
             Dir = true;
-            SineProgress += 0.01 * OscillationSpeed / FPS;            
+            SineProgress += 0.01 * OscillationSpeed / FPS;
         }
     }
 

@@ -25,10 +25,18 @@ Mosaic::~Mosaic()
     delete ui;
 }
 
+void Mosaic::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void Mosaic::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     for(unsigned int i = 0; i < controller_zones.size(); i++)
-    {        
+    {
         zone_type ZT = controller_zones[i]->type();
 
         if(tiles[i].size() != controller_zones[i]->size())
@@ -105,7 +113,7 @@ void Mosaic::ResetMosaic(std::vector<ControllerZone*> controller_zones)
 
     for(ControllerZone* controller_zone: controller_zones)
     {
-        std::vector<Tile> zone_tiles;        
+        std::vector<Tile> zone_tiles;
         zone_tiles.resize(controller_zone->size());
         tiles.push_back(zone_tiles);
     }

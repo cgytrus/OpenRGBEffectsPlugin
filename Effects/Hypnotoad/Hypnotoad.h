@@ -32,11 +32,12 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_color_mode_currentIndexChanged(int);
     void on_animation_speed_valueChanged(int);
     void on_color_rotation_speed_valueChanged(int);
     void on_animation_direction_currentIndexChanged(int);
-    void on_color_rotation_direction_currentIndexChanged(int);    
+    void on_color_rotation_direction_currentIndexChanged(int);
     void on_spacing_valueChanged(int);
     void on_thickness_valueChanged(int);
     void on_cx_valueChanged(int);

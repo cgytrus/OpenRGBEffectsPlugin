@@ -74,6 +74,14 @@ AudioParty::~AudioParty()
     delete ui;
 }
 
+void AudioParty::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void AudioParty::EffectState(const bool state)
 {
     EffectEnabled = state;

@@ -46,6 +46,14 @@ NoiseMap::~NoiseMap()
     delete ui;
 }
 
+void NoiseMap::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void NoiseMap::GenerateGradient()
 {
     QGradientStops stops;

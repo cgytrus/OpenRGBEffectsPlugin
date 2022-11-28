@@ -34,8 +34,8 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_rarity_valueChanged(int);
-
 private:
     Ui::Mosaic *ui;
 
