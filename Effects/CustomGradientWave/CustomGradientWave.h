@@ -66,7 +66,7 @@ private:
     std::vector<CustomGradientWavePreset> presets =
     {
         {"UnicornVomit", std::vector<RGBColor>{
-             HEXCOLOR(0xff0004),
+             HEXCOLOR(0xff0000),
              HEXCOLOR(0xff00e6),
              HEXCOLOR(0x0000ff),
              HEXCOLOR(0x00b3ff),
