@@ -461,6 +461,8 @@ win32:contains(QMAKE_TARGET.arch, x86_64) {
         -lws2_32                                                        \
         -lole32                                                         \
         -lOpenGL32                                                      \
+        -luser32                                                        \
+        -lgdi32 \
 }
 
 win32:contains(QMAKE_TARGET.arch, x86) {
@@ -468,6 +470,8 @@ win32:contains(QMAKE_TARGET.arch, x86) {
         -lws2_32                                                        \
         -lole32                                                         \
         -lOpenGL32                                                      \
+        -luser32                                                        \
+        -lgdi32 \
 }
 
 win32:DEFINES +=                                                        \
