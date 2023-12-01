@@ -343,7 +343,7 @@ void AudioSync::UpdateGraph(QPixmap pixmap)
 void AudioSync::LoadCustomSettings(json settings)
 {
     if (settings.contains("fade_step"))           ui->color_fade_speed->setValue(settings["fade_step"]);
-    if (settings.contains("rainbow_shift"))       ui->hue_shift->setValue(settings["rainbow_shift"]);
+    if (settings.contains("hue_shift"))           ui->hue_shift->setValue(settings["hue_shift"]);
     if (settings.contains("bypass_min"))          ui->bypass->setMinimumValue(settings["bypass_min"]);
     if (settings.contains("bypass_max"))          ui->bypass->setMaximumValue(settings["bypass_max"]);
     if (settings.contains("saturation_mode"))     ui->saturation->setCurrentIndex(settings["saturation_mode"]);
