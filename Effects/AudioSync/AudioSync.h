@@ -31,7 +31,9 @@ enum RollMode
 {
     LINEAR = 0,
     NONE = 1,
-    RADIAL = 2
+    RADIAL = 2,
+    WAVE = 3,
+    LINEAR2 = 4
 };
 
 namespace Ui {

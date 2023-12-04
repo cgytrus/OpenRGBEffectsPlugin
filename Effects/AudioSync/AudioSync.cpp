@@ -29,9 +29,11 @@ AudioSync::AudioSync(QWidget *parent) :
     /*------------------------------------*\
     | Populate roll mode list              |
     \*------------------------------------*/
-    ui->roll_mode->addItem("Linear");
+    ui->roll_mode->addItem("Linear horizontal");
     ui->roll_mode->addItem("No roll");
     ui->roll_mode->addItem("Radial");
+    ui->roll_mode->addItem("Wave");
+    ui->roll_mode->addItem("Linear vertical");
 
     /*------------------------------------*\
     | Load defaults                        |
@@ -314,14 +316,25 @@ RGBColor AudioSync::GetColor(int row, int col, int zone_width, int zone_height)
     case RollMode::NONE:
         return colors_rotation[0];
 
-    case RollMode::RADIAL:
-
+    case RollMode::RADIAL: {
         float center_x = (zone_width - 1) * 0.5;
         float center_y = (zone_height - 1) * 0.5;
 
         int distance = round(sqrt(pow(center_x - row, 2) + pow(center_y - col, 2)));
 
         return colors_rotation[distance];
+    }
+    case RollMode::WAVE: {
+        float center_x = (zone_width - 1) * 1.1; //offset a bit to to end
+        float center_y = (zone_height - 1) * 0.5;
+
+        int distance = round(sqrt(pow(center_x - row, 2) + pow(center_y - col, 2)));
+
+        return colors_rotation[distance];
+    }
+    case RollMode::LINEAR2:
+        return colors_rotation[round((zone_width -1) - row)];
+
     }
 
     return ColorUtils::OFF();
