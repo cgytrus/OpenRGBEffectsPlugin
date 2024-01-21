@@ -41,7 +41,6 @@ Ambient::Ambient(QWidget *parent) :
     }
 
     ScreenRecorder::Get()->SetScreen(0);
-    ScreenRecorder::Get()->SetRect(QRect(left, top, width, height));
 }
 
 Ambient::~Ambient()
@@ -67,7 +66,7 @@ void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)
         return;
     }
 
-    const QImage& image = ScreenRecorder::Get()->Capture();
+    const QImage& image = ScreenRecorder::Get()->Capture(QRect(left, top, width, height));
 
     int w = image.width();
     int h = image.height();
@@ -300,26 +299,22 @@ json Ambient::SaveCustomSettings()
 
 void Ambient::on_left_valueChanged(int value)
 {
-    left = value;
-    ScreenRecorder::Get()->SetRect(QRect(left, top, width, height));
+    left = value;   
 }
 
 void Ambient::on_top_valueChanged(int value)
 {
     top = value;
-    ScreenRecorder::Get()->SetRect(QRect(left, top, width, height));
 }
 
 void Ambient::on_width_valueChanged(int value)
 {
     width = value;
-    ScreenRecorder::Get()->SetRect(QRect(left, top, width, height));
 }
 
 void Ambient::on_height_valueChanged(int value)
 {
     height = value;
-    ScreenRecorder::Get()->SetRect(QRect(left, top, width, height));
 }
 
 void Ambient::on_mode_currentIndexChanged(int value)

@@ -43,11 +43,6 @@ void ScreenRecorder::SetScreen(int screen_index)
     }
 }
 
-void ScreenRecorder::SetRect(QRect p_rect)
-{
-    rect = p_rect;
-}
-
 void ScreenRecorder::Start()
 {
     if(capture_thread == nullptr)
@@ -87,9 +82,9 @@ void ScreenRecorder::CaptureThreadFunction()
 
         lock.lock();
 #ifdef _WIN32
-        capture = grabWindow(0, rect.left(), rect.top(), rect.width(), rect.height());
+        capture = grabWindow(0);
 #else
-        capture = screen->grabWindow(0, rect.left(), rect.top(), rect.width(), rect.height());
+        capture = screen->grabWindow(0);
 #endif
         lock.unlock();
 
@@ -106,8 +101,9 @@ void ScreenRecorder::CaptureThreadFunction()
 #ifdef _WIN32
 extern QPixmap qt_pixmapFromWinHBITMAP(HBITMAP bitmap, int format = 0);
 
-QPixmap ScreenRecorder::grabWindow(quintptr window, int xIn, int yIn, int width, int height) const
+QPixmap ScreenRecorder::grabWindow(quintptr window) const
 {
+
     QSize windowSize;
     HWND hwnd = reinterpret_cast<HWND>(window);
     if (hwnd)
@@ -123,11 +119,10 @@ QPixmap ScreenRecorder::grabWindow(quintptr window, int xIn, int yIn, int width,
         windowSize = screenGeometry.size();
     }
 
-    if (width < 0)
-        width = windowSize.width() - xIn;
-
-    if (height < 0)
-        height = windowSize.height() - yIn;
+    int xIn = 0;
+    int yIn = 0;
+    int width = windowSize.width();
+    int height = windowSize.height();
 
     // Create and setup bitmap
     HDC display_dc = GetDC(nullptr);
@@ -152,10 +147,10 @@ QPixmap ScreenRecorder::grabWindow(quintptr window, int xIn, int yIn, int width,
 }
 #endif
 
-const QImage ScreenRecorder::Capture()
+const QImage ScreenRecorder::Capture(QRect rect)
 {
     lock.lock();
-    QImage image = capture.toImage();
+    QImage image = capture.copy(rect).toImage();
     lock.unlock();
     return image;
 }
