@@ -22,6 +22,7 @@ public:
 
     void DisableControls();
     void EnableControls();
+    bool HasDirect();
     void ToggleBrightnessSlider();
 
     std::vector<ControllerZone*> GetSelection();
@@ -49,6 +50,7 @@ private:
 
     std::vector<ControllerZone*> controller_zones;
     RGBController* controller;
+    bool direct;
     bool single_zone;
     void UpdateCheckState();
 };

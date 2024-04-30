@@ -22,7 +22,9 @@ DeviceListItem::DeviceListItem(std::vector<ControllerZone*> controller_zones, bo
 
     UpdateCheckState();
 
-    ui->danger_not_direct->setVisible(!has_direct);
+    direct = has_direct;
+
+    ui->danger_not_direct->setVisible(!direct);
 
     QString display_name = QString::fromStdString(controller->name);
 
@@ -170,6 +172,11 @@ void DeviceListItem::EnableControls()
     {
         item->EnableControls();
     }
+}
+
+bool DeviceListItem::HasDirect()
+{
+    return direct;
 }
 
 void DeviceListItem::ToggleBrightnessSlider()

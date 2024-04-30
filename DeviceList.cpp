@@ -99,7 +99,10 @@ void DeviceList::on_toggle_select_all_clicked()
 {
     for(DeviceListItem* item: device_items)
     {
-        item->SetEnabled(ui->toggle_select_all->isChecked());
+        if(item->HasDirect())
+        {
+            item->SetEnabled(ui->toggle_select_all->isChecked());
+        }
     }
 
     emit SelectionChanged();

@@ -16,7 +16,7 @@ struct GlobalSettingsStruct
     int  fps = 60;
     int  temperature = 0;
     int  tint = 0;
-    bool hide_unsupported = false;
+    bool hide_unsupported = true;
     bool prefer_random = false;
     bool use_prefered_colors = false;
     std::string startup_profile;
