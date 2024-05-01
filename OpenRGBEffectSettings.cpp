@@ -27,6 +27,11 @@ bool OpenRGBEffectSettings::WriteGlobalSettings()
     j["use_prefered_colors"]   = globalSettings.use_prefered_colors;
     j["audio_settings"]        = globalSettings.audio_settings;
 
+    if(!CreateSettingsDirectory())
+    {
+        return false;
+    }
+    
     return write_json_to_file(SettingsFolder() / "EffectSettings.json", j);
 }
 
