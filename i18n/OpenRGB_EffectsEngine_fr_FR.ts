@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_CN">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>Ambient</name>
     <message>
         <location filename="../Effects/Ambient/Ambient.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="20"/>
+        <location filename="../Effects/Ambient/Ambient.ui" line="124"/>
         <source>Mode</source>
-        <translation>模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="27"/>
-        <source>Select rectangle...</source>
-        <translation>选择矩形…</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="61"/>
-        <source>Left</source>
-        <translation>左</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="75"/>
-        <source>Top</source>
-        <translation>前</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="89"/>
-        <source>Width</source>
-        <translation>宽度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Ambient/Ambient.ui" line="103"/>
-        <source>Height</source>
-        <translation>高度</translation>
+        <source>Select rectangle...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="120"/>
+        <location filename="../Effects/Ambient/Ambient.ui" line="76"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="41"/>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="48"/>
+        <source>Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="62"/>
+        <source>Height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="110"/>
+        <source>Smoothness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="117"/>
         <source>Screen</source>
-        <translation>屏幕</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -49,32 +54,100 @@
     <message>
         <location filename="../Effects/AudioParty/AudioParty.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="41"/>
-        <source>Device</source>
-        <translation>设备</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="92"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="64"/>
         <source>Zones</source>
-        <translation>区</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="102"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="74"/>
         <source>Effect threshold</source>
-        <translation>影响阈值</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="125"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="97"/>
         <source>Divisions</source>
-        <translation>分部</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="166"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="107"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AudioSettings</name>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="25"/>
+        <source>Equalizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="50"/>
+        <source>Capture settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="57"/>
+        <source>Reset EQ</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="93"/>
+        <source>Normalization offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="100"/>
         <source>Amplitude</source>
-        <translation>振幅</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="117"/>
+        <source>Filter constant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="124"/>
+        <source>Normalization scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="131"/>
+        <source>Decay (% per step)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="148"/>
+        <source>AudioDevice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="155"/>
+        <source>FFT Window mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="172"/>
+        <source>Average mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="199"/>
+        <source>Average size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="435"/>
+        <source>Restore default</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -82,62 +155,52 @@
     <message>
         <location filename="../Effects/AudioSine/AudioSine.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="41"/>
-        <source>Device</source>
-        <translation>设备</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="70"/>
-        <source>Amplitude</source>
-        <translation>振幅</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="111"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="62"/>
         <source>Repeat</source>
-        <translation>重复</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="131"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="48"/>
         <source>Glow</source>
-        <translation>发光</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="151"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="20"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="55"/>
         <source>Thickness</source>
-        <translation>厚度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="174"/>
-        <source>Average</source>
-        <translation>平均</translation>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="95"/>
+        <source>Color mode</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="200"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="169"/>
+        <source>Cycle speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="69"/>
         <source>Oscillation</source>
-        <translation>振荡</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="220"/>
-        <source>Colors</source>
-        <translation>颜色</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="230"/>
-        <source>Color change speed</source>
-        <translation>变色速度</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="249"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="123"/>
         <source>Background</source>
-        <translation>背景</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="256"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="133"/>
         <source>Wave color</source>
-        <translation>波色</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -145,42 +208,32 @@
     <message>
         <location filename="../Effects/AudioStar/AudioStar.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/AudioStar/AudioStar.ui" line="41"/>
         <source>Saturation</source>
-        <translation>饱和</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="48"/>
-        <source>Decay</source>
-        <translation>衰变</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="55"/>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="58"/>
         <source>Hue</source>
-        <translation>色调(Hue)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="108"/>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="75"/>
         <source>Beat Sensivity</source>
-        <translation>灵敏度Beat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="115"/>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="98"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="105"/>
         <source>Edge beat</source>
-        <translation>边缘beat</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="149"/>
-        <source>Amplitude</source>
-        <translation>振幅</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="193"/>
-        <source>Device</source>
-        <translation>设备</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -188,97 +241,47 @@
     <message>
         <location filename="../Effects/AudioSync/AudioSync.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="29"/>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="83"/>
         <source>Hue shift</source>
-        <translation>色调偏移</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="39"/>
+        <source>Color fade speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="53"/>
+        <source>Saturation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="97"/>
+        <source>Roll mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="107"/>
+        <source>Silent color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="127"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="120"/>
+        <source>Rendering options</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/AudioSync/AudioSync.ui" line="46"/>
-        <source>Color fade speed</source>
-        <translation>褪色速度</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="63"/>
-        <source>Saturation</source>
-        <translation>饱和</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="73"/>
-        <source>Roll mode</source>
-        <translation>滚动模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="86"/>
-        <source>Equalizer</source>
-        <translation>均衡器</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="114"/>
-        <source>Amplitude</source>
-        <translation>振幅</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="137"/>
-        <source>Rendering options</source>
-        <translation>渲染选项</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="172"/>
-        <source>Device</source>
-        <translation>设备</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="204"/>
-        <source>High</source>
-        <translation>高</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="211"/>
-        <source>Middle</source>
-        <translation>中间</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="218"/>
-        <source>Average size</source>
-        <translation>平均大小</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="248"/>
-        <source>Average mode</source>
-        <translation>平均模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="268"/>
         <source>Band-pass filter</source>
-        <translation>Band-pass 过滤器</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="275"/>
-        <source>Decay</source>
-        <translation>衰变</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="282"/>
-        <source>Low</source>
-        <translation>低</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="289"/>
-        <source>Filter constant</source>
-        <translation>过滤常数</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="342"/>
-        <source>Preset</source>
-        <translation>预设</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="352"/>
-        <source>Reset defaults</source>
-        <translation>重置默认值</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -286,140 +289,85 @@
     <message>
         <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="41"/>
-        <source>Audio device</source>
-        <translation>音频设备</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="75"/>
-        <source>Amplitude</source>
-        <translation>振幅</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="116"/>
-        <source>Decay</source>
-        <translation>衰变</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="136"/>
-        <source>Average size</source>
-        <translation>平均大小</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="159"/>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="66"/>
         <source>Hue offset</source>
-        <translation>色调偏移量</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="176"/>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="73"/>
+        <source>Invert hue direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="80"/>
         <source>Hue spread</source>
-        <translation>色调传播</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="193"/>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="87"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="20"/>
         <source>Saturation</source>
-        <translation>饱和</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioVisualizerUi</name>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="62"/>
-        <source>Amplitude (%)</source>
-        <translation>振幅 (%)</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="85"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="29"/>
         <source>Rendering options</source>
-        <translation>渲染选项</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="125"/>
-        <source>Device</source>
-        <translation>设备</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="169"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="71"/>
         <source>Background Brightness</source>
-        <translation>背景亮度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="201"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="103"/>
         <source>Animation Speed</source>
-        <translation>动画速度</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="129"/>
+        <source>Background Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="155"/>
+        <source>Foreground Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="181"/>
+        <source>Single Color Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="207"/>
+        <source>Background Timeout</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="227"/>
-        <source>Background Mode</source>
-        <translation>背景模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="253"/>
-        <source>Foreground Mode</source>
-        <translation>前台模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="279"/>
-        <source>Single Color Mode</source>
-        <translation>单色模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="305"/>
-        <source>Background Timeout</source>
-        <translation>背景超时</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="325"/>
         <source>Reactive Background</source>
-        <translation>被动的背景</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="345"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="247"/>
         <source>Silent Background</source>
-        <translation>沉默的背景</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="368"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="36"/>
         <source>Audio settings</source>
-        <translation>音频设置</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="396"/>
-        <source>Normalization Offset</source>
-        <translation>正常化抵消</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="415"/>
-        <source>Filter Constant</source>
-        <translation>过滤器常量</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="441"/>
-        <source>Average Size</source>
-        <translation>平均大小</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="467"/>
-        <source>Decay (% per step)</source>
-        <translation>衰变(% 每 一步)</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="503"/>
-        <source>Normalization Scale</source>
-        <translation>标准化规模</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="532"/>
-        <source>Average Mode</source>
-        <translation>平均模式</translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="558"/>
-        <source>FFT Window Mode</source>
-        <translation>FFT窗口模式</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -427,7 +375,12 @@
     <message>
         <location filename="../Effects/Bloom/Bloom.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Bloom/Bloom.ui" line="20"/>
+        <source>Saturation</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -435,59 +388,51 @@
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
-        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="20"/>
-        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="27"/>
-        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="189"/>
-        <source>10</source>
-        <translation>10</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="34"/>
         <source>Drop Height %</source>
-        <translation>落差%</translation>
+        <translation type="unfinished">dev</translation>
     </message>
     <message>
+        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="20"/>
+        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="27"/>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="41"/>
-        <source>90</source>
-        <translation>90</translation>
+        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="172"/>
+        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="189"/>
+        <source>-</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="92"/>
         <source>Spectrum Velocity</source>
-        <translation>谱速度</translation>
+        <translation type="unfinished">test</translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="99"/>
         <source>Defaults</source>
-        <translation>预设值</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="128"/>
         <source>Horizontal Velocity</source>
-        <translation>水平速度</translation>
+        <translation type="unfinished">a</translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="135"/>
         <source>How fast the ball moves side to side</source>
-        <translation>球从一边移动到另一边的速度有多快</translation>
-    </message>
-    <message>
-        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="172"/>
-        <source>15</source>
-        <translation>15</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="182"/>
         <source>Ball Radius</source>
-        <translation>球的半径</translation>
+        <translation type="unfinished">Dr No</translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="199"/>
         <source>Gravity</source>
-        <translation>重力</translation>
+        <translation type="unfinished">is</translation>
     </message>
 </context>
 <context>
@@ -495,7 +440,7 @@
     <message>
         <location filename="../Effects/BreathingCircle/BreathingCircle.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -503,37 +448,37 @@
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="68"/>
         <source>Speed</source>
-        <translation>速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="75"/>
         <source>Max bubbles</source>
-        <translation>最大泡沫</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="82"/>
         <source>Rarity</source>
-        <translation>稀薄</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="89"/>
         <source>Background</source>
-        <translation>背景</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="96"/>
         <source>Max expansion</source>
-        <translation>最大扩张</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Bubbles/Bubbles.ui" line="135"/>
         <source>Bubbles thickness</source>
-        <translation>泡沫厚度</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -541,7 +486,7 @@
     <message>
         <location filename="../Effects/Clock/Clock.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -549,7 +494,7 @@
     <message>
         <location filename="../ColorPicker.ui" line="32"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -557,22 +502,22 @@
     <message>
         <location filename="../Effects/ColorWheelEffect/ColorWheelEffect.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/ColorWheelEffect/ColorWheelEffect.ui" line="36"/>
         <source>Direction</source>
-        <translation>方向</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/ColorWheelEffect/ColorWheelEffect.ui" line="43"/>
         <source>X position</source>
-        <translation>x 位置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/ColorWheelEffect/ColorWheelEffect.ui" line="63"/>
         <source>Y position</source>
-        <translation>y 位置</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -580,12 +525,12 @@
     <message>
         <location filename="../ColorsPicker.ui" line="26"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ColorsPicker.ui" line="44"/>
-        <source>Colors</source>
-        <translation>颜色</translation>
+        <source>Colors count</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -593,7 +538,7 @@
     <message>
         <location filename="../Effects/Comet/Comet.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -601,27 +546,27 @@
     <message>
         <location filename="../Effects/CrossingBeams/CrossingBeams.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CrossingBeams/CrossingBeams.ui" line="20"/>
         <source>Vertical speed</source>
-        <translation>垂直速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CrossingBeams/CrossingBeams.ui" line="53"/>
         <source>Thickness</source>
-        <translation>厚度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CrossingBeams/CrossingBeams.ui" line="80"/>
         <source>Glow</source>
-        <translation>发光</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CrossingBeams/CrossingBeams.ui" line="87"/>
         <source>Horizontal speed</source>
-        <translation>横向速度</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -629,42 +574,42 @@
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="20"/>
         <source>Clear list</source>
-        <translation>清除列表</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="27"/>
         <source>Interval</source>
-        <translation>时间间隔</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="34"/>
         <source>Add</source>
-        <translation>添加</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="41"/>
         <source>Current pattern:</source>
-        <translation>当前模式:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="48"/>
         <source>Reset time</source>
-        <translation>重置时间</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="55"/>
         <source>-</source>
-        <translation>-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomBlink/CustomBlink.ui" line="62"/>
         <source>Remove selected</source>
-        <translation>删除所选</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -672,32 +617,32 @@
     <message>
         <location filename="../Effects/CustomGradientWave/CustomGradientWave.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomGradientWave/CustomGradientWave.ui" line="36"/>
         <source>Height</source>
-        <translation>高度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomGradientWave/CustomGradientWave.ui" line="43"/>
         <source>Preset</source>
-        <translation>预设</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomGradientWave/CustomGradientWave.ui" line="50"/>
         <source>Spread</source>
-        <translation>传播</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomGradientWave/CustomGradientWave.ui" line="76"/>
         <source>Direction</source>
-        <translation>方向</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/CustomGradientWave/CustomGradientWave.ui" line="83"/>
         <source>Width</source>
-        <translation>宽度</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -705,79 +650,68 @@
     <message>
         <location filename="../Effects/CustomMarquee/CustomMarquee.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>DeviceList</name>
     <message>
-        <location filename="../DeviceList.ui" line="20"/>
+        <location filename="../DeviceList.ui" line="32"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="38"/>
+        <location filename="../DeviceList.ui" line="62"/>
         <source>Toggle brightness sliders</source>
-        <translation>切换亮度滑块</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="41"/>
         <source>☀</source>
-        <translation>☀</translation>
+        <translation type="obsolete">poit</translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="51"/>
+        <location filename="../DeviceList.ui" line="75"/>
         <source>Select all</source>
-        <translation>选择所有</translation>
+        <translation type="unfinished">French Select</translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="61"/>
+        <location filename="../DeviceList.ui" line="85"/>
         <source>Reverse all</source>
-        <translation>改变所有</translation>
+        <translation type="unfinished">Francais</translation>
     </message>
 </context>
 <context>
     <name>DeviceListItem</name>
     <message>
-        <location filename="../DeviceListItem.ui" line="14"/>
+        <location filename="../DeviceListItem.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="47"/>
+        <location filename="../DeviceListItem.ui" line="59"/>
         <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="60"/>
+        <location filename="../DeviceListItem.ui" line="72"/>
         <source>This device doesn&apos;t have direct mode
 Using an effect on a device WILL damage the flash or controller</source>
-        <translation>这个设备没有直接模式在设备上使用特效会损坏闪存或控制器</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="64"/>
-        <source>⚠</source>
-        <translation>⚠</translation>
+        <location filename="../DeviceListItem.ui" line="76"/>
+        <source>-</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="71"/>
+        <location filename="../DeviceListItem.ui" line="95"/>
         <source>Add to current effect</source>
-        <translation>添加到当前效果</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="74"/>
-        <source>✔</source>
-        <translation>✔</translation>
-    </message>
-    <message>
-        <location filename="../DeviceListItem.ui" line="84"/>
+        <location filename="../DeviceListItem.ui" line="120"/>
         <source>Change direction</source>
-        <translation>改变方向</translation>
-    </message>
-    <message>
-        <location filename="../DeviceListItem.ui" line="87"/>
-        <source>⇔</source>
-        <translation>⇔</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -785,12 +719,12 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/DoubleRotatingRainbow/DoubleRotatingRainbow.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/DoubleRotatingRainbow/DoubleRotatingRainbow.ui" line="20"/>
         <source>Frequency</source>
-        <translation>频率</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -798,22 +732,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../EffectList.ui" line="32"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectList.ui" line="65"/>
+        <location filename="../EffectList.ui" line="71"/>
         <source>Start/Stop all effects</source>
-        <translation>启动/停止所有效果</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectList.ui" line="68"/>
-        <source>◉</source>
-        <translation>◉</translation>
-    </message>
-    <message>
-        <location filename="../EffectList.ui" line="75"/>
+        <location filename="../EffectList.ui" line="87"/>
         <source>Effects...</source>
-        <translation>效果……</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -821,17 +750,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../EffectSearch.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../EffectSearch.ui" line="23"/>
         <source>No results match</source>
-        <translation>结果不匹配</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../EffectSearch.ui" line="33"/>
         <source>Search</source>
-        <translation>搜索</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -839,27 +768,27 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../EffectTabHeader.ui" line="32"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="56"/>
+        <location filename="../EffectTabHeader.ui" line="68"/>
         <source>-</source>
-        <translation>-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="84"/>
+        <location filename="../EffectTabHeader.ui" line="96"/>
         <source>EffectName</source>
-        <translation>效果的名字</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="94"/>
-        <source>✎</source>
-        <translation>✎</translation>
+        <location filename="../EffectTabHeader.ui" line="118"/>
+        <source>Rename effect</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="101"/>
-        <source>×</source>
-        <translation>×</translation>
+        <location filename="../EffectTabHeader.ui" line="140"/>
+        <source>Remove effect</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -867,7 +796,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Fill/Fill.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -875,92 +804,92 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="33"/>
         <source>Thickness</source>
-        <translation>厚度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="40"/>
         <source>Freq m10</source>
-        <translation>频率m10</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="73"/>
         <source>Freq m12</source>
-        <translation>频率m12</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="80"/>
         <source>Freq m2</source>
-        <translation>频率m2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="87"/>
         <source>Amplitude</source>
-        <translation>振幅</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="120"/>
         <source>Freq m5</source>
-        <translation>频率m5</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="140"/>
         <source>Background color:</source>
-        <translation>背景颜色:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="176"/>
         <source>Freq m6</source>
-        <translation>频率m6</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="196"/>
         <source>Freq m1</source>
-        <translation>频率m1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="203"/>
         <source>Frequency</source>
-        <translation>频率</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="223"/>
         <source>Freq m3</source>
-        <translation>频率m3</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="282"/>
         <source>Defaults</source>
-        <translation>预设值</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="289"/>
         <source>Freq m7</source>
-        <translation>频率m7</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="296"/>
         <source>Freq m9</source>
-        <translation>频率m9</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="303"/>
         <source>Freq m4</source>
-        <translation>频率m4</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="310"/>
         <source>Freq m11</source>
-        <translation>频率m11</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/FractalMotion/FractalMotion.ui" line="330"/>
         <source>Freq m8</source>
-        <translation>频率m8</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -968,44 +897,44 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="20"/>
         <source>Style</source>
-        <translation>风格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="27"/>
         <source>#version </source>
-        <translation>#版本</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="38"/>
         <source>Tab 1</source>
-        <translation>选项卡 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="44"/>
         <source>Tab 2</source>
-        <translation>选项卡 2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="52"/>
         <source>Apply</source>
-        <translation>应用</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="59"/>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="76"/>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="83"/>
         <source>?</source>
-        <translation>?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/GLSLCodeEditor.ui" line="66"/>
         <source>110</source>
-        <translation>110</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1013,22 +942,120 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/GifPlayer/GifPlayer.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/GifPlayer/GifPlayer.ui" line="20"/>
         <source>Choose GIF file</source>
-        <translation>选择GIF文件</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="97"/>
+        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="103"/>
         <source>Open GIF file</source>
-        <translation>打开GIF文件</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="97"/>
+        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="103"/>
         <source>GIF Files (*.gif)</source>
-        <translation>GIF文件(*.gif)</translation>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>GlobalSettings</name>
+    <message>
+        <location filename="../GlobalSettings.ui" line="20"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="40"/>
+        <source>Device settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="58"/>
+        <source>Configure screen recorder behavior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="79"/>
+        <source>Set default values for new effects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="100"/>
+        <source>Configure devices behavior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="133"/>
+        <source>Ambient settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="164"/>
+        <source>Hide devices without Direct mode (restart required)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="179"/>
+        <source>Audio settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="201"/>
+        <source>Amount of screenshot taken by the ScreenRecorder engine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="207"/>
+        <source>FPS capture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="238"/>
+        <source>Set default values for audio effects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="269"/>
+        <source>FPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="282"/>
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="289"/>
+        <source>Temperature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="306"/>
+        <source>Tint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="352"/>
+        <source>Always use random colors when supported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="359"/>
+        <source>Use prefered colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="380"/>
+        <source>Effects settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="402"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1036,57 +1063,57 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="20"/>
         <source>Spacing</source>
-        <translation>间距</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="46"/>
         <source>Animation speed</source>
-        <translation>动画速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="53"/>
         <source>Animation direction</source>
-        <translation>动画方向</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="73"/>
         <source>Color mode</source>
-        <translation>颜色模式</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="93"/>
         <source>X position</source>
-        <translation>x 位置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="100"/>
         <source>Y position</source>
-        <translation>y 位置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="120"/>
         <source>Rotation direction</source>
-        <translation>转动方向</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="127"/>
         <source>Rotation speed</source>
-        <translation>旋转速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="153"/>
         <source>Thickness</source>
-        <translation>厚度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Hypnotoad/Hypnotoad.ui" line="191"/>
         <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1094,22 +1121,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Layers/LayerEntry.ui" line="32"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Layers/LayerEntry.ui" line="59"/>
-        <source>🖉</source>
-        <translation>🖉</translation>
+        <location filename="../Effects/Layers/LayerEntry.ui" line="75"/>
+        <source>Edit layer settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Layers/LayerEntry.ui" line="66"/>
-        <source>🗙</source>
-        <translation>🗙</translation>
+        <location filename="../Effects/Layers/LayerEntry.ui" line="92"/>
+        <source>Remove layer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Layers/LayerEntry.ui" line="89"/>
+        <location filename="../Effects/Layers/LayerEntry.ui" line="85"/>
         <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1117,22 +1144,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Layers/LayerGroupEntry.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Layers/LayerGroupEntry.ui" line="26"/>
         <source>Delete group</source>
-        <translation>删除组</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Layers/LayerGroupEntry.ui" line="33"/>
         <source>Clear</source>
-        <translation>清除</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Layers/LayerGroupEntry.ui" line="69"/>
         <source>Group composer function</source>
-        <translation>组编曲器功能</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1140,17 +1167,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Layers/Layers.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Layers/Layers.ui" line="21"/>
         <source>Tab 1</source>
-        <translation>选项卡 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Layers/Layers.ui" line="26"/>
         <source>Tab 2</source>
-        <translation>选项卡 2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1158,45 +1185,46 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Lightning/Lightning.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Lightning/Lightning.ui" line="20"/>
         <source>Mode</source>
-        <translation>模式</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LivePreviewController</name>
     <message>
-        <location filename="../LivePreviewController.ui" line="14"/>
+        <location filename="../LivePreviewController.ui" line="26"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="20"/>
+        <location filename="../LivePreviewController.ui" line="155"/>
         <source>Reverse</source>
-        <translation>反向</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="27"/>
+        <location filename="../LivePreviewController.ui" line="56"/>
+        <location filename="../LivePreviewController.ui" line="59"/>
         <source>Brightness</source>
-        <translation>亮度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="44"/>
+        <location filename="../LivePreviewController.ui" line="126"/>
         <source>Custom height</source>
-        <translation>定制高度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="61"/>
+        <location filename="../LivePreviewController.ui" line="103"/>
         <source>Custom width</source>
-        <translation>自定义宽度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="68"/>
+        <location filename="../LivePreviewController.ui" line="168"/>
         <source>Scale content</source>
-        <translation>规模的</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1204,7 +1232,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Marquee/Marquee.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1212,32 +1240,32 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Mask/Mask.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Mask/Mask.ui" line="41"/>
         <source>X axis</source>
-        <translation>X轴</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Mask/Mask.ui" line="58"/>
         <source>Y axis</source>
-        <translation>Y轴</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Mask/Mask.ui" line="75"/>
         <source>width</source>
-        <translation>宽度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Mask/Mask.ui" line="92"/>
         <source>height</source>
-        <translation>高度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Mask/Mask.ui" line="112"/>
         <source>Invert colors</source>
-        <translation>反色</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1245,7 +1273,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Mosaic/Mosaic.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1253,12 +1281,12 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/MotionPoint/MotionPoint.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/MotionPoint/MotionPoint.ui" line="20"/>
         <source>Background color:</source>
-        <translation>背景颜色:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1266,7 +1294,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/MotionPoints/MotionPoints.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1274,7 +1302,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/MovingPanes/MovingPanes.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1282,12 +1310,12 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Shaders/NewShaderPassTabHeader.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/NewShaderPassTabHeader.ui" line="23"/>
         <source>+</source>
-        <translation>+</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1295,52 +1323,57 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/NoiseMap/NoiseMap.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="20"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="64"/>
+        <source>Preset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="124"/>
         <source>Frequency</source>
-        <translation>频率</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="27"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="134"/>
         <source>Octaves</source>
-        <translation>八度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="34"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="78"/>
         <source>Motion</source>
-        <translation>运动</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="44"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="161"/>
         <source>Motion speed</source>
-        <translation>运动速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="51"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="57"/>
         <source>Persistence</source>
-        <translation>持久性</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="74"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="141"/>
         <source>Defaults</source>
-        <translation>预设值</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="94"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="23"/>
         <source>Lacunarity</source>
-        <translation>缺顶</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="150"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="30"/>
         <source>Amplitude</source>
-        <translation>振幅</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="157"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="71"/>
         <source>Mode</source>
-        <translation>模式</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1348,82 +1381,87 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../OpenRGBEffectPage.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="47"/>
+        <location filename="../OpenRGBEffectPage.ui" line="59"/>
         <source>Preview</source>
-        <translation>预览</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="50"/>
-        <source>Ⓟ</source>
-        <translation>Ⓟ</translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="57"/>
-        <source>▼</source>
-        <translation>▼</translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="75"/>
+        <location filename="../OpenRGBEffectPage.ui" line="102"/>
         <source>EffectName</source>
-        <translation>效果的名字</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="85"/>
+        <location filename="../OpenRGBEffectPage.ui" line="112"/>
         <source>Patterns</source>
-        <translation>Patterns</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="103"/>
+        <location filename="../OpenRGBEffectPage.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EffectDescription &lt;br/&gt;on multiple&lt;br/&gt;Lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EffectDescription &lt;br/&gt;on multiple&lt;br/&gt;Lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="119"/>
+        <location filename="../OpenRGBEffectPage.ui" line="146"/>
         <source>-</source>
-        <translation>-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="152"/>
+        <location filename="../OpenRGBEffectPage.ui" line="255"/>
         <source>Random</source>
-        <translation>随机</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="171"/>
+        <location filename="../OpenRGBEffectPage.ui" line="248"/>
         <source>Slider2Label</source>
-        <translation>un滑块2标签finished</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="219"/>
+        <location filename="../OpenRGBEffectPage.ui" line="262"/>
+        <source>Temperature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="269"/>
+        <source>Tint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="366"/>
         <source>First color</source>
-        <translation>第一颜色</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="251"/>
+        <location filename="../OpenRGBEffectPage.ui" line="229"/>
         <source>Speed</source>
-        <translation>速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="258"/>
+        <location filename="../OpenRGBEffectPage.ui" line="210"/>
         <source>Brightness</source>
-        <translation>亮度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="265"/>
+        <location filename="../OpenRGBEffectPage.ui" line="196"/>
         <source>FPS</source>
-        <translation>FPS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="272"/>
+        <location filename="../OpenRGBEffectPage.ui" line="81"/>
+        <source>Expand/Collapse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="179"/>
         <source>Colors</source>
-        <translation>颜色</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="305"/>
+        <location filename="../OpenRGBEffectPage.ui" line="203"/>
         <source>Colors settings</source>
-        <translation>颜色设置</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1431,7 +1469,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../OpenRGBEffectTab.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1439,77 +1477,77 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../PluginInfo.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="29"/>
         <source>Download lastest build</source>
-        <translation>下载最新版本</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="66"/>
         <source>Git branch:</source>
-        <translation>Git 分支:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="85"/>
         <source>Git commit date:</source>
-        <translation>Git提交日期:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="104"/>
         <source>Git commit ID:</source>
-        <translation>Git提交ID:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="123"/>
         <source>Version:</source>
-        <translation>版本:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="142"/>
         <source>Build date:</source>
-        <translation>建造日期:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="155"/>
         <source>Documentation:</source>
-        <translation>文档</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="162"/>
         <source>&lt;a href=&quot;https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/Plugins/Effects/Effects.md&quot;&gt;help&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/Plugins/Effects/Effects.md&quot;&gt;help&lt;/a&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="175"/>
         <source>GIT_BRANCH</source>
-        <translation>Git 分支</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="185"/>
         <source>GIT_COMMIT_DATE</source>
-        <translation>Git提交日期</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="195"/>
         <source>GIT_COMMIT_ID</source>
-        <translation>Git提交ID</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="205"/>
         <source>BUILDDATE_STRING</source>
-        <translation>BUILDDATE_STRING</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="215"/>
         <source>VERSION_STRING</source>
-        <translation>VERSION_STRING</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../PluginInfo.ui" line="240"/>
         <source>Open plugin folder</source>
-        <translation>打开插件文件夹</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1517,22 +1555,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/RadialRainbow/RadialRainbow.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/RadialRainbow/RadialRainbow.ui" line="20"/>
         <source>X position</source>
-        <translation>x 位置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/RadialRainbow/RadialRainbow.ui" line="30"/>
         <source>Shape</source>
-        <translation>形状</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/RadialRainbow/RadialRainbow.ui" line="37"/>
         <source>Y position</source>
-        <translation>y 位置</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1540,12 +1578,28 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Rain/Rain.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Rain/Rain.ui" line="36"/>
         <source>Drop Size</source>
-        <translation>减少尺寸</translation>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RandomMarquee</name>
+    <message>
+        <location filename="../Effects/RandomMarquee/RandomMarquee.ui" line="16"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RandomSpin</name>
+    <message>
+        <location filename="../Effects/RandomSpin/RandomSpin.ui" line="16"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1553,17 +1607,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/RotatingBeam/RotatingBeam.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/RotatingBeam/RotatingBeam.ui" line="20"/>
         <source>Mode</source>
-        <translation>模式</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/RotatingBeam/RotatingBeam.ui" line="30"/>
         <source>Thickness</source>
-        <translation>厚度</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1571,7 +1625,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/RotatingRainbow/RotatingRainbow.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1579,42 +1633,42 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../SaveProfilePopup.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="20"/>
         <source>Save effects state</source>
-        <translation>Ave效应状态</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="36"/>
         <source>Save</source>
-        <translation>保存</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="59"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="73"/>
         <source>Or create a new one:</source>
-        <translation>或者创建一个新的:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="80"/>
         <source>Load profile at startup</source>
-        <translation>启动时的负载配置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="90"/>
         <source>Choose an existing profile:</source>
-        <translation>选择一个现有的概要文件:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SaveProfilePopup.ui" line="97"/>
         <source>Enter a profile name:</source>
-        <translation>输入配置文件名称:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1622,7 +1676,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Sequence/Sequence.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1630,12 +1684,12 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Shaders/ShaderFileTabHeader.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/ShaderFileTabHeader.ui" line="20"/>
         <source>X</source>
-        <translation>X</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1643,27 +1697,27 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Shaders/ShaderPassEditor.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/ShaderPassEditor.ui" line="20"/>
         <source>The audio data will be automatically passed to this shader. Make sure to enabled &quot;Use audio&quot; in the effect page.</source>
-        <translation>音频数据将自动传递到这个着色器。确保启用了“使用音频”;在效果页面。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Shaders/ShaderPassEditor.ui" line="46"/>
         <source>Choose texture</source>
-        <translation>选择结构</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="62"/>
+        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="70"/>
         <source>Open Image</source>
-        <translation>打开图像</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="62"/>
+        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="70"/>
         <source>Image Files (*.png *.jpg *.bmp)</source>
-        <translation>图片文件(*.png *.jpg *.bmp)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1671,62 +1725,57 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Shaders/Shaders.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="29"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="32"/>
+        <source>Save shader as...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="60"/>
         <source>Use audio</source>
-        <translation>使用音频</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="36"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="94"/>
         <source>Width</source>
-        <translation>宽度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="63"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="115"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="46"/>
         <source>Edit shader</source>
-        <translation>编辑材质</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="70"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="87"/>
         <source>Invert time</source>
-        <translation>反转时间</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="90"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="101"/>
+        <source>Open shaders folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="108"/>
         <source>Height</source>
-        <translation>高度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="172"/>
-        <source>Decay</source>
-        <translation>衰变</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="179"/>
-        <source>Amplitude</source>
-        <translation>振幅</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="186"/>
-        <source>Device</source>
-        <translation>设备</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="193"/>
-        <source>Average</source>
-        <translation>平均</translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="203"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="39"/>
         <source>Reset time</source>
-        <translation>重置时间</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="210"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="80"/>
         <source>Show rendering</source>
-        <translation>显示渲染</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1734,47 +1783,60 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="23"/>
         <source>Rendering</source>
-        <translation>渲染</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="30"/>
         <source>Interval (s)</source>
-        <translation>时间间隔(s)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="37"/>
         <source>Strength (%)</source>
-        <translation>强度(%)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="74"/>
         <source>Pulse duration (s)</source>
-        <translation>脉冲持续时间(s)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="94"/>
         <source>Pulses (n)</source>
-        <translation>脉冲(n)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="101"/>
         <source>Y position</source>
-        <translation>Y位置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="108"/>
         <source>X position</source>
-        <translation>X位置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="129"/>
         <source>Defaults</source>
-        <translation>预设值</translation>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SpectrumCycling</name>
+    <message>
+        <location filename="../Effects/SpectrumCycling/SpectrumCycling.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/SpectrumCycling/SpectrumCycling.ui" line="33"/>
+        <source>Saturation</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1782,7 +1844,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Spiral/Spiral.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1790,12 +1852,12 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Stack/Stack.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Stack/Stack.ui" line="20"/>
         <source>Matrix zone direction</source>
-        <translation>矩阵区方向</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1803,37 +1865,37 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="20"/>
         <source>Motion</source>
-        <translation>运动</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="43"/>
         <source>Intensity speed</source>
-        <translation>强度速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="50"/>
         <source>Run only once</source>
-        <translation>只运行一次</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="57"/>
         <source>Radius</source>
-        <translation>半径</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="112"/>
         <source>Intensity</source>
-        <translation>强度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Sunrise/Sunrise.ui" line="119"/>
         <source>Grow speed</source>
-        <translation>增长速度</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1841,7 +1903,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Swap/Swap.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1849,12 +1911,12 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/SwirlCircles/SwirlCircles.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/SwirlCircles/SwirlCircles.ui" line="27"/>
         <source>Radius</source>
-        <translation>半径</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1862,32 +1924,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="14"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="51"/>
-        <source>Audio device</source>
-        <translation>音频设备</translation>
+        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="34"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="82"/>
-        <source>Amplitude</source>
-        <translation>振幅</translation>
-    </message>
-    <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="126"/>
-        <source>Average</source>
-        <translation>平均</translation>
-    </message>
-    <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="133"/>
+        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="27"/>
         <source>Radius</source>
-        <translation>半径</translation>
-    </message>
-    <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="140"/>
-        <source>Decay</source>
-        <translation>衰变</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1895,32 +1942,32 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/Wavy/Wavy.ui" line="56"/>
         <source>Will affect how many waves you will see</source>
-        <translation>会影响你看到多少波</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Wavy/Wavy.ui" line="59"/>
         <source>Wave frequency</source>
-        <translation>波的频率</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Wavy/Wavy.ui" line="78"/>
         <source>Will affect the wave speed (left to right)</source>
-        <translation>会影响波速(从左到右)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Wavy/Wavy.ui" line="81"/>
         <source>Wave speed</source>
-        <translation>波速度</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Wavy/Wavy.ui" line="100"/>
         <source>Will affect the wave duration</source>
-        <translation>会影响波的持续时间吗</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/Wavy/Wavy.ui" line="103"/>
         <source>Oscillation speed</source>
-        <translation>振动速度</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1928,40 +1975,40 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/ZigZag/ZigZag.ui" line="16"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ZoneListItem</name>
     <message>
-        <location filename="../ZoneListItem.ui" line="14"/>
+        <location filename="../ZoneListItem.ui" line="20"/>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="35"/>
+        <location filename="../ZoneListItem.ui" line="100"/>
         <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="45"/>
+        <location filename="../ZoneListItem.ui" line="53"/>
         <source>Add to current effect</source>
-        <translation>添加到当前效果</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="48"/>
+        <location filename="../ZoneListItem.ui" line="56"/>
         <source>✔</source>
-        <translation>✔</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="58"/>
+        <location filename="../ZoneListItem.ui" line="78"/>
         <source>Change direction</source>
-        <translation>改变方向</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="61"/>
+        <location filename="../ZoneListItem.ui" line="81"/>
         <source>⇔</source>
-        <translation>⇔</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

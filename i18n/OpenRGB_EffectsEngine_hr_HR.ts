@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.1" language="hr_HR">
 <context>
     <name>Ambient</name>
     <message>
@@ -9,38 +9,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="20"/>
-        <source>Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="27"/>
-        <source>Select rectangle...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="61"/>
-        <source>Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="75"/>
+        <location filename="../Effects/Ambient/Ambient.ui" line="41"/>
         <source>Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="89"/>
+        <location filename="../Effects/Ambient/Ambient.ui" line="48"/>
         <source>Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="103"/>
+        <location filename="../Effects/Ambient/Ambient.ui" line="62"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Ambient/Ambient.ui" line="120"/>
+        <location filename="../Effects/Ambient/Ambient.ui" line="76"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="103"/>
+        <source>Select rectangle...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="110"/>
+        <source>Smoothness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="117"/>
         <source>Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Ambient/Ambient.ui" line="124"/>
+        <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -52,28 +57,96 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="41"/>
-        <source>Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="92"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="64"/>
         <source>Zones</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="102"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="74"/>
         <source>Effect threshold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="125"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="97"/>
         <source>Divisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioParty/AudioParty.ui" line="166"/>
+        <location filename="../Effects/AudioParty/AudioParty.ui" line="107"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AudioSettings</name>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="25"/>
+        <source>Equalizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="50"/>
+        <source>Capture settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="57"/>
+        <source>Reset EQ</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="93"/>
+        <source>Normalization offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="100"/>
         <source>Amplitude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="117"/>
+        <source>Filter constant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="124"/>
+        <source>Normalization scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="131"/>
+        <source>Decay (% per step)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="148"/>
+        <source>AudioDevice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="155"/>
+        <source>FFT Window mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="172"/>
+        <source>Average mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="199"/>
+        <source>Average size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Audio/AudioSettings.ui" line="435"/>
+        <source>Restore default</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -85,58 +158,48 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="41"/>
-        <source>Device</source>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="20"/>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="70"/>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="111"/>
-        <source>Repeat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="131"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="48"/>
         <source>Glow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="151"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="55"/>
         <source>Thickness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="174"/>
-        <source>Average</source>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="62"/>
+        <source>Repeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="200"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="69"/>
         <source>Oscillation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="220"/>
-        <source>Colors</source>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="95"/>
+        <source>Color mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="230"/>
-        <source>Color change speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="249"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="123"/>
         <source>Background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSine/AudioSine.ui" line="256"/>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="133"/>
         <source>Wave color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSine/AudioSine.ui" line="169"/>
+        <source>Cycle speed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -153,33 +216,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="48"/>
-        <source>Decay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="55"/>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="58"/>
         <source>Hue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="108"/>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="75"/>
         <source>Beat Sensivity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="115"/>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="98"/>
+        <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioStar/AudioStar.ui" line="105"/>
         <source>Edge beat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="149"/>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioStar/AudioStar.ui" line="193"/>
-        <source>Device</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -191,93 +244,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="29"/>
-        <source>Hue shift</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="46"/>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="39"/>
         <source>Color fade speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="63"/>
-        <source>Saturation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="73"/>
-        <source>Roll mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="86"/>
-        <source>Equalizer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="114"/>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="137"/>
-        <source>Rendering options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="172"/>
-        <source>Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="204"/>
-        <source>High</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="211"/>
-        <source>Middle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="218"/>
-        <source>Average size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="248"/>
-        <source>Average mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="268"/>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="46"/>
         <source>Band-pass filter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="275"/>
-        <source>Decay</source>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="53"/>
+        <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="282"/>
-        <source>Low</source>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="83"/>
+        <source>Hue shift</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="289"/>
-        <source>Filter constant</source>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="97"/>
+        <source>Roll mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="342"/>
-        <source>Preset</source>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="107"/>
+        <source>Silent color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioSync/AudioSync.ui" line="352"/>
-        <source>Reset defaults</source>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="120"/>
+        <source>Rendering options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioSync/AudioSync.ui" line="127"/>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -289,136 +292,81 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="41"/>
-        <source>Audio device</source>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="20"/>
+        <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="75"/>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="116"/>
-        <source>Decay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="136"/>
-        <source>Average size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="159"/>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="66"/>
         <source>Hue offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="176"/>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="73"/>
+        <source>Invert hue direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="80"/>
         <source>Hue spread</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="193"/>
-        <source>Saturation</source>
+        <location filename="../Effects/AudioVUMeter/AudioVUMeter.ui" line="87"/>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioVisualizerUi</name>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="62"/>
-        <source>Amplitude (%)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="85"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="29"/>
         <source>Rendering options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="125"/>
-        <source>Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="169"/>
-        <source>Background Brightness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="201"/>
-        <source>Animation Speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="227"/>
-        <source>Background Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="253"/>
-        <source>Foreground Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="279"/>
-        <source>Single Color Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="305"/>
-        <source>Background Timeout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="325"/>
-        <source>Reactive Background</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="345"/>
-        <source>Silent Background</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="368"/>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="36"/>
         <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="396"/>
-        <source>Normalization Offset</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="71"/>
+        <source>Background Brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="415"/>
-        <source>Filter Constant</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="103"/>
+        <source>Animation Speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="441"/>
-        <source>Average Size</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="129"/>
+        <source>Background Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="467"/>
-        <source>Decay (% per step)</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="155"/>
+        <source>Foreground Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="503"/>
-        <source>Normalization Scale</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="181"/>
+        <source>Single Color Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="532"/>
-        <source>Average Mode</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="207"/>
+        <source>Background Timeout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="558"/>
-        <source>FFT Window Mode</source>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="227"/>
+        <source>Reactive Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/AudioVisualizer/AudioVisualizer.ui" line="247"/>
+        <source>Silent Background</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -427,6 +375,11 @@
     <message>
         <location filename="../Effects/Bloom/Bloom.ui" line="14"/>
         <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Bloom/Bloom.ui" line="20"/>
+        <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -440,18 +393,15 @@
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="20"/>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="27"/>
+        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="41"/>
+        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="172"/>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="189"/>
-        <source>10</source>
+        <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="34"/>
         <source>Drop Height %</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="41"/>
-        <source>90</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -472,11 +422,6 @@
     <message>
         <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="135"/>
         <source>How fast the ball moves side to side</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/BouncingBall/BouncingBallEffect.ui" line="172"/>
-        <source>15</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -584,7 +529,7 @@
     </message>
     <message>
         <location filename="../ColorsPicker.ui" line="44"/>
-        <source>Colors</source>
+        <source>Colors count</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -711,27 +656,22 @@
 <context>
     <name>DeviceList</name>
     <message>
-        <location filename="../DeviceList.ui" line="20"/>
+        <location filename="../DeviceList.ui" line="32"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="38"/>
+        <location filename="../DeviceList.ui" line="62"/>
         <source>Toggle brightness sliders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="41"/>
-        <source>☀</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../DeviceList.ui" line="51"/>
+        <location filename="../DeviceList.ui" line="75"/>
         <source>Select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceList.ui" line="61"/>
+        <location filename="../DeviceList.ui" line="85"/>
         <source>Reverse all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -739,44 +679,34 @@
 <context>
     <name>DeviceListItem</name>
     <message>
-        <location filename="../DeviceListItem.ui" line="14"/>
+        <location filename="../DeviceListItem.ui" line="20"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="47"/>
+        <location filename="../DeviceListItem.ui" line="59"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="60"/>
+        <location filename="../DeviceListItem.ui" line="72"/>
         <source>This device doesn&apos;t have direct mode
 Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="64"/>
-        <source>⚠</source>
+        <location filename="../DeviceListItem.ui" line="76"/>
+        <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="71"/>
+        <location filename="../DeviceListItem.ui" line="95"/>
         <source>Add to current effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../DeviceListItem.ui" line="74"/>
-        <source>✔</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../DeviceListItem.ui" line="84"/>
+        <location filename="../DeviceListItem.ui" line="120"/>
         <source>Change direction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../DeviceListItem.ui" line="87"/>
-        <source>⇔</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -801,17 +731,12 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectList.ui" line="65"/>
+        <location filename="../EffectList.ui" line="71"/>
         <source>Start/Stop all effects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectList.ui" line="68"/>
-        <source>◉</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../EffectList.ui" line="75"/>
+        <location filename="../EffectList.ui" line="87"/>
         <source>Effects...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -842,23 +767,23 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="56"/>
+        <location filename="../EffectTabHeader.ui" line="68"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="84"/>
+        <location filename="../EffectTabHeader.ui" line="96"/>
         <source>EffectName</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="94"/>
-        <source>✎</source>
+        <location filename="../EffectTabHeader.ui" line="118"/>
+        <source>Rename effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../EffectTabHeader.ui" line="101"/>
-        <source>×</source>
+        <location filename="../EffectTabHeader.ui" line="140"/>
+        <source>Remove effect</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1021,13 +946,111 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="97"/>
+        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="103"/>
         <source>Open GIF file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="97"/>
+        <location filename="../Effects/GifPlayer/GifPlayer.cpp" line="103"/>
         <source>GIF Files (*.gif)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>GlobalSettings</name>
+    <message>
+        <location filename="../GlobalSettings.ui" line="20"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="40"/>
+        <source>Device settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="58"/>
+        <source>Configure screen recorder behavior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="79"/>
+        <source>Set default values for new effects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="100"/>
+        <source>Configure devices behavior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="133"/>
+        <source>Ambient settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="164"/>
+        <source>Hide devices without Direct mode (restart required)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="179"/>
+        <source>Audio settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="201"/>
+        <source>Amount of screenshot taken by the ScreenRecorder engine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="207"/>
+        <source>FPS capture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="238"/>
+        <source>Set default values for audio effects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="269"/>
+        <source>FPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="282"/>
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="289"/>
+        <source>Temperature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="306"/>
+        <source>Tint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="352"/>
+        <source>Always use random colors when supported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="359"/>
+        <source>Use prefered colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="380"/>
+        <source>Effects settings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GlobalSettings.ui" line="402"/>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1097,18 +1120,18 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Layers/LayerEntry.ui" line="59"/>
-        <source>🖉</source>
+        <location filename="../Effects/Layers/LayerEntry.ui" line="75"/>
+        <source>Edit layer settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Layers/LayerEntry.ui" line="66"/>
-        <source>🗙</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Layers/LayerEntry.ui" line="89"/>
+        <location filename="../Effects/Layers/LayerEntry.ui" line="85"/>
         <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Layers/LayerEntry.ui" line="92"/>
+        <source>Remove layer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1169,32 +1192,33 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>LivePreviewController</name>
     <message>
-        <location filename="../LivePreviewController.ui" line="14"/>
+        <location filename="../LivePreviewController.ui" line="26"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="20"/>
-        <source>Reverse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LivePreviewController.ui" line="27"/>
+        <location filename="../LivePreviewController.ui" line="56"/>
+        <location filename="../LivePreviewController.ui" line="59"/>
         <source>Brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="44"/>
-        <source>Custom height</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LivePreviewController.ui" line="61"/>
+        <location filename="../LivePreviewController.ui" line="103"/>
         <source>Custom width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LivePreviewController.ui" line="68"/>
+        <location filename="../LivePreviewController.ui" line="126"/>
+        <source>Custom height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LivePreviewController.ui" line="155"/>
+        <source>Reverse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LivePreviewController.ui" line="168"/>
         <source>Scale content</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1298,48 +1322,53 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="20"/>
-        <source>Frequency</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="27"/>
-        <source>Octaves</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="34"/>
-        <source>Motion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="44"/>
-        <source>Motion speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="51"/>
-        <source>Persistence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="74"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="94"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="23"/>
         <source>Lacunarity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="150"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="30"/>
         <source>Amplitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="157"/>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="57"/>
+        <source>Persistence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="64"/>
+        <source>Preset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="71"/>
         <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="78"/>
+        <source>Motion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="124"/>
+        <source>Frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="134"/>
+        <source>Octaves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="141"/>
+        <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/NoiseMap/NoiseMap.ui" line="161"/>
+        <source>Motion speed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1351,78 +1380,83 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="47"/>
+        <location filename="../OpenRGBEffectPage.ui" line="59"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="50"/>
-        <source>Ⓟ</source>
+        <location filename="../OpenRGBEffectPage.ui" line="81"/>
+        <source>Expand/Collapse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="57"/>
-        <source>▼</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="75"/>
+        <location filename="../OpenRGBEffectPage.ui" line="102"/>
         <source>EffectName</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="85"/>
+        <location filename="../OpenRGBEffectPage.ui" line="112"/>
         <source>Patterns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="103"/>
+        <location filename="../OpenRGBEffectPage.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EffectDescription &lt;br/&gt;on multiple&lt;br/&gt;Lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="119"/>
+        <location filename="../OpenRGBEffectPage.ui" line="146"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="152"/>
-        <source>Random</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="171"/>
-        <source>Slider2Label</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="219"/>
-        <source>First color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="251"/>
-        <source>Speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="258"/>
-        <source>Brightness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="265"/>
-        <source>FPS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../OpenRGBEffectPage.ui" line="272"/>
+        <location filename="../OpenRGBEffectPage.ui" line="179"/>
         <source>Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OpenRGBEffectPage.ui" line="305"/>
+        <location filename="../OpenRGBEffectPage.ui" line="196"/>
+        <source>FPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="203"/>
         <source>Colors settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="210"/>
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="229"/>
+        <source>Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="248"/>
+        <source>Slider2Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="255"/>
+        <source>Random</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="262"/>
+        <source>Temperature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="269"/>
+        <source>Tint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenRGBEffectPage.ui" line="366"/>
+        <source>First color</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1549,6 +1583,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
+    <name>RandomMarquee</name>
+    <message>
+        <location filename="../Effects/RandomMarquee/RandomMarquee.ui" line="16"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RandomSpin</name>
+    <message>
+        <location filename="../Effects/RandomSpin/RandomSpin.ui" line="16"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>RotatingBeam</name>
     <message>
         <location filename="../Effects/RotatingBeam/RotatingBeam.ui" line="14"/>
@@ -1656,12 +1706,12 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="62"/>
+        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="70"/>
         <source>Open Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="62"/>
+        <location filename="../Effects/Shaders/ShaderPassEditor.cpp" line="70"/>
         <source>Image Files (*.png *.jpg *.bmp)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1674,58 +1724,53 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="29"/>
-        <source>Use audio</source>
+        <location filename="../Effects/Shaders/Shaders.ui" line="32"/>
+        <source>Save shader as...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="36"/>
-        <source>Width</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="63"/>
-        <source>Edit shader</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="70"/>
-        <source>Invert time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="90"/>
-        <source>Height</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="172"/>
-        <source>Decay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="179"/>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="186"/>
-        <source>Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="193"/>
-        <source>Average</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="203"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="39"/>
         <source>Reset time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/Shaders/Shaders.ui" line="210"/>
+        <location filename="../Effects/Shaders/Shaders.ui" line="46"/>
+        <source>Edit shader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="60"/>
+        <source>Use audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="80"/>
         <source>Show rendering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="87"/>
+        <source>Invert time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="94"/>
+        <source>Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="101"/>
+        <source>Open shaders folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="108"/>
+        <source>Height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/Shaders/Shaders.ui" line="115"/>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1774,6 +1819,19 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <location filename="../Effects/SmoothBlink/SmoothBlink.ui" line="129"/>
         <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SpectrumCycling</name>
+    <message>
+        <location filename="../Effects/SpectrumCycling/SpectrumCycling.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Effects/SpectrumCycling/SpectrumCycling.ui" line="33"/>
+        <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1865,28 +1923,13 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="51"/>
-        <source>Audio device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="82"/>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="126"/>
-        <source>Average</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="133"/>
+        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="27"/>
         <source>Radius</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="140"/>
-        <source>Decay</source>
+        <location filename="../Effects/SwirlCirclesAudio/SwirlCirclesAudio.ui" line="34"/>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1934,33 +1977,33 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>ZoneListItem</name>
     <message>
-        <location filename="../ZoneListItem.ui" line="14"/>
+        <location filename="../ZoneListItem.ui" line="20"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="35"/>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ZoneListItem.ui" line="45"/>
+        <location filename="../ZoneListItem.ui" line="53"/>
         <source>Add to current effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="48"/>
+        <location filename="../ZoneListItem.ui" line="56"/>
         <source>✔</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="58"/>
+        <location filename="../ZoneListItem.ui" line="78"/>
         <source>Change direction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ZoneListItem.ui" line="61"/>
+        <location filename="../ZoneListItem.ui" line="81"/>
         <source>⇔</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ZoneListItem.ui" line="100"/>
+        <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

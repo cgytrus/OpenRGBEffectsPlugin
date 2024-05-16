@@ -68,9 +68,9 @@ message("VERSION_RPM: "$$VERSION_RPM)
 #-----------------------------------------------------------------------------------------------#
 win32:BUILDDATE = $$system(date /t)
 unix:BUILDDATE  = $$system(date -R -d "@${SOURCE_DATE_EPOCH:-$(date +%s)}")
-GIT_COMMIT_ID   = $$system(git --git-dir $$_PRO_FILE_PWD_/.git --work-tree $$_PRO_FILE_PWD_ rev-parse HEAD)
-GIT_COMMIT_DATE = $$system(git --git-dir $$_PRO_FILE_PWD_/.git --work-tree $$_PRO_FILE_PWD_ show -s --format=%ci HEAD)
-GIT_BRANCH      = $$system(git --git-dir $$_PRO_FILE_PWD_/.git --work-tree $$_PRO_FILE_PWD_ rev-parse --abbrev-ref HEAD)
+GIT_COMMIT_ID   = $$system(git log -n 1 --pretty=format:"%H")
+GIT_COMMIT_DATE = $$system(git log -n 1 --pretty=format:"%ci")
+GIT_BRANCH      = $$system(git branch --show-current)
 
 #-----------------------------------------------------------------------------------------------#
 # Download links                                                                                #
@@ -502,16 +502,20 @@ FORMS +=                                                                        
     Effects/ZigZag/ZigZag.ui                                                                    \
 
 TRANSLATIONS +=                                                                                 \
-    i18n/OpenRGB_EffectsEngine_de.ts                                                            \
-    i18n/OpenRGB_EffectsEngine_en.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_de_DE.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_en_US.ts                                                         \
     i18n/OpenRGB_EffectsEngine_en_AU.ts                                                         \
     i18n/OpenRGB_EffectsEngine_en_GB.ts                                                         \
-    i18n/OpenRGB_EffectsEngine_es.ts                                                            \
-    i18n/OpenRGB_EffectsEngine_fr.ts                                                            \
-    i18n/OpenRGB_EffectsEngine_ms_MY.ts                                                            \
-    i18n/OpenRGB_EffectsEngine_ru.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_fr_FR.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_hr_HR.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_it_IT.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_es_ES.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_ko_KR.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_ms_MY.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_pl_PL.ts                                                         \
     i18n/OpenRGB_EffectsEngine_pt_BR.ts                                                         \
-    i18n/OpenRGB_EffectsEngine_zh.ts                                                            \
+    i18n/OpenRGB_EffectsEngine_ru_RU.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_zh_CN.ts                                                         \
     i18n/OpenRGB_EffectsEngine_zh_TW.ts                                                         \
 
 #-----------------------------------------------------------------------------------------------#
