@@ -691,3 +691,48 @@ unsigned char * OpenRGBEffectTab::GetEffectListDescription(unsigned int* data_si
 
     return(data_buf);
 }
+
+unsigned char * OpenRGBEffectTab::GetProfileListDescription(unsigned int* data_size)
+{
+    std::vector<std::string> profiles = OpenRGBEffectSettings::ListProfiles();
+
+    unsigned int data_ptr = 0;
+    unsigned short num_profiles = profiles.size();
+
+    *data_size += sizeof(unsigned int);
+    *data_size += sizeof(num_profiles);
+
+    for (unsigned int i = 0; i < num_profiles; i++)
+    {
+        *data_size += sizeof(unsigned short);
+        *data_size += strlen(profiles[i].c_str()) + 1;
+    }
+
+    /*---------------------------------------------------------*\
+    | Create data buffer                                        |
+    \*---------------------------------------------------------*/
+    unsigned char *data_buf = new unsigned char[*data_size];
+
+    /*---------------------------------------------------------*\
+    | Copy in num_profiles                                      |
+    \*---------------------------------------------------------*/
+    memcpy(&data_buf[data_ptr], &num_profiles, sizeof(num_profiles));
+    data_ptr += sizeof(num_profiles);
+
+    for (unsigned int i = 0; i < num_profiles; i++)
+    {
+        /*---------------------------------------------------------*\
+        | Copy in profile name (size+data)                           |
+        \*---------------------------------------------------------*/
+        unsigned short str_len = strlen(profiles[i].c_str()) + 1;
+
+        memcpy(&data_buf[data_ptr], &str_len, sizeof(unsigned short));
+        data_ptr += sizeof(unsigned short);
+
+        strcpy((char *)&data_buf[data_ptr], profiles[i].c_str());
+        data_ptr += str_len;
+    }
+
+    return(data_buf);
+}
+

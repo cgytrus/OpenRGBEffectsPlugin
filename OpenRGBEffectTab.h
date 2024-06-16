@@ -20,6 +20,7 @@ public:
     void SetEffectState(std::string name, bool running);
     void LoadProfile(std::string);
     unsigned char * GetEffectListDescription(unsigned int* data_size);
+    unsigned char * GetProfileListDescription(unsigned int* data_size);
 signals:
     void ProfileListUpdated();
 

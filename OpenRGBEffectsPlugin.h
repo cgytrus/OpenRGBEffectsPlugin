@@ -11,7 +11,9 @@
 enum {
     NET_PACKET_ID_REQUEST_EFFECT_LIST   = 0,
     NET_PACKET_ID_START_EFFECT          = 20,
-    NET_PACKET_ID_STOP_EFFECT           = 21
+    NET_PACKET_ID_STOP_EFFECT           = 21,
+    NET_PACKET_ID_REQUEST_EFFECTS_PROFILE_LIST  = 22,
+    NET_PACKET_ID_LOAD_EFFECTS_PROFILE          = 23
 };
 
 class OpenRGBEffectsPlugin : public QObject, public OpenRGBPluginInterface

@@ -176,6 +176,18 @@ unsigned char* OpenRGBEffectsPlugin::HandleSDK(void * instance, unsigned int pkt
                 plugin->ui->SetEffectState(std::string(name), false);
             }
             break;
+        case NET_PACKET_ID_REQUEST_EFFECTS_PROFILE_LIST:
+            data_out = plugin->ui->GetProfileListDescription(data_size);
+            break;
+        case NET_PACKET_ID_LOAD_EFFECTS_PROFILE:
+        {
+            unsigned short name_len;
+            memcpy(&name_len, &data[0], sizeof(name_len));
+            char* name = (char *)&data[sizeof(unsigned short)];
+            QMetaObject::invokeMethod(plugin->ui, "LoadProfile", Qt::QueuedConnection, Q_ARG(QString, QString::fromStdString(name)));
+        }
+        break;
+
 
     }
     return data_out;
