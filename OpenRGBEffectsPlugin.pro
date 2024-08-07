@@ -12,7 +12,13 @@ QT +=                                                                           
 
 DEFINES += OPEN_RGB_EFFECTS_PLUGIN_LIBRARY
 TEMPLATE = lib
-CONFIG += unversioned_libname unversioned_soname silent
+
+#-----------------------------------------------------------------------------------------------#
+# Build Configuration                                                                           #
+#-----------------------------------------------------------------------------------------------#
+CONFIG +=                                                                                       \
+    plugin                                                                                      \
+    silent                                                                                      \
 
 #-----------------------------------------------------------------------------------------------#
 # Application Configuration                                                                     #
