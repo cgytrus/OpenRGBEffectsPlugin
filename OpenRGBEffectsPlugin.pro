@@ -487,7 +487,7 @@ win32:DEFINES +=                                                        \
 #-----------------------------------------------------------------------#
 unix:!macx {
     LIBS += -lopenal
-    QMAKE_CXXFLAGS += -std=c++17
+    QMAKE_CXXFLAGS += -std=c++17 -Wno-psabi
     target.path=$$PREFIX/lib/openrgb/plugins/
     INSTALLS += target
 }
