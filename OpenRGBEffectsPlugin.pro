@@ -1,4 +1,15 @@
-QT += gui widgets core
+#-----------------------------------------------------------------------------------------------#
+# OpenRGB Effects Plugin QMake Project                                                          #
+#-----------------------------------------------------------------------------------------------#
+
+#-----------------------------------------------------------------------------------------------#
+# Qt Configuration                                                                              #
+#-----------------------------------------------------------------------------------------------#
+QT +=                                                                                           \
+    core                                                                                        \
+    gui                                                                                         \
+    widgets
+
 DEFINES += OPEN_RGB_EFFECTS_PLUGIN_LIBRARY
 TEMPLATE = lib
 CONFIG += unversioned_libname unversioned_soname silent
@@ -10,7 +21,6 @@ MAJOR           = 0
 MINOR           = 9
 REVISION        = 1
 VERSION         = $$MAJOR"."$$MINOR$$REVISION
-PLUGIN_VERSION  = VERSION
 
 #-----------------------------------------------------------------------------------------------#
 # Automatically generated build information                                                     #
@@ -31,7 +41,7 @@ unix:!macx:LATEST_BUILD_URL="https://gitlab.com/OpenRGBDevelopers/OpenRGBEffects
 # Inject vars in defines                                                                        #
 #-----------------------------------------------------------------------------------------------#
 DEFINES +=                                                                                      \
-    VERSION_STRING=\\"\"\"$$PLUGIN_VERSION\\"\"\"                                               \
+    VERSION_STRING=\\"\"\"$$VERSION\\"\"\"                                                      \
     BUILDDATE_STRING=\\"\"\"$$BUILDDATE\\"\"\"                                                  \
     GIT_COMMIT_ID=\\"\"\"$$GIT_COMMIT_ID\\"\"\"                                                 \
     GIT_COMMIT_DATE=\\"\"\"$$GIT_COMMIT_DATE\\"\"\"                                             \
@@ -462,33 +472,33 @@ win32:RCC_DIR     = _intermediate_$$DESTDIR/.qrc
 win32:UI_DIR      = _intermediate_$$DESTDIR/.ui
 
 win32:contains(QMAKE_TARGET.arch, x86_64) {
-    LIBS +=                                                             \
-        -lws2_32                                                        \
-        -lole32                                                         \
-        -lOpenGL32                                                      \
-        -luser32                                                        \
-        -lgdi32 \
+    LIBS +=                                                                                     \
+        -lws2_32                                                                                \
+        -lole32                                                                                 \
+        -lOpenGL32                                                                              \
+        -luser32                                                                                \
+        -lgdi32                                                                                 \
 }
 
 win32:contains(QMAKE_TARGET.arch, x86) {
-    LIBS +=                                                             \
-        -lws2_32                                                        \
-        -lole32                                                         \
-        -lOpenGL32                                                      \
-        -luser32                                                        \
-        -lgdi32 \
+    LIBS +=                                                                                     \
+        -lws2_32                                                                                \
+        -lole32                                                                                 \
+        -lOpenGL32                                                                              \
+        -luser32                                                                                \
+        -lgdi32                                                                                 \
 }
 
-win32:DEFINES +=                                                        \
-    _MBCS                                                               \
-    WIN32                                                               \
-    _CRT_SECURE_NO_WARNINGS                                             \
-    _WINSOCK_DEPRECATED_NO_WARNINGS                                     \
-    WIN32_LEAN_AND_MEAN                                                 \
+win32:DEFINES +=                                                                                \
+    _MBCS                                                                                       \
+    WIN32                                                                                       \
+    _CRT_SECURE_NO_WARNINGS                                                                     \
+    _WINSOCK_DEPRECATED_NO_WARNINGS                                                             \
+    WIN32_LEAN_AND_MEAN                                                                         \
 
-#-----------------------------------------------------------------------#
-# Linux-specific Configuration                                          #
-#-----------------------------------------------------------------------#
+#-----------------------------------------------------------------------------------------------#
+# Linux-specific Configuration                                                                  #
+#-----------------------------------------------------------------------------------------------#
 unix:!macx {
     LIBS += -lopenal
     QMAKE_CXXFLAGS += -std=c++17 -Wno-psabi
@@ -496,9 +506,9 @@ unix:!macx {
     INSTALLS += target
 }
 
-#-----------------------------------------------------------------------#
-# MacOS-specific Configuration                                          #
-#-----------------------------------------------------------------------#
+#-----------------------------------------------------------------------------------------------#
+# MacOS-specific Configuration                                                                  #
+#-----------------------------------------------------------------------------------------------#
 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.15
 
 macx: {
@@ -506,5 +516,5 @@ macx: {
     LIBS += -framework OpenAL
 }
 
-RESOURCES += \
+RESOURCES +=                                                                                    \
     resources.qrc
