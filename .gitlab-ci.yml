@@ -23,10 +23,10 @@ before_script:
  - echo "started by ${GITLAB_USER_NAME}"
 
 #-----------------------------------------------------------------------#
-# Buster 64-bit Build Target                                            #
+# Linux i386 Build Target                                               #
 #-----------------------------------------------------------------------#
-"Buster 64":
-  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:buster-64
+"Linux i386":
+  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-i386
   stage: build
   script:
   - apt update
@@ -34,18 +34,18 @@ before_script:
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
-  
+
   artifacts:
-    name: "${CI_PROJECT_NAME}_Buster_64_${CI_COMMIT_SHORT_SHA}"
+    name: "${CI_PROJECT_NAME}_Linux_i386_${CI_COMMIT_SHORT_SHA}"
     paths:
     - ./libOpenRGBEffectsPlugin.so
     expire_in: 30 days
 
 #-----------------------------------------------------------------------#
-# Bullseye 64-bit Build Target                                          #
+# Linux amd64 Build Target                                              #
 #-----------------------------------------------------------------------#
-"Bullseye 64":
-  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bullseye-64
+"Linux amd64":
+  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-amd64
   stage: build
   script:
   - apt update
@@ -55,26 +55,7 @@ before_script:
   - ./scripts/scripts_build-plugin.sh
 
   artifacts:
-    name: "${CI_PROJECT_NAME}_Bullseye_64_${CI_COMMIT_SHORT_SHA}"
-    paths:
-    - ./libOpenRGBEffectsPlugin.so
-    expire_in: 30 days
-
-#-----------------------------------------------------------------------#
-# Bookworm 64-bit Build Target                                          #
-#-----------------------------------------------------------------------#
-"Bookworm 64":
-  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-64
-  stage: build
-  script:
-  - apt update
-  - apt install -y libopenal-dev
-  - export QT_SELECT=qt5
-  - export $(dpkg-architecture)
-  - ./scripts/scripts_build-plugin.sh
-
-  artifacts:
-    name: "${CI_PROJECT_NAME}_Bookworm_64_${CI_COMMIT_SHORT_SHA}"
+    name: "${CI_PROJECT_NAME}_Linux_amd64_${CI_COMMIT_SHORT_SHA}"
     paths:
     - ./libOpenRGBEffectsPlugin.so
     expire_in: 30 days
