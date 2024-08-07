@@ -6,7 +6,11 @@ CONFIG += unversioned_libname unversioned_soname silent
 #-----------------------------------------------------------------------------------------------#
 # Application Configuration                                                                     #
 #-----------------------------------------------------------------------------------------------#
-PLUGIN_VERSION     = 0.9
+MAJOR           = 0
+MINOR           = 9
+REVISION        = 1
+VERSION         = $$MAJOR"."$$MINOR$$REVISION
+PLUGIN_VERSION  = VERSION
 
 #-----------------------------------------------------------------------------------------------#
 # Automatically generated build information                                                     #
