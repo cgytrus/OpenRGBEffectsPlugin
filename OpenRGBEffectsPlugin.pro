@@ -1,6 +1,7 @@
 QT += gui widgets core
 DEFINES += OPEN_RGB_EFFECTS_PLUGIN_LIBRARY
 TEMPLATE = lib
+CONFIG += unversioned_libname unversioned_soname
 
 #-----------------------------------------------------------------------------------------------#
 # Application Configuration                                                                     #
@@ -487,7 +488,7 @@ win32:DEFINES +=                                                        \
 unix:!macx {
     LIBS += -lopenal
     QMAKE_CXXFLAGS += -std=c++17
-    target.path=$$PREFIX/lib/
+    target.path=$$PREFIX/lib/openrgb/plugins/
     INSTALLS += target
 }
 

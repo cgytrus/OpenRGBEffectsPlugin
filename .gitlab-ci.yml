@@ -38,7 +38,7 @@ before_script:
   artifacts:
     name: "${CI_PROJECT_NAME}_Buster_64_${CI_COMMIT_SHORT_SHA}"
     paths:
-    - ./libOpenRGBEffectsPlugin.so.1.0.0
+    - ./libOpenRGBEffectsPlugin.so
     expire_in: 30 days
 
 #-----------------------------------------------------------------------#
@@ -57,7 +57,7 @@ before_script:
   artifacts:
     name: "${CI_PROJECT_NAME}_Bullseye_64_${CI_COMMIT_SHORT_SHA}"
     paths:
-    - ./libOpenRGBEffectsPlugin.so.1.0.0
+    - ./libOpenRGBEffectsPlugin.so
     expire_in: 30 days
 
 #-----------------------------------------------------------------------#
@@ -76,7 +76,7 @@ before_script:
   artifacts:
     name: "${CI_PROJECT_NAME}_Bookworm_64_${CI_COMMIT_SHORT_SHA}"
     paths:
-    - ./libOpenRGBEffectsPlugin.so.1.0.0
+    - ./libOpenRGBEffectsPlugin.so
     expire_in: 30 days
 
 #-----------------------------------------------------------------------#
@@ -246,15 +246,15 @@ before_script:
   - eval $(/opt/homebrew/bin/brew shellenv)
   - qmake OpenRGBEffectsPlugin.pro
   - make -j16
-  - install_name_tool libOpenRGBEffectsPlugin.1.0.0.dylib -change /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Versions/5/QtWidgets @executable_path/../Frameworks/QtWidgets.framework/Versions/5/QtWidgets
-  - install_name_tool libOpenRGBEffectsPlugin.1.0.0.dylib -change /opt/homebrew/opt/qt@5/lib/QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/5/QtGui
-  - install_name_tool libOpenRGBEffectsPlugin.1.0.0.dylib -change /opt/homebrew/opt/qt@5/lib/QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/5/QtCore
-  - codesign --force --verify -s OpenRGB libOpenRGBEffectsPlugin.1.0.0.dylib
+  - install_name_tool libOpenRGBEffectsPlugin.dylib -change /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Versions/5/QtWidgets @executable_path/../Frameworks/QtWidgets.framework/Versions/5/QtWidgets
+  - install_name_tool libOpenRGBEffectsPlugin.dylib -change /opt/homebrew/opt/qt@5/lib/QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/5/QtGui
+  - install_name_tool libOpenRGBEffectsPlugin.dylib -change /opt/homebrew/opt/qt@5/lib/QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/5/QtCore
+  - codesign --force --verify -s OpenRGB libOpenRGBEffectsPlugin.dylib
 
   artifacts:
     name: "${CI_PROJECT_NAME}_MacOS_ARM64_${CI_COMMIT_SHORT_SHA}"
     paths:
-    - libOpenRGBEffectsPlugin.1.0.0.dylib
+    - libOpenRGBEffectsPlugin.dylib
     expire_in: 30 days
 
   rules:
@@ -271,14 +271,14 @@ before_script:
   - eval $(/usr/local/bin/brew shellenv)
   - arch -x86_64 /usr/local/bin/qmake OpenRGBEffectsPlugin.pro
   - arch -x86_64 make -j16
-  - arch -x86_64 install_name_tool libOpenRGBEffectsPlugin.1.0.0.dylib -change /usr/local/opt/qt@5/lib/QtWidgets.framework/Versions/5/QtWidgets @executable_path/../Frameworks/QtWidgets.framework/Versions/5/QtWidgets
-  - arch -x86_64 install_name_tool libOpenRGBEffectsPlugin.1.0.0.dylib -change /usr/local/opt/qt@5/lib/QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/5/QtGui
-  - arch -x86_64 install_name_tool libOpenRGBEffectsPlugin.1.0.0.dylib -change /usr/local/opt/qt@5/lib/QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/5/QtCore
-  - arch -x86_64 codesign --force --verify -s OpenRGB libOpenRGBEffectsPlugin.1.0.0.dylib
+  - arch -x86_64 install_name_tool libOpenRGBEffectsPlugin.dylib -change /usr/local/opt/qt@5/lib/QtWidgets.framework/Versions/5/QtWidgets @executable_path/../Frameworks/QtWidgets.framework/Versions/5/QtWidgets
+  - arch -x86_64 install_name_tool libOpenRGBEffectsPlugin.dylib -change /usr/local/opt/qt@5/lib/QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/5/QtGui
+  - arch -x86_64 install_name_tool libOpenRGBEffectsPlugin.dylib -change /usr/local/opt/qt@5/lib/QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/5/QtCore
+  - arch -x86_64 codesign --force --verify -s OpenRGB libOpenRGBEffectsPlugin.dylib
   artifacts:
     name: "${CI_PROJECT_NAME}_MacOS_Intel_${CI_COMMIT_SHORT_SHA}"
     paths:
-    - libOpenRGBEffectsPlugin.1.0.0.dylib
+    - libOpenRGBEffectsPlugin.dylib
     expire_in: 30 days
 
   rules:
