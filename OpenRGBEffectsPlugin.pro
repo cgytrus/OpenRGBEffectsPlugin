@@ -1,7 +1,7 @@
 QT += gui widgets core
 DEFINES += OPEN_RGB_EFFECTS_PLUGIN_LIBRARY
 TEMPLATE = lib
-CONFIG += unversioned_libname unversioned_soname
+CONFIG += unversioned_libname unversioned_soname silent
 
 #-----------------------------------------------------------------------------------------------#
 # Application Configuration                                                                     #
