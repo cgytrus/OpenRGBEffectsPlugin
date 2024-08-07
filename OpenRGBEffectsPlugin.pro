@@ -26,7 +26,7 @@ CONFIG +=                                                                       
 MAJOR           = 0
 MINOR           = 9
 REVISION        = 1
-VERSION         = $$MAJOR"."$$MINOR$$REVISION
+PLUGIN_VERSION  = $$MAJOR"."$$MINOR$$REVISION
 
 #-----------------------------------------------------------------------------------------------#
 # Automatically generated build information                                                     #
@@ -47,7 +47,7 @@ unix:!macx:LATEST_BUILD_URL="https://gitlab.com/OpenRGBDevelopers/OpenRGBEffects
 # Inject vars in defines                                                                        #
 #-----------------------------------------------------------------------------------------------#
 DEFINES +=                                                                                      \
-    VERSION_STRING=\\"\"\"$$VERSION\\"\"\"                                                      \
+    VERSION_STRING=\\"\"\"$$PLUGIN_VERSION\\"\"\"                                               \
     BUILDDATE_STRING=\\"\"\"$$BUILDDATE\\"\"\"                                                  \
     GIT_COMMIT_ID=\\"\"\"$$GIT_COMMIT_ID\\"\"\"                                                 \
     GIT_COMMIT_DATE=\\"\"\"$$GIT_COMMIT_DATE\\"\"\"                                             \
