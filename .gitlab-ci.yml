@@ -27,6 +27,9 @@ before_script:
 #-----------------------------------------------------------------------#
 "Linux i386":
   image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-i386
+  tags:
+  - linux
+  - i386
   stage: build
   script:
   - apt update
@@ -46,6 +49,9 @@ before_script:
 #-----------------------------------------------------------------------#
 "Linux amd64":
   image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-amd64
+  tags:
+  - linux
+  - amd64
   stage: build
   script:
   - apt update
@@ -56,6 +62,50 @@ before_script:
 
   artifacts:
     name: "${CI_PROJECT_NAME}_Linux_amd64_${CI_COMMIT_SHORT_SHA}"
+    paths:
+    - ./libOpenRGBEffectsPlugin.so
+    expire_in: 30 days
+
+#-----------------------------------------------------------------------#
+# Linux armhf Build Target                                              #
+#-----------------------------------------------------------------------#
+"Linux armhf":
+  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-armhf
+  tags:
+  - linux
+  - armhf
+  stage: build
+  script:
+  - apt update
+  - apt install -y libopenal-dev
+  - export QT_SELECT=qt5
+  - export $(dpkg-architecture)
+  - ./scripts/scripts_build-plugin.sh
+
+  artifacts:
+    name: "${CI_PROJECT_NAME}_Linux_armhf_${CI_COMMIT_SHORT_SHA}"
+    paths:
+    - ./libOpenRGBEffectsPlugin.so
+    expire_in: 30 days
+
+#-----------------------------------------------------------------------#
+# Linux arm64 Build Target                                              #
+#-----------------------------------------------------------------------#
+"Linux arm64":
+  image: registry.gitlab.com/openrgbdevelopers/openrgb-linux-ci-deb-builder:bookworm-arm64
+  tags:
+  - linux
+  - arm64
+  stage: build
+  script:
+  - apt update
+  - apt install -y libopenal-dev
+  - export QT_SELECT=qt5
+  - export $(dpkg-architecture)
+  - ./scripts/scripts_build-plugin.sh
+
+  artifacts:
+    name: "${CI_PROJECT_NAME}_Linux_arm64_${CI_COMMIT_SHORT_SHA}"
     paths:
     - ./libOpenRGBEffectsPlugin.so
     expire_in: 30 days
