@@ -2,6 +2,7 @@
 #define LAYERS_H
 
 #include <QWidget>
+#include <QTabBar>
 #include "ui_Layers.h"
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"

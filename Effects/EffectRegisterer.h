@@ -1,7 +1,7 @@
 #ifndef EFFECTREGISTERER_H
 #define EFFECTREGISTERER_H
 
-#include "EffectList.h"
+#include "EffectListManager.h"
 
 #define EFFECT_REGISTERER(_name, _category, _constructor)                               \
     static class _register                                                              \
@@ -9,7 +9,7 @@
      public:                                                                            \
        _register()                                                                      \
        {                                                                                \
-           EffectList::RegisterEffect(_name, _category ,_constructor);                  \
+           EffectListManager::get()->RegisterEffect(_name, _category ,_constructor);    \
         }                                                                               \
     } _registerer;                                                                      \
 

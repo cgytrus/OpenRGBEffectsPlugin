@@ -1,5 +1,6 @@
 #include "OpenRGBEffectTab.h"
 #include "OpenRGBEffectSettings.h"
+#include "EffectListManager.h"
 #include "EffectManager.h"
 #include "OpenRGBEffectsPlugin.h"
 #include "PluginInfo.h"
@@ -501,7 +502,7 @@ void OpenRGBEffectTab::LoadEffect(json effect_settings)
 
     printf("[OpenRGBEffectsPlugin] Creating effect: %s\n", name.c_str());
 
-    RGBEffect* effect = EffectList::effects_construtors[name]();
+    RGBEffect* effect = EffectListManager::get()->GetEffectConstructor(name)();
 
     printf("[OpenRGBEffectsPlugin] Effect %s: Applying basic settings\n", name.c_str());
 

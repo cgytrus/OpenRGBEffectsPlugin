@@ -6,6 +6,7 @@
 #include "AudioSettingsStruct.h"
 
 #include <QWidget>
+#include <QListWidget>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLTexture>
 #include <mutex>

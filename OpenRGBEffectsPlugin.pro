@@ -192,6 +192,7 @@ HEADERS +=                                                                      
     DeviceList.h                                                                                \
     DeviceListItem.h                                                                            \
     EffectList.h                                                                                \
+    EffectListManager.h                                                                         \
     EffectManager.h                                                                             \
     EffectSearch.h                                                                              \
     EffectTabHeader.h                                                                           \
@@ -221,6 +222,7 @@ SOURCES +=                                                                      
     DeviceList.cpp                                                                              \
     DeviceListItem.cpp                                                                          \
     EffectList.cpp                                                                              \
+    EffectListManager.cpp                                                                       \
     EffectManager.cpp                                                                           \
     EffectSearch.cpp                                                                            \
     EffectTabHeader.cpp                                                                         \

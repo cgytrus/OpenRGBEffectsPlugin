@@ -1,4 +1,5 @@
 #include "EffectList.h"
+#include "EffectListManager.h"
 #include "ui_EffectList.h"
 #include "ColorUtils.h"
 #include "OpenRGBPluginsFont.h"
@@ -7,9 +8,6 @@
 #include <QMenu>
 #include <QAction>
 #include <QWidgetAction>
-
-std::map<std::string, std::function<RGBEffect*()>> EffectList::effects_construtors = {};
-std::map<std::string, std::vector<std::string>> EffectList::categorized_effects;
 
 EffectList::EffectList(QWidget *parent) :
     QWidget(parent),
@@ -59,7 +57,7 @@ EffectList::EffectList(QWidget *parent) :
 
 void EffectList::AddEffectsMenus()
 {
-    for(auto const& entry: categorized_effects)
+    for(auto const& entry: EffectListManager::get()->GetCategorizedEffects())
     {
         std::string category = entry.first;
 
@@ -88,7 +86,7 @@ void EffectList::AddEffectsMenus()
 
 void EffectList::AddEffect(std::string effect_name)
 {
-    RGBEffect* effect = effects_construtors[effect_name]();
+    RGBEffect* effect = EffectListManager::get()->GetEffectConstructor(effect_name)();
 
     effect->SetFPS(OpenRGBEffectSettings::globalSettings.fps);
     effect->SetBrightness(OpenRGBEffectSettings::globalSettings.brightness);
@@ -119,19 +117,6 @@ void EffectList::AddEffect(std::string effect_name)
 EffectList::~EffectList()
 {
     delete ui;
-}
-
-void EffectList::RegisterEffect(std::string name, std::string category, std::function<RGBEffect*()> constructor)
-{    
-    effects_construtors[name] = constructor;
-
-    if (!categorized_effects.count(category))
-    {
-        std::vector<std::string> effects;
-        categorized_effects[category] = effects;
-    }
-
-    categorized_effects[category].push_back(name);
 }
 
 void EffectList::on_start_stop_all_button_clicked()

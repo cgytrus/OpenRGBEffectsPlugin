@@ -2,7 +2,7 @@
 #include "ui_LayerEntry.h"
 #include "OpenRGBEffectSettings.h"
 #include <QDialog>
-#include "EffectList.h"
+#include "EffectListManager.h"
 #include "OpenRGBPluginsFont.h"
 
 LayerEntry::LayerEntry(QWidget *parent, RGBEffect* effect) :
@@ -114,7 +114,7 @@ LayerEntry* LayerEntry::FromJson(json j)
         json effect_settings = j["effect_settings"];
         std::string effect_name = effect_settings["EffectClassName"];
 
-        effect = EffectList::effects_construtors[effect_name]();
+        effect = EffectListManager::get()->GetEffectConstructor(effect_name)();
 
         if(effect_settings.contains("UserColors"))
         {

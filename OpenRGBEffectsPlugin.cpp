@@ -1,6 +1,7 @@
 #include "OpenRGBEffectsPlugin.h"
 #include "EffectManager.h"
 #include "EffectList.h"
+#include "EffectListManager.h"
 #include "NetworkServer.h"
 #include "OpenRGBEffectSettings.h"
 #include <QSystemTrayIcon>
@@ -52,7 +53,7 @@ QWidget* OpenRGBEffectsPlugin::GetWidget()
 {
     printf("[OpenRGBEffectsPlugin] version %s (%s), build date %s\n", VERSION_STRING, GIT_COMMIT_ID, GIT_COMMIT_DATE);
 
-    printf("[OpenRGBEffectsPlugin] %lu effects registered\n", EffectList::effects_construtors.size());
+    printf("[OpenRGBEffectsPlugin] %lu effects registered\n", EffectListManager::get()->GetEffectsListSize());
 
     RMPointer->WaitForDeviceDetection();
 
