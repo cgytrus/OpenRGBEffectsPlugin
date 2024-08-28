@@ -145,14 +145,19 @@ RGBColor Bubbles::GetColor(int x, int y, int w, int h)
 
 }
 
-void Bubbles::LoadCustomSettings(json Settings)
+void Bubbles::LoadCustomSettings(json settings)
 {
-    if(Settings.contains("max_bubbles"))        ui->max_bubbles->setValue(Settings["max_bubbles"]);
-    if(Settings.contains("rarity"))             ui->rarity->setValue(Settings["rarity"]);
-    if(Settings.contains("speed_mult"))         ui->speed_mult->setValue(Settings["speed_mult"]);
-    if(Settings.contains("max_expansion"))      ui->max_expansion->setValue(Settings["max_expansion"]);
-    if(Settings.contains("bubbles_thickness"))  ui->bubbles_thickness->setValue(Settings["bubbles_thickness"]);
-    if(Settings.contains("background"))         ui->background->SetRGBColor(Settings["background"]);
+    if(settings.contains("max_bubbles"))        ui->max_bubbles->setValue(settings["max_bubbles"]);
+    if(settings.contains("rarity"))             ui->rarity->setValue(settings["rarity"]);
+    if(settings.contains("speed_mult"))         ui->speed_mult->setValue(settings["speed_mult"]);
+    if(settings.contains("max_expansion"))      ui->max_expansion->setValue(settings["max_expansion"]);
+    if(settings.contains("bubbles_thickness"))  ui->bubbles_thickness->setValue(settings["bubbles_thickness"]);
+
+    if(settings.contains("background"))
+    {
+        ui->background->SetRGBColor(settings["background"]);
+        background = settings["background"];
+    }
 }
 
 json Bubbles::SaveCustomSettings()

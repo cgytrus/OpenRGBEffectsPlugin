@@ -362,7 +362,12 @@ void AudioSync::LoadCustomSettings(json settings)
     if (settings.contains("saturation_mode"))     ui->saturation->setCurrentIndex(settings["saturation_mode"]);
     if (settings.contains("roll_mode"))           ui->roll_mode->setCurrentIndex(settings["roll_mode"]);
     if (settings.contains("silent_color"))        ui->silent_color->setChecked(settings["silent_color"]);
-    if (settings.contains("silent_color_value"))  ui->silent_color_value->SetRGBColor(settings["silent_color_value"]);
+
+    if (settings.contains("silent_color_value"))
+    {
+        ui->silent_color_value->SetRGBColor(settings["silent_color_value"]);
+        silent_color_value = settings["silent_color_value"];
+    }
 
     if (settings.contains("audio_settings"))
     {
