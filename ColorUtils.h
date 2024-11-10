@@ -219,9 +219,9 @@ public:
     static RGBColor apply_adjustments(RGBColor color, float brightness, int temperature, int tint)
     {
         return ToRGBColor(
-                    (int)( std::clamp<int>(RGBGetRValue(color) + temperature, 0, 255)    * brightness),
-                    (int)( std::clamp<int>(RGBGetGValue(color) + tint, 0 , 255)          * brightness),
-                    (int)( std::clamp<int>(RGBGetBValue(color) - temperature, 0 , 255)   * brightness)
+                    (int)( std::clamp<int>(RGBGetRValue(color) * (1.0 + (temperature/255.0)), 0, 255)    * brightness),
+                    (int)( std::clamp<int>(RGBGetGValue(color) * (1.0 + (tint/255.0)), 0 , 255)          * brightness),
+                    (int)( std::clamp<int>(RGBGetBValue(color) * (1.0 - (temperature/255.0)), 0 , 255)   * brightness)
                     );
     }
 
