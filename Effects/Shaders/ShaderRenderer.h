@@ -51,6 +51,8 @@ private:
 
     std::mutex program_lock;
 
+    static std::mutex context_lock;
+
 signals:
     void Image(const QImage&);
     void Log(const QString&);

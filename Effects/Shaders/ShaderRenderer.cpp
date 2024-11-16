@@ -1,5 +1,7 @@
 #include "ShaderRenderer.h"
 
+std::mutex ShaderRenderer::context_lock;
+
 ShaderRenderer::ShaderRenderer(QObject *parent) :
     QObject(parent),
     shader_program(new ShaderProgram),
@@ -38,6 +40,8 @@ void ShaderRenderer::SetFPS(int value)
 
 void ShaderRenderer::RendererThreadFunction()
 {
+    context_lock.lock();
+
     surface = new QOffscreenSurface();
     surface->create();
 
@@ -54,7 +58,9 @@ void ShaderRenderer::RendererThreadFunction()
 
     printf("[OpenRGBEffectsPlugin] OpenGL vendor: %s, renderer: %s, version: %s\n", vendor.c_str(), renderer.c_str(), version.c_str());
 
-    surface->setFormat(context->format());   
+    surface->setFormat(context->format());
+
+    context_lock.unlock();
 
     while(running)
     {
@@ -79,7 +85,6 @@ void ShaderRenderer::RendererThreadFunction()
 
         program_lock.unlock();
         // .....
-
 
         TCount end = clock->now();
 
