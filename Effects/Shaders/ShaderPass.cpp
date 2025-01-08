@@ -1,6 +1,10 @@
 #include "ShaderPass.h"
 #include "RGBController.h"
 
+#ifdef __linux__
+#include <GL/gl.h>
+#endif
+
 ShaderPass::ShaderPass(Type type)
 {
     this->type = type;
