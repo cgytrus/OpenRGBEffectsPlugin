@@ -6,6 +6,12 @@
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 
+enum
+{
+    CLOCK_MODE_12_HOUR = 0,
+    CLOCK_MODE_24_HOUR = 1
+};
+
 namespace Ui {
 class Clock;
 }
@@ -21,15 +27,21 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Clock;});
     static std::string const ClassName() {return "Clock";}
     void StepEffect(std::vector<ControllerZone*>) override;
+    void LoadCustomSettings(json) override;
+    json SaveCustomSettings() override;
 
-private:
+private slots:
+    void on_clock_mode_combo_box_currentIndexChanged(int);
+
+private:    
     Ui::Clock *ui;
+    int clock_mode = CLOCK_MODE_12_HOUR;
 
     float h = 0.f;
     float m = 0.f;
     float s = 0.f;
 
-    RGBColor GetColor(float, float);
+    RGBColor GetColor(float, float, float);
 };
 
 #endif // CLOCK_H
