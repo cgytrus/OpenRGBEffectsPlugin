@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 PRODUCTNAME="OpenRGB Effects Plugin"
+VENDOR="OpenRGB"
+OPENRGB_PATH=$(reg query "HKCU\SOFTWARE\OpenRGB" /v InstallPath 2>/dev/null | awk -F'    ' '{print $NF}')
 
 TLD="org"
 WEBSITE="https://openrgb.org"
 NAMESPACE=$(uuidgen -n @url -N ${PRODUCTNAME} --sha1 | awk '{ print toupper($0) }')
-VENDOR="org.OpenRGB.Plugin.Effects"
-APPID="${VENDOR}.${PRODUCTNAME,,}"
+VENDOR_ID="${TLD}.${VENDOR}"
+APP_ID="${VENDOR_ID}.${PRODUCTNAME,,}"
 
 GITURL="https://gitlab.com/OpenRGBDevelopers/OpenRGBEffectsPlugin/-"
 GITPARAM="?inline=false"
@@ -28,20 +30,20 @@ fi
 
 #The Upgrade code has to be consistent to allow upgrades between channels
 #This value is roughly equivalent to "provides" in Linux packaging
-UPGRADECODE=$(uuidgen -n ${NAMESPACE} -N ${APPID} --sha1 | awk '{ print toupper($0) }')
+UPGRADECODE=$(uuidgen -n ${NAMESPACE} -N ${APP_ID} --sha1 | awk '{ print toupper($0) }')
 #The ProductID will be unique per channel
-PRODUCTID=$(uuidgen -n ${NAMESPACE} -N ${APPID}${CHANNEL} --sha1 | awk '{ print toupper($0) }')
+PRODUCTID=$(uuidgen -n ${NAMESPACE} -N ${APP_ID}${CHANNEL} --sha1 | awk '{ print toupper($0) }')
 PRODUCTCOMMENT="Open source RGB lighting control that doesn't depend on manufacturer software."
 
 
 #Print Metadata to the log
 echo -e "Icon URL:\t" $GITURL$ICONFILE
 echo -e "License URL:\t" $GITURL$LICENSEFILE
-echo -e "Product ID - UUID:\t" ${APPID}${CHANNEL} " - " $PRODUCTID
-echo -e "Upgrade Code - UUID:\t" ${APPID} " - " $UPGRADECODE
-echo -e "Product:\t" $PRODUCTNAME
-echo -e "Vendor:\t\t" $VENDOR
-echo -e "Version:\t" $VERSION
+echo -e "AppID - Channel:\t" ${APP_ID} " - " ${CHANNEL}
+echo -e "Upgrade UUID:\t" ${UPGRADECODE}
+echo -e "Product Name:\t" ${PRODUCTNAME}
+echo -e "Vendor - VendorID:\t\t" ${VENDOR} " - " ${VENDOR_ID}
+echo -e "Version:\t" ${VERSION}
 
 
 #Wix and / or Wine have issues with the mixed upper and lower case letters
@@ -93,7 +95,7 @@ XML_MAJOR_UPGRADE="\t<MajorUpgrade AllowDowngrades='yes' Schedule='afterInstallI
 XML_METADATA="$XML_PACKAGE $XML_MEDIA $XML_CONDITIONS $XML_ICON $XML_PROPERTY $XML_ACTIONS_EXECUTE $XML_WIX_UI"
 
 XML_ASSOCIATE_FILE="\t\t\t\t\t<ProgId Id='${SAVE_FILE}' Description='${PRODUCTNAME} Profile'>\n\t\t\t\t\t\t<Extension Id='${EXTENSION}' ContentType='application/${EXTENSION}'>\n\t\t\t\t\t\t<Verb Id='open' Command='Open' TargetFile='${EXE_ID}' Argument='-p \"%1\"' />\n\t\t\t\t\t\t</Extension>\n\t\t\t\t\t</ProgId>\n"
-XML_DIRECTORIES="\t<Directory Id='TARGETDIR' Name='SourceDir'>\n\t\t<Directory Id='ProgramFiles64Folder'>\n\t\t\t<Directory Id='INSTALLDIR' Name='${PRODUCTNAME}'>\n\t\t\t\t<Component Id='${PRODUCTNAME}Files' Guid='"$(uuidgen -t | awk '{ print toupper($0) }')"'>\n$FILES\n$XML_SHORTCUT\n$XML_ASSOCIATE_FILE\t\t\t\t</Component>\n$DIRECTORIES\t\t\t</Directory>\n\t\t</Directory>\n"
+XML_DIRECTORIES="\t<Directory Id='TARGETDIR' Name='SourceDir'>\n\t\t<Directory Id='INSTALLDIR' Name='${OPENRGB_PATH}\\plugins'>\n\t\t\t<Component Id='${PRODUCTNAME}Files' Guid='"$(uuidgen -t | awk '{ print toupper($0) }')"'>\n$FILES\n$XML_SHORTCUT\n$XML_ASSOCIATE_FILE\t\t\t\t</Component>\n$DIRECTORIES\t\t\t</Directory>\n\t\t</Directory>\n"
 
 XML_COMPONENTS="\t<Feature Id='Complete' Title='${PRODUCTNAME}' Description='Install all ${PRODUCTNAME} files.' Display='expand' Level='1' ConfigurableDirectory='INSTALLDIR'>\n\t\t<Feature Id='${PRODUCTNAME}Complete' Title='${PRODUCTNAME}' Description='The complete package.' Level='1' AllowAdvertise='no' InstallDefault='local'>\n\t\t\t<ComponentRef Id='${PRODUCTNAME}Files'/>\n$COMPONENTS\t\t\t<ComponentRef Id='ProgramMenuShortcut'/>\n\t\t</Feature>\n\t</Feature>\n"
 XML_DATA="$XML_DIRECTORIES $XML_COMPONENTS"
@@ -108,4 +110,4 @@ echo -e "\t...Done!\n\n"
 
 #Once the XML file manifest is created create the package
 candle -arch x64 ${PRODUCTNAME,,}.wxs
-light -sval -ext WixUIExtension ${PRODUCTNAME,,}.wixobj -out ${PRODUCTNAME}_Windows_64.msi
+light -sval -ext WixUIExtension ${PRODUCTNAME,,}.wixobj -out OpenRGB_Effects_Plugin_Windows_64.msi
