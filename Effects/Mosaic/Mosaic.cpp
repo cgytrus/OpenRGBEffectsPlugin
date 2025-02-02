@@ -1,5 +1,4 @@
 #include "Mosaic.h"
-#include "ColorUtils.h"
 
 REGISTER_EFFECT(Mosaic);
 
@@ -15,10 +14,8 @@ Mosaic::Mosaic(QWidget *parent) :
     EffectDetails.IsReversable = true;
     EffectDetails.MaxSpeed     = 200;
     EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
-    EffectDetails.MaxSlider2Val = 1000;
-    EffectDetails.MinSlider2Val = 10;
-    EffectDetails.Slider2Name   = "Rarity";
+    EffectDetails.HasCustomSettings = true;
+    EffectDetails.SupportsRandom = true;
 
     SetSpeed(10);
 }
@@ -75,7 +72,6 @@ void Mosaic::StepEffect(std::vector<ControllerZone*> controller_zones)
 
 void Mosaic::UpdateTiles(unsigned int controller_zone_idx)
 {
-    unsigned int rarity = Slider2Val;
 
     for(Tile& tile: tiles[controller_zone_idx])
     {
@@ -92,7 +88,7 @@ void Mosaic::UpdateTiles(unsigned int controller_zone_idx)
                 }
                 else
                 {
-                    rgb2hsv(UserColors[rand() % UserColors.size()], &tile.hsv);
+                    rgb2hsv(colors[rand() % colors.size()], &tile.hsv);
                 }
             }
         }
@@ -118,4 +114,36 @@ void Mosaic::ResetMosaic(std::vector<ControllerZone*> controller_zones)
 void Mosaic::OnControllerZonesListChanged(std::vector<ControllerZone*> controller_zones)
 {
     ResetMosaic(controller_zones);
+}
+
+void Mosaic::on_rarity_valueChanged(int value)
+{
+    rarity = value;
+}
+
+void Mosaic::on_colorsPicker_ColorsChanged()
+{
+    colors = ui->colorsPicker->Colors();
+}
+
+void Mosaic::LoadCustomSettings(json settings)
+{
+    if (settings.contains("colors"))
+    {
+        ui->colorsPicker->SetColors(settings["colors"]);
+    }
+
+    if (settings.contains("rarity"))
+    {
+        ui->rarity->setValue(settings["rarity"]);
+    }
+}
+
+json Mosaic::SaveCustomSettings()
+{
+    json settings;
+
+    settings["colors"]    = ui->colorsPicker->Colors();
+    settings["rarity"]    = rarity;
+    return settings;
 }

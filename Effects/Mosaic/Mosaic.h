@@ -30,15 +30,22 @@ public:
     static std::string const ClassName() {return "Mosaic";}
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;
+    void LoadCustomSettings(json) override;
+    json SaveCustomSettings() override;
 
+private slots:
+    void on_rarity_valueChanged(int);
+    void on_colorsPicker_ColorsChanged();
 private:
     Ui::Mosaic *ui;
 
     void ResetMosaic(std::vector<ControllerZone*>);
 
     void UpdateTiles(unsigned int);
+    std::vector<RGBColor> colors;
 
     std::vector<std::vector<Tile>> tiles;
+    int rarity = 10;
 };
 
 #endif // MOSAIC_H
