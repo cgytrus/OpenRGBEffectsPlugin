@@ -282,6 +282,7 @@ FORMS +=                                                                        
     EffectList.ui                                                                               \
     EffectSearch.ui                                                                             \
     EffectTabHeader.ui                                                                          \
+    Effects/Breathing/Breathing.ui \
     LivePreviewController.ui                                                                    \
     OpenRGBEffectPage.ui                                                                        \
     OpenRGBEffectTab.ui                                                                         \

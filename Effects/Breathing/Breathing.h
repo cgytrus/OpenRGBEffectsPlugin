@@ -4,23 +4,38 @@
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 #include "hsv.h"
+#include "ui_Breathing.h"
+#include <QWidget>
+
+namespace Ui {
+class Breathing;
+}
 
 class Breathing: public RGBEffect
 {
+    Q_OBJECT
+
 public:
-    Breathing();
-    ~Breathing(){}
+    explicit Breathing(QWidget *parent = nullptr);
+    ~Breathing() {};
 
     EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Breathing;});
 
     static std::string const ClassName() { return "Breathing"; }
 
     void StepEffect(std::vector<ControllerZone*>) override;
-    void SetUserColors(std::vector<RGBColor>) override;
+    void LoadCustomSettings(json) override;
+    json SaveCustomSettings() override;
+
+private slots:
+    void on_colorsPicker_ColorsChanged();
 
 private:
-    float Progress = 0;
+    Ui::Breathing *ui;
+    std::vector<RGBColor> colors;
+    float Progress = 3.14159; // This is to ensure that the colorPicker colors are used when calling StepEffect the first time
     hsv_t CurrentColor;
+    int colorLoopIndex = 0;
 };
 
 #endif // BREATHING_H
