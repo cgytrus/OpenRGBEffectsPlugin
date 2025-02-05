@@ -4,10 +4,6 @@
 <context>
     <name>Ambient</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43,10 +39,6 @@
 <context>
     <name>AudioParty</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Zones</source>
         <translation type="unfinished"></translation>
     </message>
@@ -66,10 +58,6 @@
 <context>
     <name>AudioSettings</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Equalizer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -87,7 +75,7 @@
     </message>
     <message>
         <source>Amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Амплитуда</translation>
     </message>
     <message>
         <source>Filter constant</source>
@@ -125,10 +113,6 @@
 <context>
     <name>AudioSine</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Repeat</source>
         <translation type="unfinished"></translation>
     </message>
@@ -142,7 +126,7 @@
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <source>Color mode</source>
@@ -168,10 +152,6 @@
 <context>
     <name>AudioStar</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -194,10 +174,6 @@
 </context>
 <context>
     <name>AudioSync</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Hue shift</source>
         <translation type="unfinished"></translation>
@@ -233,10 +209,6 @@
 </context>
 <context>
     <name>AudioVUMeter</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Hue offset</source>
         <translation type="unfinished"></translation>
@@ -304,20 +276,12 @@
 <context>
     <name>Bloom</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BouncingBallEffect</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Drop Height %</source>
         <translation type="unfinished"></translation>
@@ -332,7 +296,7 @@
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">По умолчанию</translation>
     </message>
     <message>
         <source>Horizontal Velocity</source>
@@ -352,25 +316,7 @@
     </message>
 </context>
 <context>
-    <name>Breathing</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>BreathingCircle</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Bubbles</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Speed</source>
         <translation type="unfinished"></translation>
@@ -399,27 +345,12 @@
 <context>
     <name>Clock</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Clock mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>ColorPicker</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>ColorWheelEffect</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Direction</source>
         <translation type="unfinished"></translation>
@@ -436,34 +367,19 @@
 <context>
     <name>ColorsPicker</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Colors count</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Comet</name>
-    <message>
-        <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CrossingBeams</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Vertical speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <source>Glow</source>
@@ -476,10 +392,6 @@
 </context>
 <context>
     <name>CustomBlink</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Clear list</source>
         <translation type="unfinished"></translation>
@@ -512,10 +424,6 @@
 <context>
     <name>CustomGradientWave</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
@@ -537,18 +445,7 @@
     </message>
 </context>
 <context>
-    <name>CustomMarquee</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DeviceList</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Toggle brightness sliders</source>
         <translation type="unfinished"></translation>
@@ -564,10 +461,6 @@
 </context>
 <context>
     <name>DeviceListItem</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
@@ -593,50 +486,34 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>DoubleRotatingRainbow</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Частота</translation>
     </message>
 </context>
 <context>
     <name>EffectList</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Start/Stop all effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить/остановить все эффекты</translation>
     </message>
     <message>
         <source>Effects...</source>
-        <translation type="unfinished"></translation>
+        <translation>Эффекты...</translation>
     </message>
 </context>
 <context>
     <name>EffectSearch</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No results match</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не найдено</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Поиск</translation>
     </message>
 </context>
 <context>
     <name>EffectTabHeader</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>-</source>
         <translation type="unfinished"></translation>
@@ -647,29 +524,18 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Rename effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Переименовать эффект</translation>
     </message>
     <message>
         <source>Remove effect</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Fill</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить эффект</translation>
     </message>
 </context>
 <context>
     <name>FractalMotion</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>Freq m10</source>
@@ -685,7 +551,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Амплитуда</translation>
     </message>
     <message>
         <source>Freq m5</source>
@@ -693,7 +559,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Фоновый цвет:</translation>
     </message>
     <message>
         <source>Freq m6</source>
@@ -705,7 +571,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота</translation>
     </message>
     <message>
         <source>Freq m3</source>
@@ -713,7 +579,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <source>Freq m7</source>
@@ -738,10 +604,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>GLSLCodeEditor</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Style</source>
         <translation type="unfinished"></translation>
@@ -774,10 +636,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>GifPlayer</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Choose GIF file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -792,10 +650,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>GlobalSettings</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Device settings:</source>
         <translation type="unfinished"></translation>
@@ -872,10 +726,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Hypnotoad</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Spacing</source>
         <translation type="unfinished"></translation>
     </message>
@@ -909,7 +759,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -957,10 +807,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Layers</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Tab 1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -972,20 +818,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Lightning</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LivePreviewController</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Reverse</source>
         <translation type="unfinished"></translation>
@@ -1008,18 +846,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>Marquee</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Mask</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>X axis</source>
         <translation type="unfinished"></translation>
@@ -1044,10 +871,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Mosaic</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Rarity</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1055,34 +878,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>MotionPoint</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>MotionPoints</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>MovingPanes</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Фоновый цвет:</translation>
     </message>
 </context>
 <context>
     <name>NewShaderPassTabHeader</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>+</source>
         <translation type="unfinished"></translation>
@@ -1091,16 +892,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>NoiseMap</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Preset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Частота</translation>
     </message>
     <message>
         <source>Octaves</source>
@@ -1120,7 +917,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">По умолчанию</translation>
     </message>
     <message>
         <source>Lacunarity</source>
@@ -1128,7 +925,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Амплитуда</translation>
     </message>
     <message>
         <source>Mode</source>
@@ -1137,10 +934,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>OpenRGBEffectPage</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Preview</source>
         <translation type="unfinished"></translation>
@@ -1207,18 +1000,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>OpenRGBEffectTab</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>PluginInfo</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Download lastest build</source>
         <translation type="unfinished"></translation>
@@ -1279,10 +1061,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>RadialRainbow</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>X position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1298,56 +1076,23 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Rain</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Drop Size</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>RandomMarquee</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>RandomSpin</name>
-    <message>
-        <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>RotatingBeam</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>RotatingRainbow</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
 </context>
 <context>
     <name>SaveProfilePopup</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Save effects state</source>
         <translation type="unfinished"></translation>
@@ -1376,20 +1121,13 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Enter a profile name:</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>Sequence</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
+        <source>Save profile</source>
+        <translation>Сохранить профиль</translation>
     </message>
 </context>
 <context>
     <name>ShaderFileTabHeader</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>X</source>
         <translation type="unfinished"></translation>
@@ -1397,10 +1135,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>ShaderPassEditor</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>The audio data will be automatically passed to this shader. Make sure to enabled &quot;Use audio&quot; in the effect page.</source>
         <translation type="unfinished"></translation>
@@ -1420,10 +1154,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>Shaders</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Save shader as...</source>
         <translation type="unfinished"></translation>
@@ -1468,10 +1198,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>SmoothBlink</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Rendering</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1501,33 +1227,18 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">По умолчанию</translation>
     </message>
 </context>
 <context>
     <name>SpectrumCycling</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>Spiral</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Stack</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Matrix zone direction</source>
         <translation type="unfinished"></translation>
@@ -1535,10 +1246,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>Sunrise</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Motion</source>
         <translation type="unfinished"></translation>
@@ -1565,18 +1272,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>Swap</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>SwirlCircles</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Radius</source>
         <translation type="unfinished"></translation>
@@ -1584,10 +1280,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>SwirlCirclesAudio</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Audio settings</source>
         <translation type="unfinished"></translation>
@@ -1625,18 +1317,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>ZigZag</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>ZoneListItem</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>

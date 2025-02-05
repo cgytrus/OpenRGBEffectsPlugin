@@ -4,10 +4,6 @@
 <context>
     <name>Ambient</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Mode</source>
         <translation>模式</translation>
     </message>
@@ -43,10 +39,6 @@
 <context>
     <name>AudioParty</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Zones</source>
         <translation>区</translation>
     </message>
@@ -65,10 +57,6 @@
 </context>
 <context>
     <name>AudioSettings</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished">表格</translation>
-    </message>
     <message>
         <source>Equalizer</source>
         <translation type="unfinished">均衡器</translation>
@@ -125,10 +113,6 @@
 <context>
     <name>AudioSine</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Repeat</source>
         <translation>重复</translation>
     </message>
@@ -168,10 +152,6 @@
 <context>
     <name>AudioStar</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Saturation</source>
         <translation>饱和</translation>
     </message>
@@ -194,10 +174,6 @@
 </context>
 <context>
     <name>AudioSync</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Hue shift</source>
         <translation>色调偏移</translation>
@@ -233,10 +209,6 @@
 </context>
 <context>
     <name>AudioVUMeter</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Hue offset</source>
         <translation>色调偏移量</translation>
@@ -304,20 +276,12 @@
 <context>
     <name>Bloom</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Saturation</source>
         <translation type="unfinished">饱和</translation>
     </message>
 </context>
 <context>
     <name>BouncingBallEffect</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Drop Height %</source>
         <translation>落差%</translation>
@@ -352,25 +316,7 @@
     </message>
 </context>
 <context>
-    <name>Breathing</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished">表格</translation>
-    </message>
-</context>
-<context>
-    <name>BreathingCircle</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>Bubbles</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Speed</source>
         <translation>速度</translation>
@@ -399,27 +345,12 @@
 <context>
     <name>Clock</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Clock mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>ColorPicker</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>ColorWheelEffect</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Direction</source>
         <translation>方向</translation>
@@ -436,27 +367,12 @@
 <context>
     <name>ColorsPicker</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Colors count</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>Comet</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>CrossingBeams</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Vertical speed</source>
         <translation>垂直速度</translation>
@@ -476,10 +392,6 @@
 </context>
 <context>
     <name>CustomBlink</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Clear list</source>
         <translation>清除列表</translation>
@@ -512,10 +424,6 @@
 <context>
     <name>CustomGradientWave</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Height</source>
         <translation>高度</translation>
     </message>
@@ -537,18 +445,7 @@
     </message>
 </context>
 <context>
-    <name>CustomMarquee</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>DeviceList</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Toggle brightness sliders</source>
         <translation>切换亮度滑块</translation>
@@ -564,10 +461,6 @@
 </context>
 <context>
     <name>DeviceListItem</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>TextLabel</source>
         <translation>文本标签</translation>
@@ -593,20 +486,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>DoubleRotatingRainbow</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Frequency</source>
         <translation>频率</translation>
     </message>
 </context>
 <context>
     <name>EffectList</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Start/Stop all effects</source>
         <translation>启动/停止所有效果</translation>
@@ -619,10 +504,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>EffectSearch</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>No results match</source>
         <translation>结果不匹配</translation>
     </message>
@@ -633,10 +514,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>EffectTabHeader</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>-</source>
         <translation>-</translation>
@@ -655,18 +532,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>Fill</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>FractalMotion</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Thickness</source>
         <translation>厚度</translation>
@@ -739,10 +605,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>GLSLCodeEditor</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Style</source>
         <translation>风格</translation>
     </message>
@@ -774,10 +636,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>GifPlayer</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Choose GIF file</source>
         <translation>选择GIF文件</translation>
     </message>
@@ -792,10 +650,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>GlobalSettings</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished">表格</translation>
-    </message>
     <message>
         <source>Device settings:</source>
         <translation type="unfinished"></translation>
@@ -871,10 +725,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>Hypnotoad</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Spacing</source>
         <translation>间距</translation>
@@ -957,10 +807,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Layers</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Tab 1</source>
         <translation>选项卡 1</translation>
     </message>
@@ -972,20 +818,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Lightning</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Mode</source>
         <translation>模式</translation>
     </message>
 </context>
 <context>
     <name>LivePreviewController</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Reverse</source>
         <translation>反向</translation>
@@ -1008,18 +846,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>Marquee</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>Mask</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>X axis</source>
         <translation>X轴</translation>
@@ -1044,10 +871,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Mosaic</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Rarity</source>
         <translation type="unfinished">稀薄</translation>
     </message>
@@ -1055,34 +878,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>MotionPoint</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Background color:</source>
         <translation>背景颜色:</translation>
     </message>
 </context>
 <context>
-    <name>MotionPoints</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
-    <name>MovingPanes</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>NewShaderPassTabHeader</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>+</source>
         <translation>+</translation>
@@ -1090,10 +891,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>NoiseMap</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Preset</source>
         <translation type="unfinished">预设</translation>
@@ -1137,10 +934,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>OpenRGBEffectPage</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Preview</source>
         <translation>预览</translation>
@@ -1207,18 +1000,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>OpenRGBEffectTab</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>PluginInfo</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Download lastest build</source>
         <translation>下载最新版本</translation>
@@ -1279,10 +1061,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>RadialRainbow</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>X position</source>
         <translation>x 位置</translation>
     </message>
@@ -1298,34 +1076,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>Rain</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Drop Size</source>
         <translation>减少尺寸</translation>
     </message>
 </context>
 <context>
-    <name>RandomMarquee</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished">表格</translation>
-    </message>
-</context>
-<context>
-    <name>RandomSpin</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished">表格</translation>
-    </message>
-</context>
-<context>
     <name>RotatingBeam</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Mode</source>
         <translation>模式</translation>
@@ -1336,18 +1092,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>RotatingRainbow</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>SaveProfilePopup</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Save effects state</source>
         <translation>Ave效应状态</translation>
@@ -1376,20 +1121,13 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Enter a profile name:</source>
         <translation>输入配置文件名称:</translation>
     </message>
-</context>
-<context>
-    <name>Sequence</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
+        <source>Save profile</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShaderFileTabHeader</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>X</source>
         <translation>X</translation>
@@ -1397,10 +1135,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>ShaderPassEditor</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>The audio data will be automatically passed to this shader. Make sure to enabled &quot;Use audio&quot; in the effect page.</source>
         <translation>音频数据将自动传递到这个着色器。确保启用了“使用音频”;在效果页面。</translation>
@@ -1420,10 +1154,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>Shaders</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Save shader as...</source>
         <translation type="unfinished"></translation>
@@ -1468,10 +1198,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>SmoothBlink</name>
     <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-    <message>
         <source>Rendering</source>
         <translation>渲染</translation>
     </message>
@@ -1507,27 +1233,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>SpectrumCycling</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished">表格</translation>
-    </message>
-    <message>
         <source>Saturation</source>
         <translation type="unfinished">饱和</translation>
     </message>
 </context>
 <context>
-    <name>Spiral</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>Stack</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Matrix zone direction</source>
         <translation>矩阵区方向</translation>
@@ -1535,10 +1246,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>Sunrise</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Motion</source>
         <translation>运动</translation>
@@ -1565,18 +1272,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>Swap</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>SwirlCircles</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Radius</source>
         <translation>半径</translation>
@@ -1584,10 +1280,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>SwirlCirclesAudio</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>Audio settings</source>
         <translation type="unfinished">音频设置</translation>
@@ -1625,18 +1317,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
-    <name>ZigZag</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
-</context>
-<context>
     <name>ZoneListItem</name>
-    <message>
-        <source>Form</source>
-        <translation>表格</translation>
-    </message>
     <message>
         <source>TextLabel</source>
         <translation>文本标签</translation>
