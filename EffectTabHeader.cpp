@@ -5,7 +5,8 @@
 
 EffectTabHeader::EffectTabHeader(QWidget *parent,  RGBEffect* effect) :
     QWidget(parent),
-    ui(new Ui::EffectTabHeader)
+    ui(new Ui::EffectTabHeader),
+    effect(effect)
 {
     ui->setupUi(this);
 
@@ -47,6 +48,10 @@ void EffectTabHeader::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        if(effect->EffectDetails.CustomName.empty())
+        {
+            ui->effect_name->setText(QString::fromStdString(effect->EffectDetails.EffectName));
+        }
     }
 }
 
@@ -64,7 +69,11 @@ void EffectTabHeader::on_rename_clicked()
 {
     bool ok;
 
-    QString text = QInputDialog::getMultiLineText(this, "Rename effect", "New name:", ui->effect_name->text(), &ok);
+    QString text = QInputDialog::getMultiLineText(this,
+                                                  tr("Rename effect"),
+                                                  tr("New name:"),
+                                                  ui->effect_name->text(),
+                                                  &ok);
 
     if (ok && !text.isEmpty())
     {

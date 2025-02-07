@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>289</width>
-    <height>180</height>
+    <height>208</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -169,7 +169,7 @@
       <item row="4" column="1">
        <widget class="QLabel" name="git_branch">
         <property name="text">
-         <string>GIT_BRANCH</string>
+         <string notr="true">GIT_BRANCH</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -179,7 +179,7 @@
       <item row="3" column="1">
        <widget class="QLabel" name="git_commit_date">
         <property name="text">
-         <string>GIT_COMMIT_DATE</string>
+         <string notr="true">GIT_COMMIT_DATE</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -189,7 +189,7 @@
       <item row="2" column="1">
        <widget class="QLabel" name="git_commit_id">
         <property name="text">
-         <string>GIT_COMMIT_ID</string>
+         <string notr="true">GIT_COMMIT_ID</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -199,7 +199,7 @@
       <item row="1" column="1">
        <widget class="QLabel" name="builddate_string">
         <property name="text">
-         <string>BUILDDATE_STRING</string>
+         <string notr="true">BUILDDATE_STRING</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -209,7 +209,7 @@
       <item row="0" column="1">
        <widget class="QLabel" name="version_string">
         <property name="text">
-         <string>VERSION_STRING</string>
+         <string notr="true">VERSION_STRING</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>

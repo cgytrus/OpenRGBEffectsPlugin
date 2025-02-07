@@ -89,6 +89,8 @@ void OpenRGBEffectPage::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        ui->EffectName->setText(QString().fromStdString(effect->EffectDetails.EffectName));
+        ui->EffectDesciption->setText(QString().fromStdString(effect->EffectDetails.EffectDescription));
     }
 }
 

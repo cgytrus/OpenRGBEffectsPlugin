@@ -59,6 +59,7 @@ private:
     void InitDeviceList();
     void LoadEffect(json);
     void ClearAll();
+    void SetLanguage();
 };
 
 #endif // OPENRGBEFFECTTAB_H

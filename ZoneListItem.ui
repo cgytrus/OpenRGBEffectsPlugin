@@ -50,7 +50,7 @@
       <string>Add to current effect</string>
      </property>
      <property name="text">
-      <string>✔</string>
+      <string notr="true">✔</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -75,7 +75,7 @@
       <string>Change direction</string>
      </property>
      <property name="text">
-      <string>⇔</string>
+      <string notr="true">⇔</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -94,7 +94,7 @@
       </sizepolicy>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string notr="true"/>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

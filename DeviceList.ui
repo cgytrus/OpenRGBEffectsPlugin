@@ -59,7 +59,7 @@
       <string>Toggle brightness sliders</string>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -106,7 +106,7 @@
         <x>0</x>
         <y>0</y>
         <width>245</width>
-        <height>142</height>
+        <height>139</height>
        </rect>
       </property>
       <property name="sizePolicy">

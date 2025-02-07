@@ -63,6 +63,9 @@ OpenRGBEffectTab::OpenRGBEffectTab(QWidget *parent):
             LoadProfile(QString::fromStdString(startup_profile));
         }
     });
+
+    // Switch language on launch
+    SetLanguage();
 }
 
 OpenRGBEffectTab::~OpenRGBEffectTab()
@@ -74,43 +77,48 @@ void OpenRGBEffectTab::changeEvent(QEvent *event)
 {
     if(event->type() == QEvent::LanguageChange)
     {
-        QString new_file;
-        bool loaded             = false;
-        QApplication* app       = static_cast<QApplication *>(QApplication::instance());
+        SetLanguage();
+    }
+}
 
-        for(QWidget *w : app->topLevelWidgets())
+void OpenRGBEffectTab::SetLanguage()
+{
+    QString new_file;
+    bool loaded             = false;
+    QApplication* app       = static_cast<QApplication *>(QApplication::instance());
+
+    for(QWidget *w : app->topLevelWidgets())
+    {
+        if (QMainWindow* mainWin = qobject_cast<QMainWindow*>(w))
         {
-            if (QMainWindow* mainWin = qobject_cast<QMainWindow*>(w))
-            {
-                QComboBox* language     = mainWin->findChild<QComboBox *>("ComboBoxLanguage");
-                new_file                = language->currentData().toString();
-                new_file                = new_file.replace("OpenRGB","OpenRGB_EffectsEngine");
-                break;
-            }
+            QComboBox* language     = mainWin->findChild<QComboBox *>("ComboBoxLanguage");
+            new_file                = language->currentData().toString();
+            new_file                = new_file.replace("OpenRGB","OpenRGB_EffectsEngine");
+            break;
+        }
+    }
+
+    if(new_file.toStdString() != current_i18n_file)
+    {
+        app->removeTranslator(&translator);
+
+        if(new_file == "default")
+        {
+            QLocale locale = QLocale(QLocale::system());
+            QLocale::setDefault(locale);
+
+            loaded = translator.load(":/i18n/" + QString("OpenRGB_EffectsEngine_%1.qm").arg(locale.name()));
+        }
+        else
+        {
+            loaded = translator.load(new_file);
         }
 
-        if(new_file.toStdString() != current_i18n_file)
+        if(loaded)
         {
-            app->removeTranslator(&translator);
-
-            if(new_file == "default")
-            {
-                QLocale locale = QLocale(QLocale::system());
-                QLocale::setDefault(locale);
-
-                loaded = translator.load(":/i18n/" + QString("OpenRGB_EffectsEngine_%1.qm").arg(locale.name()));
-            }
-            else
-            {
-                loaded = translator.load(new_file);
-            }
-
-            if(loaded)
-            {
-                app->installTranslator(&translator);
-                current_i18n_file = new_file.toStdString();
-                ui->retranslateUi(this);
-            }
+            app->installTranslator(&translator);
+            current_i18n_file = new_file.toStdString();
+            ui->retranslateUi(this);
         }
     }
 }

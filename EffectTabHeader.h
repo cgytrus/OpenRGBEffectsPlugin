@@ -31,6 +31,7 @@ private slots:
 
 private:
     Ui::EffectTabHeader *ui;
+    RGBEffect           *effect;
 };
 
 #endif // EFFECTTABHEADER_H

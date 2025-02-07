@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>220</width>
-    <height>23</height>
+    <height>25</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -62,7 +62,7 @@
       </size>
      </property>
      <property name="text">
-      <string>-</string>
+      <string notr="true">-</string>
      </property>
     </widget>
    </item>
@@ -90,7 +90,7 @@
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>EffectName</string>
+      <string notr="true"/>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -115,7 +115,7 @@
       <string>Rename effect</string>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
     </widget>
    </item>
@@ -137,7 +137,7 @@
       <string>Remove effect</string>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
     </widget>
    </item>

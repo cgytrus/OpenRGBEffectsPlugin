@@ -36,6 +36,14 @@ GlobalSettings::~GlobalSettings()
     OpenRGBEffectSettings::WriteGlobalSettings();
 }
 
+void GlobalSettings::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
 void GlobalSettings::on_fpscaptureSlider_valueChanged(int value)
 {
     OpenRGBEffectSettings::globalSettings.fpscapture = value;

@@ -462,18 +462,10 @@
 <context>
     <name>DeviceListItem</name>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>This device doesn&apos;t have direct mode
 Using an effect on a device WILL damage the flash or controller</source>
         <translation>Peranti ini tiada mod direct
 Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <translation>-</translation>
     </message>
     <message>
         <source>Add to current effect</source>
@@ -516,20 +508,16 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 <context>
     <name>EffectTabHeader</name>
     <message>
-        <source>-</source>
-        <translation>-</translation>
-    </message>
-    <message>
-        <source>EffectName</source>
-        <translation>Nama Kesan</translation>
-    </message>
-    <message>
         <source>Rename effect</source>
         <translation>Namakan semula kesan</translation>
     </message>
     <message>
         <source>Remove effect</source>
         <translation>Padam kesan</translation>
+    </message>
+    <message>
+        <source>New name:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1035,26 +1023,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>&lt;a href=&quot;https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/Plugins/Effects/Effects.md&quot;&gt;help&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>GIT_BRANCH</source>
-        <translation>GIT_BRANCH</translation>
-    </message>
-    <message>
-        <source>GIT_COMMIT_DATE</source>
-        <translation>GIT_COMMIT_DATE</translation>
-    </message>
-    <message>
-        <source>GIT_COMMIT_ID</source>
-        <translation>GIT_COMMIT_ID</translation>
-    </message>
-    <message>
-        <source>BUILDDATE_STRING</source>
-        <translation>BUILDDATE_STRING</translation>
-    </message>
-    <message>
-        <source>VERSION_STRING</source>
-        <translation>VERSION_STRING</translation>
-    </message>
-    <message>
         <source>Open plugin folder</source>
         <translation>Buka folder plugin</translation>
     </message>
@@ -1320,24 +1288,12 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 <context>
     <name>ZoneListItem</name>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Add to current effect</source>
         <translation>Tambahkan pada kesan semasa</translation>
     </message>
     <message>
-        <source>✔</source>
-        <translation>✔</translation>
-    </message>
-    <message>
         <source>Change direction</source>
         <translation>Tukar arah</translation>
-    </message>
-    <message>
-        <source>⇔</source>
-        <translation>⇔</translation>
     </message>
 </context>
 </TS>

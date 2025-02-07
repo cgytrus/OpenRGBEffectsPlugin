@@ -462,16 +462,8 @@
 <context>
     <name>DeviceListItem</name>
     <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>This device doesn&apos;t have direct mode
 Using an effect on a device WILL damage the flash or controller</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -515,19 +507,15 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>EffectTabHeader</name>
     <message>
-        <source>-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EffectName</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Rename effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Remove effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New name:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1034,26 +1022,6 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GIT_BRANCH</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GIT_COMMIT_DATE</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GIT_COMMIT_ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>BUILDDATE_STRING</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>VERSION_STRING</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Open plugin folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1323,19 +1291,7 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>✔</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Change direction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>⇔</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

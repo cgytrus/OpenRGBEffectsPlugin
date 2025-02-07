@@ -462,17 +462,9 @@
 <context>
     <name>DeviceListItem</name>
     <message>
-        <source>TextLabel</source>
-        <translation>文本標籤</translation>
-    </message>
-    <message>
         <source>This device doesn&apos;t have direct mode
 Using an effect on a device WILL damage the flash or controller</source>
         <translation>這個設備沒有直接模式在設備上使用特效會損壞閃存或控製器</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <translation type="unfinished">-</translation>
     </message>
     <message>
         <source>Add to current effect</source>
@@ -515,19 +507,15 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>EffectTabHeader</name>
     <message>
-        <source>-</source>
-        <translation>-</translation>
-    </message>
-    <message>
-        <source>EffectName</source>
-        <translation>效果的名字</translation>
-    </message>
-    <message>
         <source>Rename effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Remove effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New name:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1034,26 +1022,6 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation>&lt;a href=&quot;https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/Plugins/Effects/Effects.md&quot;&gt;help&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>GIT_BRANCH</source>
-        <translation>Git 分支</translation>
-    </message>
-    <message>
-        <source>GIT_COMMIT_DATE</source>
-        <translation>Git提交日期</translation>
-    </message>
-    <message>
-        <source>GIT_COMMIT_ID</source>
-        <translation>Git提交ID</translation>
-    </message>
-    <message>
-        <source>BUILDDATE_STRING</source>
-        <translation>BUILDDATE_STRING</translation>
-    </message>
-    <message>
-        <source>VERSION_STRING</source>
-        <translation>VERSION_STRING</translation>
-    </message>
-    <message>
         <source>Open plugin folder</source>
         <translation>打開插件文件夾</translation>
     </message>
@@ -1319,24 +1287,12 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>ZoneListItem</name>
     <message>
-        <source>TextLabel</source>
-        <translation>文本標籤</translation>
-    </message>
-    <message>
         <source>Add to current effect</source>
         <translation>添加到當前效果</translation>
     </message>
     <message>
-        <source>✔</source>
-        <translation>✔</translation>
-    </message>
-    <message>
         <source>Change direction</source>
         <translation>改變方向</translation>
-    </message>
-    <message>
-        <source>⇔</source>
-        <translation>⇔</translation>
     </message>
 </context>
 </TS>
