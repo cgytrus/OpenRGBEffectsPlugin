@@ -6,7 +6,7 @@
 
 #include "OpenRGBPluginInterface.h"
 #include "OpenRGBEffectTab.h"
-#include "ResourceManager.h"
+#include "ResourceManagerInterface.h"
 
 enum {
     NET_PACKET_ID_REQUEST_EFFECT_LIST   = 0,
@@ -34,7 +34,7 @@ public:
     /*-------------------------------------------------------------------------------------------------*\
     | Plugin Functionality                                                                              |
     \*-------------------------------------------------------------------------------------------------*/
-    virtual void                Load(bool dark_theme, ResourceManager* resource_manager_ptr)                    override;
+    virtual void                Load(ResourceManagerInterface* resource_manager_ptr)                            override;
     virtual QWidget*            GetWidget()                                                                     override;
     virtual QMenu*              GetTrayMenu()                                                                   override;
     virtual void                Unload()                                                                        override;
@@ -43,8 +43,7 @@ public:
     /*-------------------------------------------------------------------------------------------------*\
     | Plugin Variables                                                                                  |
     \*-------------------------------------------------------------------------------------------------*/
-    static bool                 DarkTheme;
-    static ResourceManager*     RMPointer;
+    static ResourceManagerInterface*     RMPointer;
 
 private:
     static void                 DeviceListChangedCallback(void* ptr);

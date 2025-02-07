@@ -7,8 +7,7 @@
 #include <QSystemTrayIcon>
 #include <QMenu>
 
-bool OpenRGBEffectsPlugin::DarkTheme = false;
-ResourceManager* OpenRGBEffectsPlugin::RMPointer = nullptr;
+ResourceManagerInterface* OpenRGBEffectsPlugin::RMPointer = nullptr;
 
 OpenRGBPluginInfo OpenRGBEffectsPlugin::GetPluginInfo()
 {
@@ -33,9 +32,8 @@ unsigned int OpenRGBEffectsPlugin::GetPluginAPIVersion()
     return(OPENRGB_PLUGIN_API_VERSION);
 }
 
-void OpenRGBEffectsPlugin::Load(bool Dt, ResourceManager *RM)
+void OpenRGBEffectsPlugin::Load(ResourceManagerInterface *RM)
 {
-    DarkTheme = Dt;
     RMPointer = RM;
     OpenRGBPluginInfo info = OpenRGBEffectsPlugin::GetPluginInfo();
     NetworkPlugin net_plugin;

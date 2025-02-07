@@ -93,35 +93,25 @@ DEFINES +=                                                                      
 #-----------------------------------------------------------------------------------------------#
 INCLUDEPATH +=                                                                                  \
     OpenRGB                                                                                     \
-    OpenRGB/i2c_smbus                                                                           \
-    OpenRGB/net_port                                                                            \
     OpenRGB/RGBController                                                                       \
     OpenRGB/dependencies/json                                                                   \
-    OpenRGB/dependencies/hidapi                                                                 \
     OpenRGB/qt                                                                                  \
-    OpenRGB/hidapi_wrapper                                                                      \
+    OpenRGB/i2c_smbus                                                                           \
+    OpenRGB/net_port                                                                            \
 
 HEADERS +=                                                                                      \
     OpenRGB/Colors.h                                                                            \
-    OpenRGB/NetworkClient.h                                                                     \
-    OpenRGB/NetworkProtocol.h                                                                   \
-    OpenRGB/NetworkServer.h                                                                     \
     OpenRGB/OpenRGBPluginInterface.h                                                            \
-    OpenRGB/LogManager.h                                                                        \
-    OpenRGB/ProfileManager.h                                                                    \
-    OpenRGB/ResourceManager.h                                                                   \
-    OpenRGB/SettingsManager.h                                                                   \
-    OpenRGB/dependencies/json/json.hpp                                                          \
-    OpenRGB/i2c_smbus/i2c_smbus.h                                                               \
-    OpenRGB/net_port/net_port.h                                                                 \
-    OpenRGB/RGBController/RGBController.h                                                       \
-    OpenRGB/qt/hsv.h                                                                            \
-    OpenRGB/hidapi_wrapper/hidapi_wrapper.h                                                     \
+    OpenRGB/ResourceManagerInterface.h                                                          \
 
 SOURCES +=                                                                                      \
     OpenRGB/RGBController/RGBController.cpp                                                     \
-    OpenRGB/LogManager.cpp                                                                      \
+    OpenRGB/RGBController/RGBController_Network.cpp                                             \
     OpenRGB/NetworkServer.cpp                                                                   \
+    OpenRGB/NetworkClient.cpp                                                                   \
+    OpenRGB/NetworkProtocol.cpp                                                                 \
+    OpenRGB/LogManager.cpp                                                                      \
+    OpenRGB/net_port/net_port.cpp                                                               \
     OpenRGB/qt/hsv.cpp                                                                          \
 
 
@@ -542,7 +532,7 @@ win32:DEFINES +=                                                                
 # Linux-specific Configuration                                                                  #
 #-----------------------------------------------------------------------------------------------#
 unix:!macx {
-    LIBS += -lopenal
+    LIBS += -lopenal -lGL
     QMAKE_CXXFLAGS += -std=c++17 -Wno-psabi
     target.path=$$PREFIX/lib/openrgb/plugins/
     INSTALLS += target
