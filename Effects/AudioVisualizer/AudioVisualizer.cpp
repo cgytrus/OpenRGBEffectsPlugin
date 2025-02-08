@@ -18,9 +18,8 @@ AudioVisualizer::AudioVisualizer(QWidget* parent):
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Audio Visualizer";
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Display audio equalizer on your devices. A ported version of <a href=\"https://gitlab.com/CalcProgrammer1/KeyboardVisualizer\">KeyboardVisualizer</a>";
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = false;
 
@@ -82,6 +81,23 @@ AudioVisualizer::~AudioVisualizer()
     delete ui;
 }
 
+void AudioVisualizer::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void AudioVisualizer::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Audio Visualizer").toStdString();
+    EffectDetails.EffectDescription = tr(
+        "Display audio equalizer on your devices. A ported version of "
+        "<a href=\"https://gitlab.com/CalcProgrammer1/KeyboardVisualizer\">KeyboardVisualizer</a>").toStdString();
+}
+
 void AudioVisualizer::EffectState(const bool state)
 {
     ZoneMaps.clear();
@@ -119,14 +135,6 @@ void AudioVisualizer::OnAudioDeviceChanged(int value)
     if(was_running)
     {
         Start();
-    }
-}
-
-void AudioVisualizer::changeEvent(QEvent *event)
-{
-    if(event->type() == QEvent::LanguageChange)
-    {
-        ui->retranslateUi(this);
     }
 }
 

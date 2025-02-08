@@ -12,13 +12,12 @@ AudioVUMeter::AudioVUMeter(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "AudioVUMeter";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Fill your led strip based on audio load";
-    EffectDetails.MaxSpeed     = 20;
-    EffectDetails.MinSpeed     = 1;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.MaxSpeed          = 20;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     SetSpeed(10);
 
@@ -48,7 +47,14 @@ void AudioVUMeter::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void AudioVUMeter::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("AudioVUMeter").toStdString();
+    EffectDetails.EffectDescription = tr("Fill your led strip based on audio load").toStdString();
 }
 
 void AudioVUMeter::EffectState(const bool state)

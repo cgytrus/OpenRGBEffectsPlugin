@@ -57,6 +57,7 @@ private:
     AmbientMode mode = SCALED_AVERAGE;
 
     void UpdateSelection();
+    void SetDynamicStrings();
     RGBColor Smooth(const RGBColor& previous_color, RGBColor color);
 
     unsigned int left = 0;

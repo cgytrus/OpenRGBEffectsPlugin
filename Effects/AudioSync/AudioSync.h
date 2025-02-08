@@ -58,6 +58,7 @@ public:
     void EffectState(bool)                                      override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void OnAudioDeviceChanged(int);
     void UpdateGraph(QPixmap);
 
@@ -75,6 +76,8 @@ signals:
 
 private:    
     Ui::AudioSync *ui;
+
+    void SetDynamicStrings();
 
     /*-----*\
     | Ui    |

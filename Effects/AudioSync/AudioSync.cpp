@@ -13,27 +13,10 @@ AudioSync::AudioSync(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Audio Sync";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Display frequency based colors with different modes";
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
-
-    /*------------------------------------*\
-    | Populate saturation mode list        |
-    \*------------------------------------*/
-    ui->saturation->addItem("No saturation");
-    ui->saturation->addItem("Saturate high amplitudes");
-    ui->saturation->addItem("Black and white mode");
-
-    /*------------------------------------*\
-    | Populate roll mode list              |
-    \*------------------------------------*/
-    ui->roll_mode->addItem("Linear horizontal");
-    ui->roll_mode->addItem("No roll");
-    ui->roll_mode->addItem("Radial");
-    ui->roll_mode->addItem("Wave");
-    ui->roll_mode->addItem("Linear vertical");
+    EffectDetails.SupportsRandom    = false;
 
     /*------------------------------------*\
     | Load defaults                        |
@@ -101,6 +84,39 @@ AudioSync::~AudioSync()
 {
     Stop();
     delete ui;
+}
+
+void AudioSync::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void AudioSync::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Audio Sync").toStdString();
+    EffectDetails.EffectDescription = tr("Display frequency based colors with different modes").toStdString();
+
+    /*------------------------------------*\
+    | Populate saturation mode list        |
+    \*------------------------------------*/
+    ui->saturation->clear();
+    ui->saturation->addItems({tr("No saturation"),
+                              tr("Saturate high amplitudes"),
+                              tr("Black and white mode")});
+
+    /*------------------------------------*\
+    | Populate roll mode list              |
+    \*------------------------------------*/
+    ui->roll_mode->clear();
+    ui->roll_mode->addItems({tr("Linear horizontal"),
+                             tr("No roll"),
+                             tr("Radial"),
+                             tr("Wave"),
+                             tr("Linear vertical")});
 }
 
 void AudioSync::EffectState(const bool state)

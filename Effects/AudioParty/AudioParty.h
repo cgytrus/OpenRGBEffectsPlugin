@@ -27,6 +27,7 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioParty;});
 
     static std::string const ClassName() {return "AudioParty";}
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void EffectState(bool) override;
     void LoadCustomSettings(json) override;
@@ -48,6 +49,7 @@ signals:
 private:
     Ui::AudioParty *ui;
 
+    void SetDynamicStrings();
     void Start();
     void Stop();
 

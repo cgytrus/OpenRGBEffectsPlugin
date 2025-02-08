@@ -17,16 +17,10 @@ Ambient::Ambient(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Ambient";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Takes a portion of the screen and reflect it to your devices";
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = false;
-
-    ui->mode->addItems({
-        "Scaled average",
-        "Screen copy"
-    });
 
     ui->select_screen->hide();
 
@@ -95,7 +89,19 @@ void Ambient::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Ambient::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Ambient").toStdString();
+    EffectDetails.EffectDescription = tr("Takes a portion of the screen and reflect it to your devices").toStdString();
+    ui->mode->clear();
+    ui->mode->addItems({
+                           tr("Scaled average"),
+                           tr("Screen copy"),
+                       });
 }
 
 void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)

@@ -44,6 +44,8 @@ private slots:
 private:
     Ui::AudioVUMeter *ui;
 
+    void SetDynamicStrings();
+
     float   last_height = 0.f;
     float   color_offset = 180.f;
     float   color_spread = 50.f;

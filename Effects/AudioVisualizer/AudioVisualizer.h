@@ -183,6 +183,8 @@ signals:
     void UpdateGraphSignal();
 
 private:
+    void SetDynamicStrings();
+
     /*---------*\
     | GUI bits  |
     \*---------*/

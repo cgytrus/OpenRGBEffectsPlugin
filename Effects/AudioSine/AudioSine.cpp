@@ -11,9 +11,8 @@ AudioSine::AudioSine(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = "AudioSine";
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Sinusoidal audio rendering";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
@@ -22,7 +21,6 @@ AudioSine::AudioSine(QWidget *parent) :
 
     SetSpeed(50);
 
-    ui->color_mode->addItems({"Spectrum cycle", "Static"});
     ui->background->SetRGBColor(background);
     ui->wave_color->SetRGBColor(wave_color);
     ui->thickness->setValue(10);
@@ -55,7 +53,17 @@ void AudioSine::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void AudioSine::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("AudioSine").toStdString();
+    EffectDetails.EffectDescription = tr("Sinusoidal audio rendering").toStdString();
+    ui->color_mode->clear();
+    ui->color_mode->addItems({tr("Spectrum cycle"),
+                              tr("Static")});
 }
 
 void AudioSine::EffectState(const bool state)

@@ -11,13 +11,12 @@ AudioStar::AudioStar(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "AudioStar";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Star audio visualizer (frequency based) with an edge beat";
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     ui->edge_beatFrame->setVisible(false);
 
@@ -49,7 +48,14 @@ void AudioStar::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void AudioStar::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("AudioStar").toStdString();
+    EffectDetails.EffectDescription = tr("Star audio visualizer (frequency based) with an edge beat").toStdString();
 }
 
 void AudioStar::EffectState(const bool state)

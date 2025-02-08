@@ -25,6 +25,7 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioStar;});
 
     static std::string const ClassName() {return "AudioStar";}
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void EffectState(bool) override;
     void LoadCustomSettings(json) override;
@@ -42,6 +43,8 @@ private slots:
 
 private:
     Ui::AudioStar *ui;
+
+    void SetDynamicStrings();
 
     bool    edge_beat = false;
     int     edge_beat_sensivity  = 100;

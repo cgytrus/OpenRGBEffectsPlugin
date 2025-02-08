@@ -11,16 +11,14 @@ AudioParty::AudioParty(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "AudioParty";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Movement, color change, effects according to audio zones.<br/>Blue zone: motion<br/>Green zone: colors<br/>Red zone: effects";
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.MaxSlider2Val = 50;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Color change speed";
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.MaxSlider2Val     = 50;
+    EffectDetails.MinSlider2Val     = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     SetSpeed(50);
     SetSlider2Val(25);
@@ -79,7 +77,16 @@ void AudioParty::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void AudioParty::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("AudioParty").toStdString();
+    EffectDetails.EffectDescription = tr("Movement, color change, effects according to audio zones.<br/>"
+                                         "Blue zone: motion<br/>Green zone: colors<br/>Red zone: effects").toStdString();
+    EffectDetails.Slider2Name       = tr("Color change speed").toStdString();
 }
 
 void AudioParty::EffectState(const bool state)

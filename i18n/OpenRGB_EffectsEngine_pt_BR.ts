@@ -35,6 +35,30 @@
         <source>Screen</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Ambient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Takes a portion of the screen and reflect it to your devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scaled average</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Screen copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Calculated average (heavy computing)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Most common color (heavy computing)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AudioParty</name>
@@ -52,6 +76,18 @@
     </message>
     <message>
         <source>Audio settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AudioParty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Movement, color change, effects according to audio zones.&lt;br/&gt;Blue zone: motion&lt;br/&gt;Green zone: colors&lt;br/&gt;Red zone: effects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color change speed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -148,6 +184,22 @@
         <source>Wave color</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>AudioSine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sinusoidal audio rendering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spectrum cycle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Static</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AudioStar</name>
@@ -169,6 +221,14 @@
     </message>
     <message>
         <source>Edge beat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AudioStar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star audio visualizer (frequency based) with an edge beat</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -206,6 +266,46 @@
         <source>Band-pass filter</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Audio Sync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display frequency based colors with different modes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No saturation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Saturate high amplitudes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black and white mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linear horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No roll</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linear vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AudioVUMeter</name>
@@ -227,6 +327,25 @@
     </message>
     <message>
         <source>Saturation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AudioVUMeter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill your led strip based on audio load</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AudioVisualizer</name>
+    <message>
+        <source>Audio Visualizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display audio equalizer on your devices. A ported version of &lt;a href=&quot;https://gitlab.com/CalcProgrammer1/KeyboardVisualizer&quot;&gt;KeyboardVisualizer&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

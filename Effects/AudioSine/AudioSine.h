@@ -26,6 +26,7 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioSine;});
 
     static std::string const ClassName() {return "AudioSine";}
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void EffectState(bool) override;
     void LoadCustomSettings(json) override;
@@ -47,6 +48,8 @@ private slots:
 
 private:
     Ui::AudioSine*  ui;
+
+    void SetDynamicStrings();
 
     double          x_time = 0.f;
     double          oscillation_time = 0.f;
