@@ -37,6 +37,9 @@ private slots:
 
 private:
     Ui::CrossingBeams *ui;
+
+    void SetDynamicStrings();
+
     double progress = 0;
     double sine_x = 0;
     double sine_y = 0;

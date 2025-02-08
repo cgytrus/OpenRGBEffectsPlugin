@@ -17,7 +17,7 @@ enum
 
 typedef struct
 {
-    std::string name;
+    const char * name;
     std::vector<RGBColor> colors;
 
 } CustomGradientWavePreset;
@@ -43,7 +43,7 @@ public:
 
 private slots:
     void changeEvent(QEvent *event);
-    void on_preset_currentTextChanged(const QString&);
+    void on_preset_currentIndexChanged(int);
     void on_spread_valueChanged(int);
     void on_direction_currentIndexChanged(int);
     void on_height_valueChanged(int);
@@ -52,9 +52,11 @@ private slots:
 
 private:
     Ui::CustomGradientWave *ui;
+
+    void SetDynamicStrings();
+
     double progress = 0.0;
     RGBColor GetColor(float, float, float, float);
-    void LoadPreset(const QString&);
 
     QImage gradient;
     void GenerateGradient();
@@ -66,7 +68,7 @@ private:
 
     std::vector<CustomGradientWavePreset> presets =
     {
-        {"UnicornVomit", std::vector<RGBColor>{
+        {QT_TR_NOOP("Unicorn Vomit"), std::vector<RGBColor>{
              HEXCOLOR(0xff0000),
              HEXCOLOR(0xff00e6),
              HEXCOLOR(0x0000ff),
@@ -77,7 +79,7 @@ private:
              HEXCOLOR(0xff0000)
          }},
 
-        {"Borealis", std::vector<RGBColor>{
+        {QT_TR_NOOP("Borealis"), std::vector<RGBColor>{
              HEXCOLOR(0x14e81e),
              HEXCOLOR(0x00ea8d),
              HEXCOLOR(0x017ed5),
@@ -86,7 +88,7 @@ private:
              HEXCOLOR(0x14e81e),
          }},
 
-        {"Ocean", std::vector<RGBColor>{
+        {QT_TR_NOOP("Ocean"), std::vector<RGBColor>{
              HEXCOLOR(0x00007f),
              HEXCOLOR(0x0000ff),
              HEXCOLOR(0x00ffff),
@@ -94,21 +96,21 @@ private:
              HEXCOLOR(0x00007f),
          }},
 
-        {"Pink/Blue", std::vector<RGBColor>{
+        {QT_TR_NOOP("Pink/Blue"), std::vector<RGBColor>{
              HEXCOLOR(0xfe00c5),
              HEXCOLOR(0x00c5ff),
              HEXCOLOR(0x00c5ff),
              HEXCOLOR(0xfe00c5)
          }},
 
-        {"Pink/Gold", std::vector<RGBColor>{
+        {QT_TR_NOOP("Pink/Gold"), std::vector<RGBColor>{
              HEXCOLOR(0xfee000),
              HEXCOLOR(0xfe00fe),
              HEXCOLOR(0xfe00fe),
              HEXCOLOR(0xfee000),
          }},
 
-        {"Pulse", std::vector<RGBColor>{
+        {QT_TR_NOOP("Pulse"), std::vector<RGBColor>{
              HEXCOLOR(0xff5500),
              HEXCOLOR(0x000000),
              HEXCOLOR(0x000000),
@@ -116,7 +118,7 @@ private:
              HEXCOLOR(0xff5500),
          }},
 
-        {"Purple/Orange", std::vector<RGBColor>{
+        {QT_TR_NOOP("Purple/Orange"), std::vector<RGBColor>{
              HEXCOLOR(0xff2100),
              HEXCOLOR(0xaa00ff),
              HEXCOLOR(0xaa00ff),
@@ -125,14 +127,14 @@ private:
              HEXCOLOR(0xff2100)
          }},
 
-        {"LightBlue/Purple", std::vector<RGBColor>{
+        {QT_TR_NOOP("LightBlue/Purple"), std::vector<RGBColor>{
              HEXCOLOR(0x03fffa),
              HEXCOLOR(0x55007f),
              HEXCOLOR(0x55007f),
              HEXCOLOR(0x03fffa)
          }},
 
-        {"PoliceBeacon", std::vector<RGBColor>{
+        {QT_TR_NOOP("Police Beacon"), std::vector<RGBColor>{
              HEXCOLOR(0xff0000),
              HEXCOLOR(0x0000ff),
              HEXCOLOR(0x0000ff),
@@ -140,7 +142,7 @@ private:
              HEXCOLOR(0xff0000)
          }},
 
-        {"Seabed", std::vector<RGBColor>{
+        {QT_TR_NOOP("Seabed"), std::vector<RGBColor>{
              HEXCOLOR(0x00ff00),
              HEXCOLOR(0x0032ff),
              HEXCOLOR(0x0032ff),
@@ -148,7 +150,7 @@ private:
              HEXCOLOR(0x00ff00)
          }},
 
-        {"Sunset", std::vector<RGBColor>{
+        {QT_TR_NOOP("Sunset"), std::vector<RGBColor>{
              HEXCOLOR(0xff2100),
              HEXCOLOR(0xab006d),
              HEXCOLOR(0xc01c52),
@@ -159,7 +161,7 @@ private:
              HEXCOLOR(0xff2100)
          }},
 
-        {"Vaporwave", std::vector<RGBColor>{
+        {QT_TR_NOOP("Vaporwave"), std::vector<RGBColor>{
              HEXCOLOR(0xFF71CE),
              HEXCOLOR(0xB967FF),
              HEXCOLOR(0x01CDFE),

@@ -517,6 +517,22 @@
         <source>Clock mode</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Clock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Digital Clock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>12-hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>24-hour</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ColorWheelEffect</name>
@@ -532,12 +548,43 @@
         <source>Y position</source>
         <translation>Kedudukan Y</translation>
     </message>
+    <message>
+        <source>Color Wheel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A rotating rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter-clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ColorsPicker</name>
     <message>
         <source>Colors count</source>
         <translation>Kiraan warna</translation>
+    </message>
+</context>
+<context>
+    <name>Comet</name>
+    <message>
+        <source>Comet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A comet that travels through your devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comet size</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -557,6 +604,14 @@
     <message>
         <source>Horizontal speed</source>
         <translation>Kelajuan mendatar</translation>
+    </message>
+    <message>
+        <source>Crossing Beams</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Two beams that move horizontally and vertically</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -589,6 +644,14 @@
         <source>Remove selected</source>
         <translation>Buang yang ditanda</translation>
     </message>
+    <message>
+        <source>Custom Blink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Make your own blinking sequence</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CustomGradientWave</name>
@@ -611,6 +674,89 @@
     <message>
         <source>Width</source>
         <translation>Lebar</translation>
+    </message>
+    <message>
+        <source>CustomGradientWave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create your own gradient wave or use predefined color set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radial out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radial in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unicorn Vomit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Borealis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ocean</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pink/Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pink/Gold</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pulse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Purple/Orange</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LightBlue/Purple</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Police Beacon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Seabed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sunset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vaporwave</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CustomMarquee</name>
+    <message>
+        <source>CustomMarquee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create your own marquee effect</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

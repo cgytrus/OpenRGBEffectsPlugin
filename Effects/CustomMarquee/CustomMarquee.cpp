@@ -8,17 +8,15 @@ CustomMarquee::CustomMarquee(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "CustomMarquee";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Create your own marquee effect";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 50;
-    EffectDetails.MinSpeed     = 1;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 50;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     SetSpeed(25);
-
 }
 
 CustomMarquee::~CustomMarquee()
@@ -31,7 +29,14 @@ void CustomMarquee::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void CustomMarquee::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("CustomMarquee").toStdString();
+    EffectDetails.EffectDescription = tr("Create your own marquee effect").toStdString();
 }
 
 void CustomMarquee::StepEffect(std::vector<ControllerZone*> controller_zones)

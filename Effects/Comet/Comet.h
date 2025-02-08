@@ -26,6 +26,9 @@ public:
 
 private:
     Ui::Comet *ui;
+
+    void SetDynamicStrings();
+
     double time = 0;
     double progress = 0;
 

@@ -21,6 +21,7 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new ColorWheelEffect;});
 
     static std::string const ClassName() {return "ColorWheel";}
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;
@@ -33,6 +34,9 @@ private slots:
 
 private:
     Ui::ColorWheelEffect *ui;
+
+    void  SetDynamicStrings();
+
     double progress = 0.f;
     RGBColor GetColor(unsigned int, unsigned int, double, double, bool);
 

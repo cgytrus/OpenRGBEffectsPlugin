@@ -9,17 +9,14 @@ ColorWheelEffect::ColorWheelEffect(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Color Wheel";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "A rotating rainbow";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 10;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 10;
     EffectDetails.HasCustomSettings = true;
 
     SetSpeed(100);
-
-    ui->direction->addItems({"Clockwise", "Counter-clockwise"});
 }
 
 ColorWheelEffect::~ColorWheelEffect()
@@ -32,7 +29,17 @@ void ColorWheelEffect::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void ColorWheelEffect::SetDynamicStrings()
+{
+    EffectDetails.EffectName = tr("Color Wheel").toStdString();
+    EffectDetails.EffectDescription = tr("A rotating rainbow").toStdString();
+    ui->direction->clear();
+    ui->direction->addItems({tr("Clockwise"),
+                             tr("Counter-clockwise")});
 }
 
 void ColorWheelEffect::StepEffect(std::vector<ControllerZone*> controller_zones)

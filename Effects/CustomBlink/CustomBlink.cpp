@@ -9,9 +9,8 @@ CustomBlink::CustomBlink(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = ClassName();
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Make your own blinking sequence";
     EffectDetails.MaxSpeed     = 50;
     EffectDetails.MinSpeed     = 1;
     EffectDetails.UserColors = 4;
@@ -45,7 +44,14 @@ void CustomBlink::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void CustomBlink::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Custom Blink").toStdString();
+    EffectDetails.EffectDescription = tr("Make your own blinking sequence").toStdString();
 }
 
 void CustomBlink::StepEffect(std::vector<ControllerZone*> controller_zones)

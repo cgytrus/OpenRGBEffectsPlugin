@@ -38,6 +38,7 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new CustomBlink;});
 
     static std::string const ClassName() {return "CustomBlink";}
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;
@@ -56,6 +57,8 @@ signals:
 
 private:
     Ui::CustomBlink *ui;
+
+    void SetDynamicStrings();
 
     std::vector<RGBColor> colors;
 

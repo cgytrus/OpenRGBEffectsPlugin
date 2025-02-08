@@ -10,28 +10,20 @@ CustomGradientWave::CustomGradientWave(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "CustomGradientWave";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Create your own gradient wave or use predefined color set";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 1;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     gradient = QImage(100, 1, QImage::Format_RGB32);
 
     SetSpeed(25);
 
-    for(const CustomGradientWavePreset& preset: presets)
-    {
-        ui->preset->addItem(QString::fromStdString(preset.name));
-    }
-
     ui->preset->blockSignals(false);
-    ui->direction->addItems({"Horizontal", "Vertical", "Radial out", "Radial in"});
-
-    LoadPreset("Default");
+    ui->preset->setCurrentIndex(0);
 }
 
 void CustomGradientWave::GenerateGradient()
@@ -78,7 +70,26 @@ void CustomGradientWave::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void CustomGradientWave::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("CustomGradientWave").toStdString();
+    EffectDetails.EffectDescription = tr("Create your own gradient wave or use predefined color set").toStdString();
+
+    ui->preset->clear();
+    for(const CustomGradientWavePreset& preset: presets)
+    {
+        ui->preset->addItem(tr(preset.name));
+    }
+
+    ui->direction->clear();
+    ui->direction->addItems({tr("Horizontal"),
+                             tr("Vertical"),
+                             tr("Radial out"),
+                             tr("Radial in")});
 }
 
 void CustomGradientWave::StepEffect(std::vector<ControllerZone*> controller_zones)
@@ -166,9 +177,12 @@ void CustomGradientWave::on_spread_valueChanged(int value)
     spread = value;
 }
 
-void CustomGradientWave::on_preset_currentTextChanged(const QString& text)
+void CustomGradientWave::on_preset_currentIndexChanged(int value)
 {
-    LoadPreset(text);
+    if(value > -1)
+    {
+        ui->colorsPicker->SetColors(presets[value].colors);
+    }
 }
 
 void CustomGradientWave::on_direction_currentIndexChanged(int value)
@@ -184,19 +198,6 @@ void CustomGradientWave::on_height_valueChanged(int value)
 void CustomGradientWave::on_width_valueChanged(int value)
 {
     width = value;
-}
-
-void CustomGradientWave::LoadPreset(const QString& text)
-{
-    std::string preset_name = text.toStdString();
-
-    for(const CustomGradientWavePreset& preset: presets)
-    {
-        if(preset_name == preset.name){
-            ui->colorsPicker->SetColors(preset.colors);
-            break;
-        }
-    }
 }
 
 void CustomGradientWave::LoadCustomSettings(json settings)

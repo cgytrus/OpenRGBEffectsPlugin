@@ -10,9 +10,8 @@ CrossingBeams::CrossingBeams(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "CrossingBeams";
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Two beams that move horizontally and vertically";
     EffectDetails.MaxSpeed     = 10;
     EffectDetails.MinSpeed     = 1;
     EffectDetails.UserColors   = 2;
@@ -31,7 +30,14 @@ void CrossingBeams::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void CrossingBeams::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Crossing Beams").toStdString();
+    EffectDetails.EffectDescription = tr("Two beams that move horizontally and vertically").toStdString();
 }
 
 void CrossingBeams::StepEffect(std::vector<ControllerZone*> controller_zones)

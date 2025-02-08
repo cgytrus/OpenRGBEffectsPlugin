@@ -8,11 +8,8 @@ Clock::Clock(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->clock_mode_combo_box->addItems({"12-hour","24-hour"});
-
-    EffectDetails.EffectName = ClassName();
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Digital clock";
     EffectDetails.UserColors = 3;
     EffectDetails.SupportsRandom = false;
     EffectDetails.HasCustomSettings = true;
@@ -28,7 +25,17 @@ void Clock::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Clock::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Clock").toStdString();
+    EffectDetails.EffectDescription = tr("Digital Clock").toStdString();
+    ui->clock_mode_combo_box->clear();
+    ui->clock_mode_combo_box->addItems({tr("12-hour"),
+                                        tr("24-hour")});
 }
 
 #ifdef WIN32

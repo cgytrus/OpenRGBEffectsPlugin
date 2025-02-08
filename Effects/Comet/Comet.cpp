@@ -9,16 +9,14 @@ Comet::Comet(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Comet";
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "A comet that travels trough your devices";
     EffectDetails.IsReversable = true;
     EffectDetails.MaxSpeed     = 50;
     EffectDetails.MinSpeed     = 1;
     EffectDetails.UserColors   = 1;
     EffectDetails.MaxSlider2Val = 100;
     EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Comet size";
 
     SetSpeed(25);
     SetSlider2Val(50);
@@ -34,7 +32,15 @@ void Comet::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Comet::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Comet").toStdString();
+    EffectDetails.EffectDescription = tr("A comet that travels through your devices").toStdString();
+    EffectDetails.Slider2Name       = tr("Comet size").toStdString();
 }
 
 void Comet::StepEffect(std::vector<ControllerZone*> controller_zones)
