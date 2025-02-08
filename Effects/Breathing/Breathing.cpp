@@ -8,14 +8,36 @@ Breathing::Breathing(QWidget *parent) :
     ui(new Ui::Breathing)
 {
     ui->setupUi(this);
-    EffectDetails.EffectName = "Breathing";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Fading in and out user selected colors across an entire zone";
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 10;
+
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 10;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = true;
+    EffectDetails.SupportsRandom    = true;
+
     SetSpeed(100);
+}
+
+Breathing::~Breathing()
+{
+    delete ui;
+}
+
+void Breathing::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void Breathing::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Breathing").toStdString();
+    EffectDetails.EffectDescription = tr("Fading in and out user selected "
+                                         "colors across an entire zone").toStdString();
 }
 
 void Breathing::StepEffect(std::vector<ControllerZone*> controller_zones)

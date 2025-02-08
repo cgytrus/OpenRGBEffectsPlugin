@@ -10,15 +10,13 @@ Bubbles::Bubbles(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Bubbles";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Bloop bloop";
-    EffectDetails.UserColors   = 5;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.UserColors        = 5;
     EffectDetails.HasCustomSettings = true;
 
     background = ColorUtils::OFF();
 }
-
 
 Bubbles::~Bubbles()
 {
@@ -30,7 +28,14 @@ void Bubbles::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Bubbles::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Bubbles").toStdString();
+    EffectDetails.EffectDescription = tr("Bloop bloop").toStdString();
 }
 
 void Bubbles::StepEffect(std::vector<ControllerZone*> controller_zones)

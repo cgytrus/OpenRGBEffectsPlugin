@@ -29,6 +29,7 @@ public:
     EFFECT_REGISTERER(ClassName(), CAT_RANDOM, [](){return new Bloom;});
 
     static std::string const ClassName() {return "Bloom";}
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;
 
@@ -41,6 +42,9 @@ private slots:
 
 private:
     Ui::Bloom *ui;
+
+    void SetDynamicStrings();
+
     std::vector<std::vector<Flower>> flowers;
 
     void Reset(std::vector<ControllerZone*>);

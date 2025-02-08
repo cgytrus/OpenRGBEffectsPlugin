@@ -37,6 +37,7 @@ private:
     Ui::BouncingBallEffect *ui;
 
     void SetDefaults();
+    void SetDynamicStrings();
 
     std::vector<BouncingBallSimulation*> bouncingBallSimulations;
 

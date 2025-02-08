@@ -9,9 +9,8 @@ Bloom::Bloom(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Bloom";
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Flower blooming effect";
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = false;
 
@@ -31,7 +30,14 @@ void Bloom::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Bloom::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Bloom").toStdString();
+    EffectDetails.EffectDescription = tr("Flower blooming effect").toStdString();
 }
 
 void Bloom::StepEffect(std::vector<ControllerZone*> controller_zones)

@@ -9,17 +9,15 @@ BreathingCircle::BreathingCircle(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "BreathingCircle";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "A breathing circle effect";
-    EffectDetails.IsReversable = true;
-    EffectDetails.SupportsRandom = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 10;
-    EffectDetails.UserColors   = 1;
-    EffectDetails.MaxSlider2Val = 20;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Thickness";
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.IsReversable      = true;
+    EffectDetails.SupportsRandom    = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 10;
+    EffectDetails.UserColors        = 1;
+    EffectDetails.MaxSlider2Val     = 20;
+    EffectDetails.MinSlider2Val     = 1;
 }
 
 BreathingCircle::~BreathingCircle()
@@ -32,7 +30,15 @@ void BreathingCircle::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void BreathingCircle::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("BreathingCircle").toStdString();
+    EffectDetails.EffectDescription = tr("A breathing circle effect").toStdString();
+    EffectDetails.Slider2Name       = tr("Thickness").toStdString();
 }
 
 void BreathingCircle::StepEffect(std::vector<ControllerZone*> controller_zones)

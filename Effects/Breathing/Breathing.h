@@ -17,7 +17,7 @@ class Breathing: public RGBEffect
 
 public:
     explicit Breathing(QWidget *parent = nullptr);
-    ~Breathing() {};
+    ~Breathing();
 
     EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Breathing;});
 
@@ -28,10 +28,14 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_colorsPicker_ColorsChanged();
 
 private:
     Ui::Breathing *ui;
+
+    void SetDynamicStrings();
+
     float Progress = 3.14159; // This is to ensure that the colorPicker colors are used when calling StepEffect the first time
     hsv_t CurrentColor;
     int colorLoopIndex = 0;

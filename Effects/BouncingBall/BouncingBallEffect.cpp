@@ -8,9 +8,8 @@ BouncingBallEffect::BouncingBallEffect(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Bouncing Ball";
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "A ball bounces around your RGB setup";
     EffectDetails.HasCustomSettings = true;
 
     SetDefaults();
@@ -42,7 +41,14 @@ void BouncingBallEffect::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void BouncingBallEffect::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Bouncing Ball").toStdString();
+    EffectDetails.EffectDescription = tr("A ball bounces around your RGB setup").toStdString();
 }
 
 void BouncingBallEffect::StepEffect(std::vector<ControllerZone*> controllerZones)

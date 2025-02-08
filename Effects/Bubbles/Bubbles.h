@@ -29,6 +29,8 @@ public:
 private:
     Ui::Bubbles   *ui;
 
+    void SetDynamicStrings();
+
     std::vector<double>    speeds;
     std::vector<double>    bubbles;
     std::vector<RGBColor>  colors;

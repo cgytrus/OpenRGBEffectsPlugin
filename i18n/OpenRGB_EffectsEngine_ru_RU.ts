@@ -398,6 +398,14 @@
         <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bloom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flower blooming effect</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BouncingBallEffect</name>
@@ -433,6 +441,40 @@
         <source>Gravity</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bouncing Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A ball bounces around your RGB setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Breathing</name>
+    <message>
+        <source>Breathing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fading in and out user selected colors across an entire zone</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BreathingCircle</name>
+    <message>
+        <source>BreathingCircle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A breathing circle effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thickness</source>
+        <translation type="unfinished">Ширина</translation>
+    </message>
 </context>
 <context>
     <name>Bubbles</name>
@@ -458,6 +500,14 @@
     </message>
     <message>
         <source>Bubbles thickness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bubbles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bloop bloop</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
