@@ -17,10 +17,10 @@ SmoothBlink::SmoothBlink(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "SmoothBlink";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Create your own breathing sequences";
-    EffectDetails.UserColors   = 2;
+    EffectDetails.UserColors        = 2;
     EffectDetails.HasCustomSettings = true;
 
     random_color_1 = ColorUtils::RandomRGBColor();

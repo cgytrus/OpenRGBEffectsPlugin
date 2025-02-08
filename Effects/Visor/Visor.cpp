@@ -5,15 +5,15 @@ REGISTER_EFFECT(Visor);
 
 Visor::Visor() : RGBEffect()
 {
-    EffectDetails.EffectName = "Visor";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A back and forth effect motion, flipping colors";
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.Slider2Name   = "Width";
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 2;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.Slider2Name       = "Width";
 
     SetSpeed(50);
     SetSlider2Val(20);

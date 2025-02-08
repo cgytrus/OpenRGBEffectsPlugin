@@ -35,9 +35,10 @@ public:
     explicit CustomBlink(QWidget *parent = nullptr);
     ~CustomBlink();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new CustomBlink;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new CustomBlink;});
 
     static std::string const ClassName() {return "CustomBlink";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Custom Blink"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

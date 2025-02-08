@@ -23,9 +23,10 @@ public:
     explicit AudioSine(QWidget *parent = nullptr);
     ~AudioSine();
 
-    EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioSine;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_AUDIO, [](){return new AudioSine;});
 
     static std::string const ClassName() {return "AudioSine";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Audio Sine"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void EffectState(bool) override;

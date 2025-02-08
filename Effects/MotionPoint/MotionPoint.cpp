@@ -8,12 +8,12 @@ MotionPoint::MotionPoint(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "MotionPoint";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A point that moves forth and back on your devices";
-    EffectDetails.MaxSpeed     = 50;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
+    EffectDetails.MaxSpeed          = 50;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
     EffectDetails.HasCustomSettings = true;
 
     ui->background->SetRGBColor(background);

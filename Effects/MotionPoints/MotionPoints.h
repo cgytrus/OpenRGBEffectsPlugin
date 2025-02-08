@@ -110,9 +110,11 @@ public:
     explicit MotionPoints(QWidget *parent = nullptr);
     ~MotionPoints();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new MotionPoints;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new MotionPoints;});
 
     static std::string const ClassName() {return "MotionPoints";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Motion Points"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void SetSlider2Val(unsigned int) override;
 

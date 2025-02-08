@@ -9,14 +9,14 @@ Sunrise::Sunrise(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Sunrise";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Sunrise/Sunset effect";
-    EffectDetails.MaxSpeed     = 20;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 4;
+    EffectDetails.MaxSpeed          = 20;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 4;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     UserColors.resize(4);
     UserColors[0] = ColorUtils::fromQColor(Qt::white);

@@ -18,9 +18,11 @@ public:
     explicit CustomMarquee(QWidget *parent = nullptr);
     ~CustomMarquee();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new CustomMarquee;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new CustomMarquee;});
 
     static std::string const ClassName() {return "CustomMarquee";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Custom Marquee"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

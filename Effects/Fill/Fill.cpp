@@ -37,7 +37,7 @@ void Fill::changeEvent(QEvent *event)
 
 void Fill::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Fill").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Progressivly fills your devices with a defined color").toStdString();
 }
 

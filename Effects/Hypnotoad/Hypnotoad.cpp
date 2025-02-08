@@ -46,7 +46,7 @@ void Hypnotoad::changeEvent(QEvent *event)
 
 void Hypnotoad::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Hypnotoad").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("You wont escape this").toStdString();
     ui->color_mode->clear();
     ui->color_mode->addItems({tr("Rainbow"),

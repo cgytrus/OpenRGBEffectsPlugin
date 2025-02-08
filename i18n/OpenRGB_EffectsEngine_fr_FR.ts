@@ -33,7 +33,7 @@
     </message>
     <message>
         <source>Screen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Écran</translation>
     </message>
     <message>
         <source>Ambient</source>
@@ -79,15 +79,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>AudioParty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Movement, color change, effects according to audio zones.&lt;br/&gt;Blue zone: motion&lt;br/&gt;Green zone: colors&lt;br/&gt;Red zone: effects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Color change speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Party</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -185,10 +185,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>AudioSine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sinusoidal audio rendering</source>
         <translation type="unfinished"></translation>
     </message>
@@ -198,6 +194,10 @@
     </message>
     <message>
         <source>Static</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Sine</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -224,11 +224,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>AudioStar</source>
+        <source>Star audio visualizer (frequency based) with an edge beat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Star audio visualizer (frequency based) with an edge beat</source>
+        <source>Audio Star</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -330,11 +330,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>AudioVUMeter</source>
+        <source>Fill your led strip based on audio load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fill your led strip based on audio load</source>
+        <source>Audio VU Meter</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -408,14 +408,10 @@
     </message>
 </context>
 <context>
-    <name>BouncingBallEffect</name>
+    <name>BouncingBall</name>
     <message>
         <source>Drop Height %</source>
         <translation type="unfinished">dev</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Spectrum Velocity</source>
@@ -442,12 +438,16 @@
         <translation type="unfinished">is</translation>
     </message>
     <message>
-        <source>Bouncing Ball</source>
-        <translation type="unfinished">Balle rebondissante</translation>
-    </message>
-    <message>
         <source>A ball bounces around your RGB setup</source>
         <translation type="unfinished">Une balle rebondit autour de votre configuration RVB</translation>
+    </message>
+    <message>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bouncing Ball</source>
+        <translation type="unfinished">Balle rebondissante</translation>
     </message>
 </context>
 <context>
@@ -464,15 +464,15 @@
 <context>
     <name>BreathingCircle</name>
     <message>
-        <source>BreathingCircle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A breathing circle effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Thickness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Breathing Circle</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -535,7 +535,50 @@
     </message>
 </context>
 <context>
-    <name>ColorWheelEffect</name>
+    <name>ColorUtils</name>
+    <message>
+        <source>Multiply</source>
+        <translation type="unfinished">Multiplier</translation>
+    </message>
+    <message>
+        <source>Screen</source>
+        <translation type="unfinished">Écran</translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished">Superposer</translation>
+    </message>
+    <message>
+        <source>Dodge</source>
+        <translation type="unfinished">Esquiver</translation>
+    </message>
+    <message>
+        <source>Burn</source>
+        <translation type="unfinished">Brûler</translation>
+    </message>
+    <message>
+        <source>Mask</source>
+        <translation type="unfinished">Masquer</translation>
+    </message>
+    <message>
+        <source>Lighten</source>
+        <translation type="unfinished">Éclairer</translation>
+    </message>
+    <message>
+        <source>Darken</source>
+        <translation type="unfinished">Assombrir</translation>
+    </message>
+    <message>
+        <source>Exclusive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Difference</source>
+        <translation type="unfinished">Différence</translation>
+    </message>
+</context>
+<context>
+    <name>ColorWheel</name>
     <message>
         <source>Direction</source>
         <translation type="unfinished"></translation>
@@ -549,10 +592,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Color Wheel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A rotating rainbow</source>
         <translation type="unfinished"></translation>
     </message>
@@ -563,6 +602,10 @@
     <message>
         <source>Counter-clockwise</source>
         <translation type="unfinished">Anti-horaire</translation>
+    </message>
+    <message>
+        <source>Color Wheel</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -676,10 +719,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CustomGradientWave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Create your own gradient wave or use predefined color set</source>
         <translation type="unfinished"></translation>
     </message>
@@ -747,15 +786,19 @@
         <source>Vaporwave</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Custom Gradient Wave</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CustomMarquee</name>
     <message>
-        <source>CustomMarquee</source>
+        <source>Create your own marquee effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Create your own marquee effect</source>
+        <source>Custom Marquee</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -797,15 +840,15 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DoubleRotatingRainbow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Two rainbows that rotate synchronously</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Color speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Double Rotating Rainbow</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -928,11 +971,11 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FractalMotion</source>
+        <source>Psychedelic sinusoid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Psychedelic sinusoid</source>
+        <source>Fractal Motion</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -982,11 +1025,11 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GifPlayer</source>
+        <source>Use GIFs to create your own effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use GIFs to create your own effect</source>
+        <source>Gif Player</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1188,11 +1231,35 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Tab 2</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Combine effects together.&lt;br /&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Blend_modes&quot;&gt;Help about blend modes&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Combine multiple effects within a group, and combine groups together</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Lightning</name>
     <message>
         <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lightning</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1220,6 +1287,13 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
+    <name>Marquee</name>
+    <message>
+        <source>Marquee</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Mask</name>
     <message>
         <source>X axis</source>
@@ -1241,6 +1315,10 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Invert colors</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Mask</source>
+        <translation type="unfinished">Masquer</translation>
+    </message>
 </context>
 <context>
     <name>Mosaic</name>
@@ -1248,11 +1326,33 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Rarity</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Mosaic</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MotionPoint</name>
     <message>
         <source>Background color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Motion Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MotionPoints</name>
+    <message>
+        <source>Motion Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MovingPanes</name>
+    <message>
+        <source>Moving Panes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1303,6 +1403,10 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Noise Map</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1413,6 +1517,37 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
 </context>
 <context>
+    <name>RGBEffect</name>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beams</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Random</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Simple</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Special</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>RadialRainbow</name>
     <message>
         <source>X position</source>
@@ -1426,11 +1561,40 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Y position</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Radial Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Rain</name>
     <message>
         <source>Drop Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rain</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RainbowWave</name>
+    <message>
+        <source>Rainbow Wave</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RandomMarquee</name>
+    <message>
+        <source>Random Marquee</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RandomSpin</name>
+    <message>
+        <source>Random Spin</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1442,6 +1606,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Thickness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rotating Beam</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RotatingRainbow</name>
+    <message>
+        <source>Rotating Rainbow</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1477,6 +1652,13 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Save profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Sequence</name>
+    <message>
+        <source>Sequence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1548,6 +1730,10 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Show rendering</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Shaders</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SmoothBlink</name>
@@ -1583,6 +1769,10 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Defaults</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Smooth Blink</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SpectrumCycling</name>
@@ -1590,11 +1780,33 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Spectrum Cycling</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Spiral</name>
+    <message>
+        <source>Spiral</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Stack</name>
     <message>
         <source>Matrix zone direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>StarryNight</name>
+    <message>
+        <source>Starry Night</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1624,11 +1836,26 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Grow speed</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sunrise</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Swap</name>
+    <message>
+        <source>Swap</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SwirlCircles</name>
     <message>
         <source>Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swirl Circles</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1640,6 +1867,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swirl Circles Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Visor</name>
+    <message>
+        <source>Visor</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1667,6 +1905,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Oscillation speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wavy</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ZigZag</name>
+    <message>
+        <source>ZigZag</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

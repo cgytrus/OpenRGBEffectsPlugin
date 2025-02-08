@@ -39,7 +39,7 @@ void DoubleRotatingRainbow::changeEvent(QEvent *event)
 
 void DoubleRotatingRainbow::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("DoubleRotatingRainbow").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Two rainbows that rotate synchronously").toStdString();
     EffectDetails.Slider2Name       = tr("Color speed").toStdString();
 }

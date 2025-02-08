@@ -1,28 +1,29 @@
-#ifndef BOUNCINGBALLEFFECT_H
-#define BOUNCINGBALLEFFECT_H
+#ifndef BouncingBall_H
+#define BouncingBall_H
 
 #include <QWidget>
 #include <vector>
 #include "RGBEffect.h"
 #include "BouncingBallSimulation.h"
 #include "EffectRegisterer.h"
-#include "ui_BouncingBallEffect.h"
+#include "ui_BouncingBall.h"
 
 namespace Ui {
-    class BouncingBallEffect;
+    class BouncingBall;
 }
 
-class BouncingBallEffect: public RGBEffect
+class BouncingBall: public RGBEffect
 {
     Q_OBJECT
 
 public:
-    explicit BouncingBallEffect(QWidget *parent = nullptr);
-    ~BouncingBallEffect();
+    explicit BouncingBall(QWidget *parent = nullptr);
+    ~BouncingBall();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){ return new BouncingBallEffect; });
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){ return new BouncingBall; });
 
     static std::string const ClassName() { return "BouncingBall"; }
+    static std::string const UI_Name() { return QT_TR_NOOP("Bouncing Ball"); }
 
     void SetFPS(unsigned int value) override;
     void SetBrightness(unsigned int value) override;
@@ -34,7 +35,7 @@ public:
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;
 
 private:
-    Ui::BouncingBallEffect *ui;
+    Ui::BouncingBall *ui;
 
     void SetDefaults();
     void SetDynamicStrings();
@@ -57,4 +58,4 @@ private slots:
        void on_reset_defaults_button_clicked();
 };
 
-#endif // BOUNCINGBALLEFFECT_H
+#endif // BouncingBall_H

@@ -9,16 +9,16 @@ RotatingBeam::RotatingBeam(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "RotatingBeam";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A beam that rotates in different ways";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
-    EffectDetails.MaxSlider2Val = 50;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Glow";
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 2;
+    EffectDetails.MaxSlider2Val     = 50;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.Slider2Name       = "Glow";
     EffectDetails.HasCustomSettings = true;
 
     ui->mode->addItems(modes);

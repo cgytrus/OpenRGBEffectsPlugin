@@ -24,9 +24,10 @@ public:
     explicit AudioParty(QWidget *parent = nullptr);
     ~AudioParty();
 
-    EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioParty;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_AUDIO, [](){return new AudioParty;});
 
     static std::string const ClassName() {return "AudioParty";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Audio Party"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void EffectState(bool) override;

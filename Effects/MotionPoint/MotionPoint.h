@@ -19,9 +19,11 @@ public:
     explicit MotionPoint(QWidget *parent = nullptr);
     ~MotionPoint();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new MotionPoint;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new MotionPoint;});
 
     static std::string const ClassName() {return "MotionPoint";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Motion Point"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

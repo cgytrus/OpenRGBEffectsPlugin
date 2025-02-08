@@ -18,9 +18,11 @@ public:
     explicit Swap(QWidget *parent = nullptr);
     ~Swap();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Swap;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Swap;});
 
     static std::string const ClassName() {return "Swap";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Swap"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

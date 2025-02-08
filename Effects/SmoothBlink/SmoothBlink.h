@@ -19,9 +19,11 @@ public:
     explicit SmoothBlink(QWidget *parent = nullptr);
     ~SmoothBlink();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new SmoothBlink;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new SmoothBlink;});
 
     static std::string const ClassName() {return "SmoothBlink";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Smooth Blink"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

@@ -19,9 +19,11 @@ public:
     explicit SwirlCircles(QWidget *parent = nullptr);
     ~SwirlCircles();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new SwirlCircles;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new SwirlCircles;});
 
     static std::string const ClassName() {return "SwirlCircles";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Swirl Circles"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void SetUserColors(std::vector<RGBColor> colors) override;
     void SetRandomColorsEnabled(bool value) override;

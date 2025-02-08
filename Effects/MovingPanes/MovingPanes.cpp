@@ -9,17 +9,17 @@ MovingPanes::MovingPanes(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "MovingPanes";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Parts of your devices in symmetrical motion";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
-    EffectDetails.MaxSlider2Val = 50;
-    EffectDetails.MinSlider2Val = 2;
-    EffectDetails.Slider2Name   = "Divisions";
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 2;
+    EffectDetails.MaxSlider2Val     = 50;
+    EffectDetails.MinSlider2Val     = 2;
+    EffectDetails.Slider2Name       = "Divisions";
+    EffectDetails.SupportsRandom    = false;
 
     SetSpeed(50);
     SetSlider2Val(4);

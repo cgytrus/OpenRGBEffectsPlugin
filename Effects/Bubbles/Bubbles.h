@@ -18,9 +18,10 @@ public:
     explicit Bubbles(QWidget *parent = nullptr);
     ~Bubbles();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new Bubbles;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new Bubbles;});
 
     static std::string const ClassName() {return "Bubbles";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Bubbles"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

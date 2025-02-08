@@ -50,6 +50,7 @@ void LayerEntry::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        PopulateCombos();
     }
 }
 
@@ -57,9 +58,10 @@ void LayerEntry::PopulateCombos()
 {
     ui->composer_fn->blockSignals(true);
 
+    ui->composer_fn->clear();
     for(std::string fn: COLOR_BLEND_FN_NAMES)
     {
-        ui->composer_fn->addItem(QString::fromStdString(fn));
+        ui->composer_fn->addItem(QCoreApplication::translate("ColorUtils", fn.c_str()));
     }
 
     ui->composer_fn->blockSignals(false);

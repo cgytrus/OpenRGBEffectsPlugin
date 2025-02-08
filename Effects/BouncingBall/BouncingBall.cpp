@@ -1,10 +1,10 @@
-#include "BouncingBallEffect.h"
+#include "BouncingBall.h"
 
-REGISTER_EFFECT(BouncingBallEffect);
+REGISTER_EFFECT(BouncingBall);
 
-BouncingBallEffect::BouncingBallEffect(QWidget *parent) :
+BouncingBall::BouncingBall(QWidget *parent) :
     RGBEffect(parent),
-    ui(new Ui::BouncingBallEffect)
+    ui(new Ui::BouncingBall)
 {
     ui->setupUi(this);
 
@@ -15,7 +15,7 @@ BouncingBallEffect::BouncingBallEffect(QWidget *parent) :
     SetDefaults();
 }
 
-BouncingBallEffect::~BouncingBallEffect()
+BouncingBall::~BouncingBall()
 {
     delete ui;
 
@@ -27,7 +27,7 @@ BouncingBallEffect::~BouncingBallEffect()
     bouncingBallSimulations.clear();
 }
 
-void BouncingBallEffect::SetDefaults()
+void BouncingBall::SetDefaults()
 {
     ui->ball_radius_slider->setValue(15);
     ui->drop_height_percent_slider->setValue(90);
@@ -36,7 +36,7 @@ void BouncingBallEffect::SetDefaults()
     ui->spectrum_velocity_slider->setValue(10);
 }
 
-void BouncingBallEffect::changeEvent(QEvent *event)
+void BouncingBall::changeEvent(QEvent *event)
 {
     if(event->type() == QEvent::LanguageChange)
     {
@@ -45,13 +45,13 @@ void BouncingBallEffect::changeEvent(QEvent *event)
     }
 }
 
-void BouncingBallEffect::SetDynamicStrings()
+void BouncingBall::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Bouncing Ball").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("A ball bounces around your RGB setup").toStdString();
 }
 
-void BouncingBallEffect::StepEffect(std::vector<ControllerZone*> controllerZones)
+void BouncingBall::StepEffect(std::vector<ControllerZone*> controllerZones)
 {
     for (unsigned int i = 0; i < controllerZones.size(); i++)
     {
@@ -61,7 +61,7 @@ void BouncingBallEffect::StepEffect(std::vector<ControllerZone*> controllerZones
 }
 
 // Override, in order to re-calculate time delta
-void BouncingBallEffect::SetFPS(unsigned int value)
+void BouncingBall::SetFPS(unsigned int value)
 {
     FPS = value;
 
@@ -71,7 +71,7 @@ void BouncingBallEffect::SetFPS(unsigned int value)
     }
 }
 
-void BouncingBallEffect::SetTemperature(int value)
+void BouncingBall::SetTemperature(int value)
 {
     Temperature = value;
 
@@ -81,7 +81,7 @@ void BouncingBallEffect::SetTemperature(int value)
     }
 }
 
-void BouncingBallEffect::SetTint(int value)
+void BouncingBall::SetTint(int value)
 {
     Tint = value;
 
@@ -91,7 +91,7 @@ void BouncingBallEffect::SetTint(int value)
     }
 }
 
-void BouncingBallEffect::SetBrightness(unsigned int value)
+void BouncingBall::SetBrightness(unsigned int value)
 {
     Brightness = value;
 
@@ -101,7 +101,7 @@ void BouncingBallEffect::SetBrightness(unsigned int value)
     }
 }
 
-void BouncingBallEffect::OnControllerZonesListChanged(std::vector<ControllerZone*> controller_zones)
+void BouncingBall::OnControllerZonesListChanged(std::vector<ControllerZone*> controller_zones)
 {
     for (auto s : bouncingBallSimulations)
     {
@@ -129,7 +129,7 @@ void BouncingBallEffect::OnControllerZonesListChanged(std::vector<ControllerZone
     }
 }
 
-void BouncingBallEffect::LoadCustomSettings(json Settings)
+void BouncingBall::LoadCustomSettings(json Settings)
 {
     if(Settings.contains("radius"))                 ui->ball_radius_slider->setValue( Settings["radius"]);
     if(Settings.contains("gravity"))                ui->gravity_slider->setValue(Settings["gravity"]);
@@ -138,7 +138,7 @@ void BouncingBallEffect::LoadCustomSettings(json Settings)
     if(Settings.contains("dropHeightPercent"))      ui->drop_height_percent_slider->setValue(Settings["dropHeightPercent"]);
 }
 
-json BouncingBallEffect::SaveCustomSettings()
+json BouncingBall::SaveCustomSettings()
 {
     json settings;
 
@@ -151,7 +151,7 @@ json BouncingBallEffect::SaveCustomSettings()
     return settings;
 }
 
-void BouncingBallEffect::on_ball_radius_slider_valueChanged(int value)
+void BouncingBall::on_ball_radius_slider_valueChanged(int value)
 {
     radius = value;
     ui->ball_radius_value_label->setText(QString::number(value));
@@ -162,7 +162,7 @@ void BouncingBallEffect::on_ball_radius_slider_valueChanged(int value)
     }
 }
 
-void BouncingBallEffect::on_gravity_slider_valueChanged(int value)
+void BouncingBall::on_gravity_slider_valueChanged(int value)
 {
     // Update label with gravity value simulation will use
     gravity = BouncingBallSimulation::GetGravity(value);
@@ -174,7 +174,7 @@ void BouncingBallEffect::on_gravity_slider_valueChanged(int value)
     }
 }
 
-void BouncingBallEffect::on_horizontal_velocity_slider_valueChanged(int value)
+void BouncingBall::on_horizontal_velocity_slider_valueChanged(int value)
 {
     horizontalVelocity = value;
     ui->horizontal_velocity_value_label->setText(QString::number(value));
@@ -185,7 +185,7 @@ void BouncingBallEffect::on_horizontal_velocity_slider_valueChanged(int value)
     }
 }
 
-void BouncingBallEffect::on_spectrum_velocity_slider_valueChanged(int value)
+void BouncingBall::on_spectrum_velocity_slider_valueChanged(int value)
 {
     spectrumVelocity = value;
     ui->spectrum_velocity_value_label->setText(QString::number(value));
@@ -196,7 +196,7 @@ void BouncingBallEffect::on_spectrum_velocity_slider_valueChanged(int value)
     }
 }
 
-void BouncingBallEffect::on_drop_height_percent_slider_valueChanged(int value)
+void BouncingBall::on_drop_height_percent_slider_valueChanged(int value)
 {
     dropHeightPercent = value;
     ui->drop_height_percent_value_label->setText(QString::number(value));
@@ -207,7 +207,7 @@ void BouncingBallEffect::on_drop_height_percent_slider_valueChanged(int value)
     }
 }
 
-void BouncingBallEffect::on_reset_defaults_button_clicked()
+void BouncingBall::on_reset_defaults_button_clicked()
 {
     SetDefaults();
 }

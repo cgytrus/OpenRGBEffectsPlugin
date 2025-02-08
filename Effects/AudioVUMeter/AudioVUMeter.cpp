@@ -53,7 +53,7 @@ void AudioVUMeter::changeEvent(QEvent *event)
 
 void AudioVUMeter::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("AudioVUMeter").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Fill your led strip based on audio load").toStdString();
 }
 

@@ -1,11 +1,11 @@
-#include "ColorWheelEffect.h"
+#include "ColorWheel.h"
 #include "hsv.h"
 
-REGISTER_EFFECT(ColorWheelEffect);
+REGISTER_EFFECT(ColorWheel);
 
-ColorWheelEffect::ColorWheelEffect(QWidget *parent) :
+ColorWheel::ColorWheel(QWidget *parent) :
     RGBEffect(parent),
-    ui(new Ui::ColorWheelEffect)
+    ui(new Ui::ColorWheel)
 {
     ui->setupUi(this);
 
@@ -19,12 +19,12 @@ ColorWheelEffect::ColorWheelEffect(QWidget *parent) :
     SetSpeed(100);
 }
 
-ColorWheelEffect::~ColorWheelEffect()
+ColorWheel::~ColorWheel()
 {
     delete ui;
 }
 
-void ColorWheelEffect::changeEvent(QEvent *event)
+void ColorWheel::changeEvent(QEvent *event)
 {
     if(event->type() == QEvent::LanguageChange)
     {
@@ -33,16 +33,16 @@ void ColorWheelEffect::changeEvent(QEvent *event)
     }
 }
 
-void ColorWheelEffect::SetDynamicStrings()
+void ColorWheel::SetDynamicStrings()
 {
-    EffectDetails.EffectName = tr("Color Wheel").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("A rotating rainbow").toStdString();
     ui->direction->clear();
     ui->direction->addItems({tr("Clockwise"),
                              tr("Counter-clockwise")});
 }
 
-void ColorWheelEffect::StepEffect(std::vector<ControllerZone*> controller_zones)
+void ColorWheel::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     float cx_shift_mult = cx_shift / 100.f;
     float cy_shift_mult = cy_shift / 100.f;
@@ -89,7 +89,7 @@ void ColorWheelEffect::StepEffect(std::vector<ControllerZone*> controller_zones)
 }
 
 
-RGBColor ColorWheelEffect::GetColor(unsigned int x, unsigned int y, double cx, double cy, bool reverse)
+RGBColor ColorWheel::GetColor(unsigned int x, unsigned int y, double cx, double cy, bool reverse)
 {
     float direction_mult = direction == 0 ? 1.f : -1.f;
     float hue = (float)(progress + (int)(180 + direction_mult * (reverse ? atan2(y - cy, x - cx) : atan2(x - cx, y - cy)) * (180.0 / 3.14159)) % 360);
@@ -101,29 +101,29 @@ RGBColor ColorWheelEffect::GetColor(unsigned int x, unsigned int y, double cx, d
     return RGBColor(hsv2rgb(&hsv));
 }
 
-void ColorWheelEffect::on_cx_valueChanged(int value)
+void ColorWheel::on_cx_valueChanged(int value)
 {
     cx_shift = value;
 }
 
-void ColorWheelEffect::on_cy_valueChanged(int value)
+void ColorWheel::on_cy_valueChanged(int value)
 {
     cy_shift = value;
 }
 
-void ColorWheelEffect::on_direction_currentIndexChanged(int value)
+void ColorWheel::on_direction_currentIndexChanged(int value)
 {
     direction = value;
 }
 
-void ColorWheelEffect::LoadCustomSettings(json settings)
+void ColorWheel::LoadCustomSettings(json settings)
 {
     if(settings.contains("cx")) ui->cx->setValue(settings["cx"]);
     if(settings.contains("cy")) ui->cy->setValue(settings["cy"]);
     if(settings.contains("direction")) ui->direction->setCurrentIndex(settings["direction"]);
 }
 
-json ColorWheelEffect::SaveCustomSettings()
+json ColorWheel::SaveCustomSettings()
 {
     json settings;
 

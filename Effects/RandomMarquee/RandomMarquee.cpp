@@ -9,13 +9,13 @@ RandomMarquee::RandomMarquee(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "RandomMarquee";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A simple RandomMarquee for your devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
 
     random.saturation = 255;
     random.value = 255;

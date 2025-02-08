@@ -19,9 +19,11 @@ public:
     explicit Marquee(QWidget *parent = nullptr);
     ~Marquee();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Marquee;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Marquee;});
 
     static std::string const ClassName() {return "Marquee";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Marquee"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

@@ -10,13 +10,13 @@ SpectrumCycling::SpectrumCycling(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Spectrum Cycling";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Goes through every solid color of the rainbow";
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     SetSpeed(50);
 }

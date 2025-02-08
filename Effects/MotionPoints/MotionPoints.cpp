@@ -9,16 +9,16 @@ MotionPoints::MotionPoints(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "MotionPoints";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Multiple points that moves in all directions on your devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Number of points";
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 2;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.Slider2Name       = "Number of points";
 
     SetSpeed(100);
     RGBEffect::SetSlider2Val(20);

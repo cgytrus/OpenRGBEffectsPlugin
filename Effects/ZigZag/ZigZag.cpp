@@ -9,13 +9,13 @@ ZigZag::ZigZag(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "ZigZag";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A snake moving on your matrix typed devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 20;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 20;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
 
     SetSpeed(10);
 }

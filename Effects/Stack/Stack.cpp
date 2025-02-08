@@ -9,13 +9,13 @@ Stack::Stack(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Stack";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Fills and stack your devices with a solid color";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 20;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 20;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
     EffectDetails.HasCustomSettings = true;
 
     ui->direction->addItems({"Horizontal", "Vertical"});

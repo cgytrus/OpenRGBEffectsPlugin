@@ -19,9 +19,11 @@ public:
     explicit CrossingBeams(QWidget *parent = nullptr);
     ~CrossingBeams();
 
-    EFFECT_REGISTERER(ClassName(), CAT_BEAMS, [](){return new CrossingBeams;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_BEAMS, [](){return new CrossingBeams;});
 
     static std::string const ClassName() {return "CrossingBeams";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Crossing Beams"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

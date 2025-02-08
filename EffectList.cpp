@@ -57,27 +57,33 @@ EffectList::EffectList(QWidget *parent) :
 
 void EffectList::AddEffectsMenus()
 {
+    main_menu->clear();
+    sub_menus.clear();
     for(auto const& entry: EffectListManager::get()->GetCategorizedEffects())
     {
         std::string category = entry.first;
 
-        QMenu* category_menu = new QMenu(QString::fromStdString(category), this);
+        QMenu* category_menu = new QMenu(QCoreApplication::translate("RGBEffect", category.c_str()), this);
         main_menu->addMenu(category_menu);
 
-        std::vector<std::string> effect_names = entry.second;
+        std::vector<effect_names> effect_names_struct = entry.second;
 
-        std::sort(effect_names.begin(), effect_names.end());
+        std::sort(effect_names_struct.begin(), effect_names_struct.end(), [](effect_names a, effect_names b)
+                                                                            {
+                                                                                return a.ui_name < b.ui_name;
+                                                                            });
 
-        for(std::string const& effect_name: effect_names)
+        for(effect_names const& effect_names: effect_names_struct)
         {
-            QAction* effect_action = new QAction(QString::fromStdString(effect_name), this);
+            QString label = QCoreApplication::translate(effect_names.classname.c_str(), effect_names.ui_name.c_str());
+            QAction* effect_action = new QAction(label, this);
             category_menu->addAction(effect_action);
 
             connect(effect_action, &QAction::triggered, [=](){
-                AddEffect(effect_name);
+                AddEffect(effect_names.classname);
             });
 
-            effect_search->add(effect_name);
+            effect_search->add(effect_names.ui_name);
         }
 
         sub_menus.push_back(category_menu);
@@ -124,6 +130,7 @@ void EffectList::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        AddEffectsMenus();
     }
 }
 

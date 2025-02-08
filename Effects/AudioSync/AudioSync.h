@@ -48,9 +48,10 @@ public:
     explicit AudioSync(QWidget *parent = nullptr);
     ~AudioSync();
 
-    EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioSync;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_AUDIO, [](){return new AudioSync;});
 
     static std::string const ClassName() {return "AudioSync";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Audio Sync"); }
 
     void StepEffect(std::vector<ControllerZone*>)               override;
     void LoadCustomSettings(json)                               override;

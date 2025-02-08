@@ -18,9 +18,11 @@ public:
     explicit Fill(QWidget *parent = nullptr);
     ~Fill();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Fill;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Fill;});
 
     static std::string const ClassName() {return "Fill";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Fill"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

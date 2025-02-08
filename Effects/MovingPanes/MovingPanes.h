@@ -18,9 +18,11 @@ public:
     explicit MovingPanes(QWidget *parent = nullptr);
     ~MovingPanes();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new MovingPanes;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new MovingPanes;});
 
     static std::string const ClassName() {return "MovingPanes";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Moving Panes"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

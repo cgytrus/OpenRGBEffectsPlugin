@@ -27,9 +27,11 @@ public:
     explicit NoiseMap(QWidget *parent = nullptr);
     ~NoiseMap();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new NoiseMap;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new NoiseMap;});
 
     static std::string const ClassName() {return "NoiseMap";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Noise Map"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

@@ -23,9 +23,11 @@ public:
     explicit SwirlCirclesAudio(QWidget *parent = nullptr);
     ~SwirlCirclesAudio();
 
-    EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new SwirlCirclesAudio;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_AUDIO, [](){return new SwirlCirclesAudio;});
 
     static std::string const ClassName() {return "SwirlCirclesAudio";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Swirl Circles Audio"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void SetUserColors(std::vector<RGBColor> colors) override;
     void SetRandomColorsEnabled(bool value) override;

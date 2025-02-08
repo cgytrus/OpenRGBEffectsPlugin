@@ -9,16 +9,16 @@ Marquee::Marquee(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Marquee";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A simple marquee for your devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
-    EffectDetails.MaxSlider2Val = 20;
-    EffectDetails.MinSlider2Val = 2;
-    EffectDetails.Slider2Name   = "Spacing";
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
+    EffectDetails.MaxSlider2Val     = 20;
+    EffectDetails.MinSlider2Val     = 2;
+    EffectDetails.Slider2Name       = "Spacing";
 
     random.saturation = 255;
     random.value = 255;

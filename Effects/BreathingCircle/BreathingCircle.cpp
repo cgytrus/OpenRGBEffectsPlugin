@@ -36,7 +36,7 @@ void BreathingCircle::changeEvent(QEvent *event)
 
 void BreathingCircle::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("BreathingCircle").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("A breathing circle effect").toStdString();
     EffectDetails.Slider2Name       = tr("Thickness").toStdString();
 }

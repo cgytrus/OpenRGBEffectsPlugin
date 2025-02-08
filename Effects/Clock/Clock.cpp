@@ -31,7 +31,7 @@ void Clock::changeEvent(QEvent *event)
 
 void Clock::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Clock").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Digital Clock").toStdString();
     ui->clock_mode_combo_box->clear();
     ui->clock_mode_combo_box->addItems({tr("12-hour"),

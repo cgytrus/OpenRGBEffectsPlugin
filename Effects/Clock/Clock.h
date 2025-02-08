@@ -24,9 +24,10 @@ public:
     explicit Clock(QWidget *parent = nullptr);
     ~Clock();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Clock;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Clock;});
 
     static std::string const ClassName() {return "Clock";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Clock"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

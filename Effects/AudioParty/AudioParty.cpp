@@ -83,7 +83,7 @@ void AudioParty::changeEvent(QEvent *event)
 
 void AudioParty::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("AudioParty").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Movement, color change, effects according to audio zones.<br/>"
                                          "Blue zone: motion<br/>Green zone: colors<br/>Red zone: effects").toStdString();
     EffectDetails.Slider2Name       = tr("Color change speed").toStdString();

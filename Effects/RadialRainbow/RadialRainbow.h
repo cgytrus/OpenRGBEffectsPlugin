@@ -18,9 +18,11 @@ public:
     explicit RadialRainbow(QWidget *parent = nullptr);
     ~RadialRainbow();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new RadialRainbow;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new RadialRainbow;});
 
     static std::string const ClassName() {return "RadialRainbow";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Radial Rainbow"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

@@ -13,12 +13,11 @@ Layers::Layers(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Layers";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Combine effects together.<br /> <a href=\"https://en.wikipedia.org/wiki/Blend_modes\">Help about blend modes</a>";
-    EffectDetails.HasCustomSettings = true;
-    EffectDetails.ExpandCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName       = ClassName();
+    EffectDetails.HasCustomSettings     = true;
+    EffectDetails.ExpandCustomSettings  = true;
+    EffectDetails.SupportsRandom        = false;
 
     // remove intial dummy tabs
     ui->groups->clear();
@@ -36,7 +35,16 @@ void Layers::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Layers::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Combine effects together.<br />"
+                                         "<a href=\"https://en.wikipedia.org/wiki/Blend_modes\">"
+                                         "Help about blend modes</a>").toStdString();
 }
 
 LayerGroupEntry* Layers::AddLayerGroup()
@@ -48,7 +56,8 @@ LayerGroupEntry* Layers::AddLayerGroup()
         delete layer_group_entry;
     });
 
-    ui->groups->addTab(layer_group_entry, QString::fromStdString("Group " + std::to_string(ui->groups->count())));
+    QString layer_name = QString(tr("Group")).append(QString(" %1").arg(ui->groups->count()));
+    ui->groups->addTab(layer_group_entry, layer_name);
     layer_groups.push_back(layer_group_entry);
 
     layer_group_entry->OnControllerZonesListChanged(assigned_zones);
@@ -64,9 +73,9 @@ void Layers::ClearLayerGroups()
 
     // First tab: add button
     QToolButton *new_group_button = new QToolButton();
-    new_group_button->setText("New group");
+    new_group_button->setText(tr("New group"));
 
-    QLabel* help = new QLabel("Combine multiple effects within a group, and combine groups together");
+    QLabel* help = new QLabel(tr("Combine multiple effects within a group, and combine groups together"));
     help->setWordWrap(true);
     help->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
 

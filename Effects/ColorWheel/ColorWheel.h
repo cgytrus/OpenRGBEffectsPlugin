@@ -1,26 +1,27 @@
-#ifndef COLORWHEELEFFECT_H
-#define COLORWHEELEFFECT_H
+#ifndef ColorWheel_H
+#define ColorWheel_H
 
 #include <QWidget>
-#include "ui_ColorWheelEffect.h"
+#include "ui_ColorWheel.h"
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 
 namespace Ui {
-class ColorWheelEffect;
+class ColorWheel;
 }
 
-class ColorWheelEffect : public RGBEffect
+class ColorWheel : public RGBEffect
 {
     Q_OBJECT
 
 public:
-    explicit ColorWheelEffect(QWidget *parent = nullptr);
-    ~ColorWheelEffect();
+    explicit ColorWheel(QWidget *parent = nullptr);
+    ~ColorWheel();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new ColorWheelEffect;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new ColorWheel;});
 
     static std::string const ClassName() {return "ColorWheel";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Color Wheel"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
@@ -33,7 +34,7 @@ private slots:
     void on_direction_currentIndexChanged(int);
 
 private:
-    Ui::ColorWheelEffect *ui;
+    Ui::ColorWheel *ui;
 
     void  SetDynamicStrings();
 
@@ -45,4 +46,4 @@ private:
     unsigned int direction = 0;
 };
 
-#endif // COLORWHEELEFFECT_H
+#endif // ColorWheel_H

@@ -38,7 +38,7 @@ void Comet::changeEvent(QEvent *event)
 
 void Comet::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Comet").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("A comet that travels through your devices").toStdString();
     EffectDetails.Slider2Name       = tr("Comet size").toStdString();
 }

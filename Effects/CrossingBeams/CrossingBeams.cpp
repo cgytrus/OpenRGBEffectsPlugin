@@ -36,7 +36,7 @@ void CrossingBeams::changeEvent(QEvent *event)
 
 void CrossingBeams::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Crossing Beams").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Two beams that move horizontally and vertically").toStdString();
 }
 

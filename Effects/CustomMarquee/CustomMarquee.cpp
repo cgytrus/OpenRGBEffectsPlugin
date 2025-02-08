@@ -35,7 +35,7 @@ void CustomMarquee::changeEvent(QEvent *event)
 
 void CustomMarquee::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("CustomMarquee").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Create your own marquee effect").toStdString();
 }
 

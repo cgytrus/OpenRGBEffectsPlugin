@@ -152,9 +152,10 @@ public:
     explicit AudioVisualizer(QWidget* parent = nullptr);
     ~AudioVisualizer();
 
-    EFFECT_REGISTERER(ClassName(), CAT_AUDIO, [](){return new AudioVisualizer;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_AUDIO, [](){return new AudioVisualizer;});
 
     static std::string const ClassName() {return "AudioVisualizer";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Audio Visualizer"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void EffectState(bool) override;

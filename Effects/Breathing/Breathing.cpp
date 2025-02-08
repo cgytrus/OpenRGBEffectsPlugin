@@ -35,7 +35,7 @@ void Breathing::changeEvent(QEvent *event)
 
 void Breathing::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Breathing").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Fading in and out user selected "
                                          "colors across an entire zone").toStdString();
 }

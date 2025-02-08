@@ -9,16 +9,16 @@ Sequence::Sequence(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Sequence";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Alternates colors with a fade effect";
-    EffectDetails.MaxSpeed     = 20;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Fade time";
+    EffectDetails.MaxSpeed          = 20;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.Slider2Name       = "Fade time";
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     SetSpeed(10);
 }

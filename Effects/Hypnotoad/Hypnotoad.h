@@ -24,9 +24,11 @@ public:
     explicit Hypnotoad(QWidget *parent = nullptr);
     ~Hypnotoad();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new Hypnotoad;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new Hypnotoad;});
 
     static std::string const ClassName() {return "Hypnotoad";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Hypnotoad"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

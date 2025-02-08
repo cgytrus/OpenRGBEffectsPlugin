@@ -8,16 +8,16 @@ Spiral::Spiral(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Spiral";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Draws a hypnotic spiral on your devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 500;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Spiral shape";
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 500;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.Slider2Name       = "Spiral shape";
 
     SetSpeed(200);
     SetSlider2Val(10);

@@ -27,9 +27,10 @@ public:
     explicit Rain(QWidget *parent = nullptr);
     ~Rain();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new Rain;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new Rain;});
 
     static std::string const ClassName() { return "Rain"; }
+    static std::string const UI_Name() { return QT_TR_NOOP("Rain"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;

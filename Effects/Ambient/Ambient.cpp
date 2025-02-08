@@ -95,7 +95,7 @@ void Ambient::changeEvent(QEvent *event)
 
 void Ambient::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Ambient").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Takes a portion of the screen and reflect it to your devices").toStdString();
     ui->mode->clear();
     ui->mode->addItems({

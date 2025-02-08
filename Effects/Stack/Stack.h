@@ -18,9 +18,11 @@ public:
     explicit Stack(QWidget *parent = nullptr);
     ~Stack();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Stack;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Stack;});
 
     static std::string const ClassName() {return "Stack";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Stack"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

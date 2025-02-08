@@ -16,10 +16,7 @@ LayerGroupEntry::LayerGroupEntry(QWidget *parent) :
 
     ui->layers->setLayout(outer_layout);
 
-    for(std::string fn: COLOR_BLEND_FN_NAMES)
-    {
-        ui->composer_fn->addItem(QString::fromStdString(fn));
-    }
+    SetDynamicStrings();
 
     ui->effect_list->ShowStartStopButton(false);
     ui->effect_list->AddEffectsMenus();
@@ -40,6 +37,17 @@ void LayerGroupEntry::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        ui->effect_list->AddEffectsMenus();
+        SetDynamicStrings();
+    }
+}
+
+void LayerGroupEntry::SetDynamicStrings()
+{
+    ui->composer_fn->clear();
+    for(std::string fn: COLOR_BLEND_FN_NAMES)
+    {
+        ui->composer_fn->addItem(QCoreApplication::translate("ColorUtils", fn.c_str()));
     }
 }
 

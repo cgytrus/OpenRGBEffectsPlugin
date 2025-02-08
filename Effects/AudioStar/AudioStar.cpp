@@ -54,7 +54,7 @@ void AudioStar::changeEvent(QEvent *event)
 
 void AudioStar::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("AudioStar").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Star audio visualizer (frequency based) with an edge beat").toStdString();
 }
 

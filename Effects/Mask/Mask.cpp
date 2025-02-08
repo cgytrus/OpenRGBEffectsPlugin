@@ -8,12 +8,12 @@ Mask::Mask(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Mask";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A simple mask for using in layers";
-    EffectDetails.UserColors   = 2;
+    EffectDetails.UserColors        = 2;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 }
 
 Mask::~Mask()

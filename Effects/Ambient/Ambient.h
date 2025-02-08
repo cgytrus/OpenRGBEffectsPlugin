@@ -26,9 +26,10 @@ public:
     explicit Ambient(QWidget *parent = nullptr);
     ~Ambient();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SPECIAL, [](){return new Ambient;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SPECIAL, [](){return new Ambient;});
 
     static std::string const ClassName() {return "Ambient";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Ambient"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

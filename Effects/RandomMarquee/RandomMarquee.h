@@ -19,9 +19,11 @@ public:
     explicit RandomMarquee(QWidget *parent = nullptr);
     ~RandomMarquee();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RANDOM, [](){return new RandomMarquee;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RANDOM, [](){return new RandomMarquee;});
 
     static std::string const ClassName() {return "RandomMarquee";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Random Marquee"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

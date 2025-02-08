@@ -8,14 +8,14 @@ Mosaic::Mosaic(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Mosaic";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Tiles randomly spawning across your devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 200;
-    EffectDetails.MinSpeed     = 1;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = true;
+    EffectDetails.SupportsRandom    = true;
 
     SetSpeed(10);
 }

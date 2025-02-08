@@ -34,7 +34,7 @@ EffectListManager::~EffectListManager()
 
 }
 
-std::map<std::string, std::vector<std::string>> EffectListManager::GetCategorizedEffects()
+std::map<std::string, std::vector<effect_names>> EffectListManager::GetCategorizedEffects()
 {
     return(categorized_effects);
 }
@@ -49,15 +49,21 @@ std::size_t EffectListManager::GetEffectsListSize()
     return(effects_constructors.size());
 }
 
-void EffectListManager::RegisterEffect(std::string name, std::string category, std::function<RGBEffect*()> constructor)
+void EffectListManager::RegisterEffect(std::string classname,
+                                       std::string ui_name,
+                                       std::string category,
+                                       std::function<RGBEffect*()> constructor)
 {    
-    effects_constructors[name] = constructor;
+    effects_constructors[classname] = constructor;
 
     if(!categorized_effects.count(category))
     {
-        std::vector<std::string> effects;
+        std::vector<effect_names> effects;
         categorized_effects[category] = effects;
     }
 
-    categorized_effects[category].push_back(name);
+    effect_names new_effect;
+    new_effect.classname    = classname;
+    new_effect.ui_name      = ui_name;
+    categorized_effects[category].push_back(new_effect);
 }

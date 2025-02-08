@@ -34,7 +34,7 @@ void Bubbles::changeEvent(QEvent *event)
 
 void Bubbles::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Bubbles").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Bloop bloop").toStdString();
 }
 

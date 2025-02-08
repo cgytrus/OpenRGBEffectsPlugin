@@ -13,13 +13,13 @@ Shaders::Shaders(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Shaders";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Unleash the power of OpenRGB with GL shaders";
-    EffectDetails.MaxSpeed     = 2000;
-    EffectDetails.MinSpeed     = 1;
+    EffectDetails.MaxSpeed          = 2000;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
+    EffectDetails.SupportsRandom    = false;
 
     shader_renderer = new ShaderRenderer(this);
 

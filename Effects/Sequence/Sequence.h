@@ -18,9 +18,11 @@ public:
     explicit Sequence(QWidget *parent = nullptr);
     ~Sequence();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new Sequence;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new Sequence;});
 
     static std::string const ClassName() {return "Sequence";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Sequence"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

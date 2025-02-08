@@ -97,7 +97,7 @@ void AudioSync::changeEvent(QEvent *event)
 
 void AudioSync::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Audio Sync").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Display frequency based colors with different modes").toStdString();
 
     /*------------------------------------*\

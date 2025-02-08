@@ -12,11 +12,11 @@ NoiseMap::NoiseMap(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "NoiseMap";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Floor is lava";
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
 
     ui->colors_choice->addItems({"Rainbow", "Inverse rainbow", "Custom"});

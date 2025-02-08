@@ -19,9 +19,11 @@ public:
     explicit FractalMotion(QWidget *parent = nullptr);
     ~FractalMotion();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new FractalMotion;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new FractalMotion;});
 
     static std::string const ClassName() {return "FractalMotion";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Fractal Motion"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

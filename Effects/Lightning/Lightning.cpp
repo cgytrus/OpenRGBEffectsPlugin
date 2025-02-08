@@ -8,15 +8,15 @@ Lightning::Lightning(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Lightning";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Prepare yourself for thunderstorm";
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 1;
-    EffectDetails.MaxSlider2Val = 60;
-    EffectDetails.MinSlider2Val = 2;
-    EffectDetails.Slider2Name   = "Decay";
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 1;
+    EffectDetails.MaxSlider2Val     = 60;
+    EffectDetails.MinSlider2Val     = 2;
+    EffectDetails.Slider2Name       = "Decay";
     EffectDetails.HasCustomSettings = true;
 
     SetSpeed(20);

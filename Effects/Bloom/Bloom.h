@@ -26,9 +26,10 @@ public:
     explicit Bloom(QWidget *parent = nullptr);
     ~Bloom();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RANDOM, [](){return new Bloom;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RANDOM, [](){return new Bloom;});
 
     static std::string const ClassName() {return "Bloom";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Bloom"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;

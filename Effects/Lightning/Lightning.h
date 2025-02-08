@@ -21,9 +21,10 @@ public:
     explicit Lightning(QWidget *parent = nullptr);
     ~Lightning();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RANDOM, [](){return new Lightning;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RANDOM, [](){return new Lightning;});
 
     static std::string const ClassName() {return "Lightning";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Lightning"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void SetUserColors(std::vector<RGBColor>) override;

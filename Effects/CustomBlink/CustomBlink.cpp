@@ -50,7 +50,7 @@ void CustomBlink::changeEvent(QEvent *event)
 
 void CustomBlink::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Custom Blink").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Make your own blinking sequence").toStdString();
 }
 

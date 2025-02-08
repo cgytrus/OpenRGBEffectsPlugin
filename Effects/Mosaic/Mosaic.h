@@ -25,9 +25,11 @@ public:
     explicit Mosaic(QWidget *parent = nullptr);
     ~Mosaic();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Mosaic;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Mosaic;});
 
     static std::string const ClassName() {return "Mosaic";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Mosaic"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

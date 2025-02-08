@@ -32,9 +32,11 @@ public:
     explicit Shaders(QWidget *parent = nullptr);
     ~Shaders();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SPECIAL, [](){return new Shaders;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SPECIAL, [](){return new Shaders;});
 
     static std::string const ClassName() {return "Shaders";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Shaders"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

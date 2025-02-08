@@ -40,6 +40,9 @@ private slots:
 
 private:
     Ui::LayerGroupEntry *ui;
+
+    void SetDynamicStrings();
+
     std::vector<LayerEntry*> layer_entries;
     void AddLayerEntry(LayerEntry*);
     void ClearLayers();

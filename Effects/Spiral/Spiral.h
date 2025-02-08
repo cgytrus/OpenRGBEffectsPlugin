@@ -18,9 +18,11 @@ public:
     explicit Spiral(QWidget *parent = nullptr);
     ~Spiral();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new Spiral;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new Spiral;});
 
     static std::string const ClassName() {return "Spiral";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Spiral"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

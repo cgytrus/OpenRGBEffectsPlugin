@@ -21,16 +21,16 @@ enum ColorBlendFn
 };
 
 static std::vector<std::string> COLOR_BLEND_FN_NAMES = {
-    "Multiply",
-    "Screen",
-    "Overlay",
-    "Dodge",
-    "Burn",
-    "Mask",
-    "Lighten",
-    "Darken",
-    "Exclusive",
-    "Difference"
+    QT_TRANSLATE_NOOP("ColorUtils", "Multiply"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Screen"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Overlay"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Dodge"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Burn"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Mask"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Lighten"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Darken"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Exclusive"),
+    QT_TRANSLATE_NOOP("ColorUtils", "Difference")
 };
 
 class ColorUtils {

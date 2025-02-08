@@ -9,17 +9,17 @@ Rain::Rain(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Rain";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Droplet effect";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MinSpeed = 1;
-    EffectDetails.MaxSpeed = 200;
-    EffectDetails.Slider2Name   = "Drops";
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.MaxSlider2Val = 50;
-    EffectDetails.UserColors = 5;
-    EffectDetails.AllowOnlyFirst = true;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.MaxSpeed          = 200;
+    EffectDetails.Slider2Name       = "Drops";
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.MaxSlider2Val     = 50;
+    EffectDetails.UserColors        = 5;
+    EffectDetails.AllowOnlyFirst    = true;
     EffectDetails.HasCustomSettings = true;
 
     SetSpeed(25);

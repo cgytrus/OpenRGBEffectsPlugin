@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>BouncingBallEffect</class>
- <widget class="QWidget" name="BouncingBallEffect">
+ <class>BouncingBall</class>
+ <widget class="QWidget" name="BouncingBall">
   <property name="geometry">
    <rect>
     <x>0</x>

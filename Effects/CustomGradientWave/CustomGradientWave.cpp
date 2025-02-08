@@ -76,7 +76,7 @@ void CustomGradientWave::changeEvent(QEvent *event)
 
 void CustomGradientWave::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("CustomGradientWave").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Create your own gradient wave or use predefined color set").toStdString();
 
     ui->preset->clear();

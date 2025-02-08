@@ -9,13 +9,13 @@ Swap::Swap(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Swap";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Alternate two colors on your devices from left to right";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 20;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 20;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 2;
 
     random1 = ColorUtils::RandomRGBColor();
     random2 = ColorUtils::RandomRGBColor();

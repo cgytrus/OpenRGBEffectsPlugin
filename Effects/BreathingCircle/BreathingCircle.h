@@ -18,9 +18,10 @@ public:
     explicit BreathingCircle(QWidget *parent = nullptr);
     ~BreathingCircle();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new BreathingCircle;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new BreathingCircle;});
 
     static std::string const ClassName() {return "BreathingCircle";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Breathing Circle"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
 

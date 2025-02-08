@@ -19,9 +19,11 @@ public:
     explicit RotatingRainbow(QWidget *parent = nullptr);
     ~RotatingRainbow();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new RotatingRainbow;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new RotatingRainbow;});
 
     static std::string const ClassName() {return "RotatingRainbow";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Rotating Rainbow"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private:

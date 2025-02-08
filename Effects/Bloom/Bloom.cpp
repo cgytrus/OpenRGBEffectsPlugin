@@ -36,7 +36,7 @@ void Bloom::changeEvent(QEvent *event)
 
 void Bloom::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Bloom").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Flower blooming effect").toStdString();
 }
 

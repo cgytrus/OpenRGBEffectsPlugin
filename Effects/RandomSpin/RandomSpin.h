@@ -28,9 +28,11 @@ public:
     explicit RandomSpin(QWidget *parent = nullptr);
     ~RandomSpin();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RANDOM, [](){return new RandomSpin;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RANDOM, [](){return new RandomSpin;});
 
     static std::string const ClassName() {return "RandomSpin";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Random Spin"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>)  override;
     void SetUserColors(std::vector<RGBColor> colors) override;

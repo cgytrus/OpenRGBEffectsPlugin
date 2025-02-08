@@ -34,9 +34,11 @@ public:
     explicit CustomGradientWave(QWidget *parent = nullptr);
     ~CustomGradientWave();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new CustomGradientWave;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new CustomGradientWave;});
 
     static std::string const ClassName() {return "CustomGradientWave";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Custom Gradient Wave"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

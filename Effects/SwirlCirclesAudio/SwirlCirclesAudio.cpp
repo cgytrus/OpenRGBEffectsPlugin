@@ -11,16 +11,16 @@ SwirlCirclesAudio::SwirlCirclesAudio(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "SwirlCirclesAudio";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Rotating circles reacting to audio";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.UserColors   = 2;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Glow";
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.UserColors        = 2;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.Slider2Name       = "Glow";
     EffectDetails.HasCustomSettings = true;
 
     SetSpeed(50);

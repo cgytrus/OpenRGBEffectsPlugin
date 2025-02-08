@@ -40,7 +40,7 @@ void FractalMotion::changeEvent(QEvent *event)
 
 void FractalMotion::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("FractalMotion").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Psychedelic sinusoid").toStdString();
 }
 

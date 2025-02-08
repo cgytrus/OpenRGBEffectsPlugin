@@ -6,13 +6,16 @@
 
 class RainbowWave: public RGBEffect
 {
+    Q_OBJECT
+
 public:
     RainbowWave();
     ~RainbowWave() {};
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new RainbowWave;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new RainbowWave;});
 
     static std::string const ClassName() { return "RainbowWave"; }
+    static std::string const UI_Name() { return QT_TR_NOOP("Rainbow Wave"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
 

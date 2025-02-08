@@ -22,9 +22,10 @@ public:
     explicit Wavy(QWidget *parent = nullptr);
     ~Wavy();
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new Wavy;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new Wavy;});
 
     static std::string const ClassName() {return "Wavy";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Wavy"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

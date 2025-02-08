@@ -59,7 +59,7 @@ void AudioSine::changeEvent(QEvent *event)
 
 void AudioSine::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("AudioSine").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Sinusoidal audio rendering").toStdString();
     ui->color_mode->clear();
     ui->color_mode->addItems({tr("Spectrum cycle"),

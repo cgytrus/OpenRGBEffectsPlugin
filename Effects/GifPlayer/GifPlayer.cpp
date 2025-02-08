@@ -39,7 +39,7 @@ void GifPlayer::changeEvent(QEvent *event)
 
 void GifPlayer::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("GifPlayer").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr("Use GIFs to create your own effect").toStdString();
 }
 

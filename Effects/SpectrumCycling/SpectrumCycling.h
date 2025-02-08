@@ -16,9 +16,10 @@ public:
     explicit SpectrumCycling(QWidget *parent = nullptr);
     ~SpectrumCycling();
 
-    EFFECT_REGISTERER(ClassName(), CAT_RAINBOW, [](){return new SpectrumCycling;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_RAINBOW, [](){return new SpectrumCycling;});
 
     static std::string const ClassName() {return "SpectrumCycling";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Spectrum Cycling"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
 

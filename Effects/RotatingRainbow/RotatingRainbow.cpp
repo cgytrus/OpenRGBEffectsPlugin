@@ -8,15 +8,15 @@ RotatingRainbow::RotatingRainbow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "RotatingRainbow";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A rainbow that rotates arround the center of your devices";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Color speed";
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.MinSlider2Val     = 1;
+    EffectDetails.Slider2Name       = "Color speed";
 
     SetSpeed(20);
     SetSlider2Val(30);

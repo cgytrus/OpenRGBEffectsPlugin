@@ -92,7 +92,7 @@ void AudioVisualizer::changeEvent(QEvent *event)
 
 void AudioVisualizer::SetDynamicStrings()
 {
-    EffectDetails.EffectName        = tr("Audio Visualizer").toStdString();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectDescription = tr(
         "Display audio equalizer on your devices. A ported version of "
         "<a href=\"https://gitlab.com/CalcProgrammer1/KeyboardVisualizer\">KeyboardVisualizer</a>").toStdString();

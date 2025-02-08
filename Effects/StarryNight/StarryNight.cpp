@@ -8,8 +8,8 @@ StarryNight::StarryNight(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Starry Night";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Light random stars that fade in and out of the background";
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = true;

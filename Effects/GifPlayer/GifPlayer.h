@@ -21,9 +21,10 @@ public:
     explicit GifPlayer(QWidget *parent = nullptr);
     ~GifPlayer();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SPECIAL, [](){return new GifPlayer;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SPECIAL, [](){return new GifPlayer;});
 
     static std::string const ClassName() {return "GIFPlayer";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Gif Player"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
 

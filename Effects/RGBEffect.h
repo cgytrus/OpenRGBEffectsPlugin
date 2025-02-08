@@ -6,13 +6,13 @@
 #include "ControllerZone.h"
 #include "json.hpp"
 
-#define CAT_ADVANCED "Advanced"
-#define CAT_AUDIO "Audio"
-#define CAT_BEAMS "Beams"
-#define CAT_RAINBOW "Rainbow"
-#define CAT_RANDOM "Random"
-#define CAT_SIMPLE "Simple"
-#define CAT_SPECIAL "Special"
+#define CAT_ADVANCED    QT_TRANSLATE_NOOP("RGBEffect", "Advanced")
+#define CAT_AUDIO       QT_TRANSLATE_NOOP("RGBEffect", "Audio")
+#define CAT_BEAMS       QT_TRANSLATE_NOOP("RGBEffect", "Beams")
+#define CAT_RAINBOW     QT_TRANSLATE_NOOP("RGBEffect", "Rainbow")
+#define CAT_RANDOM      QT_TRANSLATE_NOOP("RGBEffect", "Random")
+#define CAT_SIMPLE      QT_TRANSLATE_NOOP("RGBEffect", "Simple")
+#define CAT_SPECIAL     QT_TRANSLATE_NOOP("RGBEffect", "Special")
 
 using json = nlohmann::json;
 

@@ -9,7 +9,7 @@ RandomSpin::RandomSpin(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = "RandomSpin";
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
     EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "A simple RandomSpin for your devices";
     EffectDetails.IsReversable      = true;

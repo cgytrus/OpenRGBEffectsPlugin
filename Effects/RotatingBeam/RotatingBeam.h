@@ -19,9 +19,10 @@ public:
     explicit RotatingBeam(QWidget *parent = nullptr);
     ~RotatingBeam();
 
-    EFFECT_REGISTERER(ClassName(), CAT_BEAMS, [](){return new RotatingBeam;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_BEAMS, [](){return new RotatingBeam;});
 
     static std::string const ClassName() {return "RotatingBeam";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Rotating Beam"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void SetUserColors(std::vector<RGBColor> colors) override;

@@ -19,9 +19,10 @@ public:
     explicit Breathing(QWidget *parent = nullptr);
     ~Breathing();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SIMPLE, [](){return new Breathing;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SIMPLE, [](){return new Breathing;});
 
     static std::string const ClassName() { return "Breathing"; }
+    static std::string const UI_Name() { return QT_TR_NOOP("Breathing"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;

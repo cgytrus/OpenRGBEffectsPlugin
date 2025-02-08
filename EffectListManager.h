@@ -16,6 +16,12 @@
 #include <string>
 #include "RGBEffect.h"
 
+struct effect_names
+{
+    std::string classname;      //Internal Name reference for mapping
+    std::string ui_name;        //User friendly name (Untranslated)
+};
+
 class EffectListManager
 {
 public:
@@ -24,15 +30,18 @@ public:
     EffectListManager();
     ~EffectListManager();
     
-    std::map<std::string, std::vector<std::string>>     GetCategorizedEffects();
+    std::map<std::string, std::vector<effect_names>>    GetCategorizedEffects();
     std::function<RGBEffect*()>                         GetEffectConstructor(std::string name);
     std::size_t                                         GetEffectsListSize();
 
-    void                                                RegisterEffect(std::string, std::string, std::function<RGBEffect*()>);
+    void                                                RegisterEffect(std::string classname,
+                                                                       std::string ui_name,
+                                                                       std::string category,
+                                                                       std::function<RGBEffect*()> constructor);
 
 private:
     static EffectListManager*                           instance;
 
     std::map<std::string, std::function<RGBEffect*()>>  effects_constructors;
-    std::map<std::string, std::vector<std::string>>     categorized_effects;
+    std::map<std::string, std::vector<effect_names>>    categorized_effects;
 };

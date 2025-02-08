@@ -9,10 +9,10 @@ Wavy::Wavy(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Wavy";
-    EffectDetails.EffectClassName = ClassName();
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Alternate colors like waves";
-    EffectDetails.UserColors   = 2;
+    EffectDetails.UserColors        = 2;
     EffectDetails.HasCustomSettings = true;
 
     ui->oscillation_speed_slider->setMinimum(1);

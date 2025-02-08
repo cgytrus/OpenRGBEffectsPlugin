@@ -18,9 +18,11 @@ public:
     explicit Mask(QWidget *parent = nullptr);
     ~Mask();
 
-    EFFECT_REGISTERER(ClassName(), CAT_SPECIAL, [](){return new Mask;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_SPECIAL, [](){return new Mask;});
 
     static std::string const ClassName() {return "Mask";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Mask"); }
+
     void StepEffect(std::vector<ControllerZone*>) override;
     void LoadCustomSettings(json) override;
     json SaveCustomSettings() override;

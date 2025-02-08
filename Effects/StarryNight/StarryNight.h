@@ -1,6 +1,7 @@
 #ifndef STARRYNIGHT_H
 #define STARRYNIGHT_H
 
+#include <QWidget>
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 #include <QWidget>
@@ -72,9 +73,10 @@ public:
     explicit StarryNight(QWidget *parent = nullptr);
     ~StarryNight() {};
 
-    EFFECT_REGISTERER(ClassName(), CAT_ADVANCED, [](){return new StarryNight;});
+    EFFECT_REGISTERER(ClassName(), UI_Name(), CAT_ADVANCED, [](){return new StarryNight;});
 
     static std::string const ClassName() {return "StarryNight";}
+    static std::string const UI_Name() { return QT_TR_NOOP("Starry Night"); }
 
     void StepEffect(std::vector<ControllerZone*>) override;
     void OnControllerZonesListChanged(std::vector<ControllerZone*>) override;
