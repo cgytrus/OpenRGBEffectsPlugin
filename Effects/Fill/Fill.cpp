@@ -9,9 +9,8 @@ Fill::Fill(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Fill";
+    void SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Progressivly fills your devices with a defined color";
     EffectDetails.IsReversable = true;
     EffectDetails.MaxSpeed     = 100;
     EffectDetails.MinSpeed     = 10;
@@ -32,7 +31,14 @@ void Fill::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        void SetDynamicStrings();
     }
+}
+
+void Fill::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Fill").toStdString();
+    EffectDetails.EffectDescription = tr("Progressivly fills your devices with a defined color").toStdString();
 }
 
 void Fill::StepEffect(std::vector<ControllerZone*> controller_zones)

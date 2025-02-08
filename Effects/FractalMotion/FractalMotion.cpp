@@ -8,9 +8,8 @@ FractalMotion::FractalMotion(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "FractalMotion";
+    void SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Psychedelic sinusoid";
     EffectDetails.MaxSpeed     = 200;
     EffectDetails.MinSpeed     = 20;
     EffectDetails.UserColors   = 1;
@@ -35,7 +34,14 @@ void FractalMotion::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        void SetDynamicStrings();
     }
+}
+
+void FractalMotion::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("FractalMotion").toStdString();
+    EffectDetails.EffectDescription = tr("Psychedelic sinusoid").toStdString();
 }
 
 void FractalMotion::StepEffect(std::vector<ControllerZone*> controller_zones)

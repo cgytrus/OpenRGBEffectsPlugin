@@ -25,6 +25,9 @@ public:
 
 private:
     Ui::Fill *ui;
+
+    void SetDynamicStrings();
+
     double time = 0;
     double progress = 0;
     double old_progress = 0;

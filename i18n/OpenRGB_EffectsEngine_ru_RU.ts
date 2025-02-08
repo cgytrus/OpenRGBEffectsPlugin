@@ -796,6 +796,18 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Frequency</source>
         <translation type="unfinished">Частота</translation>
     </message>
+    <message>
+        <source>DoubleRotatingRainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Two rainbows that rotate synchronously</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color speed</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EffectList</name>
@@ -831,6 +843,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>New name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Fill</name>
+    <message>
+        <source>Fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressivly fills your devices with a defined color</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -904,6 +927,14 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Freq m8</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>FractalMotion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psychedelic sinusoid</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GLSLCodeEditor</name>
@@ -948,6 +979,14 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>GIF Files (*.gif)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GifPlayer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use GIFs to create your own effect</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1066,6 +1105,38 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hypnotoad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You wont escape this</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter-clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To the inside</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To the outside</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

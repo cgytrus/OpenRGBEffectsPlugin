@@ -443,11 +443,11 @@
     </message>
     <message>
         <source>Bouncing Ball</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Balle rebondissante</translation>
     </message>
     <message>
         <source>A ball bounces around your RGB setup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Une balle rebondit autour de votre configuration RVB</translation>
     </message>
 </context>
 <context>
@@ -527,11 +527,11 @@
     </message>
     <message>
         <source>12-hour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">12-heures</translation>
     </message>
     <message>
         <source>24-hour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">24-heures</translation>
     </message>
 </context>
 <context>
@@ -558,11 +558,11 @@
     </message>
     <message>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dans le sens horaire</translation>
     </message>
     <message>
         <source>Counter-clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anti-horaire</translation>
     </message>
 </context>
 <context>
@@ -733,15 +733,15 @@
     </message>
     <message>
         <source>Police Beacon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Balise de police</translation>
     </message>
     <message>
         <source>Seabed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fond de la mer</translation>
     </message>
     <message>
         <source>Sunset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Coucher de soleil</translation>
     </message>
     <message>
         <source>Vaporwave</source>
@@ -796,6 +796,18 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Frequency</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>DoubleRotatingRainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Two rainbows that rotate synchronously</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color speed</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EffectList</name>
@@ -831,6 +843,17 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>New name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Fill</name>
+    <message>
+        <source>Fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressivly fills your devices with a defined color</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -904,6 +927,14 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Freq m8</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>FractalMotion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psychedelic sinusoid</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GLSLCodeEditor</name>
@@ -948,6 +979,14 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>GIF Files (*.gif)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GifPlayer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use GIFs to create your own effect</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -999,7 +1038,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Luminosité</translation>
     </message>
     <message>
         <source>Temperature</source>
@@ -1015,7 +1054,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Use prefered colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utiliser les couleurs préférées</translation>
     </message>
     <message>
         <source>Effects settings:</source>
@@ -1066,6 +1105,38 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hypnotoad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You wont escape this</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clockwise</source>
+        <translation type="unfinished">Dans le sens horaire</translation>
+    </message>
+    <message>
+        <source>Counter-clockwise</source>
+        <translation type="unfinished">Anti-horaire</translation>
+    </message>
+    <message>
+        <source>To the inside</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To the outside</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1133,7 +1204,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Luminosité</translation>
     </message>
     <message>
         <source>Custom height</source>
@@ -1283,7 +1354,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Luminosité</translation>
     </message>
     <message>
         <source>FPS</source>
@@ -1310,23 +1381,23 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Git branch:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Branche GIT :</translation>
     </message>
     <message>
         <source>Git commit date:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Date de révision :</translation>
     </message>
     <message>
         <source>Git commit ID:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Révision GIT :</translation>
     </message>
     <message>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Version :</translation>
     </message>
     <message>
         <source>Build date:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Date de construction :</translation>
     </message>
     <message>
         <source>Documentation:</source>

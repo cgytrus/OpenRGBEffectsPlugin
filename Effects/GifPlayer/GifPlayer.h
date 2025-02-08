@@ -32,6 +32,9 @@ public:
 
 private:
     Ui::GifPlayer   *ui;
+
+    void SetDynamicStrings();
+
     QMovie *movie;
     QString fileName;
 

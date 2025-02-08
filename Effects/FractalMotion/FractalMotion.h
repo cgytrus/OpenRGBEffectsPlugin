@@ -50,6 +50,9 @@ private slots:
 
 private:
     Ui::FractalMotion *ui;
+
+    void SetDynamicStrings();
+
     RGBColor GetColor(unsigned int, unsigned int, unsigned int);
 
     double progress = 0.f;

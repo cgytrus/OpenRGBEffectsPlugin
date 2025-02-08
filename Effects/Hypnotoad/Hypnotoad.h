@@ -46,6 +46,9 @@ private slots:
 
 private:
     Ui::Hypnotoad *ui;
+
+    void SetDynamicStrings();
+
     double progress = 1000.0;
     RGBColor GetColor(unsigned int, unsigned int, float, float, bool);
     void GenerateGradient();

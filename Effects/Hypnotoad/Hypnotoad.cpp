@@ -13,18 +13,13 @@ Hypnotoad::Hypnotoad(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "Hypnotoad";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "You wont escape this";
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
-    EffectDetails.SupportsRandom = false;
-
-    ui->color_mode->addItems({"Rainbow", "Custom"});
-    ui->color_rotation_direction->addItems({"Clockwise","Counter-clockwise"});
-    ui->animation_direction->addItems({"To the inside","To the outside"});
+    EffectDetails.SupportsRandom    = false;
 
     ui->colors_picker->setVisible(false);
     ui->gradient->setVisible(false);
@@ -45,7 +40,23 @@ void Hypnotoad::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Hypnotoad::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("Hypnotoad").toStdString();
+    EffectDetails.EffectDescription = tr("You wont escape this").toStdString();
+    ui->color_mode->clear();
+    ui->color_mode->addItems({tr("Rainbow"),
+                              tr("Custom")});
+    ui->color_rotation_direction->clear();
+    ui->color_rotation_direction->addItems({tr("Clockwise"),
+                                            tr("Counter-clockwise")});
+    ui->animation_direction->clear();
+    ui->animation_direction->addItems({tr("To the inside"),
+                                       tr("To the outside")});
 }
 
 void Hypnotoad::StepEffect(std::vector<ControllerZone*> controller_zones)

@@ -33,6 +33,8 @@ private slots:
 private:
     Ui::DoubleRotatingRainbow *ui;
 
+    void SetDynamicStrings();
+
     double time = 1000.0;
 
     double cos_time;

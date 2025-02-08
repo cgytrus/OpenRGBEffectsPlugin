@@ -11,9 +11,8 @@ GifPlayer::GifPlayer(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "GifPlayer";
+    SetDynamicStrings();
     EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Use GIFs to create your own effect";
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = false;
 }
@@ -34,7 +33,14 @@ void GifPlayer::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void GifPlayer::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("GifPlayer").toStdString();
+    EffectDetails.EffectDescription = tr("Use GIFs to create your own effect").toStdString();
 }
 
 void GifPlayer::StepEffect(std::vector<ControllerZone*> controller_zones)

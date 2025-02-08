@@ -8,16 +8,13 @@ DoubleRotatingRainbow::DoubleRotatingRainbow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName = "DoubleRotatingRainbow";
-    EffectDetails.EffectClassName = ClassName();
-    EffectDetails.EffectDescription = "Two rainbows that rotate synchronously";
-
-    EffectDetails.IsReversable = true;
-    EffectDetails.MaxSpeed     = 100;
-    EffectDetails.MinSpeed     = 1;
-    EffectDetails.MaxSlider2Val = 100;
-    EffectDetails.MinSlider2Val = 1;
-    EffectDetails.Slider2Name   = "Color speed";
+    SetDynamicStrings();
+    EffectDetails.EffectClassName   = ClassName();
+    EffectDetails.IsReversable      = true;
+    EffectDetails.MaxSpeed          = 100;
+    EffectDetails.MinSpeed          = 1;
+    EffectDetails.MaxSlider2Val     = 100;
+    EffectDetails.MinSlider2Val     = 1;
 
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = false;
@@ -36,7 +33,15 @@ void DoubleRotatingRainbow::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void DoubleRotatingRainbow::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr("DoubleRotatingRainbow").toStdString();
+    EffectDetails.EffectDescription = tr("Two rainbows that rotate synchronously").toStdString();
+    EffectDetails.Slider2Name       = tr("Color speed").toStdString();
 }
 
 void DoubleRotatingRainbow::StepEffect(std::vector<ControllerZone*> controller_zones)
