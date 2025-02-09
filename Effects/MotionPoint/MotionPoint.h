@@ -35,6 +35,8 @@ private slots:
 private:
     Ui::MotionPoint *ui;
 
+    void SetDynamicStrings();
+
     RGBColor GetColor(unsigned int, unsigned int, double);
 
     double progress = 0.f;

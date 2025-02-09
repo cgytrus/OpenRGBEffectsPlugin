@@ -28,6 +28,9 @@ public:
 
 private:
     Ui::Marquee *ui;
+
+    void SetDynamicStrings();
+
     RGBColor GetColor(unsigned int);
     double progress = 0.0;
 

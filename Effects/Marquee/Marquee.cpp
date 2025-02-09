@@ -9,16 +9,14 @@ Marquee::Marquee(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A simple marquee for your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 200;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 1;
     EffectDetails.MaxSlider2Val     = 20;
     EffectDetails.MinSlider2Val     = 2;
-    EffectDetails.Slider2Name       = "Spacing";
 
     random.saturation = 255;
     random.value = 255;
@@ -37,7 +35,15 @@ void Marquee::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Marquee::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A simple marquee for your devices").toStdString();
+    EffectDetails.Slider2Name       = tr("Spacing").toStdString();
 }
 
 void Marquee::StepEffect(std::vector<ControllerZone*> controller_zones)

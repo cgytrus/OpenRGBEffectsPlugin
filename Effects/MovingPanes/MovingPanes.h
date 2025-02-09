@@ -28,6 +28,8 @@ public:
 private:
     Ui::MovingPanes *ui;
 
+    void SetDynamicStrings();
+
     double time = 0.0;
     RGBColor GetColor(float, float, float, float, bool);
 

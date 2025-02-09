@@ -8,9 +8,8 @@ Mosaic::Mosaic(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Tiles randomly spawning across your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 200;
     EffectDetails.MinSpeed          = 1;
@@ -30,7 +29,14 @@ void Mosaic::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Mosaic::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Tiles randomly spawning across your devices").toStdString();
 }
 
 void Mosaic::StepEffect(std::vector<ControllerZone*> controller_zones)

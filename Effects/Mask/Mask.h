@@ -38,6 +38,9 @@ private slots:
 
 private:
     Ui::Mask *ui;
+
+    void SetDynamicStrings();
+
     RGBColor GetColor(float, float, float, float);
     QRectF restrict = QRectF(0.f, 0.f, 1.f, 1.f);
 

@@ -9,16 +9,14 @@ MotionPoints::MotionPoints(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Multiple points that moves in all directions on your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 200;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 2;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Number of points";
 
     SetSpeed(100);
     RGBEffect::SetSlider2Val(20);
@@ -34,7 +32,15 @@ void MotionPoints::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void MotionPoints::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Multiple points that moves in all directions on your devices").toStdString();
+    EffectDetails.Slider2Name       = tr("Number of points").toStdString();
 }
 
 void MotionPoints::StepEffect(std::vector<ControllerZone*> controller_zones)

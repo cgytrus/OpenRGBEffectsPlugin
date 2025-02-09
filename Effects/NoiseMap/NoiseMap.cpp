@@ -12,28 +12,20 @@ NoiseMap::NoiseMap(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Floor is lava";
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
 
-    ui->colors_choice->addItems({"Rainbow", "Inverse rainbow", "Custom"});
     ui->colorsPicker->hide();
 
-    for(const NoiseMapPreset& preset: presets)
-    {
-        ui->preset_choice->addItem(QString::fromStdString(preset.name));
-    }
 
     ui->preset_choice->blockSignals(false);
     ui->preset_choice->hide();
     ui->preset_label->hide();
 
-    LoadPreset("Default");
-
-    ui->motion->addItems({"Up", "Down", "Left", "Right"});
+    ui->preset_choice->setCurrentIndex(0);
 
     SetSpeed(50);
     Defaults();
@@ -51,7 +43,30 @@ void NoiseMap::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void NoiseMap::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Floor is lava").toStdString();
+
+    ui->preset_choice->clear();
+    for(const NoiseMapPreset& preset: presets)
+    {
+        ui->preset_choice->addItem(tr(preset.name));
+    }
+
+    ui->colors_choice->clear();
+    ui->colors_choice->addItems({tr("Rainbow"),
+                                 tr("Inverse rainbow"),
+                                 tr("Custom")});
+    ui->motion->clear();
+    ui->motion->addItems({tr("Up"),
+                          tr("Down"),
+                          tr("Left"),
+                          tr("Right")});
 }
 
 void NoiseMap::GenerateGradient()
@@ -294,20 +309,10 @@ void NoiseMap::on_colors_choice_currentIndexChanged(int value)
     ui->preset_label->setVisible(value==2);
 }
 
-void NoiseMap::LoadPreset(const QString& text)
+void NoiseMap::on_preset_choice_currentTextChanged(int value)
 {
-    std::string preset_name = text.toStdString();
-
-    for(const NoiseMapPreset& preset: presets)
+    if(value > -1)
     {
-        if(preset_name == preset.name){
-            ui->colorsPicker->SetColors(preset.colors);
-            break;
-        }
+        ui->colorsPicker->SetColors(presets[value].colors);
     }
-}
-
-void NoiseMap::on_preset_choice_currentTextChanged(const QString& text)
-{
-    LoadPreset(text);
 }

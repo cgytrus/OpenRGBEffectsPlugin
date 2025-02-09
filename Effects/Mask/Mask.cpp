@@ -8,9 +8,8 @@ Mask::Mask(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A simple mask for using in layers";
     EffectDetails.UserColors        = 2;
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom    = false;
@@ -26,7 +25,14 @@ void Mask::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Mask::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A simple mask for using in layers").toStdString();
 }
 
 void Mask::StepEffect(std::vector<ControllerZone*> controller_zones)

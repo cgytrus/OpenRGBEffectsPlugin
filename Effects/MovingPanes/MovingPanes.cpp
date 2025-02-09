@@ -9,16 +9,14 @@ MovingPanes::MovingPanes(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Parts of your devices in symmetrical motion";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 2;
     EffectDetails.MaxSlider2Val     = 50;
     EffectDetails.MinSlider2Val     = 2;
-    EffectDetails.Slider2Name       = "Divisions";
     EffectDetails.SupportsRandom    = false;
 
     SetSpeed(50);
@@ -35,7 +33,15 @@ void MovingPanes::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void MovingPanes::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Parts of your devices in symmetrical motion").toStdString();
+    EffectDetails.Slider2Name       = tr("Divisions").toStdString();
 }
 
 void MovingPanes::StepEffect(std::vector<ControllerZone*> controller_zones)

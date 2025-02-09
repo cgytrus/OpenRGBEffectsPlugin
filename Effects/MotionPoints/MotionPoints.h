@@ -121,6 +121,8 @@ public:
 private:
     Ui::MotionPoints *ui;
 
+    void SetDynamicStrings();
+
     std::vector<MovingPoint> points;
 
     void UpdatePoints();

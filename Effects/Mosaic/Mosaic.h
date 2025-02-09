@@ -41,6 +41,8 @@ private slots:
 private:
     Ui::Mosaic *ui;
 
+    void SetDynamicStrings();
+
     void ResetMosaic(std::vector<ControllerZone*>);
     void UpdateTiles(unsigned int);
     std::vector<std::vector<Tile>> tiles;

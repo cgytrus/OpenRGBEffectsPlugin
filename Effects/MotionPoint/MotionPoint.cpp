@@ -8,9 +8,8 @@ MotionPoint::MotionPoint(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A point that moves forth and back on your devices";
     EffectDetails.MaxSpeed          = 50;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 1;
@@ -31,7 +30,14 @@ void MotionPoint::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void MotionPoint::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A point that moves forth and back on your devices").toStdString();
 }
 
 void MotionPoint::StepEffect(std::vector<ControllerZone*> controller_zones)

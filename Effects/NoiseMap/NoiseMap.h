@@ -10,7 +10,7 @@
 
 typedef struct
 {
-    std::string name;
+    const char * name;
     std::vector<RGBColor> colors;
 
 } NoiseMapPreset;
@@ -50,10 +50,12 @@ private slots:
 
     void on_colors_choice_currentIndexChanged(int);
     void on_colorsPicker_ColorsChanged();
-    void on_preset_choice_currentTextChanged(const QString&);
+    void on_preset_choice_currentTextChanged(int);
 
 private:
     Ui::NoiseMap *ui;
+
+    void SetDynamicStrings();
 
     void Defaults();
     void ResetNoise();
@@ -85,17 +87,15 @@ private:
     void GenerateGradient();
     QImage image = QImage(100, 1, QImage::Format_RGB32);
 
-    void LoadPreset(const QString&);
-
     std::vector<NoiseMapPreset> presets =
     {
-        {"Lava", std::vector<RGBColor>{
+        {QT_TR_NOOP("Lava"), std::vector<RGBColor>{
              HEXCOLOR(0xff5500),
              HEXCOLOR(0xffc800),
              HEXCOLOR(0xc80000)
          }},
 
-        {"Borealis", std::vector<RGBColor>{
+        {QT_TR_NOOP("Borealis"), std::vector<RGBColor>{
              HEXCOLOR(0x14e81e),
              HEXCOLOR(0x00ea8d),
              HEXCOLOR(0x017ed5),
@@ -103,14 +103,14 @@ private:
              HEXCOLOR(0x8d00c4)
          }},
 
-        {"Ocean", std::vector<RGBColor>{
+        {QT_TR_NOOP("Ocean"), std::vector<RGBColor>{
              HEXCOLOR(0x00007f),
              HEXCOLOR(0x0000ff),
              HEXCOLOR(0x00ffff),
              HEXCOLOR(0x00aaff)
          }},
 
-        {"Chemicals", std::vector<RGBColor>{
+        {QT_TR_NOOP("Chemicals"), std::vector<RGBColor>{
              HEXCOLOR(0x9346ff),
              HEXCOLOR(0x8868b5),
              HEXCOLOR(0x7afc94),
