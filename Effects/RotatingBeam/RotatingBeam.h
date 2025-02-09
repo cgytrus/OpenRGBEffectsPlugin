@@ -38,6 +38,8 @@ private slots:
 private:
     Ui::RotatingBeam *ui;
 
+    void SetDynamicStrings();
+
     double progress = 0.0;
 
     int thickness = 0;
@@ -61,12 +63,12 @@ private:
 
     QStringList modes = QStringList(
                 {
-                    "Clockwise",
-                    "Counter clockwise",
-                    "Pendulum",
-                    "Wipers",
-                    "Swing H",
-                    "Swing V"
+                    QT_TR_NOOP("Clockwise"),
+                    QT_TR_NOOP("Counter clockwise"),
+                    QT_TR_NOOP("Pendulum"),
+                    QT_TR_NOOP("Wipers"),
+                    QT_TR_NOOP("Swing H"),
+                    QT_TR_NOOP("Swing V")
                 });
 
     RotatingBeamMode mode = CLOCKWISE;

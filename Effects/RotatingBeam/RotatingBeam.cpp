@@ -9,19 +9,16 @@ RotatingBeam::RotatingBeam(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A beam that rotates in different ways";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 2;
     EffectDetails.MaxSlider2Val     = 50;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Glow";
     EffectDetails.HasCustomSettings = true;
 
-    ui->mode->addItems(modes);
 
     SetSpeed(50);
     SetSlider2Val(10);
@@ -37,6 +34,19 @@ void RotatingBeam::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void RotatingBeam::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A beam that rotates in different ways").toStdString();
+    EffectDetails.Slider2Name       = tr("Glow").toStdString();
+    ui->mode->clear();
+    for(QString mode_name: modes)
+    {
+        ui->mode->addItem(tr(mode_name.toUtf8()));
     }
 }
 

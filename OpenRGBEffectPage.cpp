@@ -91,6 +91,8 @@ void OpenRGBEffectPage::changeEvent(QEvent *event)
         ui->retranslateUi(this);
         ui->EffectName->setText(QString().fromStdString(effect->EffectDetails.EffectName));
         ui->EffectDesciption->setText(QString().fromStdString(effect->EffectDetails.EffectDescription));
+        ui->Slider2Label->setText(QCoreApplication::translate(effect->EffectDetails.EffectClassName.c_str(),
+                                                              effect->EffectDetails.Slider2Name.c_str()));
     }
 }
 
@@ -114,8 +116,8 @@ void OpenRGBEffectPage::InitUi()
     /*---------------------------------*\
     | Fill in top description and name  |
     \*---------------------------------*/
-    ui->EffectName->setText(QString().fromStdString(effect->EffectDetails.EffectName));
-    ui->EffectDesciption->setText(QString().fromStdString(effect->EffectDetails.EffectDescription));
+    ui->EffectName->setText(tr(effect->EffectDetails.EffectName.c_str()));
+    ui->EffectDesciption->setText(tr(effect->EffectDetails.EffectDescription.c_str()));
 
     ui->RandomCheckbox->setCheckState(effect->IsRandomColorsEnabled()? Qt::Checked : Qt::Unchecked);
     ui->OnlyFirst->setCheckState(effect->IsOnlyFirstColorEnabled()? Qt::Checked : Qt::Unchecked);
@@ -140,7 +142,7 @@ void OpenRGBEffectPage::InitUi()
     {
         ui->Slider2->setMaximum(effect->EffectDetails.MaxSlider2Val);
         ui->Slider2->setMinimum(effect->EffectDetails.MinSlider2Val);
-        ui->Slider2Label->setText(QString().fromStdString(effect->EffectDetails.Slider2Name));
+        ui->Slider2Label->setText(effect->EffectDetails.Slider2Name.c_str());
         ui->Slider2Label->show();
         ui->Slider2->show();
     }

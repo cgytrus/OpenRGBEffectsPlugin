@@ -10,19 +10,15 @@ RadialRainbow::RadialRainbow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Dive into the RGB tunnel";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 200;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Frequency";
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom    = false;
-
-    ui->shape->addItems({"Circles", "Squares"});
 
     SetSpeed(100);
     SetSlider2Val(50);
@@ -38,7 +34,18 @@ void RadialRainbow::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void RadialRainbow::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Dive into the RGB tunnel").toStdString();
+    EffectDetails.Slider2Name       = tr("Frequency").toStdString();
+    ui->shape->clear();
+    ui->shape->addItems({tr("Circles"),
+                         tr("Squares")});
 }
 
 void RadialRainbow::StepEffect(std::vector<ControllerZone*> controller_zones)

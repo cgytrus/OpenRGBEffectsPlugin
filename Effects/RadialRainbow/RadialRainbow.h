@@ -35,6 +35,9 @@ private slots:
 
 private:
     Ui::RadialRainbow *ui;
+
+    void SetDynamicStrings();
+
     double progress = 0.f;
     RGBColor GetColor(unsigned int, unsigned int, double, double, bool);
     unsigned int cx_shift = 50;

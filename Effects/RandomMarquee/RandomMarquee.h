@@ -26,8 +26,14 @@ public:
 
     void StepEffect(std::vector<ControllerZone*>) override;
 
+private slots:
+    void changeEvent(QEvent *event);
+
 private:
     Ui::RandomMarquee *ui;
+
+    void SetDynamicStrings();
+
     RGBColor GetColor(unsigned int);
     double custom_rand(double min, double max);
 

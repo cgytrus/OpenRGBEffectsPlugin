@@ -9,13 +9,11 @@ Rain::Rain(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Droplet effect";
     EffectDetails.IsReversable      = true;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.MaxSpeed          = 200;
-    EffectDetails.Slider2Name       = "Drops";
     EffectDetails.MinSlider2Val     = 1;
     EffectDetails.MaxSlider2Val     = 50;
     EffectDetails.UserColors        = 5;
@@ -24,6 +22,27 @@ Rain::Rain(QWidget *parent) :
 
     SetSpeed(25);
     SetSlider2Val(20);
+}
+
+Rain::~Rain()
+{
+    delete ui;
+}
+
+void Rain::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void Rain::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Droplet effect").toStdString();
+    EffectDetails.Slider2Name       = tr("Drops").toStdString();
 }
 
 void Rain::StepEffect(std::vector<ControllerZone*> controller_zones)
@@ -183,19 +202,6 @@ void Rain::OnControllerZonesListChanged(std::vector<ControllerZone*> controller_
 void Rain::on_size_valueChanged(int value)
 {
     size = value;
-}
-
-Rain::~Rain()
-{
-    delete ui;
-}
-
-void Rain::changeEvent(QEvent *event)
-{
-    if(event->type() == QEvent::LanguageChange)
-    {
-        ui->retranslateUi(this);
-    }
 }
 
 void Rain::LoadCustomSettings(json settings)

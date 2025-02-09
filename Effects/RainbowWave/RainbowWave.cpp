@@ -5,19 +5,33 @@ REGISTER_EFFECT(RainbowWave);
 
 RainbowWave::RainbowWave() : RGBEffect()
 {
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
+
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A sliding Rainbow";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.MinSlider2Val     = 1;
     EffectDetails.MaxSlider2Val     = 50;
-    EffectDetails.Slider2Name       = "Frequency";
     EffectDetails.SupportsRandom    = false;
 
     SetSpeed(40);
     SetSlider2Val(10);
+}
+
+void RainbowWave::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        SetDynamicStrings();
+    }
+}
+
+void RainbowWave::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A sliding Rainbow").toStdString();
+    EffectDetails.Slider2Name       = tr("Frequency").toStdString();
 }
 
 void RainbowWave::StepEffect(std::vector<ControllerZone*> controller_zones)

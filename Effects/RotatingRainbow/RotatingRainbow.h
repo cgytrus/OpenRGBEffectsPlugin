@@ -29,6 +29,8 @@ public:
 private:
     Ui::RotatingRainbow *ui;
 
+    void SetDynamicStrings();
+
     double time = 1000.0;
 
     double cos_time;

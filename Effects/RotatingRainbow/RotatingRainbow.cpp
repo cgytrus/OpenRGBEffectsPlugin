@@ -8,15 +8,13 @@ RotatingRainbow::RotatingRainbow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A rainbow that rotates arround the center of your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Color speed";
 
     SetSpeed(20);
     SetSlider2Val(30);
@@ -32,7 +30,15 @@ void RotatingRainbow::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void RotatingRainbow::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A rainbow that rotates around the center of your devices").toStdString();
+    EffectDetails.Slider2Name       = tr("Color speed").toStdString();
 }
 
 void RotatingRainbow::StepEffect(std::vector<ControllerZone*> controller_zones)

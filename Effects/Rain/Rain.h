@@ -43,6 +43,9 @@ private slots:
 
 private:
     Ui::Rain *ui;
+
+    void SetDynamicStrings();
+
     int size = 1;
 
     RGBColor GetColor(unsigned int, unsigned int, unsigned int);

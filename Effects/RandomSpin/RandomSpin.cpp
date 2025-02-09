@@ -9,9 +9,8 @@ RandomSpin::RandomSpin(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A simple RandomSpin for your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
@@ -26,6 +25,21 @@ RandomSpin::RandomSpin(QWidget *parent) :
 RandomSpin::~RandomSpin()
 {
     delete ui;
+}
+
+void RandomSpin::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void RandomSpin::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A simple Random Spin for your devices").toStdString();
 }
 
 void RandomSpin::GenerateGradient()

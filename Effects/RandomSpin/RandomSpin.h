@@ -37,8 +37,14 @@ public:
     void OnControllerZonesListChanged(std::vector<ControllerZone*>)  override;
     void SetUserColors(std::vector<RGBColor> colors) override;
 
+private slots:
+    void changeEvent(QEvent *event);
+
 private:
     Ui::RandomSpin *ui;
+
+    void SetDynamicStrings();
+
     RGBColor GetColor(unsigned int i, unsigned int w, const RandomSpinEntry& entry);
     double custom_rand(double, double);
 

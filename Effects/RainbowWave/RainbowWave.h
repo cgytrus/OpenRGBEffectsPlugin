@@ -1,6 +1,7 @@
 #ifndef RAINBOWWAVE_H
 #define RAINBOWWAVE_H
 
+#include <QEvent>
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 
@@ -19,7 +20,12 @@ public:
 
     void StepEffect(std::vector<ControllerZone*>) override;
 
+private slots:
+    void changeEvent(QEvent *event);
+
 private:
+    void SetDynamicStrings();
+
     float Progress = 0;
 };
 

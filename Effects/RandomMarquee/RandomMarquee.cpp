@@ -9,9 +9,8 @@ RandomMarquee::RandomMarquee(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A simple RandomMarquee for your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 200;
     EffectDetails.MinSpeed          = 1;
@@ -27,6 +26,21 @@ RandomMarquee::RandomMarquee(QWidget *parent) :
 RandomMarquee::~RandomMarquee()
 {
     delete ui;
+}
+
+void RandomMarquee::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void RandomMarquee::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A simple Random Marquee for your devices").toStdString();
 }
 
 double RandomMarquee::custom_rand(double min, double max)
