@@ -39,6 +39,8 @@ private slots:
 private:
     Ui::Lightning *ui;
 
+    void SetDynamicStrings();
+
     hsv_t UserHSV;
     std::map<ControllerZone*, std::vector<hsv_t>> Lightnings;
     RGBColor TriggerLightning(ControllerZone*, int);

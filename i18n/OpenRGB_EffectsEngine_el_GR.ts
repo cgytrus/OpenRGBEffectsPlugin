@@ -1262,6 +1262,10 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Lightning</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Prepare yourself for thunderstorm</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LivePreviewController</name>

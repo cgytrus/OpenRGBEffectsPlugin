@@ -1263,6 +1263,10 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <source>Lightning</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Prepare yourself for thunderstorm</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LivePreviewController</name>
