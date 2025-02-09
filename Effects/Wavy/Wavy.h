@@ -33,6 +33,9 @@ public:
 
 private:
     Ui::Wavy   *ui;
+
+    void SetDynamicStrings();
+
     bool       Dir = true ;
     float      SineProgress      = 0.0f;
     float      WaveProgress      = 0.0f;

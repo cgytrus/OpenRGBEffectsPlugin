@@ -9,9 +9,8 @@ Wavy::Wavy(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Alternate colors like waves";
     EffectDetails.UserColors        = 2;
     EffectDetails.HasCustomSettings = true;
 
@@ -39,7 +38,14 @@ void Wavy::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Wavy::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Alternate colors like waves").toStdString();
 }
 
 void Wavy::StepEffect(std::vector<ControllerZone*> controller_zones)

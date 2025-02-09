@@ -27,6 +27,9 @@ public:
 
 private:
     Ui::ZigZag *ui;
+
+    void SetDynamicStrings();
+
     RGBColor GetColor(float,float,float,float);
 
     double time = 0.;

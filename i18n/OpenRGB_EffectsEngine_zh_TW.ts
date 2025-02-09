@@ -1009,6 +1009,14 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>110</source>
         <translation>110</translation>
     </message>
+    <message>
+        <source>Shader editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main shader</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GifPlayer</name>
@@ -1401,6 +1409,18 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <source>+</source>
         <translation>+</translation>
+    </message>
+    <message>
+        <source>Texture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buffer</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1829,6 +1849,14 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Sequence</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Alternates colors with a fade effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fade time</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ShaderFileTabHeader</name>
@@ -1852,8 +1880,8 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation>打開圖像</translation>
     </message>
     <message>
-        <source>Image Files (*.png *.jpg *.bmp)</source>
-        <translation>圖片文件(*.png *.jpg *.bmp)</translation>
+        <source>Image Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1902,6 +1930,38 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Shaders</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unleash the power of OpenRGB with GL shaders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save shader to file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>my-shader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overwrite existing shader:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Or create a new one:</source>
+        <translation type="unfinished">或者創建一個新的:</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">取消</translation>
+    </message>
 </context>
 <context>
     <name>SmoothBlink</name>
@@ -1941,6 +2001,18 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Smooth Blink</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Create your own breathing sequences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Solid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Circle</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SpectrumCycling</name>
@@ -1952,11 +2024,23 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Spectrum Cycling</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Goes through every solid color of the rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Spiral</name>
     <message>
         <source>Spiral</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Draws a hypnotic spiral on your devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spiral shape</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1970,11 +2054,31 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Stack</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fills and stack your devices with a solid color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>StarryNight</name>
     <message>
         <source>Starry Night</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selects a random LED and fades it in an out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star Count</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2008,11 +2112,19 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Sunrise</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sunrise / Sunset effect</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Swap</name>
     <message>
         <source>Swap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alternate two colors on your devices from left to right</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2025,6 +2137,14 @@ Using an effect on a device WILL damage the flash or controller</source>
     <message>
         <source>Swirl Circles</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rotating circles around the center of your devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Glow</source>
+        <translation type="unfinished">髮光</translation>
     </message>
 </context>
 <context>
@@ -2041,12 +2161,28 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Swirl Circles Audio</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Rotating circles reacting to audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Glow</source>
+        <translation type="unfinished">髮光</translation>
+    </message>
 </context>
 <context>
     <name>Visor</name>
     <message>
         <source>Visor</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A back and forth effect motion, flipping colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Width</source>
+        <translation type="unfinished">寬度</translation>
     </message>
 </context>
 <context>
@@ -2079,11 +2215,19 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Wavy</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Alternate colors like waves</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ZigZag</name>
     <message>
         <source>ZigZag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A snake moving on your matrix typed devices</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

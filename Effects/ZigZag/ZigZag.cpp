@@ -9,9 +9,8 @@ ZigZag::ZigZag(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A snake moving on your matrix typed devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 20;
     EffectDetails.MinSpeed          = 1;
@@ -30,7 +29,14 @@ void ZigZag::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void ZigZag::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A snake moving on your matrix typed devices").toStdString();
 }
 
 void ZigZag::StepEffect(std::vector<ControllerZone*> controller_zones)

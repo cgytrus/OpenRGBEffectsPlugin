@@ -5,15 +5,13 @@ REGISTER_EFFECT(Visor);
 
 Visor::Visor() : RGBEffect()
 {
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "A back and forth effect motion, flipping colors";
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 2;
     EffectDetails.MinSlider2Val     = 1;
     EffectDetails.MaxSlider2Val     = 100;
-    EffectDetails.Slider2Name       = "Width";
 
     SetSpeed(50);
     SetSlider2Val(20);
@@ -22,9 +20,25 @@ Visor::Visor() : RGBEffect()
     C1 = ColorUtils::RandomRGBColor();
 }
 
+void Visor::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        SetDynamicStrings();
+    }
+}
+
+void Visor::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("A back and forth effect motion, flipping colors").toStdString();
+    EffectDetails.Slider2Name       = tr("Width").toStdString();
+}
+
+
 void Visor::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
-    // Caculate a few things outside the loop
+    // Calculate a few things outside the loop
     Progress += 0.01 * float(Speed) / float(FPS);
 
     width = 0.01 * Slider2Val;          // [0-1] float, size of the visor
