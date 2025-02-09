@@ -1587,6 +1587,38 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     </message>
 </context>
 <context>
+    <name>OpenRGBEffectTab</name>
+    <message>
+        <source>Profiles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Simpan</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No effects added yet.
+ Please select one from the list to get started.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PluginInfo</name>
     <message>
         <source>Download lastest build</source>

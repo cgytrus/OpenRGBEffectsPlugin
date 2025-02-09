@@ -27,7 +27,7 @@ public:
     void StepEffect(std::vector<ControllerZone*>) override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 
 private:
     Ui::RandomMarquee *ui;

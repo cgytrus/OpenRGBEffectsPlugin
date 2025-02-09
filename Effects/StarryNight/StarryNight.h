@@ -85,7 +85,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_backColor_ColorSelected(QColor);
     void on_colorsPickerStar_ColorsChanged();
     void on_starDensity_valueChanged(int);

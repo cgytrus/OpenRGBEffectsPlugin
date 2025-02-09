@@ -57,8 +57,6 @@ EffectList::EffectList(QWidget *parent) :
 
 void EffectList::AddEffectsMenus()
 {
-    main_menu->clear();
-    sub_menus.clear();
     for(auto const& entry: EffectListManager::get()->GetCategorizedEffects())
     {
         std::string category = entry.first;
@@ -130,7 +128,6 @@ void EffectList::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
-        AddEffectsMenus();
     }
 }
 
@@ -160,3 +157,20 @@ void EffectList::AddAction(QAction* action)
     main_menu->addAction(action);
     sub_actions.push_back(action);
 }
+
+void EffectList::ResetMenus()
+{
+    main_menu->clear();
+    sub_menus.clear();
+    sub_actions.clear();
+
+    delete effect_search;
+    unsigned int menu_width = width() - ui->start_stop_all_button->width() - layout()->spacing();
+    int scroll_bar_size = qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+    effect_search = new EffectSearch(ui->new_effect, menu_width - scroll_bar_size);
+    QWidgetAction* search_action = new QWidgetAction(this);
+
+    search_action->setDefaultWidget(effect_search);
+    main_menu->addAction(search_action);
+}
+

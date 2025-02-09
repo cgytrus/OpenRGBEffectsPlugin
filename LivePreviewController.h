@@ -31,7 +31,7 @@ signals:
     void ReversedChanged(bool);
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_presets_currentIndexChanged(int);
     void on_brightness_valueChanged(int);
     void on_width_valueChanged(int);

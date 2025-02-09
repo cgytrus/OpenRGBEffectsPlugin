@@ -168,7 +168,7 @@ private slots:
     \*-------------*/
     void Update();
     void OnAudioDeviceChanged(int);
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 
     void on_spinBox_Background_Brightness_valueChanged(int);
     void on_doubleSpinBox_Animation_Speed_valueChanged(double);

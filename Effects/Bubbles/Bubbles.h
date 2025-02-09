@@ -51,7 +51,7 @@ private:
     unsigned int bubbles_thickness = 10;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_max_bubbles_valueChanged(int);
     void on_rarity_valueChanged(int);
     void on_max_expansion_valueChanged(int);

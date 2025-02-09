@@ -34,7 +34,7 @@ public slots:
     void SetLog(QString);
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_apply_clicked();
     void on_styles_currentIndexChanged(int);
 

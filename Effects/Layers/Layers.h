@@ -34,7 +34,7 @@ public:
 
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void OnAddGroupClicked();
 
 private:

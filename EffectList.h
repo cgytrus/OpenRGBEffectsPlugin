@@ -26,13 +26,14 @@ public:
     void AddMenu(QMenu*);
     void AddAction(QAction*);
     void AddEffectsMenus();
+    void ResetMenus();
 
 signals:
     void EffectAdded(RGBEffect*);
     void ToggleAllEffectsState();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_start_stop_all_button_clicked();
     void AddEffect(std::string);
 

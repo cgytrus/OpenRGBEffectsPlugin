@@ -32,7 +32,7 @@ signals:
     void Remove();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_clear_clicked();
     void on_composer_fn_currentIndexChanged(int);
     void on_remove_clicked();

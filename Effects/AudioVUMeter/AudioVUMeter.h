@@ -33,7 +33,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_color_offset_valueChanged(int);
     void on_color_spread_valueChanged(int);
     void on_saturation_valueChanged(int);

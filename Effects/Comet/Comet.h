@@ -39,7 +39,7 @@ private:
     hsv_t tmp;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // COMET_H

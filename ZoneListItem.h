@@ -31,7 +31,7 @@ public:
     ControllerZone* GetControllerZone();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_enable_toggled(bool);
     void on_reverse_toggled(bool);
     void on_brightness_valueChanged(int);

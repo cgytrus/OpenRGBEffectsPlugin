@@ -28,7 +28,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_max_intensity_valueChanged(int);
     void on_intensity_speed_valueChanged(int);
     void on_radius_valueChanged(int);

@@ -24,7 +24,7 @@ public:
     void SetRGBColor(RGBColor);
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_button_clicked();
 
 signals:

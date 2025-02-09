@@ -37,7 +37,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_amplitude_valueChanged(int);
     void on_frequency_valueChanged(int);
     void on_lacunarity_valueChanged(int);

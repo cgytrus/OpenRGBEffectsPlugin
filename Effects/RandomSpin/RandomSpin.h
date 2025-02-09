@@ -38,7 +38,7 @@ public:
     void SetUserColors(std::vector<RGBColor> colors) override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 
 private:
     Ui::RandomSpin *ui;

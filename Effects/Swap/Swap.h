@@ -44,7 +44,7 @@ private:
     bool old_dir = 0;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // SWAP_H

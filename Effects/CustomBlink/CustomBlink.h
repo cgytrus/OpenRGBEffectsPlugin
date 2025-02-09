@@ -45,7 +45,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_add_clicked();
     void on_clear_clicked();
     void on_remove_clicked();

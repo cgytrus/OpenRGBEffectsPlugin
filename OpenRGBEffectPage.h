@@ -31,7 +31,7 @@ signals:
     void EffectState(bool);
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_preview_clicked();
     void on_SpeedSlider_valueChanged(int value);
     void on_Slider2_valueChanged(int value);

@@ -36,7 +36,7 @@ private:
     double progress = 0.0;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // CUSTOMMARQUEE_H

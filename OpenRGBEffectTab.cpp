@@ -30,6 +30,7 @@ OpenRGBEffectTab::OpenRGBEffectTab(QWidget *parent):
 
     effect_list = new EffectList(this);
 
+    AddGlobalMenus();
     InitEffectTabs();
 
     for (QWidget *w : QApplication::topLevelWidgets())
@@ -119,37 +120,43 @@ void OpenRGBEffectTab::SetLanguage()
             app->installTranslator(&translator);
             current_i18n_file = new_file.toStdString();
             ui->retranslateUi(this);
+            effect_list->ResetMenus();
+
+            AddGlobalMenus();
         }
     }
 }
 
-void OpenRGBEffectTab::InitEffectTabs()
+void OpenRGBEffectTab::AddGlobalMenus()
 {
-    QMenu* manage_profile_menu = new QMenu("Profiles", this);
+    QMenu* manage_profile_menu = new QMenu(tr("Profiles"), this);
 
-    load_profile_menu = new QMenu("Load profile", this);
+    load_profile_menu = new QMenu(tr("Load profile"), this);
     manage_profile_menu->addMenu(load_profile_menu);
 
-    QAction* save_profile = new QAction("Save", this);
+    QAction* save_profile = new QAction(tr("Save"), this);
     connect(save_profile, &QAction::triggered, this, &OpenRGBEffectTab::SaveProfileAction);
     manage_profile_menu->addAction(save_profile);
 
-    QAction* delete_profile = new QAction("Delete", this);
+    QAction* delete_profile = new QAction(tr("Delete"), this);
     connect(delete_profile, &QAction::triggered, this, &OpenRGBEffectTab::DeleteProfileAction);
     manage_profile_menu->addAction(delete_profile);
 
-    QAction* global_settings = new QAction("Settings", this);
+    QAction* global_settings = new QAction(tr("Settings"), this);
     connect(global_settings, &QAction::triggered, this, &OpenRGBEffectTab::GlobalSettingsAction);
 
-    QAction* plugin_info = new QAction("About", this);
+    QAction* plugin_info = new QAction(tr("About"), this);
     connect(plugin_info, &QAction::triggered, this, &OpenRGBEffectTab::PluginInfoAction);
 
     effect_list->AddMenu(manage_profile_menu);
     effect_list->AddEffectsMenus();
     effect_list->AddAction(global_settings);
     effect_list->AddAction(plugin_info);
+}
 
-    QLabel* label = new QLabel("No effects added yet.\n Please select one from the list to get started.");
+void OpenRGBEffectTab::InitEffectTabs()
+{
+    QLabel* label = new QLabel(tr("No effects added yet.\n Please select one from the list to get started."));
     label->setAlignment(Qt::AlignCenter);
 
     ui->EffectTabs->insertTab(0, label , "");

@@ -24,7 +24,7 @@ signals:
     void ColorsChanged();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_colors_count_spinBox_valueChanged(int);
 
 private:

@@ -16,7 +16,7 @@ public:
     ~ShaderFileTabHeader();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_close_clicked();
 
 private:

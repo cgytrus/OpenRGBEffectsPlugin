@@ -31,7 +31,7 @@ signals:
     void SelectionChanged();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_toggle_select_all_clicked();
     void on_toggle_reverse_clicked();
     void on_toggle_brightness_clicked();

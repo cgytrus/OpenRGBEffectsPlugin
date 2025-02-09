@@ -44,7 +44,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_preset_currentIndexChanged(int);
     void on_spread_valueChanged(int);
     void on_direction_currentIndexChanged(int);

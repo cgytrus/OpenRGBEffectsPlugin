@@ -49,7 +49,7 @@ private:
     int horizontalVelocity;
 
 private slots:
-       void changeEvent(QEvent *event);
+       void changeEvent(QEvent *event) override;
        void on_ball_radius_slider_valueChanged(int value);
        void on_gravity_slider_valueChanged(int value);
        void on_horizontal_velocity_slider_valueChanged(int value);

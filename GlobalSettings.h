@@ -19,7 +19,7 @@ public:
     ~GlobalSettings();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_fpscaptureSlider_valueChanged(int);
     void on_brightnessSlider_valueChanged(int);
     void on_fpsSlider_valueChanged(int);

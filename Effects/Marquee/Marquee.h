@@ -37,7 +37,7 @@ private:
     hsv_t random;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // MARQUEE_H

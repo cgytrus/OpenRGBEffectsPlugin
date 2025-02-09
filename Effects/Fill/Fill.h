@@ -38,7 +38,7 @@ private:
     RGBColor GetColor(unsigned int, unsigned int);
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // FILL_H

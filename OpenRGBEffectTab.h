@@ -34,7 +34,7 @@ public slots:
     void StopAll();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_device_list_SelectionChanged();
     void on_EffectTabs_currentChanged(int);
 
@@ -54,6 +54,7 @@ private:
 
     std::string latest_loaded_profile = "";
 
+    void AddGlobalMenus();
     void InitEffectTabs();
     void CreateEffectTab(RGBEffect*);
     void InitDeviceList();

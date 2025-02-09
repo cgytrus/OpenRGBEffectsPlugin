@@ -35,7 +35,7 @@ private:
     double progress = 0.f;
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // SEQUENCE_H

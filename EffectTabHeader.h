@@ -24,7 +24,7 @@ signals:
     void StartStopRequest();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_close_clicked();
     void on_rename_clicked();
     void on_start_stop_clicked();

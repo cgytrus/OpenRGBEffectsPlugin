@@ -17,7 +17,7 @@ public:
     ~PluginInfo();
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
     void on_open_plugin_folder_clicked();
     void on_download_latest_clicked();
 

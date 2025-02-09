@@ -35,7 +35,7 @@ private:
     RGBColor GetColor(float, float, float, float, bool);
 
 private slots:
-    void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) override;
 };
 
 #endif // SPIRAL_H
