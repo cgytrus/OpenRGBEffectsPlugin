@@ -13,9 +13,8 @@ Shaders::Shaders(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Unleash the power of OpenRGB with GL shaders";
     EffectDetails.MaxSpeed          = 2000;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
@@ -99,6 +98,21 @@ Shaders::~Shaders()
     delete ui;
 }
 
+void Shaders::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void Shaders::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Unleash the power of OpenRGB with GL shaders").toStdString();
+}
+
 void Shaders::SetFPS(unsigned int value)
 {
     FPS = value;
@@ -142,14 +156,6 @@ void Shaders::StopAudio()
     if(audio_settings_struct.audio_device >= 0)
     {
         AudioManager::get()->UnRegisterClient(audio_settings_struct.audio_device, this);
-    }
-}
-
-void Shaders::changeEvent(QEvent *event)
-{
-    if(event->type() == QEvent::LanguageChange)
-    {
-        ui->retranslateUi(this);
     }
 }
 
@@ -333,18 +339,18 @@ void Shaders::on_save_shader_as_clicked()
     if(filenames.empty())
     {
         filename = QInputDialog::getText(
-                    nullptr, "Save shader to file...", "Choose a filename",
-                    QLineEdit::Normal, QString("my-shader")).trimmed();
+                    nullptr, tr("Save shader to file..."), tr("Choose a filename"),
+                    QLineEdit::Normal, tr("my-shader")).trimmed();
     }
     else
     {
         QDialog dialog;
 
         dialog.setModal(true);
-        dialog.setWindowTitle("Save shader to file...");
+        dialog.setWindowTitle(tr("Save shader to file..."));
 
-        QLabel text1("Overwrite existing shader:", &dialog);
-        QLabel text2("Or create a new one:", &dialog);
+        QLabel text1(tr("Overwrite existing shader:"), &dialog);
+        QLabel text2(tr("Or create a new one:"), &dialog);
 
         QVBoxLayout dialog_layout(&dialog);
         QListWidget list_widget(&dialog);
@@ -357,7 +363,7 @@ void Shaders::on_save_shader_as_clicked()
 
         QLineEdit filename_input(&dialog);
 
-        filename_input.setText(QString("my-shader"));
+        filename_input.setText(tr("my-shader"));
 
         dialog_layout.addWidget(&text1);
         dialog_layout.addWidget(&list_widget);
@@ -367,11 +373,11 @@ void Shaders::on_save_shader_as_clicked()
         QHBoxLayout buttons_layout;
 
         QPushButton ok_button;
-        ok_button.setText("OK");
+        ok_button.setText(tr("OK"));
         buttons_layout.addWidget(&ok_button);
 
         QPushButton cancel_button;
-        cancel_button.setText("Cancel");
+        cancel_button.setText(tr("Cancel"));
         dialog.connect(&cancel_button,SIGNAL(clicked()),&dialog,SLOT(reject()));
         buttons_layout.addWidget(&cancel_button);
 

@@ -9,14 +9,12 @@ Sequence::Sequence(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Alternates colors with a fade effect";
     EffectDetails.MaxSpeed          = 20;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Fade time";
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom    = false;
 
@@ -33,7 +31,15 @@ void Sequence::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Sequence::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Alternates colors with a fade effect").toStdString();
+    EffectDetails.Slider2Name       = tr("Fade time").toStdString();
 }
 
 void Sequence::StepEffect(std::vector<ControllerZone*> controller_zones)

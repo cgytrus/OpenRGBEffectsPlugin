@@ -44,6 +44,8 @@ private slots:
 private:
     Ui::SwirlCirclesAudio *ui;
 
+    void SetDynamicStrings();
+
     double progress = 0.0;
     hsv_t hsv1;
     hsv_t hsv2;

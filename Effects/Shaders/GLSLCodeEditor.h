@@ -44,6 +44,9 @@ private slots:
 
 private:
     Ui::GLSLCodeEditor *ui;
+
+    void SetDynamicStrings();
+
     GLSLHighlighter* highlighter;
     ShaderProgram* shader_program;
 

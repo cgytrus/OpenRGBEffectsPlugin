@@ -10,9 +10,8 @@ SpectrumCycling::SpectrumCycling(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Goes through every solid color of the rainbow";
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.HasCustomSettings = true;
@@ -24,6 +23,21 @@ SpectrumCycling::SpectrumCycling(QWidget *parent) :
 SpectrumCycling::~SpectrumCycling()
 {
     delete ui;
+}
+
+void SpectrumCycling::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void SpectrumCycling::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Goes through every solid color of the rainbow").toStdString();
 }
 
 void SpectrumCycling::StepEffect(std::vector<ControllerZone*> controller_zones)

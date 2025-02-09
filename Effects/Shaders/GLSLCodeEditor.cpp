@@ -18,7 +18,7 @@ GLSLCodeEditor::GLSLCodeEditor(QWidget *parent, ShaderProgram* program) :
 
     ui->setupUi(this);
 
-    setWindowTitle("Shader editor");
+    SetDynamicStrings();
 
     /*-----------------------------------------------*\
     | List the embeded styles, add them to the        |
@@ -35,6 +35,24 @@ GLSLCodeEditor::GLSLCodeEditor(QWidget *parent, ShaderProgram* program) :
     LoadStyleFromFile();
 
     SetProgram(program);
+}
+
+GLSLCodeEditor::~GLSLCodeEditor()
+{
+    delete ui;
+}
+
+void GLSLCodeEditor::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+}
+
+void GLSLCodeEditor::SetDynamicStrings()
+{
+    setWindowTitle(tr("Shader editor"));
 }
 
 void GLSLCodeEditor::RecreateFileTabs()
@@ -98,7 +116,7 @@ void GLSLCodeEditor::RecreateFileTabs()
 
     int tab_size = ui->files->count();
     int tab_position = tab_size;
-    ShaderFileTabHeader* tab_header = new ShaderFileTabHeader(this, "Main shader", false);
+    ShaderFileTabHeader* tab_header = new ShaderFileTabHeader(this, tr("Main shader").toStdString(), false);
 
     ui->files->insertTab(tab_position, editor, "");
     ui->files->tabBar()->setTabButton(tab_position, QTabBar::RightSide, tab_header);
@@ -155,19 +173,6 @@ void GLSLCodeEditor::SetLog(QString log)
 {
     ui->logs->clear();
     ui->logs->setText(log);
-}
-
-GLSLCodeEditor::~GLSLCodeEditor()
-{
-    delete ui;
-}
-
-void GLSLCodeEditor::changeEvent(QEvent *event)
-{
-    if(event->type() == QEvent::LanguageChange)
-    {
-        ui->retranslateUi(this);
-    }
 }
 
 void GLSLCodeEditor::on_styles_currentIndexChanged(int)

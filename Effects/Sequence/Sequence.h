@@ -30,6 +30,8 @@ public:
 private:
     Ui::Sequence *ui;
 
+    void SetDynamicStrings();
+
     double progress = 0.f;
 
 private slots:

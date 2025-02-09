@@ -9,9 +9,8 @@ Swap::Swap(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Alternate two colors on your devices from left to right";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 20;
     EffectDetails.MinSpeed          = 1;
@@ -33,7 +32,14 @@ void Swap::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Swap::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Alternate two colors on your devices from left to right").toStdString();
 }
 
 void Swap::StepEffect(std::vector<ControllerZone*> controller_zones)

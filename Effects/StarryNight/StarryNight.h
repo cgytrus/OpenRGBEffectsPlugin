@@ -2,6 +2,7 @@
 #define STARRYNIGHT_H
 
 #include <QWidget>
+#include <QEvent>
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 #include <QWidget>
@@ -84,7 +85,7 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
-
+    void changeEvent(QEvent *event);
     void on_backColor_ColorSelected(QColor);
     void on_colorsPickerStar_ColorsChanged();
     void on_starDensity_valueChanged(int);
@@ -94,6 +95,8 @@ private slots:
     void on_backColorBrightness_valueChanged(int);
 
 private:
+    void SetDynamicStrings();
+
     // Used to ensure that LEDs do not all turn on at the same time.
     const double minDelayTime = 0.0; // seconds
     const double maxDelayTime = 1.0; // seconds

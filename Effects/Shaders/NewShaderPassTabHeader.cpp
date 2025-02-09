@@ -7,7 +7,7 @@ NewShaderPassTabHeader::NewShaderPassTabHeader(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->type->addItems({"Texture", "Audio", "Buffer"});
+    SetDynamicStrings();
 }
 
 NewShaderPassTabHeader::~NewShaderPassTabHeader()
@@ -20,7 +20,16 @@ void NewShaderPassTabHeader::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void NewShaderPassTabHeader::SetDynamicStrings()
+{
+    ui->type->clear();
+    ui->type->addItems({tr("Texture"),
+                        tr("Audio"),
+                        tr("Buffer")});
 }
 
 void NewShaderPassTabHeader::on_add_clicked()

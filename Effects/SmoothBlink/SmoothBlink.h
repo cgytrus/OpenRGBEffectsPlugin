@@ -42,6 +42,8 @@ private slots:
 private:
     Ui::SmoothBlink *ui;
 
+    void SetDynamicStrings();
+
     void Defaults();
 
     double time = 0;

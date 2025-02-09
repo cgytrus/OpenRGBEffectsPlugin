@@ -11,16 +11,14 @@ SwirlCirclesAudio::SwirlCirclesAudio(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Rotating circles reacting to audio";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 2;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Glow";
     EffectDetails.HasCustomSettings = true;
 
     SetSpeed(50);
@@ -52,7 +50,15 @@ void SwirlCirclesAudio::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void SwirlCirclesAudio::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Rotating circles reacting to audio").toStdString();
+    EffectDetails.Slider2Name       = tr("Glow").toStdString();
 }
 
 void SwirlCirclesAudio::EffectState(const bool state)

@@ -8,7 +8,7 @@ StarryNight::StarryNight(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
     EffectDetails.EffectDescription = "Light random stars that fade in and out of the background";
     EffectDetails.HasCustomSettings = true;
@@ -22,6 +22,21 @@ StarryNight::StarryNight(QWidget *parent) :
     // Set default colors so they aren't both black.
     ui->backColor->SetRGBColor(ColorUtils::OFF());
     ui->colorsPickerStar->SetColors({ColorUtils::RandomRGBColor()});
+}
+
+void StarryNight::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        SetDynamicStrings();
+    }
+}
+
+void StarryNight::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Selects a random LED and fades it in an out").toStdString();
+    EffectDetails.Slider2Name       = tr("Star Count").toStdString();
 }
 
 // This is implemented differently than most other effects.  Since only the active stars have colors other than background,

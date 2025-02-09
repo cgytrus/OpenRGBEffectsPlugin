@@ -63,6 +63,9 @@ private slots:
 
 private:
     Ui::Shaders *ui;
+
+    void SetDynamicStrings();
+
     QImage image;
     ShaderRenderer* shader_renderer = nullptr;
     GLSLCodeEditor* editor = nullptr;

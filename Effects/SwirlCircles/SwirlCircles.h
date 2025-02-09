@@ -31,10 +31,14 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_radius_valueChanged(int);
 
 private:
     Ui::SwirlCircles *ui;
+
+    void SetDynamicStrings();
+
     double progress = 0.0;
     int radius = 0;
 

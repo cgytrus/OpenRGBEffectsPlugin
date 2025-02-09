@@ -66,8 +66,9 @@ QString ShaderPassEditor::toPlainText()
 
 void ShaderPassEditor::on_choose_texture_clicked()
 {
+    QString filter = tr("Image Files").append(" (*.png *.jpg *.bmp)");
     QString new_texture_path = QFileDialog::getOpenFileName(this,
-        tr("Open Image"), "", tr("Image Files (*.png *.jpg *.bmp)"));
+        tr("Open Image"), "", filter);
 
     if(!new_texture_path.isEmpty())
     {

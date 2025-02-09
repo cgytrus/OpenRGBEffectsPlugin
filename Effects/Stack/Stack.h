@@ -35,6 +35,8 @@ private slots:
 private:
     Ui::Stack *ui;
 
+    void SetDynamicStrings();
+
     bool reset = false;
 
     std::vector<unsigned int> stops;

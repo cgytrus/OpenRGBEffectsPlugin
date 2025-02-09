@@ -9,16 +9,14 @@ SwirlCircles::SwirlCircles(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Rotating circles around the center of your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 100;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 2;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Glow";
 
     SetSpeed(50);
     SetSlider2Val(50);
@@ -27,6 +25,22 @@ SwirlCircles::SwirlCircles(QWidget *parent) :
 SwirlCircles::~SwirlCircles()
 {
     delete ui;
+}
+
+void SwirlCircles::changeEvent(QEvent *event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+        SetDynamicStrings();
+    }
+}
+
+void SwirlCircles::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Rotating circles around the center of your devices").toStdString();
+    EffectDetails.Slider2Name       = tr("Glow").toStdString();
 }
 
 void SwirlCircles::StepEffect(std::vector<ControllerZone*> controller_zones)

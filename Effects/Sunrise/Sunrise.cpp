@@ -9,9 +9,8 @@ Sunrise::Sunrise(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Sunrise/Sunset effect";
     EffectDetails.MaxSpeed          = 20;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 4;
@@ -37,7 +36,14 @@ void Sunrise::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Sunrise::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Sunrise / Sunset effect").toStdString();
 }
 
 void Sunrise::StepEffect(std::vector<ControllerZone*> controller_zones)

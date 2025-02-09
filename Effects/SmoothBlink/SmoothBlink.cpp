@@ -17,18 +17,15 @@ SmoothBlink::SmoothBlink(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Create your own breathing sequences";
     EffectDetails.UserColors        = 2;
     EffectDetails.HasCustomSettings = true;
 
-    random_color_1 = ColorUtils::RandomRGBColor();
-    random_color_2 = ColorUtils::RandomRGBColor();
-    next_color_1 = ColorUtils::RandomRGBColor();
-    next_color_2 = ColorUtils::RandomRGBColor();
-
-    ui->rendering->addItems({"Solid", "Circle"});
+    random_color_1  = ColorUtils::RandomRGBColor();
+    random_color_2  = ColorUtils::RandomRGBColor();
+    next_color_1    = ColorUtils::RandomRGBColor();
+    next_color_2    = ColorUtils::RandomRGBColor();
 
     Defaults();
 }
@@ -43,7 +40,17 @@ void SmoothBlink::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void SmoothBlink::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Create your own breathing sequences").toStdString();
+    ui->rendering->clear();
+    ui->rendering->addItems({tr("Solid"),
+                             tr("Circle")});
 }
 
 void SmoothBlink::Defaults()

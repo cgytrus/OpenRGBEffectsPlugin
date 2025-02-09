@@ -39,6 +39,8 @@ private slots:
 private:
     Ui::Sunrise *ui;
 
+    void SetDynamicStrings();
+
     double time = 0;
     double progress = 0;
     double y_shift = -1;

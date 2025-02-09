@@ -23,6 +23,8 @@ private slots:
 private:
     Ui::NewShaderPassTabHeader *ui;
 
+    void SetDynamicStrings();
+
 signals:
     void Added(ShaderPass::Type);
 };

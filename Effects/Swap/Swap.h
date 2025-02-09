@@ -28,6 +28,8 @@ public:
 private:
     Ui::Swap *ui;
 
+    void SetDynamicStrings();
+
     RGBColor GetColor(unsigned int, unsigned int);
 
     RGBColor c1;

@@ -27,10 +27,14 @@ public:
     json SaveCustomSettings() override;
 
 private slots:
+    void changeEvent(QEvent *event);
     void on_saturation_valueChanged(int);
 
 private:
     Ui::SpectrumCycling *ui;
+
+    void SetDynamicStrings();
+
     double progress = 0.0;
     int  saturation   = 255;
 };

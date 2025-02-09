@@ -8,16 +8,14 @@ Spiral::Spiral(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Draws a hypnotic spiral on your devices";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 500;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 1;
     EffectDetails.MaxSlider2Val     = 100;
     EffectDetails.MinSlider2Val     = 1;
-    EffectDetails.Slider2Name       = "Spiral shape";
 
     SetSpeed(200);
     SetSlider2Val(10);
@@ -33,7 +31,15 @@ void Spiral::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Spiral::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Draws a hypnotic spiral on your devices").toStdString();
+    EffectDetails.Slider2Name       = tr("Spiral shape").toStdString();
 }
 
 void Spiral::StepEffect(std::vector<ControllerZone*> controller_zones)

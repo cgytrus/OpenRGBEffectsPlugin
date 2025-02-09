@@ -9,16 +9,13 @@ Stack::Stack(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    SetDynamicStrings();
     EffectDetails.EffectClassName   = ClassName();
-    EffectDetails.EffectDescription = "Fills and stack your devices with a solid color";
     EffectDetails.IsReversable      = true;
     EffectDetails.MaxSpeed          = 20;
     EffectDetails.MinSpeed          = 1;
     EffectDetails.UserColors        = 1;
     EffectDetails.HasCustomSettings = true;
-
-    ui->direction->addItems({"Horizontal", "Vertical"});
 
     SetSpeed(10);
 }
@@ -33,7 +30,17 @@ void Stack::changeEvent(QEvent *event)
     if(event->type() == QEvent::LanguageChange)
     {
         ui->retranslateUi(this);
+        SetDynamicStrings();
     }
+}
+
+void Stack::SetDynamicStrings()
+{
+    EffectDetails.EffectName        = tr(UI_Name().c_str()).toStdString();
+    EffectDetails.EffectDescription = tr("Fills and stack your devices with a solid color").toStdString();
+    ui->direction->clear();
+    ui->direction->addItems({tr("Horizontal"),
+                             tr("Vertical")});
 }
 
 void Stack::StepEffect(std::vector<ControllerZone*> controller_zones)
