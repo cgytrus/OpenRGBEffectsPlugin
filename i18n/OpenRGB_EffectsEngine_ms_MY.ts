@@ -36,10 +36,6 @@
         <translation>Skrin</translation>
     </message>
     <message>
-        <source>Ambient</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Takes a portion of the screen and reflect it to your devices</source>
         <translation type="unfinished"></translation>
     </message>
@@ -84,10 +80,6 @@
     </message>
     <message>
         <source>Color change speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Audio Party</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -196,10 +188,6 @@
         <source>Static</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Audio Sine</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>AudioStar</name>
@@ -225,10 +213,6 @@
     </message>
     <message>
         <source>Star audio visualizer (frequency based) with an edge beat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Audio Star</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -265,10 +249,6 @@
     <message>
         <source>Band-pass filter</source>
         <translation>Penapis laluan jalur</translation>
-    </message>
-    <message>
-        <source>Audio Sync</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Display frequency based colors with different modes</source>
@@ -333,17 +313,9 @@
         <source>Fill your led strip based on audio load</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Audio VU Meter</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>AudioVisualizer</name>
-    <message>
-        <source>Audio Visualizer</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Display audio equalizer on your devices. A ported version of &lt;a href=&quot;https://gitlab.com/CalcProgrammer1/KeyboardVisualizer&quot;&gt;KeyboardVisualizer&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
@@ -399,10 +371,6 @@
         <translation>Ketepuan</translation>
     </message>
     <message>
-        <source>Bloom</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Flower blooming effect</source>
         <translation type="unfinished"></translation>
     </message>
@@ -445,17 +413,9 @@
         <source>-</source>
         <translation type="unfinished">-</translation>
     </message>
-    <message>
-        <source>Bouncing Ball</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Breathing</name>
-    <message>
-        <source>Breathing</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Fading in and out user selected colors across an entire zone</source>
         <translation type="unfinished"></translation>
@@ -470,10 +430,6 @@
     <message>
         <source>Thickness</source>
         <translation type="unfinished">Ketebalan</translation>
-    </message>
-    <message>
-        <source>Breathing Circle</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -503,10 +459,6 @@
         <translation>Ketebalan gelembung</translation>
     </message>
     <message>
-        <source>Bubbles</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bloop bloop</source>
         <translation type="unfinished"></translation>
     </message>
@@ -515,10 +467,6 @@
     <name>Clock</name>
     <message>
         <source>Clock mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -603,10 +551,6 @@
         <source>Counter-clockwise</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Color Wheel</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ColorsPicker</name>
@@ -617,10 +561,6 @@
 </context>
 <context>
     <name>Comet</name>
-    <message>
-        <source>Comet</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>A comet that travels through your devices</source>
         <translation type="unfinished"></translation>
@@ -647,10 +587,6 @@
     <message>
         <source>Horizontal speed</source>
         <translation>Kelajuan mendatar</translation>
-    </message>
-    <message>
-        <source>Crossing Beams</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Two beams that move horizontally and vertically</source>
@@ -686,10 +622,6 @@
     <message>
         <source>Remove selected</source>
         <translation>Buang yang ditanda</translation>
-    </message>
-    <message>
-        <source>Custom Blink</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Make your own blinking sequence</source>
@@ -786,19 +718,11 @@
         <source>Vaporwave</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Custom Gradient Wave</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>CustomMarquee</name>
     <message>
         <source>Create your own marquee effect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Custom Marquee</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -848,10 +772,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <source>Color speed</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Double Rotating Rainbow</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>EffectList</name>
@@ -892,10 +812,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>Fill</name>
-    <message>
-        <source>Fill</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Progressivly fills your devices with a defined color</source>
         <translation type="unfinished"></translation>
@@ -975,10 +891,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <source>Psychedelic sinusoid</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Fractal Motion</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>GLSLCodeEditor</name>
@@ -1035,10 +947,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     </message>
     <message>
         <source>Use GIFs to create your own effect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gif Player</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1160,10 +1068,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Hypnotoad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>You wont escape this</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1241,10 +1145,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Tab 2</translation>
     </message>
     <message>
-        <source>Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Combine effects together.&lt;br /&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Blend_modes&quot;&gt;Help about blend modes&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1266,10 +1166,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <message>
         <source>Mode</source>
         <translation>Mod</translation>
-    </message>
-    <message>
-        <source>Lightning</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Prepare yourself for thunderstorm</source>
@@ -1302,10 +1198,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 <context>
     <name>Marquee</name>
     <message>
-        <source>Marquee</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A simple marquee for your devices</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1337,10 +1229,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Terbalikkan warna</translation>
     </message>
     <message>
-        <source>Mask</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A simple mask for using in layers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1350,10 +1238,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <message>
         <source>Rarity</source>
         <translation type="unfinished">Rarity</translation>
-    </message>
-    <message>
-        <source>Mosaic</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Tiles randomly spawning across your devices</source>
@@ -1367,20 +1251,12 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Warna latar belakang:</translation>
     </message>
     <message>
-        <source>Motion Point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A point that moves forth and back on your devices</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MotionPoints</name>
-    <message>
-        <source>Motion Points</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Multiple points that moves in all directions on your devices</source>
         <translation type="unfinished"></translation>
@@ -1392,10 +1268,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>MovingPanes</name>
-    <message>
-        <source>Moving Panes</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Parts of your devices in symmetrical motion</source>
         <translation type="unfinished"></translation>
@@ -1465,10 +1337,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <message>
         <source>Mode</source>
         <translation>Mod</translation>
-    </message>
-    <message>
-        <source>Noise Map</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Floor is lava</source>
@@ -1703,10 +1571,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Kedudukan Y</translation>
     </message>
     <message>
-        <source>Radial Rainbow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Dive into the RGB tunnel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1730,10 +1594,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Saiz Titisan</translation>
     </message>
     <message>
-        <source>Rain</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Droplet effect</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1744,10 +1604,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>RainbowWave</name>
-    <message>
-        <source>Rainbow Wave</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>A sliding Rainbow</source>
         <translation type="unfinished"></translation>
@@ -1760,20 +1616,12 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 <context>
     <name>RandomMarquee</name>
     <message>
-        <source>Random Marquee</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A simple Random Marquee for your devices</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>RandomSpin</name>
-    <message>
-        <source>Random Spin</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>A simple Random Spin for your devices</source>
         <translation type="unfinished"></translation>
@@ -1788,10 +1636,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <message>
         <source>Thickness</source>
         <translation>Ketebalan</translation>
-    </message>
-    <message>
-        <source>Rotating Beam</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A beam that rotates in different ways</source>
@@ -1828,10 +1672,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>RotatingRainbow</name>
-    <message>
-        <source>Rotating Rainbow</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Color speed</source>
         <translation type="unfinished"></translation>
@@ -1878,10 +1718,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>Sequence</name>
-    <message>
-        <source>Sequence</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Alternates colors with a fade effect</source>
         <translation type="unfinished"></translation>
@@ -1960,10 +1796,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Tunjukkan rendering</translation>
     </message>
     <message>
-        <source>Shaders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unleash the power of OpenRGB with GL shaders</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2031,10 +1863,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Lalai</translation>
     </message>
     <message>
-        <source>Smooth Blink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Create your own breathing sequences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2054,20 +1882,12 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Ketepuan</translation>
     </message>
     <message>
-        <source>Spectrum Cycling</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Goes through every solid color of the rainbow</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Spiral</name>
-    <message>
-        <source>Spiral</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Draws a hypnotic spiral on your devices</source>
         <translation type="unfinished"></translation>
@@ -2084,10 +1904,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Arah zon matriks</translation>
     </message>
     <message>
-        <source>Stack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fills and stack your devices with a solid color</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2102,10 +1918,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>StarryNight</name>
-    <message>
-        <source>Starry Night</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Selects a random LED and fades it in an out</source>
         <translation type="unfinished"></translation>
@@ -2142,20 +1954,12 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Berkembang kelajuan</translation>
     </message>
     <message>
-        <source>Sunrise</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sunrise / Sunset effect</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Swap</name>
-    <message>
-        <source>Swap</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Alternate two colors on your devices from left to right</source>
         <translation type="unfinished"></translation>
@@ -2166,10 +1970,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <message>
         <source>Radius</source>
         <translation>Jejari</translation>
-    </message>
-    <message>
-        <source>Swirl Circles</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rotating circles around the center of your devices</source>
@@ -2191,10 +1991,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Jejari</translation>
     </message>
     <message>
-        <source>Swirl Circles Audio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Rotating circles reacting to audio</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2205,10 +2001,6 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
 </context>
 <context>
     <name>Visor</name>
-    <message>
-        <source>Visor</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>A back and forth effect motion, flipping colors</source>
         <translation type="unfinished"></translation>
@@ -2245,20 +2037,12 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
         <translation>Kelajuan ayunan</translation>
     </message>
     <message>
-        <source>Wavy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Alternate colors like waves</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ZigZag</name>
-    <message>
-        <source>ZigZag</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>A snake moving on your matrix typed devices</source>
         <translation type="unfinished"></translation>
@@ -2273,6 +2057,225 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <message>
         <source>Change direction</source>
         <translation>Tukar arah</translation>
+    </message>
+</context>
+<context>
+    <name>std</name>
+    <message>
+        <source>Ambient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Party</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Sine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Star</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Sync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio VU Meter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Visualizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bloom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bouncing Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Breathing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Breathing Circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bubbles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color Wheel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crossing Beams</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom Blink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom Gradient Wave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom Marquee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Double Rotating Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fractal Motion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gif Player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hypnotoad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lightning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Marquee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mosaic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Motion Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Motion Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moving Panes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Noise Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radial Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rainbow Wave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Random Marquee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Random Spin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rotating Beam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rotating Rainbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sequence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shaders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Smooth Blink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spectrum Cycling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spiral</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starry Night</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sunrise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swirl Circles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swirl Circles Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wavy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZigZag</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
