@@ -8,7 +8,6 @@ Breathing::Breathing(QWidget *parent) :
     ui(new Ui::Breathing)
 {
     ui->setupUi(this);
-
     EffectDetails.EffectName = "Breathing";
     EffectDetails.EffectClassName = ClassName();
     EffectDetails.EffectDescription = "Fading in and out user selected colors across an entire zone";
@@ -16,7 +15,6 @@ Breathing::Breathing(QWidget *parent) :
     EffectDetails.MinSpeed     = 10;
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = true;
-
     SetSpeed(100);
 }
 
@@ -35,9 +33,9 @@ void Breathing::StepEffect(std::vector<ControllerZone*> controller_zones)
         }
         else
         {
-           rgb2hsv(colors[colorLoopIndex], &CurrentColor);
+           rgb2hsv(ui->colorsPicker->Colors().at(colorLoopIndex), &CurrentColor);
 
-           if (colorLoopIndex < colors.size() -1)
+           if (colorLoopIndex < ui->colorsPicker->Colors().size() -1)
            {
                colorLoopIndex++;
            }
@@ -58,8 +56,7 @@ void Breathing::StepEffect(std::vector<ControllerZone*> controller_zones)
 
 void Breathing::on_colorsPicker_ColorsChanged()
 {
-    colors = ui->colorsPicker->Colors();
-    if (colorLoopIndex > colors.size() -1)
+    if (colorLoopIndex > ui->colorsPicker->Colors().size() -1)
     {
         // The number of colors was reduced so the next color no longer exists so let's restart at 0
         colorLoopIndex = 0;
@@ -72,13 +69,11 @@ void Breathing::LoadCustomSettings(json settings)
     {
         ui->colorsPicker->SetColors(settings["colors"]);
     }
-
 }
 
 json Breathing::SaveCustomSettings()
 {
     json settings;
-
     settings["colors"]    = ui->colorsPicker->Colors();
     return settings;
 }

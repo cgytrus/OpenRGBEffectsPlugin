@@ -32,7 +32,6 @@ private slots:
 
 private:
     Ui::Breathing *ui;
-    std::vector<RGBColor> colors;
     float Progress = 3.14159; // This is to ensure that the colorPicker colors are used when calling StepEffect the first time
     hsv_t CurrentColor;
     int colorLoopIndex = 0;
