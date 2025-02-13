@@ -35,15 +35,12 @@ public:
 
 private slots:
     void on_rarity_valueChanged(int);
-    void on_colorsPicker_ColorsChanged();
+
 private:
     Ui::Mosaic *ui;
 
     void ResetMosaic(std::vector<ControllerZone*>);
-
     void UpdateTiles(unsigned int);
-    std::vector<RGBColor> colors;
-
     std::vector<std::vector<Tile>> tiles;
     int rarity = 10;
 };

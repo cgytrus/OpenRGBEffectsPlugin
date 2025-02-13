@@ -88,7 +88,7 @@ void Mosaic::UpdateTiles(unsigned int controller_zone_idx)
                 }
                 else
                 {
-                    rgb2hsv(colors[rand() % colors.size()], &tile.hsv);
+                    rgb2hsv(ui->colorsPicker->Colors().at(rand() % ui->colorsPicker->Colors().size()), &tile.hsv);
                 }
             }
         }
@@ -121,10 +121,6 @@ void Mosaic::on_rarity_valueChanged(int value)
     rarity = value;
 }
 
-void Mosaic::on_colorsPicker_ColorsChanged()
-{
-    colors = ui->colorsPicker->Colors();
-}
 
 void Mosaic::LoadCustomSettings(json settings)
 {
