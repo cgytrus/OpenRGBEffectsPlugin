@@ -64,6 +64,7 @@ void EffectManager::Assign(std::vector<ControllerZone*> controller_zones, RGBEff
 {
     printf("[OpenRGBEffectsPlugin] Assigning %lu zones to %s\n", controller_zones.size(), effect->EffectDetails.EffectName.c_str());
 
+    lock.lock();
     effect_zones[effect] = controller_zones;
 
     // remove from other effects
@@ -114,6 +115,7 @@ void EffectManager::Assign(std::vector<ControllerZone*> controller_zones, RGBEff
     }
 
     NotifySelectionChanged(effect);
+    lock.unlock();
 }
 
 std::vector<ControllerZone*> EffectManager::GetAssignedZones(RGBEffect* effect)
@@ -137,6 +139,7 @@ void EffectManager::EffectThreadFunction(RGBEffect* effect)
     {
         TCount start = clock->now();
 
+        lock.lock();
         std::vector<ControllerZone*> controller_zones =  effect_zones[effect];
 
         // Add preview virtual controllers to the list of real devices if any
@@ -145,7 +148,6 @@ void EffectManager::EffectThreadFunction(RGBEffect* effect)
             controller_zones.push_back(previews[effect]);
         }
 
-        lock.lock();
         effect->StepEffect(controller_zones);
         lock.unlock();
 
@@ -200,14 +202,21 @@ bool EffectManager::HasActiveEffects()
 
 void EffectManager::AddPreview(RGBEffect* effect, ControllerZone* preview)
 {
-    previews[effect] = preview;
+    lock.lock();
+
+    previews[effect] = preview;    
     NotifySelectionChanged(effect);
+
+    lock.unlock();
 }
 
 void EffectManager::RemovePreview(RGBEffect* effect)
 {
     lock.lock();
-    previews.erase(effect);
+
+    previews.erase(effect);    
+    NotifySelectionChanged(effect);
+
     lock.unlock();
 }
 
