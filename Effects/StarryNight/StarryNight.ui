@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StarryNight</class>
+ <widget class="QWidget" name="StarryNight">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>465</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0" colspan="2">
+    <widget class="ColorsPicker" name="colorsPickerStar" native="true"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QSlider" name="fadeOutSpeed">
+     <property name="toolTip">
+      <string extracomment="Adjust speed of star appearance"/>
+     </property>
+     <property name="toolTipDuration">
+      <number>5</number>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QSlider" name="starOnTime">
+     <property name="toolTip">
+      <string extracomment="Adjust the length of time star will be at their brightest"/>
+     </property>
+     <property name="toolTipDuration">
+      <number>5</number>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="background_label">
+     <property name="text">
+      <string>Background color:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="starFadeInSpeed_Label">
+     <property name="text">
+      <string>Star fade in speed</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QSlider" name="fadeInSpeed">
+     <property name="toolTip">
+      <string extracomment="Adjust speed of star appearance"/>
+     </property>
+     <property name="toolTipDuration">
+      <number>5</number>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QSlider" name="starDensity">
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>90</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="starOnTime_Label">
+     <property name="text">
+      <string>Star on time</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="density_label">
+     <property name="text">
+      <string>Star density</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="starFadeOutSpeed_Label">
+     <property name="text">
+      <string>Star fade out speed</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="ColorPicker" name="backColor" native="true"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="Backgroundbrightness_Label">
+     <property name="text">
+      <string>Background brightness</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSlider" name="backColorBrightness">
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorPicker</class>
+   <extends>QWidget</extends>
+   <header>ColorPicker.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorsPicker</class>
+   <extends>QWidget</extends>
+   <header location="global">ColorsPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

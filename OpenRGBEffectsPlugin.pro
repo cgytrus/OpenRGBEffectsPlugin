@@ -273,6 +273,7 @@ FORMS +=                                                                        
     EffectSearch.ui                                                                             \
     EffectTabHeader.ui                                                                          \
     Effects/Breathing/Breathing.ui \
+    Effects/StarryNight/StarryNight.ui \
     LivePreviewController.ui                                                                    \
     OpenRGBEffectPage.ui                                                                        \
     OpenRGBEffectTab.ui                                                                         \
