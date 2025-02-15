@@ -224,8 +224,8 @@ private:
     float anim_speed;
     int bkgd_bright;
     int bkgd_mode;
-    bool reactive_bkgd;
-    bool silent_bkgd;
+    bool reactive_bkgd = false;
+    bool silent_bkgd = false;
     float background_timeout;
     float background_timer;
     int single_color_mode;
