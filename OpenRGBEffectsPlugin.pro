@@ -503,14 +503,15 @@ FORMS +=                                                                        
 
 TRANSLATIONS +=                                                                                 \
     i18n/OpenRGB_EffectsEngine_de_DE.ts                                                         \
-    i18n/OpenRGB_EffectsEngine_el_GR.ts                                                                    \
+    i18n/OpenRGB_EffectsEngine_el_GR.ts                                                         \
     i18n/OpenRGB_EffectsEngine_en_US.ts                                                         \
     i18n/OpenRGB_EffectsEngine_en_AU.ts                                                         \
     i18n/OpenRGB_EffectsEngine_en_GB.ts                                                         \
-    i18n/OpenRGB_EffectsEngine_es_ES.ts                                                                    \
+    i18n/OpenRGB_EffectsEngine_es_ES.ts                                                         \
     i18n/OpenRGB_EffectsEngine_fr_FR.ts                                                         \
     i18n/OpenRGB_EffectsEngine_hr_HR.ts                                                         \
     i18n/OpenRGB_EffectsEngine_it_IT.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_ja_JP.ts                                                         \
     i18n/OpenRGB_EffectsEngine_ko_KR.ts                                                         \
     i18n/OpenRGB_EffectsEngine_ms_MY.ts                                                         \
     i18n/OpenRGB_EffectsEngine_pl_PL.ts                                                         \

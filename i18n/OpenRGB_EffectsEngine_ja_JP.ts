@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>Ambient</name>
-    <message>
-        <source>Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select rectangle...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Top</source>
         <translation type="unfinished"></translation>
@@ -28,11 +16,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select rectangle...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Smoothness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -149,7 +149,7 @@
 <context>
     <name>AudioSine</name>
     <message>
-        <source>Repeat</source>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -157,23 +157,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Audio settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Thickness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Color mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cycle speed</source>
+        <source>Repeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Oscillation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -182,6 +178,10 @@
     </message>
     <message>
         <source>Wave color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cycle speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -235,15 +235,19 @@
 <context>
     <name>AudioSync</name>
     <message>
-        <source>Hue shift</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Color fade speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Band-pass filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saturation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hue shift</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -255,15 +259,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Audio settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Rendering options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Band-pass filter</source>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -310,6 +310,10 @@
 <context>
     <name>AudioVUMeter</name>
     <message>
+        <source>Saturation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Hue offset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -323,10 +327,6 @@
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -353,6 +353,10 @@
     <name>AudioVisualizerUi</name>
     <message>
         <source>Rendering options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -387,10 +391,6 @@
         <source>Silent Background</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Audio settings</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Bloom</name>
@@ -409,6 +409,10 @@
 </context>
 <context>
     <name>BouncingBall</name>
+    <message>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Drop Height %</source>
         <translation type="unfinished"></translation>
@@ -439,10 +443,6 @@
     </message>
     <message>
         <source>A ball bounces around your RGB setup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -739,6 +739,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Custom Gradient Wave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Unicorn Vomit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -786,10 +790,6 @@
         <source>Vaporwave</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Custom Gradient Wave</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>CustomMarquee</name>
@@ -810,11 +810,11 @@
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished">English Select</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Reverse all</source>
-        <translation type="unfinished">English</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1025,15 +1025,15 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Use GIFs to create your own effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Open GIF file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>GIF Files (*.gif)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use GIFs to create your own effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1202,11 +1202,11 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove layer</source>
+        <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>TextLabel</source>
+        <source>Remove layer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1278,11 +1278,11 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>LivePreviewController</name>
     <message>
-        <source>Reverse</source>
+        <source>Brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Brightness</source>
+        <source>Custom width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1290,7 +1290,7 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Custom width</source>
+        <source>Reverse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1426,7 +1426,27 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>NoiseMap</name>
     <message>
+        <source>Lacunarity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Amplitude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Persistence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Preset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Motion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1438,31 +1458,11 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Motion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Motion speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Persistence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Lacunarity</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Amplitude</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mode</source>
+        <source>Motion speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1498,6 +1498,10 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Noise Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Lava</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1513,15 +1517,15 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Chemicals</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Noise Map</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>OpenRGBEffectPage</name>
     <message>
         <source>Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expand/Collapse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1541,11 +1545,31 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Random</source>
+        <source>Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Colors settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slider2Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Random</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1558,30 +1582,6 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>First color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brightness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FPS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Expand/Collapse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Colors settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1797,6 +1797,10 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Rotating Beam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Clockwise</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1820,19 +1824,15 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Swing V</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Rotating Beam</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>RotatingRainbow</name>
     <message>
-        <source>Color speed</source>
+        <source>A rainbow that rotates around the center of your devices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A rainbow that rotates around the center of your devices</source>
+        <source>Color speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1842,6 +1842,10 @@ Using an effect on a device WILL damage the flash or controller</source>
 </context>
 <context>
     <name>SaveProfilePopup</name>
+    <message>
+        <source>Save profile</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Save effects state</source>
         <translation type="unfinished"></translation>
@@ -1868,10 +1872,6 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Enter a profile name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save profile</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1908,11 +1908,11 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Open Image</source>
+        <source>Image Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Image Files</source>
+        <source>Open Image</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1923,15 +1923,7 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use audio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Width</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Audio settings</source>
+        <source>Reset time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1939,7 +1931,19 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Use audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show rendering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Invert time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1951,11 +1955,7 @@ Using an effect on a device WILL damage the flash or controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Reset time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show rendering</source>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2182,11 +2182,11 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>SwirlCirclesAudio</name>
     <message>
-        <source>Audio settings</source>
+        <source>Radius</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Radius</source>
+        <source>Audio settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
