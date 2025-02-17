@@ -48,15 +48,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Calculated average (heavy computing)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Most common color (heavy computing)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ambient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Framerate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select screen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2111,6 +2111,30 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Starry Night</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Background color:</source>
+        <translation type="unfinished">Фоновый цвет:</translation>
+    </message>
+    <message>
+        <source>Star fade in speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star on time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star density</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star fade out speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Background brightness</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
