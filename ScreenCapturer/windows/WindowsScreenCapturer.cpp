@@ -1,35 +1,26 @@
-#include "ScreenRecorder.h"
-#include "OpenRGBEffectSettings.h"
+#include "WindowsScreenCapturer.h"
+#include <QGuiApplication>
+#include <QPixmap>
+
 #ifdef _WIN32
 #include <Windows.h>
 #endif
 
-ScreenRecorder* ScreenRecorder::instance;
+WindowsScreenCapturer::WindowsScreenCapturer() : ScreenCapturer() {}
 
-ScreenRecorder::ScreenRecorder() {}
-
-ScreenRecorder* ScreenRecorder::Get()
-{
-    if(!instance)
-    {
-        instance = new ScreenRecorder();
-    }
-
-    return instance;
-}
-
-ScreenRecorder::~ScreenRecorder()
+WindowsScreenCapturer::~WindowsScreenCapturer()
 {
     continue_capture = false;
 
-    if(capture_thread)
+    if(capture_thread != nullptr)
     {
         capture_thread->join();
         delete capture_thread;
+        capture_thread = nullptr;
     }
 }
 
-void ScreenRecorder::SetScreen(int screen_index)
+void WindowsScreenCapturer::SetScreen(int screen_index)
 {
     QList<QScreen*> screens = QGuiApplication::screens();
 
@@ -43,21 +34,20 @@ void ScreenRecorder::SetScreen(int screen_index)
     }
 }
 
-void ScreenRecorder::Start()
+void WindowsScreenCapturer::Start()
 {
     if(capture_thread == nullptr)
     {
         continue_capture = true;
-        capture_thread = new std::thread(&ScreenRecorder::CaptureThreadFunction, this);
+        capture_thread = new std::thread(&WindowsScreenCapturer::CaptureThreadFunction, this);
     }
 }
 
-void ScreenRecorder::Stop()
+void WindowsScreenCapturer::Stop()
 {
     if(capture_thread != nullptr)
     {
-        printf("[OpenRGBEffectsPlugin] SCREENRECORDER: Stopping capture thread...\n");
-
+        printf("[WindowsScreenCapturer] Stopping capture thread...\n");
         continue_capture = false;
         capture_thread->join();
         delete capture_thread;
@@ -65,13 +55,14 @@ void ScreenRecorder::Stop()
     }
 }
 
-void ScreenRecorder::CaptureThreadFunction()
+void WindowsScreenCapturer::CaptureThreadFunction()
 {
-    printf("[OpenRGBEffectsPlugin] SCREENRECORDER: Thread started\n");
+    printf("[WindowsScreenCapturer] Thread started\n");
 
     while(continue_capture)
     {
-        int delay = 1000 / OpenRGBEffectSettings::globalSettings.fpscapture;
+        int delay = 1000 / framerate;
+
         if(screen == nullptr)
         {
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -80,13 +71,9 @@ void ScreenRecorder::CaptureThreadFunction()
 
         auto start = std::chrono::steady_clock::now();
 
-        lock.lock();
 #ifdef _WIN32
-        capture = grabWindow(0);
-#else
-        capture = screen->grabWindow(0);
+        emit OnImage(grabWindow(0).toImage());
 #endif
-        lock.unlock();
 
         int took = (int) std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count();
         int delta = delay - took;
@@ -95,13 +82,13 @@ void ScreenRecorder::CaptureThreadFunction()
         std::this_thread::sleep_for(std::chrono::milliseconds(delta > 2 ? delta : 2));
     }
 
-    printf("[OpenRGBEffectsPlugin] SCREENRECORDER: Thread stopped\n");
+    printf("[WindowsScreenCapturer] Thread ended\n");
 }
 
 #ifdef _WIN32
 extern QPixmap qt_pixmapFromWinHBITMAP(HBITMAP bitmap, int format = 0);
 
-QPixmap ScreenRecorder::grabWindow(quintptr window) const
+QPixmap WindowsScreenCapturer::grabWindow(quintptr window) const
 {
 
     QSize windowSize;
@@ -146,11 +133,3 @@ QPixmap ScreenRecorder::grabWindow(quintptr window) const
     return pixmap;
 }
 #endif
-
-const QImage ScreenRecorder::Capture(QRect rect)
-{
-    lock.lock();
-    QImage image = capture.copy(rect).toImage();
-    lock.unlock();
-    return image;
-}

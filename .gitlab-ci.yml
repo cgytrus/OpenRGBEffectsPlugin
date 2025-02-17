@@ -40,6 +40,7 @@ before_script:
   - i386
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
@@ -61,6 +62,7 @@ before_script:
   - amd64
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
@@ -82,6 +84,7 @@ before_script:
   - armhf
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
@@ -103,6 +106,7 @@ before_script:
   - arm64
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
@@ -124,6 +128,7 @@ before_script:
   - i386
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -149,6 +154,7 @@ before_script:
   - amd64
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -174,6 +180,7 @@ before_script:
   - armhf
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -199,6 +206,7 @@ before_script:
   - arm64
   stage: build
   script:
+  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -243,6 +251,7 @@ before_script:
   - curl.exe -LJ -o qt-webchannel.7z  'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/56183486/download'
   - curl.exe -LJ -o qt-declare.7z     'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/56183490/download'
   - curl.exe -LJ -o qt-location.7z    'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/56183492/download'
+  - curl.exe -LJ -o qt-jom.zip        'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/55610138/download'
   - _fold_final_
   
   - _fold_start_ 'extracting the downloaded qt binaries'
@@ -252,6 +261,7 @@ before_script:
   - 7z x qt-webchannel.7z  '-o../_qt' -y
   - 7z x qt-declare.7z     '-o../_qt' -y
   - 7z x qt-location.7z    '-o../_qt' -y
+  - 7z x qt-jom.zip        '-o../_qt' -y
   - _fold_final_
   
   - _fold_start_ 'turn the qt install from enterprise to foss; remove the licensing checks'
@@ -273,7 +283,7 @@ before_script:
   - _fold_final_
   
   - _fold_start_ 'start the actual build with jom instead of nmake; for speed'
-  - nmake
+  - ..\_qt\jom
   - _fold_final_
 
   - _fold_start_ 'Copy Qt5Network to distrobution folder'
@@ -320,6 +330,7 @@ before_script:
   - curl.exe -LJ -o qt-webchannel.7z  'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/56183514/download'
   - curl.exe -LJ -o qt-declare.7z     'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/56183518/download'
   - curl.exe -LJ -o qt-location.7z    'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/56183520/download'
+  - curl.exe -LJ -o qt-jom.zip        'https://gitlab.com/OpenRGBDevelopers/openrgb-linux-ci-deb-builder/-/package_files/55610138/download'
   - _fold_final_
 
   
@@ -331,6 +342,7 @@ before_script:
   - 7z x qt-webchannel.7z  '-o../_qt' -y
   - 7z x qt-declare.7z     '-o../_qt' -y
   - 7z x qt-location.7z    '-o../_qt' -y
+  - 7z x qt-jom.zip        '-o../_qt' -y
   - _fold_final_
   
   - _fold_start_ 'turn the qt install from enterprise to foss; remove the licensing checks'
@@ -352,7 +364,7 @@ before_script:
   - _fold_final_
   
   - _fold_start_ 'start the actual build with jom instead of nmake; for speed'
-  - nmake
+  - ..\_qt\jom
   - _fold_final_
 
   - _fold_start_ 'Copy Qt5Network to distrobution folder if it matches a string'

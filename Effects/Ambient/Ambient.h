@@ -7,10 +7,16 @@
 #include "RGBEffect.h"
 #include "EffectRegisterer.h"
 #include "RectangleSelector.h"
+#include "ScreenCapturer.h"
 
 namespace Ui {
 class Ambient;
 }
+
+enum AmbientMode{
+    SCALED_AVERAGE = 0,
+    SCREEN_COPY = 1
+};
 
 class Ambient : public RGBEffect
 {
@@ -30,6 +36,7 @@ public:
     void EffectState(bool) override;
 
 private slots:
+    void on_select_screen_clicked();
     void on_select_rectangle_clicked();
     void on_left_valueChanged(int);
     void on_top_valueChanged(int);
@@ -38,38 +45,29 @@ private slots:
     void on_mode_currentIndexChanged(int);
     void on_screen_currentIndexChanged(int);
     void on_smoothness_valueChanged(int);
-
-private:
-
+    void on_framerate_valueChanged(int);
 
 private:
     Ui::Ambient *ui;
+    ScreenCapturer* capturer = nullptr;
+    RectangleSelectorOverlay* rectangle_selector_overlay = nullptr;
 
     int screen_index = -1;
+    AmbientMode mode = SCALED_AVERAGE;
 
     void UpdateSelection();
+    RGBColor Smooth(const RGBColor& previous_color, RGBColor color);
 
-    RectangleSelectorOverlay* rectangle_selector_overlay;
+    unsigned int left = 0;
+    unsigned int top = 0;
+    unsigned int width = 1;
+    unsigned int height = 1;
+    unsigned int smoothness = 80;
+    unsigned int framerate = 60;
+    QString restore_token;
 
-    enum AmbientMode{
-        SCALED_AVERAGE = 0,
-        SCREEN_COPY = 1,
-        CALCULATED_AVERAGE = 2,
-        MOST_COMMON = 3
-    };
-
-    AmbientMode mode = CALCULATED_AVERAGE;
-
-    RGBColor old_single_color = ToRGBColor(0,0,0);
-    RGBColor Smooth(RGBColor color);
-    RGBColor SmoothMatrix(RGBColor color, int w, int h);
-
-    int left = 0;
-    int top = 0;
-    int width = 1;
-    int height = 1;
-    int smoothness = 800;
-    RGBColor previous[15360][8640];
+    QImage image;
+    std::mutex lock;
 };
 
 #endif // AMBIENT_H

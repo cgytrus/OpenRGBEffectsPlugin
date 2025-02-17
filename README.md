@@ -32,7 +32,7 @@ You can get older releases [here](https://gitlab.com/OpenRGBDevelopers/OpenRGBEf
 
 ### Linux
 
-You need `libopenal` installed.
+You need `libopenal` and `pipewire` installed.
 
 #### Fedora
 

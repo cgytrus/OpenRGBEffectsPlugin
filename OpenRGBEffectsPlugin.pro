@@ -104,6 +104,7 @@ HEADERS +=                                                                      
     OpenRGB/OpenRGBPluginInterface.h                                                            \
     OpenRGB/ResourceManagerInterface.h                                                          \
 
+
 SOURCES +=                                                                                      \
     OpenRGB/RGBController/RGBController.cpp                                                     \
     OpenRGB/RGBController/RGBController_Network.cpp                                             \
@@ -113,6 +114,7 @@ SOURCES +=                                                                      
     OpenRGB/LogManager.cpp                                                                      \
     OpenRGB/net_port/net_port.cpp                                                               \
     OpenRGB/qt/hsv.cpp                                                                          \
+
 
 
 #-----------------------------------------------------------------------------------------------#
@@ -203,6 +205,13 @@ HEADERS +=                                                                      
 #-----------------------------------------------------------------------------------------------#
 # GUI and misc                                                                                  #
 #-----------------------------------------------------------------------------------------------#
+INCLUDEPATH += \
+    ScreenCapturer                                                                              \
+    ScreenCapturer/windows                                                                      \
+    ScreenCapturer/qt                                                                           \
+    ScreenCapturer/linux/wayland                                                                \
+    Audio                                                                                       \
+
 HEADERS +=                                                                                      \
     Audio/AudioDataStruct.h                                                                     \
     Audio/AudioSettings.h                                                                       \
@@ -230,10 +239,12 @@ HEADERS +=                                                                      
     PreviewWidget.h                                                                             \
     QTooltipedSlider.h                                                                          \
     SaveProfilePopup.h                                                                          \
-    ScreenRecorder.h                                                                            \
     ZoneListItem.h                                                                              \
     OpenRGBPluginsFont.h                                                                        \
-    GlobalSettings.h
+    GlobalSettings.h                                                                            \
+    ScreenCapturer/ScreenCapturer.h                                                             \
+    ScreenCapturer/qt/QtScreenCapturer.h                                                        \
+    ScreenCapturer/windows/WindowsScreenCapturer.h                                              \
 
 SOURCES +=                                                                                      \
     Audio/AudioSettings.cpp                                                                     \
@@ -257,11 +268,13 @@ SOURCES +=                                                                      
     PluginInfo.cpp                                                                              \
     QTooltipedSlider.cpp                                                                        \
     PreviewWidget.cpp                                                                           \
-    ScreenRecorder.cpp                                                                          \
     SaveProfilePopup.cpp                                                                        \
     ZoneListItem.cpp                                                                            \
     OpenRGBPluginsFont.cpp                                                                      \
-    GlobalSettings.cpp
+    GlobalSettings.cpp                                                                          \
+    ScreenCapturer/qt/QtScreenCapturer.cpp                                                      \
+    ScreenCapturer/windows/WindowsScreenCapturer.cpp
+
 
 FORMS +=                                                                                        \
     Audio/AudioSettings.ui                                                                      \
@@ -533,10 +546,32 @@ win32:DEFINES +=                                                                
 # Linux-specific Configuration                                                                  #
 #-----------------------------------------------------------------------------------------------#
 unix:!macx {
-    LIBS += -lopenal -lGL
+    QT += dbus
+    LIBS += -lopenal -lGL -lpipewire-0.3
     QMAKE_CXXFLAGS += -std=c++17 -Wno-psabi
     target.path=$$PREFIX/lib/openrgb/plugins/
     INSTALLS += target
+
+    INCLUDEPATH +=                                                                              \
+        /usr/include/pipewire-0.3                                                               \
+        /usr/include/spa-0.2                                                                    \
+
+    INCLUDEPATH +=                                                                              \
+        ScreenCapturer/linux/wayland                                                            \
+
+    SOURCES +=                                                                                  \
+        ScreenCapturer/linux/wayland/DBusScreenCastManager.cpp                                  \
+        ScreenCapturer/linux/wayland/PipeWireCapturer.cpp                                       \
+        ScreenCapturer/linux/wayland/SpaPodUtils.cpp                                            \
+        ScreenCapturer/linux/wayland/PipeWireStreamInfo.cpp                                     \
+        ScreenCapturer/linux/wayland/WaylandScreenCapturer.cpp                                  \
+
+    HEADERS +=                                                                                  \
+        ScreenCapturer/linux/wayland/DBusScreenCastManager.h                                    \
+        ScreenCapturer/linux/wayland/PipeWireCapturer.h                                         \
+        ScreenCapturer/linux/wayland/SpaPodUtils.h                                              \
+        ScreenCapturer/linux/wayland/PipeWireStreamInfo.h                                       \
+        ScreenCapturer/linux/wayland/WaylandScreenCapturer.h                                    \
 }
 
 #-----------------------------------------------------------------------------------------------#

@@ -167,6 +167,10 @@ public:
         controller->SetLED(startidx() + idx, ColorUtils::apply_adjustments(color,  (self_brightness / 100.f) * (brightness / 100.f), temperature, tint));
     }
 
+    RGBColor GetLED(int idx)
+    {
+        return controller->colors[startidx() + idx];
+    }
 };
 
 #endif // CONTROLLERZONE_H
