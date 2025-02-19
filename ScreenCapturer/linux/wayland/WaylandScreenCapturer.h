@@ -8,10 +8,11 @@
 class WaylandScreenCapturer : public ScreenCapturer
 {
 public:
-    WaylandScreenCapturer();
+    WaylandScreenCapturer(QObject* parent = nullptr);
     ~WaylandScreenCapturer();
 
-    void Init(const QString& restore_token = "") override;
+    void Init(const QString& restore_token = "",  bool auto_start = false) override;
+    void SetToken(const QString& restore_token = "") override;
     void Start() override;
     void Stop() override;
     void SetScreen(int) override;

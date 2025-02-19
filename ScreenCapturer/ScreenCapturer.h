@@ -16,12 +16,13 @@ class ScreenCapturer : public QObject
     Q_OBJECT
 
 public:
-    ScreenCapturer(): QObject(){};
+    ScreenCapturer(QObject* parent = nullptr): QObject(parent){};
     ~ScreenCapturer() {};
 
     void SetFrameRate(unsigned int value) {framerate = value;};
 
-    virtual void Init(const QString& restore_token = "") {};
+    virtual void Init(const QString& restore_token = "", bool auto_start = false) {};
+    virtual void SetToken(const QString& restore_token = "") {};
     virtual void Start() {};
     virtual void Stop() {};
     virtual void SetScreen(int) {};

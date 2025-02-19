@@ -6,10 +6,15 @@
 
 // doc https://webrtc.googlesource.com/src/+/refs/heads/main/modules/desktop_capture/linux/wayland/
 
-PipeWireCapturer::PipeWireCapturer() :  QObject(nullptr)  {
+PipeWireCapturer::PipeWireCapturer(QObject* parent) :  QObject(parent)  {
     pw_init(NULL,NULL);
     qDebug() << "Compiled with libpipewire " << pw_get_headers_version();
     qDebug() << "Linked with libpipewire " << pw_get_library_version();
+}
+
+PipeWireCapturer::~PipeWireCapturer()
+{
+    StopStream();
 }
 
 void PipeWireCapturer::OnCoreError(void* data, uint32_t id, int seq, int res, const char* message)
@@ -132,11 +137,11 @@ pw_stream* PipeWireCapturer::CreateReceivingStream() {
 
     struct spa_rectangle resolution = SPA_RECTANGLE(width, height);
 
-    params.push_back(SpaPodUtils::CreateFormatOptions(&builder, &resolution));
+    params.push_back(SpaPodUtils::CreateFormatOptions(&builder, &resolution, framerate));
     pw_stream_add_listener(stream, &stream_listener, &stream_events, this);
 
     if (pw_stream_connect(stream, PW_DIRECTION_INPUT, node_id,
-         (pw_stream_flags)(PW_STREAM_FLAG_AUTOCONNECT | PW_STREAM_FLAG_MAP_BUFFERS), params.data(), params.size()) != 0)
+                          (pw_stream_flags)(PW_STREAM_FLAG_AUTOCONNECT | PW_STREAM_FLAG_MAP_BUFFERS), params.data(), params.size()) != 0)
     {
         qDebug() << "Could not connect receiving stream.";
         return nullptr;
@@ -144,13 +149,16 @@ pw_stream* PipeWireCapturer::CreateReceivingStream() {
 
     return stream;
 }
-void PipeWireCapturer::ReadStream(quint32 id, int fd, unsigned int width, unsigned int height){
+void PipeWireCapturer::StartStream(quint32 id, int fd, unsigned int width, unsigned int height, unsigned int framerate){
+
+    qDebug() << "PipeWireCapturer::StartStream";
 
     this->width = width;
     this->height = height;
+    this->framerate = framerate;
 
     node_id = id;
-    //pw_init(nullptr, nullptr);
+    this->fd = fd;
 
     main_loop = pw_thread_loop_new("pipewire-main-loop", nullptr);
     pw_thread_loop_lock(main_loop);
@@ -195,12 +203,60 @@ void PipeWireCapturer::ReadStream(quint32 id, int fd, unsigned int width, unsign
     }
 
     pw_thread_loop_unlock(main_loop);
+
+    qDebug() << "main loop unlocked";
+
 }
 
-void PipeWireCapturer::Stop()
+void PipeWireCapturer::StopStream()
 {
     if(main_loop)
     {
-        pw_thread_loop_stop(main_loop);
+        qDebug() << "pw_thread_loop_stop";
+        pw_thread_loop_wait(main_loop);
+        pw_thread_loop_stop(main_loop);        
+    }
+
+    if(stream)
+    {
+        qDebug() << "pw_stream_disconnect";
+
+        pw_stream_disconnect(stream);
+        qDebug() << "pw_stream_destroy";
+
+        pw_stream_destroy(stream);
+        stream = nullptr;
+    }
+
+    if(core)
+    {
+        qDebug() << "pw_core_disconnect";
+
+        pw_core_disconnect(core);
+        core = nullptr;
+    }
+
+    if(context)
+    {
+        qDebug() << "pw_context_destroy";
+
+        pw_context_destroy(context);
+        context = nullptr;
+    }
+
+    if(main_loop)
+    {
+        qDebug() << "pw_thread_loop_destroy";
+
+        pw_thread_loop_destroy(main_loop);
+        main_loop = nullptr;
+    }
+
+    if(fd > 0)
+    {
+        qDebug() << "close(fd)";
+
+        close(fd);
+        fd = -1;
     }
 }

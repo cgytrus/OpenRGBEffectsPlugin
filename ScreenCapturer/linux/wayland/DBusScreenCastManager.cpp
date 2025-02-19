@@ -27,8 +27,101 @@ unsigned long DBusScreenCastManager::SessionTokenCounter = 0;
 
 DBusScreenCastManager::DBusScreenCastManager(QObject* parent) : QObject(parent){}
 
-DBusScreenCastManager::~DBusScreenCastManager(){}
+DBusScreenCastManager::~DBusScreenCastManager()
+{
+    Stop();
+    Clear();
+}
 
+bool DBusScreenCastManager::IsSessionCreated()
+{
+    return session_created;
+}
+
+bool DBusScreenCastManager::IsSourceSelected()
+{
+    return sources_selected;
+}
+
+bool DBusScreenCastManager::IsStarted()
+{
+    return started;
+}
+
+bool DBusScreenCastManager::IsStreamOpened()
+{
+    return stream_opened;
+}
+
+void DBusScreenCastManager::SetToken(QString token)
+{
+    restore_token = token;
+}
+
+void DBusScreenCastManager::OpenStream()
+{
+    if(!session_created)
+    {
+        CreateSession(restore_token, true);
+        return;
+    }
+
+    if(streams.size() == 1)
+    {
+        OpenPipeWireRemote(streams[0]);
+    }
+    else
+    {
+        qDebug() << "[DBusScreenCastManager] No available streams yet";
+    }
+}
+
+void DBusScreenCastManager::CloseSession()
+{
+    if(!session_handle.isEmpty())
+    {
+        QDBusInterface i = QDBusInterface(
+            "org.gnome.Shell",
+            "/org/gnome/Shell/Extensions/WindowsExt",
+            "org.freedesktop.portal.Session", bus, nullptr);
+
+        QDBusMessage message = QDBusMessage::createMethodCall(
+            QStringLiteral("org.freedesktop.portal.Desktop"),
+            session_handle,
+            QStringLiteral("org.freedesktop.portal.Session"),
+            QStringLiteral("Close")
+            );
+
+        QDBusMessage reply = bus.call(message);
+        qDebug() << "close reply " << reply;
+
+        session_handle.clear();
+        session_created = false;
+    }
+}
+
+
+void DBusScreenCastManager::Stop()
+{
+    CloseSession();
+
+    if(watcher != nullptr)
+    {
+        delete watcher;
+        watcher = nullptr;
+    }
+
+    started = false;
+}
+
+void DBusScreenCastManager::Clear()
+{
+    CloseSession();
+    restore_token.clear();
+    streams.clear();
+}
+
+// Dbus stuff
 DBusPathToken DBusScreenCastManager::NewPath(QString type)
 {
     QString token = "u" + QString::number(++RequestTokenCounter);
@@ -46,10 +139,12 @@ DBusPathToken DBusScreenCastManager::NewSessionPath()
     return NewPath("session");
 }
 
-void DBusScreenCastManager::CreateSession(const QString& restore_token)
+void DBusScreenCastManager::CreateSession(const QString& restore_token, bool auto_open_stream)
 {
-    qDebug() << "CreateSession with token" << (restore_token.isEmpty() ? "NOT PROVIDED" : restore_token);
+    qDebug() << "[DBusScreenCastManager] ###############";
+    qDebug() << "[DBusScreenCastManager] CreateSession() restore_token:" << (restore_token.isEmpty() ? "(empty)" : restore_token);
 
+    this->auto_open_stream = auto_open_stream;
     this->restore_token = restore_token;
 
     DBusPathToken new_session_path = NewSessionPath();
@@ -59,19 +154,17 @@ void DBusScreenCastManager::CreateSession(const QString& restore_token)
     options["handle_token"] = new_request_path.token;
     options["session_handle_token"] = new_session_path.token;
 
-    qDebug() << "session options " << options;
-
     QDBusReply<QDBusObjectPath> repl = i.call("CreateSession", options);
 
     if(repl.isValid())
     {
-        qDebug() << "CreateSession() valid : " << repl.value().path();
         bool con = bus.connect("", repl.value().path(), "org.freedesktop.portal.Request", "Response", this, SLOT(OnSessionCreated(uint, QVariantMap)));
-        qDebug() << "session con" << con;
+        qDebug() << "con=" << con;
     }
     else
     {
-        emit OnError(repl.error(), "Cannot create session");
+        qDebug() << repl.error() << bus.lastError();
+        emit OnError(repl.error(), "Cannot call CreateSession");
     }
 }
 
@@ -79,13 +172,14 @@ void DBusScreenCastManager::OnSessionCreated(uint responseCode, QVariantMap resu
 {
     if(responseCode == 0)
     {
-        qDebug() << "OnSessionCreated() " << results;
+        session_created = true;
         session_handle = results["session_handle"].toString();
-        qDebug() << "session handle = " << session_handle;
+        qDebug() << "[DBusScreenCastManager] Session created with session handle = " << session_handle;
         SelectSources();
     }
     else
     {
+        qDebug() << bus.lastError();
         emit OnError(bus.lastError(), "Cannot create session");
     }
 }
@@ -94,6 +188,7 @@ void DBusScreenCastManager::SelectSources()
 {
     QVariantMap options;
     DBusPathToken new_request_path = NewRequestPath();
+
     options["handle_token"] = new_request_path.token;
     options["multiple"] = false;
     options["types"] = quint32(1|2);
@@ -104,13 +199,10 @@ void DBusScreenCastManager::SelectSources()
         options["restore_token"] = restore_token;
     }
 
-    qDebug() << options;
-
     QDBusReply<QDBusObjectPath> repl = i.call("SelectSources", QDBusObjectPath(session_handle), options);
 
     if(repl.isValid())
     {
-        qDebug() << "SelectSources() valid " << repl.value().path();
         bus.connect("", repl.value().path(), "org.freedesktop.portal.Request", "Response", this, SLOT(OnSourceSelected(uint, QVariantMap)));
     }
     else
@@ -122,12 +214,10 @@ void DBusScreenCastManager::SelectSources()
 void DBusScreenCastManager::OnSourceSelected(uint responseCode, QVariantMap results) {
     if(responseCode == 0)
     {
-        qDebug() << "OnSourceSelected() " << results;
+        sources_selected = true;
 
-        if(!restore_token.isEmpty())
-        {
-            Start();
-        }
+        qDebug() << "[DBusScreenCastManager] OnSourceSelected";
+        Start();
     }
     else
     {
@@ -141,15 +231,11 @@ void DBusScreenCastManager::Start()
     DBusPathToken new_request_path = NewRequestPath();
     options["handle_token"] = new_request_path.token;
 
-    qDebug() << options;
-
     QDBusReply<QDBusObjectPath> repl = i.call("Start", QDBusObjectPath(session_handle), "", options);
 
     if(repl.isValid())
     {
-        qDebug() << "Start() valid " << repl.value().path();
-        bool con=bus.connect("", repl.value().path(), "org.freedesktop.portal.Request", "Response", this, SLOT(OnStarted(uint, QVariantMap)));
-        qDebug() << con;
+        bus.connect("", repl.value().path(), "org.freedesktop.portal.Request", "Response", this, SLOT(OnStarted(uint, QVariantMap)));
     }
     else
     {
@@ -157,35 +243,21 @@ void DBusScreenCastManager::Start()
     }
 }
 
-void DBusScreenCastManager::ReOpen()
-{
-    if(streams.size() == 1)
-    {
-        OpenPipeWireRemote(streams[0]);
-    }
-}
-
-bool DBusScreenCastManager::Started()
-{
-    return started;
-}
-
 void DBusScreenCastManager::OnStarted(uint responseCode, QVariantMap results) {
     streams.clear();
 
     if(responseCode == 0)
     {
+        qDebug() << "[DBusScreenCastManager] OnStarted";
         started = true;
 
+        qDebug() << "[DBusScreenCastManager] emiting token";
         restore_token = results["restore_token"].toString();
-        emit OnRestoreTokenAcquired(restore_token);
-
-        qDebug() << "OnStarted()";
-        qDebug() << "restore_token" << restore_token;
+        emit OnRestoreTokenAcquired(restore_token);                
 
         streams = qdbus_cast<PipeWireStreamInfoList>(results["streams"].value<QDBusArgument>()) ;
 
-        qDebug() << "Stream infos:";
+        qDebug() << "[DBusScreenCastManager] Streams infos:";
 
         for(PipeWireStreamInfo stream: streams)
         {
@@ -197,20 +269,22 @@ void DBusScreenCastManager::OnStarted(uint responseCode, QVariantMap results) {
             qDebug() << "----------";
         }
 
+        // ready
+        if(auto_open_stream)
+        {
+            OpenStream();
+        }
     }
     else
     {
-        qDebug() << "OnStarted() response code " << responseCode;
+        qDebug() << "[DBusScreenCastManager] OnStarted() response code " << responseCode;
     }
 
-    if(streams.size() == 1)
-    {
-        OpenPipeWireRemote(streams[0]);
-    }
 }
 
 void DBusScreenCastManager::OpenPipeWireRemote(const PipeWireStreamInfo& stream_info)
 {
+    this->stream_info = stream_info;
     QVariantMap options;
 
     QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.portal.Desktop"),
@@ -220,28 +294,35 @@ void DBusScreenCastManager::OpenPipeWireRemote(const PipeWireStreamInfo& stream_
 
     message <<  QDBusObjectPath(session_handle) << options;
 
+    if(watcher != nullptr)
+    {
+        delete watcher;
+        watcher = nullptr;
+    }
+
     QDBusPendingCall pendingCall = QDBusConnection::sessionBus().asyncCall(message);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingCall);
 
-    connect(watcher, &QDBusPendingCallWatcher::finished, [&] (QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<QDBusUnixFileDescriptor> reply = *watcher;
+    watcher = new QDBusPendingCallWatcher(pendingCall);
 
-        if (reply.isError())
-        {
-            qDebug() << "Couldn't get reply";
-            qDebug() << "Error: " << reply.error().message();
-        }
-        else
-        {
-            qDebug() << "no errors";
-            qDebug() << reply.isValid();
-            qDebug() << reply.isFinished();
-            int fd = reply.value().fileDescriptor();
-            qDebug() << "fd " << fd;
-
-            emit OnPipeWireStreamOpened(stream_info.node_id, fd, stream_info.width , stream_info.height);
-        }
-    });
+    QObject::connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)), this, SLOT(OnCallFinished(QDBusPendingCallWatcher*)));
 }
 
+void DBusScreenCastManager::OnCallFinished(QDBusPendingCallWatcher *watcher)
+{
+    QDBusPendingReply<QDBusUnixFileDescriptor> reply = *watcher;
+
+    if (reply.isError())
+    {
+        qDebug() << "[DBusScreenCastManager] OpenPipeWireRemote() Couldn't get reply";
+        qDebug() << "[DBusScreenCastManager] Error: " << reply.error().message();
+    }
+    else
+    {
+        stream_opened = true;
+        int fd = reply.value().fileDescriptor();
+        qDebug() << "[DBusScreenCastManager] OpenPipeWireRemote fd available:" << fd;
+
+        emit OnPipeWireStreamOpened(stream_info.node_id, fd, stream_info.width , stream_info.height);
+    }
+}
 

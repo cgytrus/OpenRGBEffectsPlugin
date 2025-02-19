@@ -6,14 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>365</width>
-    <height>264</height>
+    <width>679</width>
+    <height>482</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
-   <item row="2" column="1">
-    <widget class="QComboBox" name="mode"/>
-   </item>
    <item row="2" column="0">
     <widget class="QLabel" name="mode_label">
      <property name="text">
@@ -21,15 +18,44 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
-    <widget class="QPushButton" name="select_rectangle">
+   <item row="2" column="1">
+    <widget class="QComboBox" name="mode"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="screen_label">
      <property name="text">
-      <string>Select rectangle...</string>
+      <string>Screen</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QTooltipedSlider" name="framerate">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>60</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>60</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="framerate_label">
+     <property name="text">
+      <string>Framerate</string>
      </property>
     </widget>
    </item>
    <item row="8" column="0" colspan="2">
-    <widget class="QFrame" name="position_frame">
+    <widget class="QFrame" name="crop_frame">
      <property name="frameShape">
       <enum>QFrame::Shape::NoFrame</enum>
      </property>
@@ -105,18 +131,22 @@
         </property>
        </widget>
       </item>
+      <item row="0" column="0" colspan="4">
+       <widget class="QPushButton" name="select_rectangle">
+        <property name="text">
+         <string>Select rectangle...</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="screen_label">
+   <item row="3" column="0" colspan="2">
+    <widget class="QPushButton" name="select_screen">
      <property name="text">
-      <string>Screen</string>
+      <string>Select screen</string>
      </property>
     </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QComboBox" name="screen"/>
    </item>
    <item row="5" column="1">
     <widget class="QTooltipedSlider" name="smoothness">
@@ -140,6 +170,9 @@
      </property>
     </widget>
    </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="screen"/>
+   </item>
    <item row="5" column="0">
     <widget class="QLabel" name="smoothness_label">
      <property name="text">
@@ -147,36 +180,10 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="framerate_label">
+   <item row="7" column="0">
+    <widget class="QCheckBox" name="crop_stream">
      <property name="text">
-      <string>Framerate</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1">
-    <widget class="QSlider" name="framerate">
-     <property name="minimum">
-      <number>1</number>
-     </property>
-     <property name="maximum">
-      <number>60</number>
-     </property>
-     <property name="pageStep">
-      <number>1</number>
-     </property>
-     <property name="value">
-      <number>60</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Orientation::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" colspan="2">
-    <widget class="QPushButton" name="select_screen">
-     <property name="text">
-      <string>Select screen</string>
+      <string>Crop stream</string>
      </property>
     </widget>
    </item>

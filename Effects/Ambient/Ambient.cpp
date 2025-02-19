@@ -1,4 +1,5 @@
 ﻿#include "Ambient.h"
+#include <QDebug>
 #include "ColorUtils.h"
 #include "OpenRGBEffectSettings.h"
 #include "QtScreenCapturer.h"
@@ -23,6 +24,7 @@ Ambient::Ambient(QWidget *parent) :
     EffectDetails.SupportsRandom = false;
 
     ui->select_screen->hide();
+    ui->crop_frame->hide();
 
 #ifdef __linux__
     bool isWayland = qgetenv("XDG_SESSION_TYPE") == "wayland";
@@ -33,9 +35,7 @@ Ambient::Ambient(QWidget *parent) :
 
         ui->select_rectangle->hide();
         ui->screen_label->hide();
-        ui->screen->hide();
-        ui->framerate_label->hide();
-        ui->framerate->hide();
+        ui->screen->hide();        
         ui->select_screen->show();
     }
 #elif _WIN32
@@ -66,20 +66,39 @@ Ambient::Ambient(QWidget *parent) :
     }
 
     connect(capturer, &ScreenCapturer::OnImage, [&](const QImage& img){
-        lock.lock();
-        image = img.copy(QRect(left,top,width,height));
-        lock.unlock();
+        if(!img.isNull())
+        {
+            lock.lock();
+
+            if(crop_stream)
+            {
+                image = img.copy(QRect(left,top,width,height));
+            }
+            else
+            {
+                image = img.copy();
+            }
+
+            lock.unlock();
+        }
+    });
+
+    connect(capturer, &ScreenCapturer::OnError, [&](const ScreenCapturerError& err, const QString& message){
+        qDebug() << "ScreenCapturer::OnError" << err << message;
     });
 
     capturer->SetScreen(0);
 
     connect(capturer, &ScreenCapturer::OnRestoreTokenProvided,[&](const QString token){
+        qDebug() << "[Ambient] capturer provided a restore token";
         restore_token = token;
     });
 }
 
 Ambient::~Ambient()
 {
+    capturer->Stop();
+    delete capturer;
     delete rectangle_selector_overlay;
     delete ui;
 }
@@ -104,6 +123,21 @@ void Ambient::SetDynamicStrings()
                        });
 }
 
+void Ambient::EffectState(const bool state)
+{
+    EffectEnabled = state;
+
+    if(state)
+    {
+        qDebug() << "[Ambient] Start capturer";
+        capturer->Start();
+    }
+    else
+    {
+        capturer->Stop();
+    }
+}
+
 void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)
 {
     if(controller_zones.empty())
@@ -118,6 +152,11 @@ void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)
             controller_zone->SetAllZoneLEDs(0, Brightness, Temperature, Tint);
         }
 
+        return;
+    }
+
+    if(image.isNull())
+    {
         return;
     }
 
@@ -204,25 +243,6 @@ RGBColor Ambient::Smooth(const RGBColor& previous_color, RGBColor color)
     return color;
 }
 
-void Ambient::EffectState(bool state)
-{
-    if(state)
-    {
-        if(!restore_token.isEmpty())
-        {
-            capturer->Init(restore_token);
-        }
-        else
-        {
-            capturer->Start();
-        }
-    }
-    else
-    {
-        capturer->Stop();
-    }
-}
-
 void Ambient::LoadCustomSettings(json settings)
 {
     if(settings.contains("left"))           ui->left->setValue(settings["left"]);
@@ -233,10 +253,12 @@ void Ambient::LoadCustomSettings(json settings)
     if(settings.contains("screen_index"))   ui->screen->setCurrentIndex(settings["screen_index"]);
     if(settings.contains("smoothness"))     ui->smoothness->setValue(settings["smoothness"]);
     if(settings.contains("framerate"))      ui->framerate->setValue(settings["framerate"]);
+    if(settings.contains("crop_stream"))    ui->crop_stream->setChecked(settings["crop_stream"]);
 
     if(settings.contains("restore_token"))
     {
         restore_token = QString::fromStdString(settings["restore_token"]);
+        capturer->SetToken(restore_token);
     }
 }
 
@@ -253,6 +275,7 @@ json Ambient::SaveCustomSettings()
     settings["smoothness"]      = smoothness;
     settings["framerate"]       = framerate;
     settings["restore_token"]   = restore_token.toStdString();
+    settings["crop_stream"]     = crop_stream;
 
     return settings;
 }
@@ -295,7 +318,7 @@ void Ambient::on_select_rectangle_clicked()
 
 void Ambient::on_select_screen_clicked()
 {
-    capturer->Init();
+    capturer->Init("", EffectEnabled);
 }
 
 void Ambient::on_smoothness_valueChanged(int value)
@@ -308,3 +331,10 @@ void Ambient::on_framerate_valueChanged(int value)
     framerate = value;
     capturer->SetFrameRate(framerate);
 }
+
+void Ambient::on_crop_stream_stateChanged(int value)
+{
+    crop_stream = value;
+    ui->crop_frame->setVisible(value);
+}
+

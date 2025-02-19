@@ -6,7 +6,7 @@
 class SpaPodUtils
 {
 public:
-    static spa_pod* CreateFormatOptions(spa_pod_builder* builder, const struct spa_rectangle* resolution);
+    static spa_pod* CreateFormatOptions(spa_pod_builder* builder, const struct spa_rectangle* resolution, unsigned int framerate);
 };
 
 #endif // SPAPODUTILS_H

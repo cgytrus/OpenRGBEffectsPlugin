@@ -13,9 +13,11 @@ class PipeWireCapturer : public QObject
     Q_OBJECT
 
 public:
-    PipeWireCapturer();
-    void ReadStream(quint32 id, int fd, unsigned int width, unsigned int height);
-    void Stop();
+    PipeWireCapturer(QObject* parent);
+    ~PipeWireCapturer();
+
+    void StartStream(quint32 id, int fd, unsigned int width, unsigned int height, unsigned int framerate);
+    void StopStream();
 
 signals:
     void NewImage(const QImage&);
@@ -34,6 +36,7 @@ private:
     quint32 fd = -1;
     unsigned int width;
     unsigned int height;
+    unsigned int framerate;
 
     pw_stream* CreateReceivingStream();
     void HandleBuffer(pw_buffer* buffer);

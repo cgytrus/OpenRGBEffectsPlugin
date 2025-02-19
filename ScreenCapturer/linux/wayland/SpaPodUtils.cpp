@@ -2,7 +2,7 @@
 
 #include <spa/param/video/format-utils.h>
 
-spa_pod* SpaPodUtils::CreateFormatOptions(spa_pod_builder* builder, const struct spa_rectangle* resolution) {
+spa_pod* SpaPodUtils::CreateFormatOptions(spa_pod_builder* builder, const struct spa_rectangle* resolution, unsigned int framerate) {
 
     spa_pod_frame frames[2];
     spa_pod_builder_push_object(builder, &frames[0], SPA_TYPE_OBJECT_Format, SPA_PARAM_EnumFormat);
@@ -91,5 +91,13 @@ spa_pod* SpaPodUtils::CreateFormatOptions(spa_pod_builder* builder, const struct
                                                ), 0);
 
     spa_pod_builder_add(builder, SPA_FORMAT_VIDEO_size, SPA_POD_Rectangle(resolution), 0);
+
+    spa_fraction pwFramerateMin = SPA_FRACTION(0, 1);
+    spa_fraction pwFramerateMax = SPA_FRACTION(framerate, 1);
+
+    spa_pod_builder_add(builder, SPA_FORMAT_VIDEO_framerate, SPA_POD_Fraction(&pwFramerateMin),0);
+    spa_pod_builder_add(builder, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&pwFramerateMax, &pwFramerateMin, &pwFramerateMax),0);
+
+
     return static_cast<spa_pod*>(spa_pod_builder_pop(builder, &frames[0]));
 }

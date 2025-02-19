@@ -48,6 +48,7 @@ private slots:
     void on_screen_currentIndexChanged(int);
     void on_smoothness_valueChanged(int);
     void on_framerate_valueChanged(int);
+    void on_crop_stream_stateChanged(int);
 
 private:
     Ui::Ambient *ui;
@@ -67,6 +68,7 @@ private:
     unsigned int height = 1;
     unsigned int smoothness = 80;
     unsigned int framerate = 60;
+    bool crop_stream = false;
     QString restore_token;
 
     QImage image;

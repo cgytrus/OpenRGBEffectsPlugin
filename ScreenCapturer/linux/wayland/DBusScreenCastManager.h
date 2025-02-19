@@ -28,16 +28,22 @@ public:
     DBusScreenCastManager(QObject *parent = nullptr);
     ~DBusScreenCastManager();
 
-    void Start();
-    void CreateSession(const QString& restore_token);
-    bool Started();
-    void ReOpen();
-
+    void CreateSession(const QString& restore_token, bool auto_open_stream);
+    void Stop();
+    void Clear();
+    void CloseSession();
+    bool IsSessionCreated();
+    bool IsSourceSelected();
+    bool IsStarted();
+    bool IsStreamOpened();
+    void SetToken(QString);
+    void OpenStream();
 
 public slots:
     void OnSessionCreated(uint responseCode, QVariantMap results);
     void OnSourceSelected(uint responseCode, QVariantMap results);
     void OnStarted(uint responseCode, QVariantMap results);
+    void OnCallFinished(QDBusPendingCallWatcher *watcher);
 
 signals:
     void OnRestoreTokenAcquired(const QString& restore_token);
@@ -49,6 +55,7 @@ private:
     QDBusConnection bus = QDBusConnection::sessionBus();
     QDBusInterface i = QDBusInterface("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop", "org.freedesktop.portal.ScreenCast", bus, nullptr);
 
+    void Start();
     void SelectSources();
     void OpenPipeWireRemote(const PipeWireStreamInfo&);
 
@@ -63,7 +70,15 @@ private:
     static unsigned long SessionTokenCounter;
 
     bool started = false;
+    bool session_created = false;
+    bool sources_selected = false;
+    bool stream_opened = false;
+
+    bool auto_open_stream = false;
+
     QString restore_token;
+    PipeWireStreamInfo stream_info;
+    QDBusPendingCallWatcher *watcher = nullptr;
 };
 
 #endif // DBUSSCREENCASTMANAGER_H
