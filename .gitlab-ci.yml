@@ -84,7 +84,6 @@ before_script:
   - armhf
   stage: build
   script:
-  - apt update && apt install -y libpipewire-0.3-dev
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
@@ -106,7 +105,6 @@ before_script:
   - arm64
   stage: build
   script:
-  - apt update && apt install -y libpipewire-0.3-dev
   - export QT_SELECT=qt5
   - export $(dpkg-architecture)
   - ./scripts/scripts_build-plugin.sh
@@ -128,7 +126,6 @@ before_script:
   - i386
   stage: build
   script:
-  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -154,7 +151,6 @@ before_script:
   - amd64
   stage: build
   script:
-  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -180,7 +176,6 @@ before_script:
   - armhf
   stage: build
   script:
-  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B
@@ -206,7 +201,6 @@ before_script:
   - arm64
   stage: build
   script:
-  - apt update && apt install -y libpipewire-0.3-dev
   - ./scripts/build-package-files.sh debian/changelog
   - dpkg-architecture -l
   - dpkg-buildpackage -us -B

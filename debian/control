@@ -14,6 +14,7 @@ Build-Depends:
  libhidapi-dev,
  libmbedtls-dev,
  libopenal-dev,
+ libpipewire-0.3-dev,
 Homepage: https://gitlab.com/OpenRGBDevelopers/OpenRGBEffectsPlugin
 
 Package: openrgb-plugin-effects
