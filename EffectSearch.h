@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QListWidgetItem>
 #include <QKeyEvent>
+#include "EffectsName.h"
 
 namespace Ui {
 class EffectSearch;
@@ -17,7 +18,7 @@ public:
     explicit EffectSearch(QWidget *parent = nullptr, unsigned int w = 0);
     ~EffectSearch();
 
-    void add(std::string);
+    void add(effect_names);
     void FocusSearch();
 
 private slots:
@@ -35,7 +36,7 @@ protected:
 
 private:
     Ui::EffectSearch *ui;
-    std::vector<std::string> strings;
+    std::vector<effect_names> effects_names;
 };
 
 #endif // EFFECTSEARCH_H

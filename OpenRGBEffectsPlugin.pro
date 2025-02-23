@@ -228,6 +228,7 @@ HEADERS +=                                                                      
     EffectList.h                                                                                \
     EffectListManager.h                                                                         \
     EffectManager.h                                                                             \
+    EffectsName.h                                                                               \
     EffectSearch.h                                                                              \
     EffectTabHeader.h                                                                           \
     Effects/EffectRegisterer.h                                                                  \

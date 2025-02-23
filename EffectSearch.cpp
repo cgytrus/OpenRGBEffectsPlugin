@@ -43,12 +43,13 @@ void EffectSearch::on_search_textChanged(const QString& search)
 
     bool results = false;
 
-    for(const std::string& s: strings)
+    for(const effect_names& data: effects_names)
     {
-        if(QString::fromStdString(s).toLower().contains(search.toLower()))
+        if(QString::fromStdString(data.ui_name).toLower().contains(search.toLower()))
         {
             results = true;
-            ui->results->addItem(QString::fromStdString(s));
+            QString s = QString::fromStdString(data.ui_name);
+            ui->results->addItem(s);
         }
     }
 
@@ -57,9 +58,9 @@ void EffectSearch::on_search_textChanged(const QString& search)
     emit Searching(true);
 }
 
-void EffectSearch::add(std::string s)
+void EffectSearch::add(effect_names data)
 {
-    strings.push_back(s);
+    effects_names.push_back(data);
 }
 
 void EffectSearch::FocusSearch()
@@ -76,7 +77,20 @@ void EffectSearch::on_results_itemClicked(QListWidgetItem* item)
     ui->no_results->hide();
     ui->search->clear();
 
-    emit EffectClicked(effect_name);
+    std::string effect_class_name;
+
+    for(const effect_names& data: effects_names)
+    {
+        if(effect_name == data.ui_name) {
+            effect_class_name = data.classname;
+            break;
+        }
+    }
+
+    if(!effect_class_name.empty())
+    {
+        emit EffectClicked(effect_class_name);
+    }
 }
 
 void EffectSearch::keyPressEvent(QKeyEvent *event)

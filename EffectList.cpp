@@ -81,7 +81,7 @@ void EffectList::AddEffectsMenus()
                 AddEffect(effect_names.classname);
             });
 
-            effect_search->add(effect_names.ui_name);
+            effect_search->add(effect_names);
         }
 
         sub_menus.push_back(category_menu);

@@ -15,12 +15,7 @@
 #include <functional>
 #include <string>
 #include "RGBEffect.h"
-
-struct effect_names
-{
-    std::string classname;      //Internal Name reference for mapping
-    std::string ui_name;        //User friendly name (Untranslated)
-};
+#include "EffectsName.h"
 
 class EffectListManager
 {
@@ -29,7 +24,7 @@ public:
 
     EffectListManager();
     ~EffectListManager();
-    
+
     std::map<std::string, std::vector<effect_names>>    GetCategorizedEffects();
     std::function<RGBEffect*()>                         GetEffectConstructor(std::string name);
     std::size_t                                         GetEffectsListSize();
