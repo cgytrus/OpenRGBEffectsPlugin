@@ -5,15 +5,15 @@
     <name>Ambient</name>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modus</translation>
     </message>
     <message>
         <source>Select rectangle...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechteck auswählen...</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <source>Top</source>
@@ -21,11 +21,11 @@
     </message>
     <message>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Breite</translation>
     </message>
     <message>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Höhe</translation>
     </message>
     <message>
         <source>Smoothness</source>
@@ -33,7 +33,7 @@
     </message>
     <message>
         <source>Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildschirm</translation>
     </message>
     <message>
         <source>Takes a portion of the screen and reflect it to your devices</source>
@@ -57,7 +57,7 @@
     </message>
     <message>
         <source>Select screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle Bildschirm</translation>
     </message>
     <message>
         <source>Crop stream</source>
@@ -68,7 +68,7 @@
     <name>AudioParty</name>
     <message>
         <source>Zones</source>
-        <translation type="unfinished"></translation>
+        <translation>Zonen</translation>
     </message>
     <message>
         <source>Effect threshold</source>
@@ -860,37 +860,37 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>EffectList</name>
     <message>
         <source>Start/Stop all effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Starte/stoppe alle Effekte</translation>
     </message>
     <message>
         <source>Effects...</source>
-        <translation type="unfinished"></translation>
+        <translation>Effekte...</translation>
     </message>
 </context>
 <context>
     <name>EffectSearch</name>
     <message>
         <source>No results match</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine übereinstimmende Resultate</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche</translation>
     </message>
 </context>
 <context>
     <name>EffectTabHeader</name>
     <message>
         <source>Rename effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Effekt umbennenen</translation>
     </message>
     <message>
         <source>Remove effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Effekt entfernen</translation>
     </message>
     <message>
         <source>New name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Name:</translation>
     </message>
 </context>
 <context>
@@ -1577,63 +1577,64 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>OpenRGBEffectTab</name>
     <message>
         <source>Profiles</source>
-        <translation type="unfinished"></translation>
+        <translation>Profile</translation>
     </message>
     <message>
         <source>Load profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil laden</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Über</translation>
     </message>
     <message>
         <source>No effects added yet.
  Please select one from the list to get started.</source>
-        <translation type="unfinished"></translation>
+        <translation>Noch keine Effekte hinzugefügt.
+Bitte wählen Sie eins von der Liste.</translation>
     </message>
 </context>
 <context>
     <name>PluginInfo</name>
     <message>
         <source>Download lastest build</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuestes Build herunterladen</translation>
     </message>
     <message>
         <source>Git branch:</source>
-        <translation type="unfinished"></translation>
+        <translation>Git branch:</translation>
     </message>
     <message>
         <source>Git commit date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Git commit datum:</translation>
     </message>
     <message>
         <source>Git commit ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Git commit ID:</translation>
     </message>
     <message>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Version:</translation>
     </message>
     <message>
         <source>Build date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Build datum:</translation>
     </message>
     <message>
         <source>Documentation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentation:</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/Plugins/Effects/Effects.md&quot;&gt;help&lt;/a&gt;</source>
@@ -1641,7 +1642,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Open plugin folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Pluginordner öffnen</translation>
     </message>
 </context>
 <context>
@@ -1832,35 +1833,35 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>SaveProfilePopup</name>
     <message>
         <source>Save effects state</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichere Effektzustand</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbrechen</translation>
     </message>
     <message>
         <source>Or create a new one:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oder erstelle ein neues:</translation>
     </message>
     <message>
         <source>Load profile at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Lade Profil beim starten</translation>
     </message>
     <message>
         <source>Choose an existing profile:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksistierendes Profil wählen:</translation>
     </message>
     <message>
         <source>Enter a profile name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Profilname eingeben:</translation>
     </message>
     <message>
         <source>Save profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil speichern</translation>
     </message>
 </context>
 <context>
@@ -2279,11 +2280,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>ZoneListItem</name>
     <message>
         <source>Add to current effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum aktuellen Effekt hinzufügen</translation>
     </message>
     <message>
         <source>Change direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Richtung ändern</translation>
     </message>
 </context>
 </TS>
