@@ -860,7 +860,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Effects...</source>
-        <translation Effekter...</translation>
+        <translation>Effekter...</translation>
     </message>
 </context>
 <context>

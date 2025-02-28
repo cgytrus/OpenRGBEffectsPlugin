@@ -1585,7 +1585,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Save</source>
-        <translation>保存/translation>
+        <translation>保存</translation>
     </message>
     <message>
         <source>Delete</source>
