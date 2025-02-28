@@ -315,13 +315,13 @@ SOURCES +=                                                                      
     Effects/AudioVisualizer/AudioVisualizer.cpp                                                 \
     Effects/AudioVUMeter/AudioVUMeter.cpp                                                       \
     Effects/Bloom/Bloom.cpp                                                                     \
-    Effects/BouncingBall/BouncingBall.cpp                                                 \
+    Effects/BouncingBall/BouncingBall.cpp                                                       \
     Effects/BouncingBall/BouncingBallSimulation.cpp                                             \
     Effects/Breathing/Breathing.cpp                                                             \
     Effects/BreathingCircle/BreathingCircle.cpp                                                 \
     Effects/Bubbles/Bubbles.cpp                                                                 \
     Effects/Clock/Clock.cpp                                                                     \
-    Effects/ColorWheel/ColorWheel.cpp                                               \
+    Effects/ColorWheel/ColorWheel.cpp                                                           \
     Effects/Comet/Comet.cpp                                                                     \
     Effects/CrossingBeams/CrossingBeams.cpp                                                     \
     Effects/CustomBlink/CustomBlink.cpp                                                         \
@@ -344,6 +344,7 @@ SOURCES +=                                                                      
     Effects/MotionPoints/MotionPoints.cpp                                                       \
     Effects/MovingPanes/MovingPanes.cpp                                                         \
     Effects/NoiseMap/NoiseMap.cpp                                                               \
+    Effects/Policing/Policing.cpp                                                               \
     Effects/RadialRainbow/RadialRainbow.cpp                                                     \
     Effects/Rain/Rain.cpp                                                                       \
     Effects/RainbowWave/RainbowWave.cpp                                                         \
@@ -384,13 +385,13 @@ HEADERS +=                                                                      
     Effects/AudioVisualizer/AudioVisualizer.h                                                   \
     Effects/AudioVUMeter/AudioVUMeter.h                                                         \
     Effects/Bloom/Bloom.h                                                                       \
-    Effects/BouncingBall/BouncingBall.h                                                   \
+    Effects/BouncingBall/BouncingBall.h                                                         \
     Effects/BouncingBall/BouncingBallSimulation.h                                               \
     Effects/Breathing/Breathing.h                                                               \
     Effects/BreathingCircle/BreathingCircle.h                                                   \
     Effects/Bubbles/Bubbles.h                                                                   \
     Effects/Clock/Clock.h                                                                       \
-    Effects/ColorWheel/ColorWheel.h                                                 \
+    Effects/ColorWheel/ColorWheel.h                                                             \
     Effects/Comet/Comet.h                                                                       \
     Effects/CrossingBeams/CrossingBeams.h                                                       \
     Effects/CustomBlink/CustomBlink.h                                                           \
@@ -413,6 +414,7 @@ HEADERS +=                                                                      
     Effects/MotionPoints/MotionPoints.h                                                         \
     Effects/MovingPanes/MovingPanes.h                                                           \
     Effects/NoiseMap/NoiseMap.h                                                                 \
+    Effects/Policing/Policing.h                                                                 \
     Effects/RadialRainbow/RadialRainbow.h                                                       \
     Effects/Rain/Rain.h                                                                         \
     Effects/RainbowWave/RainbowWave.h                                                           \
@@ -453,11 +455,11 @@ FORMS +=                                                                        
     Effects/AudioVisualizer/AudioVisualizer.ui                                                  \
     Effects/AudioVUMeter/AudioVUMeter.ui                                                        \
     Effects/Bloom/Bloom.ui                                                                      \
-    Effects/BouncingBall/BouncingBall.ui                                                  \
+    Effects/BouncingBall/BouncingBall.ui                                                        \
     Effects/BreathingCircle/BreathingCircle.ui                                                  \
     Effects/Bubbles/Bubbles.ui                                                                  \
     Effects/Clock/Clock.ui                                                                      \
-    Effects/ColorWheel/ColorWheel.ui                                                \
+    Effects/ColorWheel/ColorWheel.ui                                                            \
     Effects/Comet/Comet.ui                                                                      \
     Effects/CrossingBeams/CrossingBeams.ui                                                      \
     Effects/CustomBlink/CustomBlink.ui                                                          \
