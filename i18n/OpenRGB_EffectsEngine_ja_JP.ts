@@ -33,7 +33,7 @@
     </message>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>モード:</translation>
     </message>
     <message>
         <source>Takes a portion of the screen and reflect it to your devices</source>
@@ -806,15 +806,15 @@
     <name>DeviceList</name>
     <message>
         <source>Toggle brightness sliders</source>
-        <translation type="unfinished"></translation>
+        <translation>輝度スライダーの切り替え</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>すべて選択</translation>
     </message>
     <message>
         <source>Reverse all</source>
-        <translation type="unfinished"></translation>
+        <translation>すべて逆</translation>
     </message>
 </context>
 <context>
@@ -856,37 +856,37 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>EffectList</name>
     <message>
         <source>Start/Stop all effects</source>
-        <translation type="unfinished"></translation>
+        <translation>すべてのエフェクトを開始/停止</translation>
     </message>
     <message>
         <source>Effects...</source>
-        <translation type="unfinished"></translation>
+        <translation>エフェクト...</translation>
     </message>
 </context>
 <context>
     <name>EffectSearch</name>
     <message>
         <source>No results match</source>
-        <translation type="unfinished"></translation>
+        <translation>結果が一致しない</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>サーチ</translation>
     </message>
 </context>
 <context>
     <name>EffectTabHeader</name>
     <message>
         <source>Rename effect</source>
-        <translation type="unfinished"></translation>
+        <translation>名前変更エフェクト</translation>
     </message>
     <message>
         <source>Remove effect</source>
-        <translation type="unfinished"></translation>
+        <translation>エフェクトを削除します</translation>
     </message>
     <message>
         <source>New name:</source>
-        <translation type="unfinished"></translation>
+        <translation>新しい名前:</translation>
     </message>
 </context>
 <context>
@@ -1589,27 +1589,27 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>OpenRGBEffectTab</name>
     <message>
         <source>Profiles</source>
-        <translation type="unfinished"></translation>
+        <translation>プロフィール</translation>
     </message>
     <message>
         <source>Load profile</source>
-        <translation type="unfinished"></translation>
+        <translation>プロファイルをロード</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存/translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>削除</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>について</translation>
     </message>
     <message>
         <source>No effects added yet.
@@ -1625,23 +1625,23 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Git branch:</source>
-        <translation type="unfinished"></translation>
+        <translation>Git branch:</translation>
     </message>
     <message>
         <source>Git commit date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Git commit 日付:</translation>
     </message>
     <message>
         <source>Git commit ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Git commit ID:</translation>
     </message>
     <message>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>バージョン:</translation>
     </message>
     <message>
         <source>Build date:</source>
-        <translation type="unfinished"></translation>
+        <translation>ビルド日付:</translation>
     </message>
     <message>
         <source>Documentation:</source>
@@ -1844,7 +1844,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>SaveProfilePopup</name>
     <message>
         <source>Save profile</source>
-        <translation type="unfinished"></translation>
+        <translation>プロファイルを保存</translation>
     </message>
     <message>
         <source>Save effects state</source>
@@ -1852,11 +1852,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <source>Or create a new one:</source>
