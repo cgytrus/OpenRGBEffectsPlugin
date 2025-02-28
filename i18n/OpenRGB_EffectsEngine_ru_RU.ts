@@ -5,133 +5,139 @@
     <name>Ambient</name>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <source>Select rectangle...</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать область экрана...</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Слева</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Сверху</translation>
     </message>
     <message>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <source>Smoothness</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>In this case, &quot;smoothing&quot; is a more appropriate term</translatorcomment>
+        <translation>Сглаживание</translation>
     </message>
     <message>
         <source>Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Экран</translation>
     </message>
     <message>
         <source>Takes a portion of the screen and reflect it to your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>Дополняет свет экрана при помощи подсветки устройств</translation>
     </message>
     <message>
         <source>Scaled average</source>
-        <translation type="unfinished"></translation>
+        <translation>Взвешенное среднее</translation>
     </message>
     <message>
         <source>Screen copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Копия экрана</translation>
     </message>
     <message>
         <source>Ambient</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Does not translate well</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <source>Framerate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота обновления</translation>
     </message>
     <message>
         <source>Select screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите экран</translation>
+    </message>
+    <message>
+        <source>Crop stream</source>
+        <translation>Обрезать</translation>
     </message>
 </context>
 <context>
     <name>AudioParty</name>
     <message>
         <source>Zones</source>
-        <translation type="unfinished"></translation>
+        <translation>Зоны</translation>
     </message>
     <message>
         <source>Effect threshold</source>
-        <translation type="unfinished"></translation>
+        <translation>Порог смены эффекта</translation>
     </message>
     <message>
         <source>Divisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Деления</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки аудио</translation>
     </message>
     <message>
         <source>Movement, color change, effects according to audio zones.&lt;br/&gt;Blue zone: motion&lt;br/&gt;Green zone: colors&lt;br/&gt;Red zone: effects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Движение, цвет и анимация сменяются в зависимости от интенсивности звука</translation>
     </message>
     <message>
         <source>Color change speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость смены цвета</translation>
     </message>
     <message>
         <source>Audio Party</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio Party</translation>
     </message>
 </context>
 <context>
     <name>AudioSettings</name>
     <message>
         <source>Equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Эквалайзер</translation>
     </message>
     <message>
         <source>Capture settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки захвата звука</translation>
     </message>
     <message>
         <source>Reset EQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбросить эквалайзер</translation>
     </message>
     <message>
         <source>Normalization offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение нормализации</translation>
     </message>
     <message>
         <source>Amplitude</source>
-        <translation type="unfinished">Амплитуда</translation>
+        <translation>Амплитуда</translation>
     </message>
     <message>
         <source>Filter constant</source>
-        <translation type="unfinished"></translation>
+        <translation>Срезать константу фильтром</translation>
     </message>
     <message>
         <source>Normalization scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб нормализации</translation>
     </message>
     <message>
         <source>Decay (% per step)</source>
-        <translation type="unfinished"></translation>
+        <translation>Угасание (% на шаг)</translation>
     </message>
     <message>
         <source>AudioDevice</source>
-        <translation type="unfinished"></translation>
+        <translation>Источник аудио</translation>
     </message>
     <message>
         <source>FFT Window mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Окно преобразования Фурье</translation>
     </message>
     <message>
         <source>Average mode</source>
@@ -143,58 +149,58 @@
     </message>
     <message>
         <source>Restore default</source>
-        <translation type="unfinished"></translation>
+        <translation>Сброс к настройкам по-умолчанию</translation>
     </message>
 </context>
 <context>
     <name>AudioSine</name>
     <message>
         <source>Repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Повтор</translation>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished"></translation>
+        <translation>Свечение</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки аудио</translation>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished">Ширина</translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>Color mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим цвета</translation>
     </message>
     <message>
         <source>Cycle speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость повтора</translation>
     </message>
     <message>
         <source>Oscillation</source>
-        <translation type="unfinished"></translation>
+        <translation>Осцилляция</translation>
     </message>
     <message>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Фон</translation>
     </message>
     <message>
         <source>Wave color</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет волны</translation>
     </message>
     <message>
         <source>Sinusoidal audio rendering</source>
-        <translation type="unfinished"></translation>
+        <translation>Синусоидальное отображение аудио</translation>
     </message>
     <message>
         <source>Spectrum cycle</source>
-        <translation type="unfinished"></translation>
+        <translation>Цикл по спектру</translation>
     </message>
     <message>
         <source>Static</source>
-        <translation type="unfinished"></translation>
+        <translation>Статический</translation>
     </message>
     <message>
         <source>Audio Sine</source>
@@ -205,133 +211,140 @@
     <name>AudioStar</name>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Насыщение</translation>
     </message>
     <message>
         <source>Hue</source>
-        <translation type="unfinished"></translation>
+        <translation>Оттенок</translation>
     </message>
     <message>
         <source>Beat Sensivity</source>
-        <translation type="unfinished"></translation>
+        <translation>Чувствительность к ритму</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки аудио</translation>
     </message>
     <message>
         <source>Edge beat</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Does not translate well</translatorcomment>
+        <translation>Отражение бита по краю</translation>
     </message>
     <message>
         <source>Star audio visualizer (frequency based) with an edge beat</source>
-        <translation type="unfinished"></translation>
+        <translation>Отражение аудио по частотам в виде звезды, с отражением ритма по краю</translation>
     </message>
     <message>
         <source>Audio Star</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Does not translate well</translatorcomment>
+        <translation>Аудио Звезда</translation>
     </message>
 </context>
 <context>
     <name>AudioSync</name>
     <message>
         <source>Hue shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение оттенков</translation>
     </message>
     <message>
         <source>Color fade speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость угасания цвета</translation>
     </message>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Насыщение</translation>
     </message>
     <message>
         <source>Roll mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим вращения</translation>
     </message>
     <message>
         <source>Silent color</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет тишины</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки аудио</translation>
     </message>
     <message>
         <source>Rendering options</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки рендеринга</translation>
     </message>
     <message>
         <source>Band-pass filter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Display frequency based colors with different modes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No saturation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Saturate high amplitudes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Black and white mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Linear horizontal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No roll</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Radial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Linear vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Полосовой фильтр частот</translation>
     </message>
     <message>
         <source>Audio Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Синхронизация аудио</translation>
+    </message>
+    <message>
+        <source>Display frequency based colors with different modes</source>
+        <translation>Отражать цвета в зависимости от частот, с разными режимами</translation>
+    </message>
+    <message>
+        <source>No saturation</source>
+        <translation>Без насыщения</translation>
+    </message>
+    <message>
+        <source>Saturate high amplitudes</source>
+        <translation>Насыщать цвет при высоких амплитудах</translation>
+    </message>
+    <message>
+        <source>Black and white mode</source>
+        <translation>Чёрно-белый режим</translation>
+    </message>
+    <message>
+        <source>Linear horizontal</source>
+        <translation>Линейный горизонтальный</translation>
+    </message>
+    <message>
+        <source>No roll</source>
+        <translation>Без вращения</translation>
+    </message>
+    <message>
+        <source>Radial</source>
+        <translation>Радиальный</translation>
+    </message>
+    <message>
+        <source>Wave</source>
+        <translation>Волна</translation>
+    </message>
+    <message>
+        <source>Linear vertical</source>
+        <translation>Линейный вертикальный</translation>
     </message>
 </context>
 <context>
     <name>AudioVUMeter</name>
     <message>
         <source>Hue offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение оттенков</translation>
     </message>
     <message>
         <source>Invert hue direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Инвертировать направление смены оттенков</translation>
     </message>
     <message>
         <source>Hue spread</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>&quot;Hue&quot; does not have a straightforward translation; &quot;Оттенок&quot; indicates a specific shade of a color rather than the position of the color on the spectrum, whereas &quot;Цветность&quot;, even though it is the most common translation for &quot;Hue&quot;, mostly indicates the presence of a color (closer to the definition of &quot;saturation&quot;). Therefore, the translation for &quot;Hue&quot; should be based on the term &quot;Spectrum&quot; (&quot;спектр&quot;) and motion over the spectrum.</translatorcomment>
+        <translation>Разброс оттенков</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки аудио</translation>
     </message>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Насыщение</translation>
     </message>
     <message>
         <source>Fill your led strip based on audio load</source>
-        <translation type="unfinished"></translation>
+        <translation>Заполняет светодиодную ленту в соответствии с нагрузкой на динамики</translation>
+    </message>
+    <message>
+        <source></source>
+        <translation>Индикатор громкости (VU)</translation>
     </message>
     <message>
         <source>Audio VU Meter</source>
@@ -342,46 +355,46 @@
     <name>AudioVisualizer</name>
     <message>
         <source>Display audio equalizer on your devices. A ported version of &lt;a href=&quot;https://gitlab.com/CalcProgrammer1/KeyboardVisualizer&quot;&gt;KeyboardVisualizer&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображает эквалайзер на RGB-устройствах. Портирован из &lt;a href=&quot;https://gitlab.com/CalcProgrammer1/KeyboardVisualizer&quot;&gt;KeyboardVisualizer&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Audio Visualizer</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>AudioVisualizerUi</name>
     <message>
         <source>Rendering options</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки рендеринга</translation>
     </message>
     <message>
         <source>Background Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Яркость фона</translation>
     </message>
     <message>
         <source>Animation Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость анимации</translation>
     </message>
     <message>
         <source>Background Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим заднего плана</translation>
     </message>
     <message>
         <source>Foreground Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим переднего плана</translation>
     </message>
     <message>
         <source>Single Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим одного цвета</translation>
     </message>
     <message>
         <source>Background Timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Таймаут фона</translation>
     </message>
     <message>
         <source>Reactive Background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ре</translation>
     </message>
     <message>
         <source>Silent Background</source>
@@ -389,22 +402,22 @@
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки аудио</translation>
     </message>
 </context>
 <context>
     <name>Bloom</name>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Насыщение</translation>
     </message>
     <message>
         <source>Flower blooming effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Эффект раскрывающегося цветка</translation>
     </message>
     <message>
         <source>Bloom</source>
-        <translation type="unfinished"></translation>
+        <translation>Цветок</translation>
     </message>
 </context>
 <context>
@@ -419,23 +432,23 @@
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished">По умолчанию</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <source>Horizontal Velocity</source>
-        <translation type="unfinished"></translation>
+        <translation>Горизонтальная скорость</translation>
     </message>
     <message>
         <source>How fast the ball moves side to side</source>
-        <translation type="unfinished"></translation>
+        <translation>Как быстро мяч будет двигаться из стороны в сторону</translation>
     </message>
     <message>
         <source>Ball Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиус мячика</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Тяжесть</translation>
     </message>
     <message>
         <source>A ball bounces around your RGB setup</source>
@@ -443,11 +456,11 @@
     </message>
     <message>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
         <source>Bouncing Ball</source>
-        <translation type="unfinished"></translation>
+        <translation>Прыгающий мяч</translation>
     </message>
 </context>
 <context>
@@ -480,19 +493,19 @@
     <name>Bubbles</name>
     <message>
         <source>Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Пузырьки</translation>
     </message>
     <message>
         <source>Max bubbles</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальное количество пузырей</translation>
     </message>
     <message>
         <source>Rarity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Редкость</translation>
     </message>
     <message>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Фон</translation>
     </message>
     <message>
         <source>Max expansion</source>
@@ -542,7 +555,7 @@
     </message>
     <message>
         <source>Screen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Экран</translation>
     </message>
     <message>
         <source>Overlay</source>
@@ -642,7 +655,7 @@
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Свечение</translation>
     </message>
     <message>
         <source>Horizontal speed</source>
@@ -677,11 +690,11 @@
     </message>
     <message>
         <source>Reset time</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сбросить время</translation>
     </message>
     <message>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-</translation>
     </message>
     <message>
         <source>Remove selected</source>
@@ -700,11 +713,11 @@
     <name>CustomGradientWave</name>
     <message>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Высота</translation>
     </message>
     <message>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пресет</translation>
     </message>
     <message>
         <source>Spread</source>
@@ -716,7 +729,7 @@
     </message>
     <message>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <source>Create your own gradient wave or use predefined color set</source>
@@ -795,11 +808,11 @@
     <name>CustomMarquee</name>
     <message>
         <source>Create your own marquee effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Создаёт бегущую строку из нескольких цветов, движущихся в одном направлении</translation>
     </message>
     <message>
         <source>Custom Marquee</source>
-        <translation type="unfinished"></translation>
+        <translation>Бегущая строка</translation>
     </message>
 </context>
 <context>
@@ -1089,7 +1102,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Яркость</translation>
     </message>
     <message>
         <source>Temperature</source>
@@ -1113,50 +1126,46 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки аудио</translation>
     </message>
 </context>
 <context>
     <name>Hypnotoad</name>
     <message>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаг</translation>
     </message>
     <message>
         <source>Animation speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость анимации</translation>
     </message>
     <message>
         <source>Animation direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Направление анимации</translation>
     </message>
     <message>
         <source>Color mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим цвета</translation>
     </message>
     <message>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция по X</translation>
     </message>
     <message>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция по Y</translation>
     </message>
     <message>
         <source>Rotation direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Направление вращения</translation>
     </message>
     <message>
         <source>Rotation speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость вращения</translation>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished">Ширина</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>You wont escape this</source>
@@ -1194,10 +1203,6 @@ Using an effect on a device WILL damage the flash or controller</source>
 <context>
     <name>LayerEntry</name>
     <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Edit layer settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1205,17 +1210,9 @@ Using an effect on a device WILL damage the flash or controller</source>
         <source>Remove layer</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>LayerGroupEntry</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Delete group</source>
         <translation type="unfinished"></translation>
@@ -1264,7 +1261,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>Lightning</name>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <source>Prepare yourself for thunderstorm</source>
@@ -1279,23 +1276,23 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>LivePreviewController</name>
     <message>
         <source>Reverse</source>
-        <translation type="unfinished"></translation>
+        <translation>Реверс</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Яркость</translation>
     </message>
     <message>
         <source>Custom height</source>
-        <translation type="unfinished"></translation>
+        <translation>Польз. высота</translation>
     </message>
     <message>
         <source>Custom width</source>
-        <translation type="unfinished"></translation>
+        <translation>Польз. ширина</translation>
     </message>
     <message>
         <source>Scale content</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштабировать содержимое</translation>
     </message>
 </context>
 <context>
@@ -1306,7 +1303,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шаг</translation>
     </message>
     <message>
         <source>Marquee</source>
@@ -1317,23 +1314,23 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>Mask</name>
     <message>
         <source>X axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Ось X</translation>
     </message>
     <message>
         <source>Y axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Ось Y</translation>
     </message>
     <message>
         <source>width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>height</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <source>Invert colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Инвертировать цвета</translation>
     </message>
     <message>
         <source>A simple mask for using in layers</source>
@@ -1348,7 +1345,8 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>Mosaic</name>
     <message>
         <source>Rarity</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Term is not exactly descriptive, translation could be misleading</translatorcomment>
+        <translation>Редкость</translation>
     </message>
     <message>
         <source>Tiles randomly spawning across your devices</source>
@@ -1363,7 +1361,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>MotionPoint</name>
     <message>
         <source>Background color:</source>
-        <translation type="unfinished">Фоновый цвет:</translation>
+        <translation>Фоновый цвет:</translation>
     </message>
     <message>
         <source>A point that moves forth and back on your devices</source>
@@ -1397,7 +1395,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Divisions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Деления</translation>
     </message>
     <message>
         <source>Moving Panes</source>
@@ -1408,7 +1406,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>NewShaderPassTabHeader</name>
     <message>
         <source>+</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Texture</source>
@@ -1427,43 +1425,43 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>NoiseMap</name>
     <message>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>Пресет</translation>
     </message>
     <message>
         <source>Frequency</source>
-        <translation type="unfinished">Частота</translation>
+        <translation>Частота</translation>
     </message>
     <message>
         <source>Octaves</source>
-        <translation type="unfinished"></translation>
+        <translation>Октавы</translation>
     </message>
     <message>
         <source>Motion</source>
-        <translation type="unfinished"></translation>
+        <translation>Движение</translation>
     </message>
     <message>
         <source>Motion speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Скорость движения</translation>
     </message>
     <message>
         <source>Persistence</source>
-        <translation type="unfinished"></translation>
+        <translation>Задержка угасания</translation>
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished">По умолчанию</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <source>Lacunarity</source>
-        <translation type="unfinished"></translation>
+        <translation>Лакунарность (детализация)</translation>
     </message>
     <message>
         <source>Amplitude</source>
-        <translation type="unfinished">Амплитуда</translation>
+        <translation>Амплитуда</translation>
     </message>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <source>Floor is lava</source>
@@ -1491,7 +1489,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Слева</translation>
     </message>
     <message>
         <source>Right</source>
@@ -1538,7 +1536,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-</translation>
     </message>
     <message>
         <source>Random</source>
@@ -1562,11 +1560,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Speed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пузырьки</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Яркость</translation>
     </message>
     <message>
         <source>FPS</source>
@@ -1597,7 +1595,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сохранить</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -1782,11 +1780,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>RotatingBeam</name>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished">Ширина</translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>A beam that rotates in different ways</source>
@@ -1794,7 +1792,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Свечение</translation>
     </message>
     <message>
         <source>Clockwise</source>
@@ -1844,31 +1842,31 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>SaveProfilePopup</name>
     <message>
         <source>Save effects state</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить состояние эффектов</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <source>Or create a new one:</source>
-        <translation type="unfinished"></translation>
+        <translation>Или создайте новый:</translation>
     </message>
     <message>
         <source>Load profile at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить профиль при запуске</translation>
     </message>
     <message>
         <source>Choose an existing profile:</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите существующий профиль:</translation>
     </message>
     <message>
         <source>Enter a profile name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите название профиля:</translation>
     </message>
     <message>
         <source>Save profile</source>
@@ -1894,69 +1892,69 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>ShaderFileTabHeader</name>
     <message>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>ShaderPassEditor</name>
     <message>
         <source>The audio data will be automatically passed to this shader. Make sure to enabled &quot;Use audio&quot; in the effect page.</source>
-        <translation type="unfinished"></translation>
+        <translation>В этот шейдер будет автоматически направлен аудиосигнал. Убедитесь, что использование аудио включено на странице эффекта.</translation>
     </message>
     <message>
         <source>Choose texture</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите текстуру</translation>
     </message>
     <message>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть изображение</translation>
     </message>
     <message>
         <source>Image Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы изображений</translation>
     </message>
 </context>
 <context>
     <name>Shaders</name>
     <message>
         <source>Save shader as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить шейдер как...</translation>
     </message>
     <message>
         <source>Use audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать аудио</translation>
     </message>
     <message>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки аудио</translation>
     </message>
     <message>
         <source>Edit shader</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать шейдер</translation>
     </message>
     <message>
         <source>Invert time</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить в обратном направлении</translation>
     </message>
     <message>
         <source>Open shaders folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть папку с шейдерами</translation>
     </message>
     <message>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <source>Reset time</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбросить время</translation>
     </message>
     <message>
         <source>Show rendering</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать рендер</translation>
     </message>
     <message>
         <source>Unleash the power of OpenRGB with GL shaders</source>
@@ -1980,7 +1978,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Or create a new one:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Или создайте новый:</translation>
     </message>
     <message>
         <source>OK</source>
@@ -1988,7 +1986,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Отмена</translation>
     </message>
     <message>
         <source>Shaders</source>
@@ -1999,35 +1997,35 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>SmoothBlink</name>
     <message>
         <source>Rendering</source>
-        <translation type="unfinished"></translation>
+        <translation>Рендеринг</translation>
     </message>
     <message>
         <source>Interval (s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Интервал (с)</translation>
     </message>
     <message>
         <source>Strength (%)</source>
-        <translation type="unfinished"></translation>
+        <translation>Сила (%)</translation>
     </message>
     <message>
         <source>Pulse duration (s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Продолжительность импульса (с)</translation>
     </message>
     <message>
         <source>Pulses (n)</source>
-        <translation type="unfinished"></translation>
+        <translation>Кол-во импульсов</translation>
     </message>
     <message>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция Y</translation>
     </message>
     <message>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция X</translation>
     </message>
     <message>
         <source>Defaults</source>
-        <translation type="unfinished">По умолчанию</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <source>Create your own breathing sequences</source>
@@ -2050,7 +2048,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>SpectrumCycling</name>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Насыщенность</translation>
     </message>
     <message>
         <source>Goes through every solid color of the rainbow</source>
@@ -2080,7 +2078,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>Stack</name>
     <message>
         <source>Matrix zone direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Направление по матрице</translation>
     </message>
     <message>
         <source>Fills and stack your devices with a solid color</source>
@@ -2142,7 +2140,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>Sunrise</name>
     <message>
         <source>Motion</source>
-        <translation type="unfinished"></translation>
+        <translation>Движение</translation>
     </message>
     <message>
         <source>Intensity speed</source>
@@ -2196,7 +2194,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Свечение</translation>
     </message>
     <message>
         <source>Swirl Circles</source>
@@ -2207,7 +2205,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>SwirlCirclesAudio</name>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки аудио</translation>
     </message>
     <message>
         <source>Radius</source>
@@ -2219,7 +2217,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Свечение</translation>
     </message>
     <message>
         <source>Swirl Circles Audio</source>
@@ -2234,7 +2232,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <source>Visor</source>

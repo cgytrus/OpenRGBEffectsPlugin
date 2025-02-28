@@ -59,6 +59,10 @@
         <source>Select screen</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Crop stream</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AudioParty</name>
@@ -1156,7 +1160,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <translation type="vanished">文本标签</translation>
     </message>
     <message>
         <source>You wont escape this</source>
@@ -1195,7 +1199,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>LayerEntry</name>
     <message>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="vanished">表格</translation>
     </message>
     <message>
         <source>Edit layer settings</source>
@@ -1207,14 +1211,14 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <translation type="vanished">文本标签</translation>
     </message>
 </context>
 <context>
     <name>LayerGroupEntry</name>
     <message>
         <source>Form</source>
-        <translation>表格</translation>
+        <translation type="vanished">表格</translation>
     </message>
     <message>
         <source>Delete group</source>

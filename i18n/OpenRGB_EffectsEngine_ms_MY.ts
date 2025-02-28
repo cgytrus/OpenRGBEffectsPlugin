@@ -59,6 +59,10 @@
         <source>Select screen</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Crop stream</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AudioParty</name>
@@ -1157,7 +1161,7 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation type="vanished">TextLabel</translation>
     </message>
     <message>
         <source>You wont escape this</source>
@@ -1196,7 +1200,7 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     <name>LayerEntry</name>
     <message>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation type="vanished">Form</translation>
     </message>
     <message>
         <source>Edit layer settings</source>
@@ -1208,14 +1212,14 @@ Menggunakan kesan pada peranti AKAN merosakkan flash atau pengawal</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation type="vanished">TextLabel</translation>
     </message>
 </context>
 <context>
     <name>LayerGroupEntry</name>
     <message>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation type="vanished">Form</translation>
     </message>
     <message>
         <source>Delete group</source>
