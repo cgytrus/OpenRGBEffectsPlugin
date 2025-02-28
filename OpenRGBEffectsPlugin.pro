@@ -515,6 +515,7 @@ TRANSLATIONS +=                                                                 
     i18n/OpenRGB_EffectsEngine_ja_JP.ts                                                         \
     i18n/OpenRGB_EffectsEngine_ko_KR.ts                                                         \
     i18n/OpenRGB_EffectsEngine_ms_MY.ts                                                         \
+    i18n/OpenRGB_EffectsEngine_nb_NO.ts                                                         \
     i18n/OpenRGB_EffectsEngine_pl_PL.ts                                                         \
     i18n/OpenRGB_EffectsEngine_pt_BR.ts                                                         \
     i18n/OpenRGB_EffectsEngine_ru_RU.ts                                                         \
