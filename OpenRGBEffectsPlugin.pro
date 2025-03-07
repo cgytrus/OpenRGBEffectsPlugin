@@ -288,8 +288,6 @@ FORMS +=                                                                        
     EffectList.ui                                                                               \
     EffectSearch.ui                                                                             \
     EffectTabHeader.ui                                                                          \
-    Effects/Breathing/Breathing.ui \
-    Effects/StarryNight/StarryNight.ui \
     LivePreviewController.ui                                                                    \
     OpenRGBEffectPage.ui                                                                        \
     OpenRGBEffectTab.ui                                                                         \
@@ -364,6 +362,7 @@ SOURCES +=                                                                      
     Effects/Shaders/GLSLCodeEditor.cpp                                                          \
     Effects/SmoothBlink/SmoothBlink.cpp                                                         \
     Effects/SpectrumCycling/SpectrumCycling.cpp                                                 \
+    Effects/SparkleFade/SparkleFade.cpp                                                         \
     Effects/Spiral/Spiral.cpp                                                                   \
     Effects/Stack/Stack.cpp                                                                     \
     Effects/StarryNight/StarryNight.cpp                                                         \
@@ -434,6 +433,7 @@ HEADERS +=                                                                      
     Effects/Shaders/GLSLHighlighter.h                                                           \
     Effects/Shaders/GLSLCodeEditor.h                                                            \
     Effects/SmoothBlink/SmoothBlink.h                                                           \
+    Effects/SparkleFade/SparkleFade.h                                                           \
     Effects/SpectrumCycling/SpectrumCycling.h                                                   \
     Effects/Spiral/Spiral.h                                                                     \
     Effects/Stack/Stack.h                                                                       \
@@ -456,6 +456,7 @@ FORMS +=                                                                        
     Effects/AudioVUMeter/AudioVUMeter.ui                                                        \
     Effects/Bloom/Bloom.ui                                                                      \
     Effects/BouncingBall/BouncingBall.ui                                                        \
+    Effects/Breathing/Breathing.ui                                                              \
     Effects/BreathingCircle/BreathingCircle.ui                                                  \
     Effects/Bubbles/Bubbles.ui                                                                  \
     Effects/Clock/Clock.ui                                                                      \
@@ -494,9 +495,11 @@ FORMS +=                                                                        
     Effects/Shaders/ShaderFileTabHeader.ui                                                      \
     Effects/Shaders/ShaderPassEditor.ui                                                         \
     Effects/SmoothBlink/SmoothBlink.ui                                                          \
+    Effects/SparkleFade/SparkleFade.ui                                                          \
     Effects/SpectrumCycling/SpectrumCycling.ui                                                  \
     Effects/Spiral/Spiral.ui                                                                    \
     Effects/Stack/Stack.ui                                                                      \
+    Effects/StarryNight/StarryNight.ui                                                          \
     Effects/Sunrise/Sunrise.ui                                                                  \
     Effects/Swap/Swap.ui                                                                        \
     Effects/SwirlCircles/SwirlCircles.ui                                                        \
