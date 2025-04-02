@@ -29,39 +29,39 @@
     </message>
     <message>
         <source>Smoothness</source>
-        <translation type="unfinished"></translation>
+        <translation>平滑渡</translation>
     </message>
     <message>
         <source>Screen</source>
-        <translation>屏幕</translation>
+        <translation>选择屏幕源</translation>
     </message>
     <message>
         <source>Takes a portion of the screen and reflect it to your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>选取屏幕范围并展示在设备上</translation>
     </message>
     <message>
         <source>Scaled average</source>
-        <translation type="unfinished"></translation>
+        <translation>整屏颜色均值</translation>
     </message>
     <message>
         <source>Screen copy</source>
-        <translation type="unfinished"></translation>
+        <translation>屏幕映射</translation>
     </message>
     <message>
         <source>Ambient</source>
-        <translation type="unfinished"></translation>
+        <translation>屏幕映射</translation>
     </message>
     <message>
         <source>Framerate</source>
-        <translation type="unfinished"></translation>
+        <translation>采样率</translation>
     </message>
     <message>
         <source>Select screen</source>
-        <translation type="unfinished"></translation>
+        <translation>选择屏幕</translation>
     </message>
     <message>
         <source>Crop stream</source>
-        <translation type="unfinished"></translation>
+        <translation>交叉流</translation>
     </message>
 </context>
 <context>
@@ -80,74 +80,74 @@
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Movement, color change, effects according to audio zones.&lt;br/&gt;Blue zone: motion&lt;br/&gt;Green zone: colors&lt;br/&gt;Red zone: effects</source>
-        <translation type="unfinished"></translation>
+        <translation>运动、颜色变化、根据音频区域的效果&lt;br/&gt;蓝色区域：运动&lt;br/&gt;绿色区域：颜色&lt;br/&gt;红色区域：效果</translation>
     </message>
     <message>
         <source>Color change speed</source>
-        <translation type="unfinished"></translation>
+        <translation>颜色变化速度</translation>
     </message>
     <message>
         <source>Audio Party</source>
-        <translation type="unfinished"></translation>
+        <translation>音频派对</translation>
     </message>
 </context>
 <context>
     <name>AudioSettings</name>
     <message>
         <source>Equalizer</source>
-        <translation type="unfinished">均衡器</translation>
+        <translation>均衡器</translation>
     </message>
     <message>
         <source>Capture settings</source>
-        <translation type="unfinished"></translation>
+        <translation>捕获设置</translation>
     </message>
     <message>
         <source>Reset EQ</source>
-        <translation type="unfinished"></translation>
+        <translation>重置EQ</translation>
     </message>
     <message>
         <source>Normalization offset</source>
-        <translation type="unfinished"></translation>
+        <translation>归一化偏移</translation>
     </message>
     <message>
         <source>Amplitude</source>
-        <translation type="unfinished">振幅</translation>
+        <translation>振幅</translation>
     </message>
     <message>
         <source>Filter constant</source>
-        <translation type="unfinished">过滤常数</translation>
+        <translation>过滤常数</translation>
     </message>
     <message>
         <source>Normalization scale</source>
-        <translation type="unfinished"></translation>
+        <translation>归一化尺度</translation>
     </message>
     <message>
         <source>Decay (% per step)</source>
-        <translation type="unfinished">衰变(% 每 一步)</translation>
+        <translation>衰变(% 每 一步)</translation>
     </message>
     <message>
         <source>AudioDevice</source>
-        <translation type="unfinished"></translation>
+        <translation>音频设备</translation>
     </message>
     <message>
         <source>FFT Window mode</source>
-        <translation type="unfinished"></translation>
+        <translation>FFT窗口模式</translation>
     </message>
     <message>
         <source>Average mode</source>
-        <translation type="unfinished">平均模式</translation>
+        <translation>平均模式</translation>
     </message>
     <message>
         <source>Average size</source>
-        <translation type="unfinished">平均大小</translation>
+        <translation>平均大小</translation>
     </message>
     <message>
         <source>Restore default</source>
-        <translation type="unfinished"></translation>
+        <translation>恢复默认设置</translation>
     </message>
 </context>
 <context>
@@ -162,7 +162,7 @@
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Thickness</source>
@@ -170,11 +170,11 @@
     </message>
     <message>
         <source>Color mode</source>
-        <translation type="unfinished">颜色模式</translation>
+        <translation>颜色模式</translation>
     </message>
     <message>
         <source>Cycle speed</source>
-        <translation type="unfinished"></translation>
+        <translation>循环速度</translation>
     </message>
     <message>
         <source>Oscillation</source>
@@ -190,19 +190,19 @@
     </message>
     <message>
         <source>Sinusoidal audio rendering</source>
-        <translation type="unfinished"></translation>
+        <translation>正弦音频渲染</translation>
     </message>
     <message>
         <source>Spectrum cycle</source>
-        <translation type="unfinished"></translation>
+        <translation>频谱周期</translation>
     </message>
     <message>
         <source>Static</source>
-        <translation type="unfinished"></translation>
+        <translation>静态</translation>
     </message>
     <message>
         <source>Audio Sine</source>
-        <translation type="unfinished"></translation>
+        <translation>音频正弦</translation>
     </message>
 </context>
 <context>
@@ -221,7 +221,7 @@
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Edge beat</source>
@@ -229,11 +229,11 @@
     </message>
     <message>
         <source>Star audio visualizer (frequency based) with an edge beat</source>
-        <translation type="unfinished"></translation>
+        <translation>带有边缘节拍的星形音频可视化器（基于频率）</translation>
     </message>
     <message>
         <source>Audio Star</source>
-        <translation type="unfinished"></translation>
+        <translation>舞台音频</translation>
     </message>
 </context>
 <context>
@@ -256,11 +256,11 @@
     </message>
     <message>
         <source>Silent color</source>
-        <translation type="unfinished"></translation>
+        <translation>无声音时的颜色</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Rendering options</source>
@@ -272,43 +272,43 @@
     </message>
     <message>
         <source>Display frequency based colors with different modes</source>
-        <translation type="unfinished"></translation>
+        <translation>以不同模式显示基于频率的颜色</translation>
     </message>
     <message>
         <source>No saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>无饱和</translation>
     </message>
     <message>
         <source>Saturate high amplitudes</source>
-        <translation type="unfinished"></translation>
+        <translation>饱和高振幅</translation>
     </message>
     <message>
         <source>Black and white mode</source>
-        <translation type="unfinished"></translation>
+        <translation>黑白模式</translation>
     </message>
     <message>
         <source>Linear horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>线性水平</translation>
     </message>
     <message>
         <source>No roll</source>
-        <translation type="unfinished"></translation>
+        <translation>没有滚动</translation>
     </message>
     <message>
         <source>Radial</source>
-        <translation type="unfinished"></translation>
+        <translation>径向</translation>
     </message>
     <message>
         <source>Wave</source>
-        <translation type="unfinished"></translation>
+        <translation>波</translation>
     </message>
     <message>
         <source>Linear vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>线性垂直</translation>
     </message>
     <message>
         <source>Audio Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>音频同步</translation>
     </message>
 </context>
 <context>
@@ -319,7 +319,7 @@
     </message>
     <message>
         <source>Invert hue direction</source>
-        <translation type="unfinished"></translation>
+        <translation>反转色调方向</translation>
     </message>
     <message>
         <source>Hue spread</source>
@@ -327,7 +327,7 @@
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Saturation</source>
@@ -335,22 +335,22 @@
     </message>
     <message>
         <source>Fill your led strip based on audio load</source>
-        <translation type="unfinished"></translation>
+        <translation>根据音频负载填充led灯带</translation>
     </message>
     <message>
         <source>Audio VU Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>音频VU表</translation>
     </message>
 </context>
 <context>
     <name>AudioVisualizer</name>
     <message>
         <source>Display audio equalizer on your devices. A ported version of &lt;a href=&quot;https://gitlab.com/CalcProgrammer1/KeyboardVisualizer&quot;&gt;KeyboardVisualizer&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>在您的设备上显示音频均衡器</translation>
     </message>
     <message>
         <source>Audio Visualizer</source>
-        <translation type="unfinished"></translation>
+        <translation>音频可视化仪</translation>
     </message>
 </context>
 <context>
@@ -400,26 +400,26 @@
     <name>Bloom</name>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished">饱和</translation>
+        <translation>饱和</translation>
     </message>
     <message>
         <source>Flower blooming effect</source>
-        <translation type="unfinished"></translation>
+        <translation>电视花屏效果</translation>
     </message>
     <message>
         <source>Bloom</source>
-        <translation type="unfinished"></translation>
+        <translation>电视花屏</translation>
     </message>
 </context>
 <context>
     <name>BouncingBall</name>
     <message>
         <source>Drop Height %</source>
-        <translation type="unfinished">落差%</translation>
+        <translation>落差%</translation>
     </message>
     <message>
         <source>Spectrum Velocity</source>
-        <translation>谱速度</translation>
+        <translation>颜色循环速度</translation>
     </message>
     <message>
         <source>Defaults</source>
@@ -443,41 +443,41 @@
     </message>
     <message>
         <source>A ball bounces around your RGB setup</source>
-        <translation type="unfinished"></translation>
+        <translation>球在RGB设置中反弹</translation>
     </message>
     <message>
         <source>-</source>
-        <translation type="unfinished">-</translation>
+        <translation>-</translation>
     </message>
     <message>
         <source>Bouncing Ball</source>
-        <translation type="unfinished"></translation>
+        <translation>重力球</translation>
     </message>
 </context>
 <context>
     <name>Breathing</name>
     <message>
         <source>Fading in and out user selected colors across an entire zone</source>
-        <translation type="unfinished"></translation>
+        <translation>在整个区域中淡入淡出用户选择的颜色</translation>
     </message>
     <message>
         <source>Breathing</source>
-        <translation type="unfinished"></translation>
+        <translation>呼吸</translation>
     </message>
 </context>
 <context>
     <name>BreathingCircle</name>
     <message>
         <source>A breathing circle effect</source>
-        <translation type="unfinished"></translation>
+        <translation>呼吸循环效应</translation>
     </message>
     <message>
         <source>Thickness</source>
-        <translation type="unfinished">厚度</translation>
+        <translation>厚度</translation>
     </message>
     <message>
         <source>Breathing Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>呼吸圈</translation>
     </message>
 </context>
 <context>
@@ -508,130 +508,130 @@
     </message>
     <message>
         <source>Bloop bloop</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloop Bloop</translation>
     </message>
     <message>
         <source>Bubbles</source>
-        <translation type="unfinished"></translation>
+        <translation>泡泡</translation>
     </message>
 </context>
 <context>
     <name>Clock</name>
     <message>
         <source>Clock mode</source>
-        <translation type="unfinished"></translation>
+        <translation>时钟模式</translation>
     </message>
     <message>
         <source>Digital Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>数字时钟</translation>
     </message>
     <message>
         <source>12-hour</source>
-        <translation type="unfinished"></translation>
+        <translation>12小时</translation>
     </message>
     <message>
         <source>24-hour</source>
-        <translation type="unfinished"></translation>
+        <translation>24小时</translation>
     </message>
     <message>
         <source>Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>条纹时钟</translation>
     </message>
 </context>
 <context>
     <name>ColorUtils</name>
     <message>
         <source>Multiply</source>
-        <translation type="unfinished"></translation>
+        <translation>乘</translation>
     </message>
     <message>
         <source>Screen</source>
-        <translation type="unfinished">屏幕</translation>
+        <translation>屏幕</translation>
     </message>
     <message>
         <source>Overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>覆盖</translation>
     </message>
     <message>
         <source>Dodge</source>
-        <translation type="unfinished"></translation>
+        <translation>闪避</translation>
     </message>
     <message>
         <source>Burn</source>
-        <translation type="unfinished"></translation>
+        <translation>燃烧</translation>
     </message>
     <message>
         <source>Mask</source>
-        <translation type="unfinished"></translation>
+        <translation>面具</translation>
     </message>
     <message>
         <source>Lighten</source>
-        <translation type="unfinished"></translation>
+        <translation>减轻</translation>
     </message>
     <message>
         <source>Darken</source>
-        <translation type="unfinished"></translation>
+        <translation>变暗</translation>
     </message>
     <message>
         <source>Exclusive</source>
-        <translation type="unfinished"></translation>
+        <translation>独家</translation>
     </message>
     <message>
         <source>Difference</source>
-        <translation type="unfinished"></translation>
+        <translation>差别</translation>
     </message>
 </context>
 <context>
     <name>ColorWheel</name>
     <message>
         <source>Direction</source>
-        <translation type="unfinished">方向</translation>
+        <translation>方向</translation>
     </message>
     <message>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation>X位置</translation>
     </message>
     <message>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation>Y位置</translation>
     </message>
     <message>
         <source>A rotating rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>旋转彩虹</translation>
     </message>
     <message>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>顺时针方向的</translation>
     </message>
     <message>
         <source>Counter-clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>逆时针地</translation>
     </message>
     <message>
         <source>Color Wheel</source>
-        <translation type="unfinished"></translation>
+        <translation>螺旋彩虹波</translation>
     </message>
 </context>
 <context>
     <name>ColorsPicker</name>
     <message>
         <source>Colors count</source>
-        <translation type="unfinished"></translation>
+        <translation>颜色计数</translation>
     </message>
 </context>
 <context>
     <name>Comet</name>
     <message>
         <source>A comet that travels through your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>横扫穿过你的设备</translation>
     </message>
     <message>
         <source>Comet size</source>
-        <translation type="unfinished"></translation>
+        <translation>横扫大小</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation type="unfinished"></translation>
+        <translation>横扫</translation>
     </message>
 </context>
 <context>
@@ -654,11 +654,11 @@
     </message>
     <message>
         <source>Two beams that move horizontally and vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>两根水平和垂直移动的梁</translation>
     </message>
     <message>
         <source>Crossing Beams</source>
-        <translation type="unfinished"></translation>
+        <translation>十字定位</translation>
     </message>
 </context>
 <context>
@@ -693,11 +693,11 @@
     </message>
     <message>
         <source>Make your own blinking sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>制作自己的闪烁序列</translation>
     </message>
     <message>
         <source>Custom Blink</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义闪烁</translation>
     </message>
 </context>
 <context>
@@ -724,86 +724,86 @@
     </message>
     <message>
         <source>Create your own gradient wave or use predefined color set</source>
-        <translation type="unfinished"></translation>
+        <translation>创建自己的渐变波或使用预定义的颜色集</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>水平的</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直的</translation>
     </message>
     <message>
         <source>Radial out</source>
-        <translation type="unfinished"></translation>
+        <translation>径向向外</translation>
     </message>
     <message>
         <source>Radial in</source>
-        <translation type="unfinished"></translation>
+        <translation>径向入</translation>
     </message>
     <message>
         <source>Unicorn Vomit</source>
-        <translation type="unfinished"></translation>
+        <translation>独角兽呕吐</translation>
     </message>
     <message>
         <source>Borealis</source>
-        <translation type="unfinished"></translation>
+        <translation>北极光</translation>
     </message>
     <message>
         <source>Ocean</source>
-        <translation type="unfinished"></translation>
+        <translation>大海</translation>
     </message>
     <message>
         <source>Pink/Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>粉红色/蓝色</translation>
     </message>
     <message>
         <source>Pink/Gold</source>
-        <translation type="unfinished"></translation>
+        <translation>粉红色/金色</translation>
     </message>
     <message>
         <source>Pulse</source>
-        <translation type="unfinished"></translation>
+        <translation>脉搏</translation>
     </message>
     <message>
         <source>Purple/Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>紫色/橙色</translation>
     </message>
     <message>
         <source>LightBlue/Purple</source>
-        <translation type="unfinished"></translation>
+        <translation>浅蓝色/紫色</translation>
     </message>
     <message>
         <source>Police Beacon</source>
-        <translation type="unfinished"></translation>
+        <translation>警察灯塔</translation>
     </message>
     <message>
         <source>Seabed</source>
-        <translation type="unfinished"></translation>
+        <translation>海底</translation>
     </message>
     <message>
         <source>Sunset</source>
-        <translation type="unfinished"></translation>
+        <translation>日落</translation>
     </message>
     <message>
         <source>Vaporwave</source>
-        <translation type="unfinished"></translation>
+        <translation>蒸汽波</translation>
     </message>
     <message>
         <source>Custom Gradient Wave</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义渐变波浪</translation>
     </message>
 </context>
 <context>
     <name>CustomMarquee</name>
     <message>
         <source>Create your own marquee effect</source>
-        <translation type="unfinished"></translation>
+        <translation>创建自己的字幕效果</translation>
     </message>
     <message>
         <source>Custom Marquee</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义选框</translation>
     </message>
 </context>
 <context>
@@ -845,15 +845,15 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Two rainbows that rotate synchronously</source>
-        <translation type="unfinished"></translation>
+        <translation>两道同步旋转的彩虹</translation>
     </message>
     <message>
         <source>Color speed</source>
-        <translation type="unfinished"></translation>
+        <translation>色彩速度</translation>
     </message>
     <message>
         <source>Double Rotating Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>双旋转彩虹</translation>
     </message>
 </context>
 <context>
@@ -864,7 +864,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Effects...</source>
-        <translation>效果……</translation>
+        <translation>灯效</translation>
     </message>
 </context>
 <context>
@@ -882,26 +882,26 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>EffectTabHeader</name>
     <message>
         <source>Rename effect</source>
-        <translation type="unfinished"></translation>
+        <translation>重命名效果</translation>
     </message>
     <message>
         <source>Remove effect</source>
-        <translation type="unfinished"></translation>
+        <translation>删除效果</translation>
     </message>
     <message>
         <source>New name:</source>
-        <translation type="unfinished"></translation>
+        <translation>新名称：</translation>
     </message>
 </context>
 <context>
     <name>Fill</name>
     <message>
         <source>Progressivly fills your devices with a defined color</source>
-        <translation type="unfinished"></translation>
+        <translation>逐步用定义的颜色填充您的设备</translation>
     </message>
     <message>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>序列填充并消退</translation>
     </message>
 </context>
 <context>
@@ -976,11 +976,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Psychedelic sinusoid</source>
-        <translation type="unfinished"></translation>
+        <translation>迷幻正弦波</translation>
     </message>
     <message>
         <source>Fractal Motion</source>
-        <translation type="unfinished"></translation>
+        <translation>迷幻正弦波</translation>
     </message>
 </context>
 <context>
@@ -1015,11 +1015,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Shader editor</source>
-        <translation type="unfinished"></translation>
+        <translation>着色器编辑器</translation>
     </message>
     <message>
         <source>Main shader</source>
-        <translation type="unfinished"></translation>
+        <translation>主着色器</translation>
     </message>
 </context>
 <context>
@@ -1038,86 +1038,86 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Use GIFs to create your own effect</source>
-        <translation type="unfinished"></translation>
+        <translation>使用GIF创建自己的效果</translation>
     </message>
     <message>
         <source>Gif Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Gif播放器</translation>
     </message>
 </context>
 <context>
     <name>GlobalSettings</name>
     <message>
         <source>Device settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>设备设置：</translation>
     </message>
     <message>
         <source>Configure screen recorder behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>配置屏幕录制器行为</translation>
     </message>
     <message>
         <source>Set default values for new effects</source>
-        <translation type="unfinished"></translation>
+        <translation>为新效果设置默认值</translation>
     </message>
     <message>
         <source>Configure devices behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>配置设备行为</translation>
     </message>
     <message>
         <source>Ambient settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>环境设置：</translation>
     </message>
     <message>
         <source>Hide devices without Direct mode (restart required)</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏没有直接模式的设备（需要重新启动）</translation>
     </message>
     <message>
         <source>Audio settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>音频设置：</translation>
     </message>
     <message>
         <source>Amount of screenshot taken by the ScreenRecorder engine</source>
-        <translation type="unfinished"></translation>
+        <translation>获取屏幕截图的数量</translation>
     </message>
     <message>
         <source>FPS capture</source>
-        <translation type="unfinished"></translation>
+        <translation>帧率捕捉</translation>
     </message>
     <message>
         <source>Set default values for audio effects</source>
-        <translation type="unfinished"></translation>
+        <translation>设置音频效果的默认值</translation>
     </message>
     <message>
         <source>FPS</source>
-        <translation type="unfinished">FPS</translation>
+        <translation>刷新率</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished">亮度</translation>
+        <translation>亮度</translation>
     </message>
     <message>
         <source>Temperature</source>
-        <translation type="unfinished"></translation>
+        <translation>温度</translation>
     </message>
     <message>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>色调</translation>
     </message>
     <message>
         <source>Always use random colors when supported</source>
-        <translation type="unfinished"></translation>
+        <translation>在支持的情况下，始终使用随机颜色</translation>
     </message>
     <message>
         <source>Use prefered colors</source>
-        <translation type="unfinished"></translation>
+        <translation>使用首选颜色</translation>
     </message>
     <message>
         <source>Effects settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>效果设置：</translation>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
 </context>
 <context>
@@ -1164,35 +1164,35 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>You wont escape this</source>
-        <translation type="unfinished"></translation>
+        <translation>你逃不掉的</translation>
     </message>
     <message>
         <source>Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>彩虹波</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>习惯</translation>
     </message>
     <message>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>顺时针方向的</translation>
     </message>
     <message>
         <source>Counter-clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>逆时针地</translation>
     </message>
     <message>
         <source>To the inside</source>
-        <translation type="unfinished"></translation>
+        <translation>到里面去</translation>
     </message>
     <message>
         <source>To the outside</source>
-        <translation type="unfinished"></translation>
+        <translation>到外面去</translation>
     </message>
     <message>
         <source>Hypnotoad</source>
-        <translation type="unfinished"></translation>
+        <translation>圆圈汇聚</translation>
     </message>
 </context>
 <context>
@@ -1203,11 +1203,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Edit layer settings</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑图层设置</translation>
     </message>
     <message>
         <source>Remove layer</source>
-        <translation type="unfinished"></translation>
+        <translation>移除图层</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -1245,23 +1245,23 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Combine effects together.&lt;br /&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Blend_modes&quot;&gt;Help about blend modes&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>将效果结合在一起&lt;br/&gt;&lt;a href=“https://en.wikipedia.org/wiki/Blend_modes“&gt;关于混合模式的帮助&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>组</translation>
     </message>
     <message>
         <source>New group</source>
-        <translation type="unfinished"></translation>
+        <translation>新建组</translation>
     </message>
     <message>
         <source>Combine multiple effects within a group, and combine groups together</source>
-        <translation type="unfinished"></translation>
+        <translation>在一个组内组合多种效果，并将组组合在一起</translation>
     </message>
     <message>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>图层自定义</translation>
     </message>
 </context>
 <context>
@@ -1272,11 +1272,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Prepare yourself for thunderstorm</source>
-        <translation type="unfinished"></translation>
+        <translation>为雷雨做好准备</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>闪电</translation>
     </message>
 </context>
 <context>
@@ -1299,22 +1299,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Scale content</source>
-        <translation>规模的</translation>
+        <translation>铺满</translation>
     </message>
 </context>
 <context>
     <name>Marquee</name>
     <message>
         <source>A simple marquee for your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>为您的设备提供简单的选框</translation>
     </message>
     <message>
         <source>Spacing</source>
-        <translation type="unfinished">间距</translation>
+        <translation>间距</translation>
     </message>
     <message>
         <source>Marquee</source>
-        <translation type="unfinished"></translation>
+        <translation>跑马灯</translation>
     </message>
 </context>
 <context>
@@ -1341,26 +1341,26 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>A simple mask for using in layers</source>
-        <translation type="unfinished"></translation>
+        <translation>一个用于分层的简单口罩</translation>
     </message>
     <message>
         <source>Mask</source>
-        <translation type="unfinished"></translation>
+        <translation>面具</translation>
     </message>
 </context>
 <context>
     <name>Mosaic</name>
     <message>
         <source>Rarity</source>
-        <translation type="unfinished">稀薄</translation>
+        <translation>稀薄</translation>
     </message>
     <message>
         <source>Tiles randomly spawning across your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>瓷砖在您的设备上随机生成</translation>
     </message>
     <message>
         <source>Mosaic</source>
-        <translation type="unfinished"></translation>
+        <translation>马赛克</translation>
     </message>
 </context>
 <context>
@@ -1371,41 +1371,41 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>A point that moves forth and back on your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>在您的设备上来回移动的点</translation>
     </message>
     <message>
         <source>Motion Point</source>
-        <translation type="unfinished"></translation>
+        <translation>晴朗往返</translation>
     </message>
 </context>
 <context>
     <name>MotionPoints</name>
     <message>
         <source>Multiple points that moves in all directions on your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>在设备上向各个方向移动的多个点</translation>
     </message>
     <message>
         <source>Number of points</source>
-        <translation type="unfinished"></translation>
+        <translation>粒子点数</translation>
     </message>
     <message>
         <source>Motion Points</source>
-        <translation type="unfinished"></translation>
+        <translation>粒子折返</translation>
     </message>
 </context>
 <context>
     <name>MovingPanes</name>
     <message>
         <source>Parts of your devices in symmetrical motion</source>
-        <translation type="unfinished"></translation>
+        <translation>对称运动的设备部件</translation>
     </message>
     <message>
         <source>Divisions</source>
-        <translation type="unfinished">分部</translation>
+        <translation>分部</translation>
     </message>
     <message>
         <source>Moving Panes</source>
-        <translation type="unfinished"></translation>
+        <translation>移动窗格</translation>
     </message>
 </context>
 <context>
@@ -1416,22 +1416,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Texture</source>
-        <translation type="unfinished"></translation>
+        <translation>纹理</translation>
     </message>
     <message>
         <source>Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>音频响应</translation>
     </message>
     <message>
         <source>Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>缓冲数量</translation>
     </message>
 </context>
 <context>
     <name>NoiseMap</name>
     <message>
         <source>Preset</source>
-        <translation type="unfinished">预设</translation>
+        <translation>预设</translation>
     </message>
     <message>
         <source>Frequency</source>
@@ -1471,55 +1471,55 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Floor is lava</source>
-        <translation type="unfinished"></translation>
+        <translation>地面是熔岩</translation>
     </message>
     <message>
         <source>Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>彩虹波</translation>
     </message>
     <message>
         <source>Inverse rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>逆彩虹波</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>习惯</translation>
     </message>
     <message>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>上</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>下</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished">左</translation>
+        <translation>左</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <source>Lava</source>
-        <translation type="unfinished"></translation>
+        <translation>熔岩</translation>
     </message>
     <message>
         <source>Borealis</source>
-        <translation type="unfinished"></translation>
+        <translation>北极光</translation>
     </message>
     <message>
         <source>Ocean</source>
-        <translation type="unfinished"></translation>
+        <translation>大海</translation>
     </message>
     <message>
         <source>Chemicals</source>
-        <translation type="unfinished"></translation>
+        <translation>化学品</translation>
     </message>
     <message>
         <source>Noise Map</source>
-        <translation type="unfinished"></translation>
+        <translation>热力图</translation>
     </message>
 </context>
 <context>
@@ -1554,11 +1554,11 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Temperature</source>
-        <translation type="unfinished"></translation>
+        <translation>温度</translation>
     </message>
     <message>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>色调</translation>
     </message>
     <message>
         <source>First color</source>
@@ -1578,7 +1578,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Expand/Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>展开/折叠</translation>
     </message>
     <message>
         <source>Colors</source>
@@ -1593,32 +1593,31 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>OpenRGBEffectTab</name>
     <message>
         <source>Profiles</source>
-        <translation type="unfinished"></translation>
+        <translation>简介</translation>
     </message>
     <message>
         <source>Load profile</source>
-        <translation type="unfinished"></translation>
+        <translation>加载配置文件</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished">保存</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>设置</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
     <message>
-        <source>No effects added yet.
- Please select one from the list to get started.</source>
-        <translation type="unfinished"></translation>
+        <source>No effects added yet.Please select one from the list to get started.</source>
+        <translation>尚未添加任何效果,请从列表中选择一个开始</translation>
     </message>
 </context>
 <context>
@@ -1649,7 +1648,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Documentation:</source>
-        <translation>文档</translation>
+        <translation>汉化_言之</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/Plugins/Effects/Effects.md&quot;&gt;help&lt;/a&gt;</source>
@@ -1664,31 +1663,31 @@ Using an effect on a device WILL damage the flash or controller</source>
     <name>RGBEffect</name>
     <message>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>高阶灯效</translation>
     </message>
     <message>
         <source>Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>音频</translation>
     </message>
     <message>
         <source>Beams</source>
-        <translation type="unfinished"></translation>
+        <translation>横梁</translation>
     </message>
     <message>
         <source>Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>彩虹波</translation>
     </message>
     <message>
         <source>Random</source>
-        <translation type="unfinished">随机</translation>
+        <translation>随机</translation>
     </message>
     <message>
         <source>Simple</source>
-        <translation type="unfinished"></translation>
+        <translation>简单</translation>
     </message>
     <message>
         <source>Special</source>
-        <translation type="unfinished"></translation>
+        <translation>特别的</translation>
     </message>
 </context>
 <context>
@@ -1707,79 +1706,79 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Dive into the RGB tunnel</source>
-        <translation type="unfinished"></translation>
+        <translation>深入RGB隧道</translation>
     </message>
     <message>
         <source>Frequency</source>
-        <translation type="unfinished">频率</translation>
+        <translation>频率</translation>
     </message>
     <message>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>圈</translation>
     </message>
     <message>
         <source>Squares</source>
-        <translation type="unfinished"></translation>
+        <translation>正方形</translation>
     </message>
     <message>
         <source>Radial Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>扩散彩虹波</translation>
     </message>
 </context>
 <context>
     <name>Rain</name>
     <message>
         <source>Drop Size</source>
-        <translation>减少尺寸</translation>
+        <translation>减小尺寸</translation>
     </message>
     <message>
         <source>Droplet effect</source>
-        <translation type="unfinished"></translation>
+        <translation>液滴效应</translation>
     </message>
     <message>
         <source>Drops</source>
-        <translation type="unfinished"></translation>
+        <translation>雨水长度</translation>
     </message>
     <message>
         <source>Rain</source>
-        <translation type="unfinished"></translation>
+        <translation>下雨</translation>
     </message>
 </context>
 <context>
     <name>RainbowWave</name>
     <message>
         <source>A sliding Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>滑动的彩虹</translation>
     </message>
     <message>
         <source>Frequency</source>
-        <translation type="unfinished">频率</translation>
+        <translation>频率</translation>
     </message>
     <message>
         <source>Rainbow Wave</source>
-        <translation type="unfinished"></translation>
+        <translation>彩虹波浪</translation>
     </message>
 </context>
 <context>
     <name>RandomMarquee</name>
     <message>
         <source>A simple Random Marquee for your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>为您的设备提供简单的随机选框</translation>
     </message>
     <message>
         <source>Random Marquee</source>
-        <translation type="unfinished"></translation>
+        <translation>随机条纹</translation>
     </message>
 </context>
 <context>
     <name>RandomSpin</name>
     <message>
         <source>A simple Random Spin for your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>为您的设备提供简单的随机旋转</translation>
     </message>
     <message>
         <source>Random Spin</source>
-        <translation type="unfinished"></translation>
+        <translation>随机停顿换向</translation>
     </message>
 </context>
 <context>
@@ -1794,54 +1793,54 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>A beam that rotates in different ways</source>
-        <translation type="unfinished"></translation>
+        <translation>以不同方式旋转的梁</translation>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished">发光</translation>
+        <translation>发光</translation>
     </message>
     <message>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>顺时针方向的</translation>
     </message>
     <message>
         <source>Counter clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>逆时针方向</translation>
     </message>
     <message>
         <source>Pendulum</source>
-        <translation type="unfinished"></translation>
+        <translation>钟摆</translation>
     </message>
     <message>
         <source>Wipers</source>
-        <translation type="unfinished"></translation>
+        <translation>刮水器</translation>
     </message>
     <message>
         <source>Swing H</source>
-        <translation type="unfinished"></translation>
+        <translation>摆动H</translation>
     </message>
     <message>
         <source>Swing V</source>
-        <translation type="unfinished"></translation>
+        <translation>摆动V</translation>
     </message>
     <message>
         <source>Rotating Beam</source>
-        <translation type="unfinished"></translation>
+        <translation>旋转金箍棒</translation>
     </message>
 </context>
 <context>
     <name>RotatingRainbow</name>
     <message>
         <source>Color speed</source>
-        <translation type="unfinished"></translation>
+        <translation>色彩速度</translation>
     </message>
     <message>
         <source>A rainbow that rotates around the center of your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>围绕设备中心旋转的彩虹</translation>
     </message>
     <message>
         <source>Rotating Rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>旋转彩虹</translation>
     </message>
 </context>
 <context>
@@ -1876,22 +1875,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Save profile</source>
-        <translation type="unfinished"></translation>
+        <translation>保存配置文件</translation>
     </message>
 </context>
 <context>
     <name>Sequence</name>
     <message>
         <source>Alternates colors with a fade effect</source>
-        <translation type="unfinished"></translation>
+        <translation>通过渐变效果交替颜色</translation>
     </message>
     <message>
         <source>Fade time</source>
-        <translation type="unfinished"></translation>
+        <translation>褪色时间</translation>
     </message>
     <message>
         <source>Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义颜色循环</translation>
     </message>
 </context>
 <context>
@@ -1917,14 +1916,14 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Image Files</source>
-        <translation type="unfinished"></translation>
+        <translation>图像文件</translation>
     </message>
 </context>
 <context>
     <name>Shaders</name>
     <message>
         <source>Save shader as...</source>
-        <translation type="unfinished"></translation>
+        <translation>将着色器另存为。。。</translation>
     </message>
     <message>
         <source>Use audio</source>
@@ -1936,7 +1935,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Edit shader</source>
@@ -1948,7 +1947,7 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Open shaders folder</source>
-        <translation type="unfinished"></translation>
+        <translation>打开着色器文件夹</translation>
     </message>
     <message>
         <source>Height</source>
@@ -1964,39 +1963,39 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Unleash the power of OpenRGB with GL shaders</source>
-        <translation type="unfinished"></translation>
+        <translation>使用GL着色器释放OpenRGB的强大功能</translation>
     </message>
     <message>
         <source>Save shader to file...</source>
-        <translation type="unfinished"></translation>
+        <translation>将着色器保存到文件</translation>
     </message>
     <message>
         <source>Choose a filename</source>
-        <translation type="unfinished"></translation>
+        <translation>选择文件名</translation>
     </message>
     <message>
         <source>my-shader</source>
-        <translation type="unfinished"></translation>
+        <translation>我的着色器</translation>
     </message>
     <message>
         <source>Overwrite existing shader:</source>
-        <translation type="unfinished"></translation>
+        <translation>覆盖现有着色器：</translation>
     </message>
     <message>
         <source>Or create a new one:</source>
-        <translation type="unfinished">或者创建一个新的:</translation>
+        <translation>或者创建一个新的:</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>完成</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <source>Shaders</source>
-        <translation type="unfinished"></translation>
+        <translation>音频响应着色器</translation>
     </message>
 </context>
 <context>
@@ -2035,49 +2034,49 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Create your own breathing sequences</source>
-        <translation type="unfinished"></translation>
+        <translation>创建自己的呼吸序列</translation>
     </message>
     <message>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>固体</translation>
     </message>
     <message>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>圆</translation>
     </message>
     <message>
         <source>Smooth Blink</source>
-        <translation type="unfinished"></translation>
+        <translation>平滑闪烁</translation>
     </message>
 </context>
 <context>
     <name>SpectrumCycling</name>
     <message>
         <source>Saturation</source>
-        <translation type="unfinished">饱和</translation>
+        <translation>饱和</translation>
     </message>
     <message>
         <source>Goes through every solid color of the rainbow</source>
-        <translation type="unfinished"></translation>
+        <translation>穿过彩虹的每一种纯色</translation>
     </message>
     <message>
         <source>Spectrum Cycling</source>
-        <translation type="unfinished"></translation>
+        <translation>单色循环</translation>
     </message>
 </context>
 <context>
     <name>Spiral</name>
     <message>
         <source>Draws a hypnotic spiral on your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>在您的设备上绘制死亡旋涡</translation>
     </message>
     <message>
         <source>Spiral shape</source>
-        <translation type="unfinished"></translation>
+        <translation>旋涡大小</translation>
     </message>
     <message>
         <source>Spiral</source>
-        <translation type="unfinished"></translation>
+        <translation>旋涡</translation>
     </message>
 </context>
 <context>
@@ -2088,58 +2087,58 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Fills and stack your devices with a solid color</source>
-        <translation type="unfinished"></translation>
+        <translation>用纯色填充和堆叠您的设备</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>水平</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直</translation>
     </message>
     <message>
         <source>Stack</source>
-        <translation type="unfinished"></translation>
+        <translation>堆叠</translation>
     </message>
 </context>
 <context>
     <name>StarryNight</name>
     <message>
         <source>Selects a random LED and fades it in an out</source>
-        <translation type="unfinished"></translation>
+        <translation>随机选择一个LED并将其淡入淡出</translation>
     </message>
     <message>
         <source>Star Count</source>
-        <translation type="unfinished"></translation>
+        <translation>星数</translation>
     </message>
     <message>
         <source>Starry Night</source>
-        <translation type="unfinished"></translation>
+        <translation>星夜</translation>
     </message>
     <message>
         <source>Background color:</source>
-        <translation type="unfinished">背景颜色:</translation>
+        <translation>背景颜色:</translation>
     </message>
     <message>
         <source>Star fade in speed</source>
-        <translation type="unfinished"></translation>
+        <translation>星星逐渐消失的速度</translation>
     </message>
     <message>
         <source>Star on time</source>
-        <translation type="unfinished"></translation>
+        <translation>准时星</translation>
     </message>
     <message>
         <source>Star density</source>
-        <translation type="unfinished"></translation>
+        <translation>恒星密度</translation>
     </message>
     <message>
         <source>Star fade out speed</source>
-        <translation type="unfinished"></translation>
+        <translation>恒星淡出速度</translation>
     </message>
     <message>
         <source>Background brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>背景亮度</translation>
     </message>
 </context>
 <context>
@@ -2170,22 +2169,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Sunrise / Sunset effect</source>
-        <translation type="unfinished"></translation>
+        <translation>日出/日落效果</translation>
     </message>
     <message>
         <source>Sunrise</source>
-        <translation type="unfinished"></translation>
+        <translation>日出</translation>
     </message>
 </context>
 <context>
     <name>Swap</name>
     <message>
         <source>Alternate two colors on your devices from left to right</source>
-        <translation type="unfinished"></translation>
+        <translation>从左到右交替显示设备上的两种颜色</translation>
     </message>
     <message>
         <source>Swap</source>
-        <translation type="unfinished"></translation>
+        <translation>序列往返</translation>
     </message>
 </context>
 <context>
@@ -2196,22 +2195,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Rotating circles around the center of your devices</source>
-        <translation type="unfinished"></translation>
+        <translation>围绕设备中心旋转圆圈</translation>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished">发光</translation>
+        <translation>光发散</translation>
     </message>
     <message>
         <source>Swirl Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>量子纠缠</translation>
     </message>
 </context>
 <context>
     <name>SwirlCirclesAudio</name>
     <message>
         <source>Audio settings</source>
-        <translation type="unfinished">音频设置</translation>
+        <translation>音频设置</translation>
     </message>
     <message>
         <source>Radius</source>
@@ -2219,30 +2218,30 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Rotating circles reacting to audio</source>
-        <translation type="unfinished"></translation>
+        <translation>旋转圆圈对音频做出反应</translation>
     </message>
     <message>
         <source>Glow</source>
-        <translation type="unfinished">发光</translation>
+        <translation>发光</translation>
     </message>
     <message>
         <source>Swirl Circles Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>量子纠缠的音频</translation>
     </message>
 </context>
 <context>
     <name>Visor</name>
     <message>
         <source>A back and forth effect motion, flipping colors</source>
-        <translation type="unfinished"></translation>
+        <translation>来回效果动作，翻转颜色</translation>
     </message>
     <message>
         <source>Width</source>
-        <translation type="unfinished">宽度</translation>
+        <translation>宽度</translation>
     </message>
     <message>
         <source>Visor</source>
-        <translation type="unfinished"></translation>
+        <translation>晴朗往返</translation>
     </message>
 </context>
 <context>
@@ -2273,22 +2272,22 @@ Using an effect on a device WILL damage the flash or controller</source>
     </message>
     <message>
         <source>Alternate colors like waves</source>
-        <translation type="unfinished"></translation>
+        <translation>波浪般的交替颜色</translation>
     </message>
     <message>
         <source>Wavy</source>
-        <translation type="unfinished"></translation>
+        <translation>波浪</translation>
     </message>
 </context>
 <context>
     <name>ZigZag</name>
     <message>
         <source>A snake moving on your matrix typed devices</source>
-        <translation type="unfinished"></translation>
+        <translation>选取屏幕范围并展示在设备上</translation>
     </message>
     <message>
         <source>ZigZag</source>
-        <translation type="unfinished"></translation>
+        <translation>蛇形</translation>
     </message>
 </context>
 <context>
