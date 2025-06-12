@@ -166,7 +166,7 @@ void Ambient::StepEffect(std::vector<ControllerZone*> controller_zones)
 
     case SCALED_AVERAGE:
     {
-        QImage scaled_internal = image.scaled(1, 1);
+        QImage scaled_internal = image.scaled(1, 1, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
 
         RGBColor color = ColorUtils::fromQColor(scaled_internal.pixelColor(0,0));
 
