@@ -22,8 +22,9 @@ CustomGradientWave::CustomGradientWave(QWidget *parent) :
 
     SetSpeed(25);
 
-    ui->preset->blockSignals(false);
     ui->preset->setCurrentIndex(0);
+
+    GenerateGradient();
 }
 
 void CustomGradientWave::GenerateGradient()
