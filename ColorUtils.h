@@ -48,13 +48,24 @@ public:
         return hsv;
     }
 
+    static RGBColor FromHue(int hue)
+    {
+        hsv_t hsv;
+
+        hsv.hue = hue;
+        hsv.saturation = 255;
+        hsv.value = 255;
+
+        return RGBColor(hsv2rgb(&hsv));
+    }
+
     static RGBColor RandomRGBColor()
     {
         hsv_t hsv = RandomHSVColor();
         return RGBColor(hsv2rgb(&hsv));
     }
 
-    static RGBColor Enlight(RGBColor color, float value)
+    static RGBColor Enlight(RGBColor color, double value)
     {
         hsv_t hsv;
         rgb2hsv(color, &hsv);

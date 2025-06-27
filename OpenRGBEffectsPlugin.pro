@@ -306,6 +306,7 @@ INCLUDEPATH +=                                                                  
 SOURCES +=                                                                                      \
     Effects/Ambient/Ambient.cpp                                                                 \
     Effects/Ambient/RectangleSelector.cpp                                                       \
+    Effects/AudioBubbles/AudioBubbles.cpp                                                       \
     Effects/AudioParty/AudioParty.cpp                                                           \
     Effects/AudioSine/AudioSine.cpp                                                             \
     Effects/AudioStar/AudioStar.cpp                                                             \
@@ -377,6 +378,7 @@ SOURCES +=                                                                      
 HEADERS +=                                                                                      \
     Effects/Ambient/Ambient.h                                                                   \
     Effects/Ambient/RectangleSelector.h                                                         \
+    Effects/AudioBubbles/AudioBubbles.h                                                         \
     Effects/AudioParty/AudioParty.h                                                             \
     Effects/AudioSine/AudioSine.h                                                               \
     Effects/AudioStar/AudioStar.h                                                               \
@@ -448,6 +450,7 @@ HEADERS +=                                                                      
 
 FORMS +=                                                                                        \
     Effects/Ambient/Ambient.ui                                                                  \
+    Effects/AudioBubbles/AudioBubbles.ui                                                        \
     Effects/AudioParty/AudioParty.ui                                                            \
     Effects/AudioSine/AudioSine.ui                                                              \
     Effects/AudioStar/AudioStar.ui                                                              \
