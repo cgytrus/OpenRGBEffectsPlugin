@@ -39,7 +39,7 @@ void OpenRGBEffectsPlugin::Load(ResourceManagerInterface *RM)
     NetworkPlugin net_plugin;
     net_plugin.name = info.Name;
     net_plugin.description = info.Description;
-    net_plugin.protocol_version = 1;
+    net_plugin.protocol_version = 2;
     net_plugin.version = info.Version;
     net_plugin.callback = OpenRGBEffectsPlugin::HandleSDK;
     net_plugin.callback_arg = (void*)this;

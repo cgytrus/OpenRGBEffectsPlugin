@@ -715,6 +715,12 @@ unsigned char * OpenRGBEffectTab::GetEffectListDescription(unsigned int* data_si
     unsigned char *data_buf = new unsigned char[*data_size];
 
     /*---------------------------------------------------------*\
+    | Copy in data size                                         |
+    \*---------------------------------------------------------*/
+    memcpy(data_buf, data_size, sizeof(*data_size));
+    data_ptr += sizeof(*data_size);
+
+    /*---------------------------------------------------------*\
     | Copy in num_effects                                       |
     \*---------------------------------------------------------*/
     memcpy(&data_buf[data_ptr], &num_effects, sizeof(num_effects));
