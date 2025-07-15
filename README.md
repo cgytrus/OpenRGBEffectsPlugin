@@ -105,6 +105,10 @@ brew install openal-soft
 └── Wavy
 ```
 
+## SDK support
+
+This plugin is supported by the OpenRGB SDK, see [SDK docs](./SDK.md) for more details.
+
 ## Common Issues
 
 ### OpenRGB does not start with the plugin
