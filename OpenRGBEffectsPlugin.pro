@@ -8,7 +8,13 @@
 QT +=                                                                                           \
     core                                                                                        \
     gui                                                                                         \
+    opengl                                                                                      \
     widgets
+
+if(greaterThan(QT_MAJOR_VERSION, 5)) {
+QT +=                                                                                           \
+    core5compat                                                                                 \
+}
 
 DEFINES += OPEN_RGB_EFFECTS_PLUGIN_LIBRARY
 TEMPLATE = lib

@@ -2,6 +2,7 @@
 #define GLSLHIGHLIGHTER_H
 
 #include <QSyntaxHighlighter>
+#include <QRegExp>
 
 class GLSLHighlighter : public QSyntaxHighlighter
 {

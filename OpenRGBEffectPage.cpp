@@ -38,7 +38,7 @@ OpenRGBEffectPage::OpenRGBEffectPage(QWidget *parent, RGBEffect* effect):
     | Extra options and custom widgets                |
     \*-----------------------------------------------*/
     ui->ExtraOptions->addWidget(effect);
-    ui->ExtraOptions->setMargin(0);
+    ui->ExtraOptions->setContentsMargins(0, 0, 0, 0);
     effect->setParent(ui->extra_settings);
 
     InitUi();

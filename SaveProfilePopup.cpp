@@ -2,8 +2,8 @@
 #include "ui_SaveProfilePopup.h"
 #include "OpenRGBEffectSettings.h"
 
-#include <QRegExp>
-#include <QRegExpValidator>
+#include <QRegularExpression>
+#include <QRegularExpressionValidator>
 
 SaveProfilePopup::SaveProfilePopup(QWidget *parent) :
     QWidget(parent),
@@ -12,8 +12,8 @@ SaveProfilePopup::SaveProfilePopup(QWidget *parent) :
     ui->setupUi(this);
 
     // only letters or numbers, - _ and .
-    QRegExp re("^[\\w\\-_.]+$");
-    QRegExpValidator *validator = new QRegExpValidator(re, this);
+    QRegularExpression re("^[\\w\\-_.]+$");
+    QRegularExpressionValidator *validator = new QRegularExpressionValidator(re, this);
     ui->filename->setValidator(validator);
 
     std::vector<std::string> filenames = OpenRGBEffectSettings::ListProfiles();
