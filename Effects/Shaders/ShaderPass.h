@@ -11,8 +11,8 @@
 #include <QOpenGLFunctions>
 #include <QOpenGLTexture>
 #include <thread>
+#include <nlohmann/json.hpp>
 #include "ShaderPassData.h"
-#include "json.hpp"
 
 using json = nlohmann::json;
 

@@ -2,8 +2,8 @@
 #define LAYERGROUPENTRY_H
 
 #include <QWidget>
+#include <nlohmann/json.hpp>
 #include "LayerEntry.h"
-#include "json.hpp"
 #include "ControllerZone.h"
 
 using json = nlohmann::json;

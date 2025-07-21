@@ -2,8 +2,8 @@
 #define SHADERPROGRAM_H
 
 #include <vector>
+#include <nlohmann/json.hpp>
 #include "ShaderPass.h"
-#include "json.hpp"
 
 using json = nlohmann::json;
 

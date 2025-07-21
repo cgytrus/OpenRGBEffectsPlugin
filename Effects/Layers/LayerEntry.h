@@ -2,9 +2,9 @@
 #define LAYERENTRY_H
 
 #include <QWidget>
+#include <nlohmann/json.hpp>
 #include "RGBEffect.h"
 #include "ColorUtils.h"
-#include "json.hpp"
 #include "OpenRGBEffectPage.h"
 
 using json = nlohmann::json;

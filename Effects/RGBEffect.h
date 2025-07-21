@@ -3,8 +3,8 @@
 
 #include <QWidget>
 #include <QLayout>
+#include <nlohmann/json.hpp>
 #include "ControllerZone.h"
-#include "json.hpp"
 
 #define CAT_ADVANCED    QT_TRANSLATE_NOOP("RGBEffect", "Advanced")
 #define CAT_AUDIO       QT_TRANSLATE_NOOP("RGBEffect", "Audio")

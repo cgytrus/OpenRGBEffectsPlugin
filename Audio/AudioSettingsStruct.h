@@ -1,7 +1,7 @@
 #ifndef AUDIOSETTINGSSTRUCT_H
 #define AUDIOSETTINGSSTRUCT_H
 
-#include "json.hpp"
+#include <nlohmann/json.hpp>
 
 using json = nlohmann::json;
 

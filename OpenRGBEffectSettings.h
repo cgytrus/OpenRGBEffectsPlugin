@@ -4,8 +4,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <nlohmann/json.hpp>
 #include "AudioSettingsStruct.h"
-#include "json.hpp"
 #include "filesystem.h"
 #include "RGBController.h"
 
