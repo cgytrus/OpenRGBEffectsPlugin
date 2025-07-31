@@ -288,18 +288,15 @@
          </widget>
         </item>
         <item row="3" column="1" colspan="3">
-         <widget class="QTooltipedSlider" name="FPS_slider">
+         <widget class="QSpinBox" name="FPS_slider">
           <property name="minimum">
            <number>1</number>
           </property>
           <property name="maximum">
-           <number>60</number>
+           <number>360</number>
           </property>
           <property name="value">
            <number>60</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>

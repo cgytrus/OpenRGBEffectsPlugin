@@ -206,18 +206,15 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QTooltipedSlider" name="fpscaptureSlider">
+       <widget class="QSpinBox" name="fpscaptureSlider">
         <property name="minimum">
          <number>1</number>
         </property>
         <property name="maximum">
-         <number>60</number>
+         <number>360</number>
         </property>
         <property name="value">
          <number>60</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -315,18 +312,15 @@
        </widget>
       </item>
       <item row="2" column="2" colspan="3">
-       <widget class="QTooltipedSlider" name="fpsSlider">
+       <widget class="QSpinBox" name="fpsSlider">
         <property name="minimum">
          <number>1</number>
         </property>
         <property name="maximum">
-         <number>60</number>
+         <number>360</number>
         </property>
         <property name="value">
          <number>60</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
