@@ -15,7 +15,10 @@ AmbientObs::AmbientObs(QWidget *parent) : RGBEffect(parent), m_ui(new Ui::Ambien
     EffectDetails.HasCustomSettings = true;
     EffectDetails.SupportsRandom = false;
 
-    m_ui->crop->hide();
+    m_ui->crop->setCheckState(m_crop ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
+    m_ui->gammaCorrection->setCheckState(m_gammaCorrection ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
+
+    m_ui->cropFrame->hide();
 }
 
 AmbientObs::~AmbientObs() {
@@ -78,7 +81,9 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> controller_zones) {
     switch (m_mode) {
         case AmbientObsMode::Average: {
             QImage scaled = m_image.scaled(1, 1, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-            RGBColor color = applyGamma(ColorUtils::fromQColor(scaled.pixelColor(0, 0)));
+            auto color = ColorUtils::fromQColor(scaled.pixelColor(0, 0));
+            if (m_gammaCorrection)
+                color = applyGamma(color);
             for (ControllerZone* controller_zone : controller_zones) {
                 controller_zone->SetAllZoneLEDs(color, Brightness, Temperature, Tint);
             }
@@ -93,8 +98,10 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> controller_zones) {
                     unsigned int height = 1;
                     QImage scaled = m_image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
                     for (unsigned int i = 0; i < width; i++) {
-                        QColor color = scaled.pixelColor(reverse ? width - i - 1 : i, 0);
-                        controller_zone->SetLED(i, applyGamma(ColorUtils::fromQColor(color)), Brightness, Temperature, Tint);
+                        auto color = ColorUtils::fromQColor(scaled.pixelColor(reverse ? width - i - 1 : i, 0));
+                        if (m_gammaCorrection)
+                            color = applyGamma(color);
+                        controller_zone->SetLED(i, color, Brightness, Temperature, Tint);
                     }
                 }
                 else if (controller_zone->type() == ZONE_TYPE_MATRIX) {
@@ -105,8 +112,10 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> controller_zones) {
                     for (unsigned int y = 0; y < height; y++) {
                         for (unsigned int x = 0; x < width; x++) {
                             unsigned int i = map[y * width + x];
-                            QColor color = scaled.pixelColor(reverse ? width - x - 1 : x, y);
-                            controller_zone->SetLED(i, applyGamma(ColorUtils::fromQColor(color)), Brightness, Temperature, Tint);
+                            auto color = ColorUtils::fromQColor(scaled.pixelColor(reverse ? width - x - 1 : x, y));
+                            if (m_gammaCorrection)
+                                color = applyGamma(color);
+                            controller_zone->SetLED(i, color, Brightness, Temperature, Tint);
                         }
                     }
                 }
@@ -121,6 +130,8 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> controller_zones) {
 void AmbientObs::LoadCustomSettings(json settings) {
     if (settings.contains("mode"))
         m_ui->mode->setCurrentIndex(settings["mode"]);
+    if (settings.contains("gammaCorrection"))
+        m_ui->gammaCorrection->setChecked(settings["gammaCorrection"]);
     if (settings.contains("crop"))
         m_ui->crop->setChecked(settings["crop"]);
     if (settings.contains("cropLeft"))
@@ -137,6 +148,7 @@ json AmbientObs::SaveCustomSettings() {
     json settings;
 
     settings["mode"] = m_mode;
+    settings["gammaCorrection"] = m_gammaCorrection;
     settings["crop"] = m_crop;
     settings["cropLeft"] = m_cropLeft;
     settings["cropTop"] = m_cropTop;
@@ -152,7 +164,11 @@ void AmbientObs::on_mode_currentIndexChanged(int value) {
 
 void AmbientObs::on_crop_stateChanged(int value) {
     m_crop = value;
-    m_ui->crop->setVisible(value);
+    m_ui->cropFrame->setVisible(value);
+}
+
+void AmbientObs::on_gammaCorrection_stateChanged(int value) {
+    m_gammaCorrection = value;
 }
 
 void AmbientObs::on_cropLeft_valueChanged(int value) {
@@ -164,7 +180,7 @@ void AmbientObs::on_cropTop_valueChanged(int value) {
 }
 
 void AmbientObs::on_cropWidth_valueChanged(int value) {
-    m_cropWidth= value;
+    m_cropWidth = value;
 }
 
 void AmbientObs::on_cropHeight_valueChanged(int value) {

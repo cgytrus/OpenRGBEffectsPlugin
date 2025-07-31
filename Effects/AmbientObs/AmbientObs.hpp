@@ -33,6 +33,7 @@ public:
 private slots:
     void changeEvent(QEvent *event) override;
     void on_mode_currentIndexChanged(int);
+    void on_gammaCorrection_stateChanged(int);
     void on_crop_stateChanged(int);
     void on_cropLeft_valueChanged(int);
     void on_cropTop_valueChanged(int);
@@ -46,6 +47,7 @@ private:
     void SetDynamicStrings();
 
     AmbientObsMode m_mode = AmbientObsMode::Copy;
+    bool m_gammaCorrection = true;
     bool m_crop = false;
     unsigned int m_cropLeft = 0;
     unsigned int m_cropTop = 0;
