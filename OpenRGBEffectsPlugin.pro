@@ -210,6 +210,13 @@ SOURCES +=                                                                      
 HEADERS +=                                                                                      \
     Dependencies/SimplexNoise/src/SimplexNoise.h                                                \
 
+# perlin noise
+INCLUDEPATH +=                                                                                  \
+    Dependencies/PerlinNoise                                                                    \
+
+HEADERS +=                                                                                      \
+    Dependencies/PerlinNoise/PerlinNoise.hpp                                                    \
+
 # obs
 INCLUDEPATH += \
     Dependencies/libobs/include \
@@ -275,6 +282,7 @@ HEADERS +=                                                                      
     EffectTabHeader.h                                                                           \
     Effects/EffectRegisterer.h                                                                  \
     Effects/RGBEffect.h                                                                         \
+    Effects/CgsLedEffect.hpp                                                                    \
     LivePreviewController.h                                                                     \
     OpenRGBEffectPage.h                                                                         \
     OpenRGBEffectsPlugin.h                                                                      \
@@ -347,6 +355,9 @@ INCLUDEPATH +=                                                                  
     Audio                                                                                       \
 
 SOURCES +=                                                                                      \
+    Effects/CgsLedFire/CgsLedFire.cpp \
+    Effects/CgsLedStandby/CgsLedStandby.cpp \
+    Effects/CgsLedWaveform/CgsLedWaveform.cpp \
     Effects/Ambient/Ambient.cpp                                                                 \
     Effects/Ambient/RectangleSelector.cpp                                                       \
     Effects/AmbientObs/AmbientObs.cpp                                                           \
@@ -420,6 +431,9 @@ SOURCES +=                                                                      
     Effects/ZigZag/ZigZag.cpp                                                                   \
 
 HEADERS +=                                                                                      \
+    Effects/CgsLedFire/CgsLedFire.hpp \
+    Effects/CgsLedStandby/CgsLedStandby.hpp \
+    Effects/CgsLedWaveform/CgsLedWaveform.hpp \
     Effects/Ambient/Ambient.h                                                                   \
     Effects/Ambient/RectangleSelector.h                                                         \
     Effects/AmbientObs/AmbientObs.hpp                                                           \
@@ -494,6 +508,9 @@ HEADERS +=                                                                      
     Effects/ZigZag/ZigZag.h                                                                     \
 
 FORMS +=                                                                                        \
+    Effects/CgsLedFire/CgsLedFire.ui \
+    Effects/CgsLedStandby/CgsLedStandby.ui \
+    Effects/CgsLedWaveform/CgsLedWaveform.ui \
     Effects/Ambient/Ambient.ui                                                                  \
     Effects/AmbientObs/AmbientObs.ui                                                            \
     Effects/AudioBubbles/AudioBubbles.ui                                                        \

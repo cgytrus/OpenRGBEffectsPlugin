@@ -7,6 +7,9 @@
 [submodule "Dependencies/SimplexNoise"]
 	path = Dependencies/SimplexNoise
 	url = https://github.com/SRombauts/SimplexNoise.git
+[submodule "Dependencies/PerlinNoise"]
+	path = Dependencies/PerlinNoise
+	url = https://github.com/Reputeless/PerlinNoise.git
 [submodule "Dependencies/obs-studio"]
 	path = Dependencies/obs-studio
 	url = https://github.com/cgytrus/obs-studio-openrgb.git

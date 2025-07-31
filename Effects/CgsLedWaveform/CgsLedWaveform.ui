@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CgsLedWaveform</class>
+ <widget class="QWidget" name="CgsLedWaveform">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>0</width>
+    <height>0</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="1">
+   <item row="0" column="0">
+    <widget class="QLabel" name="hueSpeedLabel">
+     <property name="text">
+      <string>Hue Speed</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QDoubleSpinBox" name="hueSpeed" />
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="hueOffsetLabel">
+     <property name="text">
+      <string>Hue Offset</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QDoubleSpinBox" name="hueOffset" />
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="rightHueOffsetLabel">
+     <property name="text">
+      <string>Right Hue Offset</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QDoubleSpinBox" name="rightHueOffset" />
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="hueRangeLabel">
+     <property name="text">
+      <string>Hue Range</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QDoubleSpinBox" name="hueRange" />
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="saturationLabel">
+     <property name="text">
+      <string>Saturation</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QDoubleSpinBox" name="saturation" />
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="gammaCorrection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Gamma Correction</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QTooltipedSlider</class>
+   <extends>QSlider</extends>
+   <header location="global">QTooltipedSlider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
