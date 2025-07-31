@@ -104,7 +104,7 @@ void AudioSettings::on_amplitude_valueChanged(int value)
 
 void AudioSettings::on_avg_mode_currentIndexChanged(int value)
 {
-    settings->avg_mode = value;
+    settings->avg_mode = (Audio::AverageMode)value;
 }
 
 void AudioSettings::on_avg_size_valueChanged(int value)
@@ -114,7 +114,7 @@ void AudioSettings::on_avg_size_valueChanged(int value)
 
 void AudioSettings::on_window_mode_currentIndexChanged(int value)
 {
-    settings->window_mode = value;
+    settings->window_mode = (Audio::FftWindowMode)value;
 }
 
 void AudioSettings::on_decay_valueChanged(int value)
