@@ -21,6 +21,8 @@
 
 namespace obs {
     namespace {
+        // anything under 2 is Technically gonna instroduce some shimmering but It's Alright imo..
+        constexpr int outScale = 4;
         std::unordered_map<void*, std::function<void(QImage)>> s_video;
         std::unordered_map<void*, std::function<void(float)>> s_audioMono;
         std::unordered_map<void*, std::function<void(float, float)>> s_audioStereo;
@@ -83,8 +85,8 @@ namespace obs {
             ovi.fps_den = 1;
             ovi.base_width = width;
             ovi.base_height = height;
-            ovi.output_width = width;
-            ovi.output_height = height;
+            ovi.output_width = width / outScale;
+            ovi.output_height = height / outScale;
             ovi.output_format = video_format::VIDEO_FORMAT_RGBA;
             ovi.adapter = 0;
             ovi.gpu_conversion = true;
@@ -251,7 +253,7 @@ namespace obs {
     QSize getOutputSize() {
         if (!s_videoSource)
             return { 0, 0 };
-        return QSize(obs_source_get_width(s_videoSource), obs_source_get_height(s_videoSource));
+        return QSize(obs_source_get_width(s_videoSource) / outScale, obs_source_get_height(s_videoSource) / outScale);
     }
 
     uint64_t getFramerate() {

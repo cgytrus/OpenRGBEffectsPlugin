@@ -50,10 +50,11 @@ void AmbientObs::EffectState(const bool state) {
     if (state) {
         qDebug() << "[AmbientObs] Start capturer";
         obs::startVideo(this, [&](QImage img) {
-            m_imageLock.lock();
-            m_image = m_crop ?
+            auto image = m_crop ?
                 img.copy(QRect(m_cropLeft, m_cropTop, m_cropWidth, m_cropHeight)) :
                 img.copy({ {}, obs::getOutputSize() });
+            m_imageLock.lock();
+            m_image = image;
             m_imageLock.unlock();
         });
     }
@@ -73,15 +74,16 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> zones) {
         return;
     }
 
-    if (m_image.isNull()) {
-        return;
-    }
-
     m_imageLock.lock();
+    QImage image = m_image;
+    m_imageLock.unlock();
+
+    if (image.isNull())
+        return;
 
     switch (m_mode) {
         case AmbientObsMode::Average: {
-            QImage scaled = m_image.scaled(1, 1, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+            QImage scaled = image.scaled(1, 1, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
             for (ControllerZone* zone : zones) {
                 bool isPreview = dynamic_cast<LivePreviewController*>(zone->controller);
                 auto color = ColorUtils::fromQColor(scaled.pixelColor(0, 0));
@@ -99,7 +101,7 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> zones) {
                 if (zone->type() == ZONE_TYPE_SINGLE || zone->type() == ZONE_TYPE_LINEAR) {
                     unsigned int width = zone->leds_count();
                     unsigned int height = 1;
-                    QImage scaled = m_image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+                    QImage scaled = image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
                     for (unsigned int i = 0; i < width; i++) {
                         auto color = ColorUtils::fromQColor(scaled.pixelColor(reverse ? width - i - 1 : i, 0));
                         if (!isPreview && m_gammaCorrection)
@@ -110,7 +112,7 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> zones) {
                 else if (zone->type() == ZONE_TYPE_MATRIX) {
                     unsigned int width = zone->matrix_map_width();
                     unsigned int height = zone->matrix_map_height();
-                    QImage scaled = m_image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+                    QImage scaled = image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
                     unsigned int* map = zone->map();
                     for (unsigned int y = 0; y < height; y++) {
                         for (unsigned int x = 0; x < width; x++) {
@@ -126,8 +128,6 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> zones) {
             break;
         }
     }
-
-    m_imageLock.unlock();
 }
 
 void AmbientObs::LoadCustomSettings(json settings) {
