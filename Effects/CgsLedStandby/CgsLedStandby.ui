@@ -10,6 +10,8 @@
     <height>0</height>
    </rect>
   </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="1">
+  </layout>
  </widget>
  <resources/>
  <connections/>

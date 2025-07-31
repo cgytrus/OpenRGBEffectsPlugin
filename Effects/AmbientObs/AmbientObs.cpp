@@ -4,6 +4,7 @@
 #include "OpenRGBEffectSettings.h"
 #include "global_obs.hpp"
 #include "gamma8.hpp"
+#include "LivePreviewController.h"
 
 REGISTER_EFFECT(AmbientObs);
 
@@ -61,13 +62,13 @@ void AmbientObs::EffectState(const bool state) {
     }
 }
 
-void AmbientObs::StepEffect(std::vector<ControllerZone*> controller_zones) {
-    if (controller_zones.empty())
+void AmbientObs::StepEffect(std::vector<ControllerZone*> zones) {
+    if (zones.empty())
         return;
 
     if (m_crop && (m_cropWidth == 0 || m_cropHeight == 0)) {
-        for (ControllerZone* controller_zone : controller_zones) {
-            controller_zone->SetAllZoneLEDs(0, Brightness, Temperature, Tint);
+        for (ControllerZone* zone : zones) {
+            zone->SetAllZoneLEDs(0, Brightness, Temperature, Tint);
         }
         return;
     }
@@ -81,41 +82,43 @@ void AmbientObs::StepEffect(std::vector<ControllerZone*> controller_zones) {
     switch (m_mode) {
         case AmbientObsMode::Average: {
             QImage scaled = m_image.scaled(1, 1, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-            auto color = ColorUtils::fromQColor(scaled.pixelColor(0, 0));
-            if (m_gammaCorrection)
-                color = applyGamma(color);
-            for (ControllerZone* controller_zone : controller_zones) {
-                controller_zone->SetAllZoneLEDs(color, Brightness, Temperature, Tint);
+            for (ControllerZone* zone : zones) {
+                bool isPreview = dynamic_cast<LivePreviewController*>(zone->controller);
+                auto color = ColorUtils::fromQColor(scaled.pixelColor(0, 0));
+                if (!isPreview && m_gammaCorrection)
+                    color = applyGamma(color);
+                zone->SetAllZoneLEDs(color, Brightness, Temperature, Tint);
             }
             break;
         }
 
         case AmbientObsMode::Copy: {
-            for (ControllerZone* controller_zone : controller_zones) {
-                bool reverse = controller_zone->reverse;
-                if (controller_zone->type() == ZONE_TYPE_SINGLE || controller_zone->type() == ZONE_TYPE_LINEAR) {
-                    unsigned int width = controller_zone->leds_count();
+            for (ControllerZone* zone : zones) {
+                bool isPreview = dynamic_cast<LivePreviewController*>(zone->controller);
+                bool reverse = zone->reverse;
+                if (zone->type() == ZONE_TYPE_SINGLE || zone->type() == ZONE_TYPE_LINEAR) {
+                    unsigned int width = zone->leds_count();
                     unsigned int height = 1;
                     QImage scaled = m_image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
                     for (unsigned int i = 0; i < width; i++) {
                         auto color = ColorUtils::fromQColor(scaled.pixelColor(reverse ? width - i - 1 : i, 0));
-                        if (m_gammaCorrection)
+                        if (!isPreview && m_gammaCorrection)
                             color = applyGamma(color);
-                        controller_zone->SetLED(i, color, Brightness, Temperature, Tint);
+                        zone->SetLED(i, color, Brightness, Temperature, Tint);
                     }
                 }
-                else if (controller_zone->type() == ZONE_TYPE_MATRIX) {
-                    unsigned int width = controller_zone->matrix_map_width();
-                    unsigned int height = controller_zone->matrix_map_height();
+                else if (zone->type() == ZONE_TYPE_MATRIX) {
+                    unsigned int width = zone->matrix_map_width();
+                    unsigned int height = zone->matrix_map_height();
                     QImage scaled = m_image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-                    unsigned int* map = controller_zone->map();
+                    unsigned int* map = zone->map();
                     for (unsigned int y = 0; y < height; y++) {
                         for (unsigned int x = 0; x < width; x++) {
                             unsigned int i = map[y * width + x];
                             auto color = ColorUtils::fromQColor(scaled.pixelColor(reverse ? width - x - 1 : x, y));
-                            if (m_gammaCorrection)
+                            if (!isPreview && m_gammaCorrection)
                                 color = applyGamma(color);
-                            controller_zone->SetLED(i, color, Brightness, Temperature, Tint);
+                            zone->SetLED(i, color, Brightness, Temperature, Tint);
                         }
                     }
                 }

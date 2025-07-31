@@ -4,7 +4,6 @@ REGISTER_EFFECT(CgsLedFire);
 
 CgsLedFire::~CgsLedFire() { }
 CgsLedFire::CgsLedFire(QWidget* parent) : CgsLedEffect(parent) {
-    EffectDetails.HasCustomSettings = false;
     SetSpeed(80);
 }
 

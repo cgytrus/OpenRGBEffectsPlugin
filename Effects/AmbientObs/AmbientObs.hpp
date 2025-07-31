@@ -47,7 +47,7 @@ private:
     void SetDynamicStrings();
 
     AmbientObsMode m_mode = AmbientObsMode::Copy;
-    bool m_gammaCorrection = true;
+    bool m_gammaCorrection = false;
     bool m_crop = false;
     unsigned int m_cropLeft = 0;
     unsigned int m_cropTop = 0;

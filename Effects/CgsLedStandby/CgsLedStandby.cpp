@@ -4,7 +4,6 @@ REGISTER_EFFECT(CgsLedStandby);
 
 CgsLedStandby::~CgsLedStandby() { }
 CgsLedStandby::CgsLedStandby(QWidget* parent) : CgsLedEffect(parent) {
-    EffectDetails.HasCustomSettings = false;
     SetSpeed(100);
 }
 

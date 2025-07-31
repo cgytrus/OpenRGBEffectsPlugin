@@ -42,11 +42,6 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
     this->connect(m_ui->saturation, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.saturation = static_cast<float>(value);
     });
-
-    m_ui->gammaCorrection->setCheckState(m_colors.gammaCorrection ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
-    this->connect(m_ui->gammaCorrection, static_cast<void(QCheckBox::*)(int)>(&QCheckBox::stateChanged), [&](int value) {
-        m_colors.gammaCorrection = value == Qt::CheckState::Checked;
-    });
 }
 
 void CgsLedWaveform::load(json settings) {
