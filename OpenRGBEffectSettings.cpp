@@ -7,6 +7,8 @@
 #include <QString>
 #include <QDir>
 
+#include "global_obs.hpp"
+
 unsigned int OpenRGBEffectSettings::version = 2;
 
 GlobalSettingsStruct OpenRGBEffectSettings::globalSettings;
@@ -27,11 +29,15 @@ bool OpenRGBEffectSettings::WriteGlobalSettings()
     j["use_prefered_colors"]   = globalSettings.use_prefered_colors;
     j["audio_settings"]        = globalSettings.audio_settings;
 
+    j["obs_fps"] = obs::getFramerate();
+    j["obs_video_source"] = obs::saveVideoSource();
+    j["obs_audio_source"] = obs::saveAudioSource();
+
     if(!CreateSettingsDirectory())
     {
         return false;
     }
-    
+
     return write_json_to_file(SettingsFolder() / "EffectSettings.json", j);
 }
 
@@ -67,6 +73,16 @@ void OpenRGBEffectSettings::LoadGlobalSettings()
                     globalSettings.prefered_colors.push_back(color);
                 }
             }
+
+            obs::setVideoSource(obs::VideoSourceType::Monitor);
+            obs::setAudioSource(obs::AudioSourceType::Output);
+
+            if (j.contains("obs_fps"))
+                obs::setFramerate(j["obs_fps"]);
+            if (j.contains("obs_video_source"))
+                obs::loadVideoSource(j["obs_video_source"]);
+            if (j.contains("obs_audio_source"))
+                obs::loadAudioSource(j["obs_audio_source"]);
         }
         catch(const std::exception& e)
         {
@@ -248,7 +264,7 @@ std::vector<std::string> OpenRGBEffectSettings::list_files(filesystem::path path
     QDir dir(QString::fromStdString(path.string()));
 
     if(dir.exists())
-    {       
+    {
         for (const QString & entry : dir.entryList(QDir::Files))
         {
             std::string filename = entry.toStdString();
@@ -301,4 +317,9 @@ filesystem::path OpenRGBEffectSettings::ProfilesFolder()
 filesystem::path OpenRGBEffectSettings::PatternsFolder()
 {
     return SettingsFolder() / "effect-patterns";
+}
+
+filesystem::path OpenRGBEffectSettings::ObsPluginsFolder()
+{
+    return SettingsFolder() / "obs-plugins";
 }

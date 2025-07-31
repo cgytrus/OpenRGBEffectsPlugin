@@ -4,6 +4,8 @@
 #include <stringapiset.h>
 #endif
 
+#include "global_obs.hpp"
+
 AudioManager* AudioManager::instance;
 
 AudioManager* AudioManager::get()
@@ -22,7 +24,7 @@ AudioManager::AudioManager()
 }
 
 AudioManager::~AudioManager()
-{    
+{
     /*-----------------------------*\
     | Remove all remaining clients  |
     \*-----------------------------*/
@@ -33,6 +35,7 @@ AudioManager::~AudioManager()
     \*--------------------------------*/
     std::map<int, std::thread *>::iterator threads_it;
 
+    CloseDevice(0);
     for (threads_it = devices_capture_threads.begin(); threads_it != devices_capture_threads.end(); threads_it++)
     {
         int device_idx = threads_it->first;
@@ -106,7 +109,8 @@ void AudioManager::RegisterClient(int device_idx, void * client)
     {
         OpenDevice(device_idx);
 
-        devices_capture_threads[device_idx] = new std::thread(&AudioManager::CaptureThreadFunction, this, device_idx);
+        if (device_idx != 0)
+            devices_capture_threads[device_idx] = new std::thread(&AudioManager::CaptureThreadFunction, this, device_idx);
     }
 }
 
@@ -127,11 +131,13 @@ void AudioManager::UnRegisterClient(int device_idx, void * client)
             active_clients.erase(device_idx);
 
             ContinueCapture[device_idx] = false;
-            std::thread* thread = devices_capture_threads[device_idx];
-            thread->join();
-            delete thread;
 
-            devices_capture_threads.erase(device_idx);
+            if (device_idx != 0) {
+                std::thread* thread = devices_capture_threads[device_idx];
+                thread->join();
+                delete thread;
+                devices_capture_threads.erase(device_idx);
+            }
 
             /*----------------------*\
             | delete unused buffers  |
@@ -148,6 +154,16 @@ void AudioManager::UnRegisterClient(int device_idx, void * client)
 
 void AudioManager::InitAudioDeviceList()
 {
+    if (known_audio_devices.size() > 0)
+        delete[] known_audio_devices[0];
+
+    known_audio_devices.clear();
+    ContinueCapture.clear();
+
+    char* obsName = new char[4] { "OBS" };
+    known_audio_devices.push_back(obsName);
+    ContinueCapture.push_back(false);
+
     #ifdef _WIN32
     IMMDevice* pEndpoint;
     IPropertyStore* pProps;
@@ -159,19 +175,17 @@ void AudioManager::InitAudioDeviceList()
     CoInitializeEx(NULL, COINIT_MULTITHREADED);
     CoCreateInstance(__uuidof(MMDeviceEnumerator), NULL, CLSCTX_ALL, __uuidof(IMMDeviceEnumerator), (void**)&pMMDeviceEnumerator);
 
-    for (int i = 0; i < (int)pMMDevices.size(); i++)
+    for (int i = 1; i < (int)pMMDevices.size(); i++)
     {
         pMMDevices[i]->Release();
-        if (i != 0)
-        {
-            delete known_audio_devices[i];
-        }
+        delete[] known_audio_devices[i];
     }
 
     pMMDevices.clear();
-    known_audio_devices.clear();
     isCapture.clear();
-    ContinueCapture.clear();
+
+    pMMDevices.push_back(nullptr);
+    isCapture.push_back(false);
 
     /*------------------------*\
     | Enumerate audio outputs  |
@@ -345,10 +359,9 @@ void AudioManager::CaptureThreadFunction(int device_idx)
                 {
                     for (unsigned int i = 0; i < nextPacketSize; i += 4)
                     {
-                        for (int j = 0; j < 255; j++)
+                        for (int j = 0; j < 510; j++)
                         {
-                            input_wave[2 * j] = input_wave[2 * (j + 1)];
-                            input_wave[(2 * j) + 1] = input_wave[2 * j];
+                            input_wave[j] = input_wave[j + 2];
                         }
 
                         float avg_buf = (buf[i] + buf[i + 1] + buf[i + 2] + buf[i + 3]) / 4;
@@ -389,7 +402,7 @@ void AudioManager::CaptureThreadFunction(int device_idx)
         \*----------------------*/
         for (int i = 0; i < 512; i++)
         {
-            devices_buffers[device_idx][i] = buffer[i / 2];
+            devices_buffers[device_idx][i] = (buffer[i / 2] - 128.0f) / 128.0f;
         }
         #endif
 
@@ -409,6 +422,15 @@ void AudioManager::OpenDevice(int device_idx)
 {
     printf("[OpenRGBEffectsPlugin] AUDIO: Opening device %d\n" , device_idx);
     ContinueCapture[device_idx] = true;
+
+    if (device_idx == 0) {
+        obs::startMonoAudio(this, [&](float sample) {
+            for (size_t i = 0; i < 511; i++)
+                devices_buffers[0][i] = devices_buffers[0][i + 1];
+            devices_buffers[0][511] = sample;
+        });
+        return;
+    }
 
     #ifdef _WIN32
 
@@ -460,6 +482,11 @@ void AudioManager::CloseDevice(int device_idx)
 {
     printf("[OpenRGBEffectsPlugin] AUDIO: Closing device %d\n" , device_idx);
     ContinueCapture[device_idx] = false;
+
+    if (device_idx == 0) {
+        obs::stopMonoAudio(this);
+        return;
+    }
 
     #ifdef _WIN32
     if (active_audio_clients.find(device_idx) != active_audio_clients.end() )

@@ -7,13 +7,13 @@ using json = nlohmann::json;
 
 namespace Audio
 {
-    enum
+    enum AverageMode : unsigned int
     {
         AVERAGE_MODE_BINNING        = 0,
         AVERAGE_MODE_LOW_PASS       = 1
     };
 
-    enum
+    enum FftWindowMode : unsigned int
     {
         FFT_WINDOW_MODE_NONE        = 0,
         FFT_WINDOW_MODE_HANNING     = 1,
@@ -26,9 +26,9 @@ namespace Audio
         int           audio_device     = -1;
 
         unsigned int  amplitude        = 100;
-        unsigned int  avg_mode         = AVERAGE_MODE_BINNING;
+        AverageMode   avg_mode         = AVERAGE_MODE_BINNING;
         unsigned int  avg_size         = 8;
-        unsigned int  window_mode      = FFT_WINDOW_MODE_NONE;
+        FftWindowMode window_mode      = FFT_WINDOW_MODE_NONE;
         unsigned int  decay            = 80;
 
         float         filter_constant  = 1.0f;

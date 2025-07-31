@@ -7,3 +7,7 @@
 [submodule "Dependencies/SimplexNoise"]
 	path = Dependencies/SimplexNoise
 	url = https://github.com/SRombauts/SimplexNoise.git
+[submodule "Dependencies/obs-studio"]
+	path = Dependencies/obs-studio
+	url = https://github.com/cgytrus/obs-studio-openrgb.git
+	shallow = true

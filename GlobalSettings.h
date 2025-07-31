@@ -5,6 +5,7 @@
 #include "ui_GlobalSettings.h"
 
 #include <QWidget>
+#include "properties-view.hpp"
 
 namespace Ui {
 class GlobalSettings;
@@ -33,8 +34,13 @@ private slots:
 
 private:
     Ui::GlobalSettings *ui;
+    OBSPropertiesView* m_obsVideoSourcePropertiesView = nullptr;
+    OBSPropertiesView* m_obsAudioSourcePropertiesView = nullptr;
 
     AudioSettings                   audio_settings;
+
+    void UpdateObsVideoSourcePropertiesView();
+    void UpdateObsAudioSourcePropertiesView();
 };
 
 #endif // GLOBALSETTINGS_H

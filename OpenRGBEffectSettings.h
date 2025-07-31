@@ -30,7 +30,7 @@ using json = nlohmann::json;
 class OpenRGBEffectSettings
 {
 
-public:    
+public:
     static unsigned int version;
 
     static bool WriteGlobalSettings();
@@ -50,6 +50,8 @@ public:
     static filesystem::path ShadersFolder();
     static std::vector<std::string> ListShaders();
     static bool SaveShader(std::string, std::string);
+
+    static filesystem::path ObsPluginsFolder();
 
     static GlobalSettingsStruct globalSettings;
 

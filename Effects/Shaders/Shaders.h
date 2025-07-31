@@ -49,6 +49,7 @@ private slots:
     void changeEvent(QEvent *event) override;
     void on_show_rendering_stateChanged(int);
     void on_use_audio_stateChanged(int);
+    void on_use_fft_stateChanged(int);
     void on_shaders_currentIndexChanged(int);
     void on_width_valueChanged(int);
     void on_height_valueChanged(int);
@@ -76,8 +77,9 @@ private:
     std::vector<QString> shader_paths;
     unsigned int current_shader_idx = 0;
     bool show_rendering = false;
-    std::mutex image_mutex;  
+    std::mutex image_mutex;
     bool use_audio = false;
+    bool use_fft = true;
     bool invert_time = false;
 
     AudioSettings                   audio_settings;

@@ -10,6 +10,8 @@ public:
     AudioSignalProcessor();
 
     void SetNormalization(Audio::AudioSettingsStruct*);
+    void Capture(Audio::AudioSettingsStruct*);
+    void RunFft(int, Audio::AudioSettingsStruct*);
     void Process(int, Audio::AudioSettingsStruct*);
     const Audio::AudioDataStruct& Data();
 

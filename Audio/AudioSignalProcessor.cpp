@@ -19,12 +19,22 @@ void AudioSignalProcessor::SetNormalization(Audio::AudioSettingsStruct* settings
 {
     for (int i = 0; i < 256; i++)
     {
+        data.waveform[i] = 0.0f;
         data.fft[i] = 0.0f;
+        data.fft_fltr[i] = 0.0f;
         data.fft_nrml[i] = settings->nrml_ofst + (settings->nrml_scl * (i / 256.0f));
     }
 }
 
-void AudioSignalProcessor::Process(int FPS, Audio::AudioSettingsStruct* settings)
+void AudioSignalProcessor::Capture(Audio::AudioSettingsStruct* settings)
+{
+    AudioManager::get()->Capture(settings->audio_device, data.waveform);
+    for (int i = 0; i < 512; i++) {
+        data.waveform[i] *= settings->amplitude;
+    }
+}
+
+void AudioSignalProcessor::RunFft(int fps, Audio::AudioSettingsStruct* settings)
 {
     float fft_tmp[512];
 
@@ -38,40 +48,32 @@ void AudioSignalProcessor::Process(int FPS, Audio::AudioSettingsStruct* settings
         /*----------------------*\
         | Decay previous values  |
         \*----------------------*/
-        data.fft[i] = data.fft[i] * ((float(settings->decay) / 100.0f / (60 / FPS)));
+        data.fft[i] = data.fft[i] * std::powf(static_cast<float>(settings->decay) / 100.0f, 60.0f / fps);
     }
 
-    AudioManager::get()->Capture(settings->audio_device, fft_tmp);
-
-#ifdef _WIN32
-    for (int i = 0; i < 512; i++)
+    for (size_t i = 0; i < 256; i++)
     {
-        fft_tmp[i] *= settings->amplitude;
+        fft_tmp[i * 2 + 0] = data.waveform[i];
+        fft_tmp[i * 2 + 1] = data.waveform[i];
     }
-#else
-    for (int i = 0; i < 512; i++)
-    {
-        fft_tmp[i] = (fft_tmp[i] - 128.0f) * (settings->amplitude / 128.0f);
-    }
-#endif
 
     /*----------------------*\
     | Apply selected window  |
     \*----------------------*/
     switch (settings->window_mode)
     {
-    case 0:
+    case Audio::FFT_WINDOW_MODE_NONE:
         break;
 
-    case 1:
+    case Audio::FFT_WINDOW_MODE_HANNING:
         apply_window(fft_tmp, data.win_hanning, 256);
         break;
 
-    case 2:
+    case Audio::FFT_WINDOW_MODE_HAMMING:
         apply_window(fft_tmp, data.win_hamming, 256);
         break;
 
-    case 3:
+    case Audio::FFT_WINDOW_MODE_BLACKMAN:
         apply_window(fft_tmp, data.win_blackman, 256);
         break;
 
@@ -138,7 +140,7 @@ void AudioSignalProcessor::Process(int FPS, Audio::AudioSettingsStruct* settings
         data.fft[(i * 2) + 3] = data.fft[i * 2];
     }
 
-    if (settings->avg_mode == 0)
+    if (settings->avg_mode == Audio::AVERAGE_MODE_BINNING)
     {
         /*--------------------------------------------*\
         | Apply averaging over given number of values  |
@@ -177,7 +179,7 @@ void AudioSignalProcessor::Process(int FPS, Audio::AudioSettingsStruct* settings
             }
         }
     }
-    else if(settings->avg_mode == 1)
+    else if(settings->avg_mode == Audio::AVERAGE_MODE_LOW_PASS)
     {
         for (unsigned int i = 0; i < settings->avg_size; i++)
         {
@@ -211,4 +213,9 @@ void AudioSignalProcessor::Process(int FPS, Audio::AudioSettingsStruct* settings
     {
         data.fft_fltr[i] = settings->equalizer[i/16] * (data.fft_fltr[i] + (settings->filter_constant * (data.fft[i] - data.fft_fltr[i])));
     }
+}
+
+void AudioSignalProcessor::Process(int fps, Audio::AudioSettingsStruct* settings) {
+    this->Capture(settings);
+    this->RunFft(fps, settings);
 }

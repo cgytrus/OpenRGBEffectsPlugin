@@ -3,10 +3,14 @@
 ui_*
 moc_*
 qrc_*
-Makefile
+Makefile*
 OpenRGB-x86_64.AppImage
 .qmake.stash
 .vscode
 build
 Ship
 libORGBEffectPlugin.so*
+.qm/
+release/
+_intermediate_release/
+Dependencies/libobs/

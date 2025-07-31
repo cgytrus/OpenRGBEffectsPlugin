@@ -5,6 +5,8 @@
 #include <QUrl>
 #include <string>
 
+#include "global_obs.hpp"
+
 GlobalSettings::GlobalSettings(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::GlobalSettings)
@@ -28,12 +30,69 @@ GlobalSettings::GlobalSettings(QWidget *parent) :
     connect(&audio_settings, &AudioSettings::AudioDeviceChanged, [=](int value){
         OpenRGBEffectSettings::globalSettings.audio_settings.audio_device = value;
     });
+
+    ui->obsFpsSlider->setValue(obs::getFramerate());
+    this->connect(ui->obsFpsSlider, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged), [](int value) {
+        obs::setFramerate(value);
+    });
+
+    ui->obsVideoSourceType->clear();
+    ui->obsVideoSourceType->addItems({
+        "Monitor",
+        "Window",
+        "Game"
+    });
+    ui->obsVideoSourceType->setCurrentIndex(static_cast<int>(obs::getVideoSource()));
+    this->connect(ui->obsVideoSourceType, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [&](int value) {
+        obs::setVideoSource(static_cast<obs::VideoSourceType>(value));
+        this->UpdateObsVideoSourcePropertiesView();
+    });
+    this->UpdateObsVideoSourcePropertiesView();
+
+    ui->obsAudioSourceType->clear();
+    ui->obsAudioSourceType->addItems({
+        "Input",
+        "Output",
+        "Application"
+    });
+    ui->obsAudioSourceType->setCurrentIndex(static_cast<int>(obs::getAudioSource()));
+    this->connect(ui->obsAudioSourceType, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [&](int value) {
+        obs::setAudioSource(static_cast<obs::AudioSourceType>(value));
+        this->UpdateObsAudioSourcePropertiesView();
+    });
+    this->UpdateObsAudioSourcePropertiesView();
 }
 
 GlobalSettings::~GlobalSettings()
 {
     delete ui;
+    delete m_obsVideoSourcePropertiesView;
+    delete m_obsAudioSourcePropertiesView;
     OpenRGBEffectSettings::WriteGlobalSettings();
+}
+
+void GlobalSettings::UpdateObsVideoSourcePropertiesView() {
+    if (m_obsVideoSourcePropertiesView) {
+        ui->obsVideoSourcePropertiesLayout->removeWidget(m_obsVideoSourcePropertiesView);
+        delete m_obsVideoSourcePropertiesView;
+        m_obsVideoSourcePropertiesView = nullptr;
+    }
+    m_obsVideoSourcePropertiesView = obs::createVideoPropertiesView();
+    if (m_obsVideoSourcePropertiesView) {
+        ui->obsVideoSourcePropertiesLayout->addWidget(m_obsVideoSourcePropertiesView);
+    }
+}
+
+void GlobalSettings::UpdateObsAudioSourcePropertiesView() {
+    if (m_obsAudioSourcePropertiesView) {
+        ui->obsAudioSourcePropertiesLayout->removeWidget(m_obsAudioSourcePropertiesView);
+        delete m_obsAudioSourcePropertiesView;
+        m_obsAudioSourcePropertiesView = nullptr;
+    }
+    m_obsAudioSourcePropertiesView = obs::createAudioPropertiesView();
+    if (m_obsAudioSourcePropertiesView) {
+        ui->obsAudioSourcePropertiesLayout->addWidget(m_obsAudioSourcePropertiesView);
+    }
 }
 
 void GlobalSettings::changeEvent(QEvent *event)

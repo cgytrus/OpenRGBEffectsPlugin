@@ -170,7 +170,9 @@ void Shaders::StepEffect(std::vector<ControllerZone*> controller_zones)
 
     if(use_audio)
     {
-        audio_signal_processor.Process(FPS, &audio_settings_struct);
+        audio_signal_processor.Capture(&audio_settings_struct);
+        if (use_fft)
+            audio_signal_processor.RunFft(FPS, &audio_settings_struct);
     }
 
     if(!shader_renderer->isRunning())
@@ -257,6 +259,11 @@ void Shaders::on_use_audio_stateChanged(int state)
     {
         StopAudio();
     }
+}
+
+void Shaders::on_use_fft_stateChanged(int state)
+{
+    use_fft = state;
 }
 
 void Shaders::OnAudioDeviceChanged(int value)
@@ -439,6 +446,9 @@ void Shaders::LoadCustomSettings(json Settings)
     if(Settings.contains("use_audio"))
         ui->use_audio->setChecked(Settings["use_audio"]);
 
+    if(Settings.contains("use_fft"))
+        ui->use_fft->setChecked(Settings["use_fft"]);
+
     if (Settings.contains("audio_settings"))
     {
         audio_settings_struct = Settings["audio_settings"];
@@ -457,6 +467,7 @@ json Shaders::SaveCustomSettings()
     settings["show_rendering"]   = show_rendering;
     settings["invert_time"]      = invert_time;
     settings["use_audio"]        = use_audio;
+    settings["use_fft"]        = use_fft;
     settings["audio_settings"] = audio_settings_struct;
 
     return settings;

@@ -6,6 +6,7 @@
 #include "OpenRGBEffectSettings.h"
 #include <QSystemTrayIcon>
 #include <QMenu>
+#include "global_obs.hpp"
 
 ResourceManagerInterface* OpenRGBEffectsPlugin::RMPointer = nullptr;
 
@@ -44,6 +45,7 @@ void OpenRGBEffectsPlugin::Load(ResourceManagerInterface *RM)
     net_plugin.callback = OpenRGBEffectsPlugin::HandleSDK;
     net_plugin.callback_arg = (void*)this;
     RMPointer->GetServer()->RegisterPlugin(net_plugin);
+    obs::init("en-US", OpenRGBEffectSettings::ObsPluginsFolder());
     OpenRGBEffectSettings::LoadGlobalSettings();
 }
 
@@ -133,6 +135,8 @@ void OpenRGBEffectsPlugin::Unload()
     printf("[OpenRGBEffectsPlugin] Unloading\n");
 
     ui->StopAll();
+
+    obs::deinit();
 
     RMPointer->UnregisterDeviceListChangeCallback(DeviceListChangedCallback, ui);
     RMPointer->UnregisterDetectionProgressCallback(DeviceListChangedCallback, ui);

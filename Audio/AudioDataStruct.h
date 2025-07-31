@@ -5,7 +5,7 @@ namespace Audio
 {
     struct AudioDataStruct
     {
-        unsigned char buffer[256];
+        float waveform[512];
 
         float         fft[256];
         float         fft_nrml[256];

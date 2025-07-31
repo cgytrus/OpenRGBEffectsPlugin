@@ -210,6 +210,41 @@ SOURCES +=                                                                      
 HEADERS +=                                                                                      \
     Dependencies/SimplexNoise/src/SimplexNoise.h                                                \
 
+# obs
+INCLUDEPATH += \
+    Dependencies/libobs/include \
+    Dependencies/obs-studio/libobs/build/config \
+    Dependencies/obs-studio/shared/properties-view \
+    Dependencies/obs-studio/shared/qt/icon-label \
+    Dependencies/obs-studio/shared/qt/plain-text-edit \
+    Dependencies/obs-studio/shared/qt/slider-ignorewheel \
+    Dependencies/obs-studio/shared/qt/vertical-scroll-area \
+    Dependencies/obs-studio/shared/qt/wrappers \
+
+HEADERS += \
+    Dependencies/obs-studio/shared/properties-view/double-slider.hpp \
+    Dependencies/obs-studio/shared/properties-view/properties-view.hpp \
+    Dependencies/obs-studio/shared/properties-view/properties-view.moc.hpp \
+    Dependencies/obs-studio/shared/properties-view/spinbox-ignorewheel.hpp \
+    Dependencies/obs-studio/shared/qt/icon-label/icon-label.hpp \
+    Dependencies/obs-studio/shared/qt/plain-text-edit/plain-text-edit.hpp \
+    Dependencies/obs-studio/shared/qt/slider-ignorewheel/slider-ignorewheel.hpp \
+    Dependencies/obs-studio/shared/qt/vertical-scroll-area/vertical-scroll-area.hpp \
+    Dependencies/obs-studio/shared/qt/wrappers/qt-wrappers.hpp \
+
+SOURCES += \
+    Dependencies/obs-studio/shared/properties-view/double-slider.cpp \
+    Dependencies/obs-studio/shared/properties-view/properties-view.cpp \
+    Dependencies/obs-studio/shared/properties-view/spinbox-ignorewheel.cpp \
+    Dependencies/obs-studio/shared/qt/plain-text-edit/plain-text-edit.cpp \
+    Dependencies/obs-studio/shared/qt/slider-ignorewheel/slider-ignorewheel.cpp \
+    Dependencies/obs-studio/shared/qt/vertical-scroll-area/vertical-scroll-area.cpp \
+    Dependencies/obs-studio/shared/qt/wrappers/qt-wrappers.cpp \
+
+LIBS += \
+    -lDependencies/libobs/lib/obs \
+    -lDependencies/libobs/lib/w32-pthreads \
+
 #-----------------------------------------------------------------------------------------------#
 # GUI and misc                                                                                  #
 #-----------------------------------------------------------------------------------------------#
@@ -217,6 +252,7 @@ INCLUDEPATH += \
     ScreenCapturer                                                                              \
     ScreenCapturer/windows                                                                      \
     ScreenCapturer/qt                                                                           \
+    obs                                                                           \
     ScreenCapturer/linux/wayland                                                                \
     Audio                                                                                       \
 
@@ -282,7 +318,8 @@ SOURCES +=                                                                      
     OpenRGBPluginsFont.cpp                                                                      \
     GlobalSettings.cpp                                                                          \
     ScreenCapturer/qt/QtScreenCapturer.cpp                                                      \
-    ScreenCapturer/windows/WindowsScreenCapturer.cpp
+    ScreenCapturer/windows/WindowsScreenCapturer.cpp                                            \
+    obs/global_obs.cpp                                                                          \
 
 
 FORMS +=                                                                                        \
@@ -312,6 +349,7 @@ INCLUDEPATH +=                                                                  
 SOURCES +=                                                                                      \
     Effects/Ambient/Ambient.cpp                                                                 \
     Effects/Ambient/RectangleSelector.cpp                                                       \
+    Effects/AmbientObs/AmbientObs.cpp                                                           \
     Effects/AudioBubbles/AudioBubbles.cpp                                                       \
     Effects/AudioParty/AudioParty.cpp                                                           \
     Effects/AudioSine/AudioSine.cpp                                                             \
@@ -384,6 +422,7 @@ SOURCES +=                                                                      
 HEADERS +=                                                                                      \
     Effects/Ambient/Ambient.h                                                                   \
     Effects/Ambient/RectangleSelector.h                                                         \
+    Effects/AmbientObs/AmbientObs.hpp                                                           \
     Effects/AudioBubbles/AudioBubbles.h                                                         \
     Effects/AudioParty/AudioParty.h                                                             \
     Effects/AudioSine/AudioSine.h                                                               \
@@ -456,6 +495,7 @@ HEADERS +=                                                                      
 
 FORMS +=                                                                                        \
     Effects/Ambient/Ambient.ui                                                                  \
+    Effects/AmbientObs/AmbientObs.ui                                                            \
     Effects/AudioBubbles/AudioBubbles.ui                                                        \
     Effects/AudioParty/AudioParty.ui                                                            \
     Effects/AudioSine/AudioSine.ui                                                              \
