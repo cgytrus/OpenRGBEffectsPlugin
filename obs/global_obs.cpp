@@ -145,11 +145,8 @@ namespace obs {
             return;
         }
 
-        obs_add_module_path(
-            "C:/Users/cgytrus/scoop/apps/openrgb-nightly/current/obs-plugins/64bit",
-            "C:/Users/cgytrus/scoop/apps/openrgb-nightly/current/data/obs-plugins/%module%"
-        );
-        obs_add_data_path("C:/Users/cgytrus/scoop/apps/openrgb-nightly/current/data/libobs/");
+        obs_add_module_path("obs-plugins/64bit", "obs-plugins/%module%");
+        obs_add_data_path("data/libobs/");
 
         resetVideo(60, 32, 32);
 
