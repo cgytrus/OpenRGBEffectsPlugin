@@ -8,12 +8,14 @@
 
 namespace obs {
     enum class VideoSourceType {
+        None,
         Monitor,
         Window,
         Game
     };
 
     enum class AudioSourceType {
+        None,
         Input,
         Output,
         Application

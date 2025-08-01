@@ -38,6 +38,7 @@ GlobalSettings::GlobalSettings(QWidget *parent) :
 
     ui->obsVideoSourceType->clear();
     ui->obsVideoSourceType->addItems({
+        "None",
         "Monitor",
         "Window",
         "Game"
@@ -51,6 +52,7 @@ GlobalSettings::GlobalSettings(QWidget *parent) :
 
     ui->obsAudioSourceType->clear();
     ui->obsAudioSourceType->addItems({
+        "None",
         "Input",
         "Output",
         "Application"

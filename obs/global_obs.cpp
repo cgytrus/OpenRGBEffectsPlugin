@@ -4,17 +4,37 @@
 #include <QApplication>
 
 #ifdef __APPLE__
+
+#define GRAPHICS_MODULE "libobs-opengl"
+
+#define MONITOR_CAPTURE_VIDEO_SOURCE "monitor_capture" // TODO
+#define WINDOW_CAPTURE_VIDEO_SOURCE "window_capture" // TODO
+
 #define INPUT_AUDIO_SOURCE "coreaudio_input_capture"
 #define OUTPUT_AUDIO_SOURCE "coreaudio_output_capture"
-#define APPLICATION_AUDIO_SOURCE ""
+
 #elif _WIN32
+
+#define GRAPHICS_MODULE "libobs-d3d11"
+
+#define MONITOR_CAPTURE_VIDEO_SOURCE "monitor_capture"
+#define WINDOW_CAPTURE_VIDEO_SOURCE "window_capture"
+#define GAME_CAPTURE_VIDEO_SOURCE "game_capture"
+
 #define INPUT_AUDIO_SOURCE "wasapi_input_capture"
 #define OUTPUT_AUDIO_SOURCE "wasapi_output_capture"
 #define APPLICATION_AUDIO_SOURCE "wasapi_process_output_capture"
+
 #else
+
+#define GRAPHICS_MODULE "libobs-opengl"
+
+#define MONITOR_CAPTURE_VIDEO_SOURCE "pipewire-screen-capture-source"
+#define WINDOW_CAPTURE_VIDEO_SOURCE "pipewire-window-capture-source"
+
 #define INPUT_AUDIO_SOURCE "pulse_input_capture"
 #define OUTPUT_AUDIO_SOURCE "pulse_output_capture"
-#define APPLICATION_AUDIO_SOURCE ""
+
 #endif
 
 namespace obs {
@@ -78,7 +98,7 @@ namespace obs {
             height += (0b10 - (height - (height & 0xfffffffe))) % 0b10;
 
             obs_video_info ovi;
-            ovi.graphics_module = "libobs-d3d11";
+            ovi.graphics_module = GRAPHICS_MODULE;
             ovi.fps_num = fps;
             ovi.fps_den = 1;
             ovi.base_width = width;
@@ -145,8 +165,21 @@ namespace obs {
             return;
         }
 
-        obs_add_module_path("obs-plugins/64bit", "obs-plugins/%module%");
+#ifdef _WIN32
+        obs_add_module_path("obs-plugins/64bit", "data/obs-plugins/%module%");
         obs_add_data_path("data/libobs/");
+#endif
+
+        // TODO: mac
+        obs_add_safe_module("linux-alsa");
+        obs_add_safe_module("linux-capture");
+        obs_add_safe_module("linux-pipewire");
+        obs_add_safe_module("linux-pulseaudio");
+        obs_add_safe_module("linux-v4l2");
+        obs_add_safe_module("obs-ffmpeg");
+        obs_add_safe_module("win-capture");
+        obs_add_safe_module("win-dshow");
+        obs_add_safe_module("win-wasapi");
 
         resetVideo(60, 32, 32);
 
@@ -164,7 +197,6 @@ namespace obs {
 
         logObsEnum("obs_enum_source_types", &obs_enum_source_types);
         logObsEnum("obs_enum_input_types", &obs_enum_input_types);
-        logObsEnum("obs_enum_filter_types", &obs_enum_filter_types);
     }
 
     void deinit() {
@@ -264,68 +296,94 @@ namespace obs {
 
     VideoSourceType getVideoSource() {
         if (!s_videoSource)
-            return VideoSourceType::Monitor;
+            return VideoSourceType::None;
         std::string id = obs_source_get_id(s_videoSource);
-        if (id == "monitor_capture")
+#ifdef MONITOR_CAPTURE_VIDEO_SOURCE
+        if (id == MONITOR_CAPTURE_VIDEO_SOURCE)
             return VideoSourceType::Monitor;
-        if (id == "window_capture")
+#endif
+#ifdef WINDOW_CAPTURE_VIDEO_SOURCE
+        if (id == WINDOW_CAPTURE_VIDEO_SOURCE)
             return VideoSourceType::Window;
-        if (id == "game_capture")
+#endif
+#ifdef GAME_CAPTURE_VIDEO_SOURCE
+        if (id == GAME_CAPTURE_VIDEO_SOURCE)
             return VideoSourceType::Game;
-        return VideoSourceType::Monitor;
+#endif
+        return VideoSourceType::None;
     }
 
     void setVideoSource(VideoSourceType type) {
-        const char* id = "";
-        switch (type) {
-            case VideoSourceType::Monitor:
-                id = "monitor_capture";
-                break;
-            case VideoSourceType::Window:
-                id = "window_capture";
-                break;
-            case VideoSourceType::Game:
-                id = "game_capture";
-                break;
-            default:
-                return;
-        }
         setVideoSourceInternal(nullptr);
-        setVideoSourceInternal(obs_source_create(id, "video", nullptr, nullptr));
-    }
-
-    AudioSourceType getAudioSource() {
-        if (!s_audioSource)
-            return AudioSourceType::Output;
-        std::string id = obs_source_get_id(s_audioSource);
-        if (id == INPUT_AUDIO_SOURCE)
-            return AudioSourceType::Input;
-        if (id == OUTPUT_AUDIO_SOURCE)
-            return AudioSourceType::Output;
-        if (id == APPLICATION_AUDIO_SOURCE)
-            return AudioSourceType::Application;
-        return AudioSourceType::Output;
-    }
-
-    void setAudioSource(AudioSourceType type) {
         const char* id = "";
         switch (type) {
-            case AudioSourceType::Input:
-                id = INPUT_AUDIO_SOURCE;
+#ifdef MONITOR_CAPTURE_VIDEO_SOURCE
+            case VideoSourceType::Monitor:
+                id = MONITOR_CAPTURE_VIDEO_SOURCE;
                 break;
-            case AudioSourceType::Output:
-                id = OUTPUT_AUDIO_SOURCE;
+#endif
+#ifdef WINDOW_CAPTURE_VIDEO_SOURCE
+            case VideoSourceType::Window:
+                id = WINDOW_CAPTURE_VIDEO_SOURCE;
                 break;
-            case AudioSourceType::Application:
-                id = APPLICATION_AUDIO_SOURCE;
+#endif
+#ifdef GAME_CAPTURE_VIDEO_SOURCE
+            case VideoSourceType::Game:
+                id = GAME_CAPTURE_VIDEO_SOURCE;
                 break;
+#endif
             default:
                 return;
         }
         if (strlen(id) == 0)
             return;
+        setVideoSourceInternal(obs_source_create(id, "my epic video", nullptr, nullptr));
+    }
+
+    AudioSourceType getAudioSource() {
+        if (!s_audioSource)
+            return AudioSourceType::None;
+        std::string id = obs_source_get_id(s_audioSource);
+#ifdef INPUT_AUDIO_SOURCE
+        if (id == INPUT_AUDIO_SOURCE)
+            return AudioSourceType::Input;
+#endif
+#ifdef OUTPUT_AUDIO_SOURCE
+        if (id == OUTPUT_AUDIO_SOURCE)
+            return AudioSourceType::Output;
+#endif
+#ifdef APPLICATION_AUDIO_SOURCE
+        if (id == APPLICATION_AUDIO_SOURCE)
+            return AudioSourceType::Application;
+#endif
+        return AudioSourceType::None;
+    }
+
+    void setAudioSource(AudioSourceType type) {
         setAudioSourceInternal(nullptr);
-        setAudioSourceInternal(obs_source_create(id, "audio", nullptr, nullptr));
+        const char* id = "";
+        switch (type) {
+#ifdef INPUT_AUDIO_SOURCE
+            case AudioSourceType::Input:
+                id = INPUT_AUDIO_SOURCE;
+                break;
+#endif
+#ifdef OUTPUT_AUDIO_SOURCE
+            case AudioSourceType::Output:
+                id = OUTPUT_AUDIO_SOURCE;
+                break;
+#endif
+#ifdef APPLICATION_AUDIO_SOURCE
+            case AudioSourceType::Application:
+                id = APPLICATION_AUDIO_SOURCE;
+                break;
+#endif
+            default:
+                return;
+        }
+        if (strlen(id) == 0)
+            return;
+        setAudioSourceInternal(obs_source_create(id, "my aweosme audio", nullptr, nullptr));
     }
 
     OBSPropertiesView* createVideoPropertiesView() {

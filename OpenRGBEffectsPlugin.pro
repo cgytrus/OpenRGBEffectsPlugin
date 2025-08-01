@@ -253,10 +253,9 @@ SOURCES += \
 
 win32:LIBS += \
     -lDependencies/libobs/lib/obs \
-    -lDependencies/libobs/lib/w32-pthreads \
 
 unix:LIBS += \
-   ./Dependencies/libobs/lib/libobs.so \
+    -lobs \
 
 #-----------------------------------------------------------------------------------------------#
 # GUI and misc                                                                                  #
