@@ -42,6 +42,27 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
     this->connect(m_ui->saturation, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.saturation = static_cast<float>(value);
     });
+
+    m_ui->bufferSeconds->setRange(0.0, std::numeric_limits<double>::infinity());
+    m_ui->bufferSeconds->setSingleStep(0.01);
+    m_ui->bufferSeconds->setValue(static_cast<double>(m_bufferSeconds));
+    this->connect(m_ui->bufferSeconds, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
+        m_bufferSeconds = static_cast<float>(value);
+    });
+
+    m_ui->displaySeconds->setRange(0.0, std::numeric_limits<double>::infinity());
+    m_ui->displaySeconds->setSingleStep(0.01);
+    m_ui->displaySeconds->setValue(static_cast<double>(m_displaySeconds));
+    this->connect(m_ui->displaySeconds, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
+        m_displaySeconds = static_cast<float>(value);
+    });
+
+    m_ui->avgCount->setRange(0, 48000);
+    m_ui->avgCount->setSingleStep(1);
+    m_ui->avgCount->setValue(m_avgCount);
+    this->connect(m_ui->avgCount, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged), [&](int value) {
+        m_avgCount = value;
+    });
 }
 
 void CgsLedWaveform::load(json settings) {
