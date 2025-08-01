@@ -218,10 +218,6 @@ HEADERS +=                                                                      
     Dependencies/PerlinNoise/PerlinNoise.hpp                                                    \
 
 # obs
-win32:INCLUDEPATH += \
-    Dependencies/libobs/include \
-unix:INCLUDEPATH += \
-    Dependencies/libobs/include/obs \
 INCLUDEPATH += \
     Dependencies/obs-studio/libobs/build/config \
     Dependencies/obs-studio/shared/properties-view \
@@ -251,11 +247,20 @@ SOURCES += \
     Dependencies/obs-studio/shared/qt/vertical-scroll-area/vertical-scroll-area.cpp \
     Dependencies/obs-studio/shared/qt/wrappers/qt-wrappers.cpp \
 
-win32:LIBS += \
-    -lDependencies/libobs/lib/obs \
-    -lDependencies/libobs/lib/w32-pthreads \
-unix:LIBS += \
-    -lDependencies/libobs/lib/libobs \
+win32 {
+    INCLUDEPATH += \
+        Dependencies/libobs/include \
+    LIBS += \
+        -lDependencies/libobs/lib/obs \
+        -lDependencies/libobs/lib/w32-pthreads \
+}
+
+unix {
+    INCLUDEPATH += \
+        Dependencies/libobs/include/obs \
+    LIBS += \
+        -lDependencies/libobs/lib/libobs \
+}
 
 #-----------------------------------------------------------------------------------------------#
 # GUI and misc                                                                                  #
