@@ -11,54 +11,54 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout" columnstretch="1">
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QLabel" name="hueSpeedLabel">
      <property name="text">
       <string>Hue Speed</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="1">
+   <item row="1" column="1">
     <widget class="QDoubleSpinBox" name="hueSpeed" />
    </item>
-   <item row="1" column="0">
+   <item row="2" column="0">
     <widget class="QLabel" name="hueOffsetLabel">
      <property name="text">
       <string>Hue Offset</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="2" column="1">
     <widget class="QDoubleSpinBox" name="hueOffset" />
    </item>
-   <item row="2" column="0">
+   <item row="3" column="0">
     <widget class="QLabel" name="rightHueOffsetLabel">
      <property name="text">
       <string>Right Hue Offset</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="3" column="1">
     <widget class="QDoubleSpinBox" name="rightHueOffset" />
    </item>
-   <item row="3" column="0">
+   <item row="4" column="0">
     <widget class="QLabel" name="hueRangeLabel">
      <property name="text">
       <string>Hue Range</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
+   <item row="4" column="1">
     <widget class="QDoubleSpinBox" name="hueRange" />
    </item>
-   <item row="4" column="0">
+   <item row="5" column="0">
     <widget class="QLabel" name="saturationLabel">
      <property name="text">
       <string>Saturation</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
+   <item row="5" column="1">
     <widget class="QDoubleSpinBox" name="saturation" />
    </item>
   </layout>
