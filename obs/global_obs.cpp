@@ -1,6 +1,4 @@
 #include "global_obs.hpp"
-#define NOMINMAX
-#include <Windows.h>
 #include <unordered_map>
 #include <mutex>
 #include <QApplication>
