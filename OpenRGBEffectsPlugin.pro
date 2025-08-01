@@ -259,7 +259,7 @@ unix {
     INCLUDEPATH += \
         Dependencies/libobs/include/obs \
     LIBS += \
-        -lDependencies/libobs/lib/libobs.so \
+        Dependencies/libobs/lib/libobs.so \
 }
 
 #-----------------------------------------------------------------------------------------------#
