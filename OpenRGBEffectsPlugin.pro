@@ -218,10 +218,6 @@ HEADERS +=                                                                      
     Dependencies/PerlinNoise/PerlinNoise.hpp                                                    \
 
 # obs
-win32:INCLUDEPATH += \
-    Dependencies/libobs/include \
-unix:INCLUDEPATH += \
-    Dependencies/libobs/include/obs \
 INCLUDEPATH += \
     Dependencies/obs-studio/libobs/build/config \
     Dependencies/obs-studio/shared/properties-view \
@@ -230,6 +226,12 @@ INCLUDEPATH += \
     Dependencies/obs-studio/shared/qt/slider-ignorewheel \
     Dependencies/obs-studio/shared/qt/vertical-scroll-area \
     Dependencies/obs-studio/shared/qt/wrappers \
+
+win32:INCLUDEPATH += \
+    Dependencies/libobs/include \
+
+unix:INCLUDEPATH += \
+    Dependencies/libobs/include/obs \
 
 HEADERS += \
     Dependencies/obs-studio/shared/properties-view/double-slider.hpp \
