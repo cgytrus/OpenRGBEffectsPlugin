@@ -26,7 +26,7 @@ struct music_colors_t {
     float hueSpeed = 5.0f;
     float hueOffset = 0.0f;
     float rightHueOffset = 30.0f;
-    float hueRange = 120.0f;
+    float hueRange = 30.0f;
     float saturation = 0.7f;
 
     inline RGBColor get(unsigned int i, unsigned int length, float time, float h, float v) {
