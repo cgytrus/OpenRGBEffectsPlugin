@@ -56,6 +56,10 @@ public: \
     explicit className(QWidget* parent = nullptr); \
     ~className(); \
     EFFECT_REGISTERER(#className, "CG's LED " name, "CG's LED", [](){ return new className; }); \
+    void LoadCustomSettings(json settings) { \
+        auto* gammaCorrection = dynamic_cast<QCheckBox*>(m_ui->gridLayout->itemAt(0)->widget()); \
+        gammaCorrection->setCheckState(this->getGammaCorrection() ? Qt::CheckState::Checked : Qt::CheckState::Unchecked); \
+    } \
 protected: \
     RGBColor getColor(unsigned int x, unsigned int y, unsigned int width, unsigned int height, float t) override; \
 private: \
@@ -80,6 +84,7 @@ private: \
         EffectDetails.MaxSpeed = 200; \
         EffectDetails.MinSpeed = 1; \
         EffectDetails.HasCustomSettings = true; \
+        this->onShouldUpdateUi(); \
         return std::move(ui); \
     })();
 
@@ -130,10 +135,11 @@ public:
         m_time += Speed / 100.0f / FPS;
     }
 
-    void LoadCustomSettings(json settings) {
+    virtual void LoadCustomSettings(json settings) {
         if (settings.contains("gammaCorrection"))
             m_gammaCorrection = settings["gammaCorrection"];
         load(settings);
+        this->onShouldUpdateUi();
     }
     json SaveCustomSettings() {
         json settings = save();
@@ -146,6 +152,8 @@ protected:
 
     bool getGammaCorrection() { return m_gammaCorrection; }
     void setGammaCorrection(bool x) { m_gammaCorrection = x; }
+
+    virtual void onShouldUpdateUi() { }
 
     virtual void load(json) { }
     virtual json save() { return { }; }

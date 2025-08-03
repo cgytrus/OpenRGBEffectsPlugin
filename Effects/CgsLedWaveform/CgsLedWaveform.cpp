@@ -5,40 +5,32 @@ REGISTER_EFFECT(CgsLedWaveform);
 
 CgsLedWaveform::~CgsLedWaveform() { }
 CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
-    EffectDetails.HasCustomSettings = true;
-    SetSpeed(100);
-
     m_ui->hueSpeed->setRange(-std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity());
     m_ui->hueSpeed->setSingleStep(0.1);
-    m_ui->hueSpeed->setValue(static_cast<double>(m_colors.hueSpeed));
     this->connect(m_ui->hueSpeed, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.hueSpeed = static_cast<float>(value);
     });
 
     m_ui->hueOffset->setRange(-std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity());
     m_ui->hueOffset->setSingleStep(1.0);
-    m_ui->hueOffset->setValue(static_cast<double>(m_colors.hueOffset));
     this->connect(m_ui->hueOffset, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.hueOffset = static_cast<float>(value);
     });
 
     m_ui->rightHueOffset->setRange(-std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity());
     m_ui->rightHueOffset->setSingleStep(1.0);
-    m_ui->rightHueOffset->setValue(static_cast<double>(m_colors.rightHueOffset));
     this->connect(m_ui->rightHueOffset, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.rightHueOffset = static_cast<float>(value);
     });
 
     m_ui->hueRange->setRange(-std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity());
     m_ui->hueRange->setSingleStep(1.0);
-    m_ui->hueRange->setValue(static_cast<double>(m_colors.hueRange));
     this->connect(m_ui->hueRange, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.hueRange = static_cast<float>(value);
     });
 
     m_ui->saturation->setRange(0.0, 1.0);
     m_ui->saturation->setSingleStep(0.01);
-    m_ui->saturation->setValue(static_cast<double>(m_colors.saturation));
     this->connect(m_ui->saturation, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_colors.saturation = static_cast<float>(value);
     });
@@ -48,17 +40,25 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
         "Absolute",
         "Centered"
     });
-    m_ui->hueOffsetMode->setCurrentIndex(static_cast<int>(m_hueOffsetMode));
     this->connect(m_ui->hueOffsetMode, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [&](int value) {
         m_hueOffsetMode = static_cast<HueOffsetMode>(value);
     });
 
     m_ui->displaySeconds->setRange(0.0, std::numeric_limits<double>::infinity());
     m_ui->displaySeconds->setSingleStep(0.01);
-    m_ui->displaySeconds->setValue(static_cast<double>(m_displaySeconds));
     this->connect(m_ui->displaySeconds, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_displaySeconds = static_cast<float>(value);
     });
+}
+
+void CgsLedWaveform::onShouldUpdateUi() {
+    m_ui->hueSpeed->setValue(static_cast<double>(m_colors.hueSpeed));
+    m_ui->hueOffset->setValue(static_cast<double>(m_colors.hueOffset));
+    m_ui->rightHueOffset->setValue(static_cast<double>(m_colors.rightHueOffset));
+    m_ui->hueRange->setValue(static_cast<double>(m_colors.hueRange));
+    m_ui->saturation->setValue(static_cast<double>(m_colors.saturation));
+    m_ui->hueOffsetMode->setCurrentIndex(static_cast<int>(m_hueOffsetMode));
+    m_ui->displaySeconds->setValue(static_cast<double>(m_displaySeconds));
 }
 
 void CgsLedWaveform::load(json settings) {

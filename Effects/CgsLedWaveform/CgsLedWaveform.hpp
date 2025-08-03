@@ -21,6 +21,8 @@ public:
     virtual void StepEffect(std::vector<ControllerZone*> zones) override;
 
 protected:
+    virtual void onShouldUpdateUi() override;
+
     virtual void load(json settings) override;
     virtual json save() override;
 
