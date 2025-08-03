@@ -110,20 +110,23 @@ void CgsLedWaveform::stop() {
 static float lerpUnclamped(float a, float b, float t) { return a + (b - a) * t; }
 static float lerp(float a, float b, float t) { return t <= 0.0f ? a : t >= 1.0f ? b : lerpUnclamped(a, b, t); }
 RGBColor CgsLedWaveform::draw(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
-    if (m_samples.empty())
+    if (this->getDisplayCount() == 0)
         return m_colors.get(x, width, t, 0.0f, 0.0f);
-    size_t head = m_bufferHead;
-    if (head < m_displayTail)
-        head += m_samples.size();
-    float progress = static_cast<float>(x + 1) / width;
-    float prevProgress = static_cast<float>(x) / width;
-    size_t prevIndex = static_cast<size_t>(lerp(m_displayTail, head, prevProgress));
-    size_t index = static_cast<size_t>(lerp(m_displayTail, head, progress));
+    float progressLeft = static_cast<float>(x) / width;
+    float progressRight = static_cast<float>(x + 1) / width;
     float bin = 0.0f;
     size_t count = 0;
-    for (size_t i = prevIndex + 1; i <= index; i++) {
-        bin += m_samples[i % m_samples.size()];
-        count++;
+    {
+        const std::lock_guard lock(m_samplesLock);
+        size_t head = m_bufferHead;
+        if (head < m_displayTail)
+            head += m_samples.size();
+        size_t indexLeft = static_cast<size_t>(lerp(m_displayTail, head, progressLeft));
+        size_t indexRight = static_cast<size_t>(lerp(m_displayTail, head, progressRight));
+        for (size_t i = indexLeft + 1; i <= indexRight; i++) {
+            bin += m_samples[i % m_samples.size()];
+            count++;
+        }
     }
     bin /= std::max<size_t>(count, 1);
     bin = std::clamp(bin, -1.0f, 1.0f);
