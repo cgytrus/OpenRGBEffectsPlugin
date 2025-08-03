@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CgsLedWaveform</class>
- <widget class="QWidget" name="CgsLedWaveform">
+ <class>CgsLedWaveformOld</class>
+ <widget class="QWidget" name="CgsLedWaveformOld">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -62,14 +62,14 @@
     <widget class="QDoubleSpinBox" name="saturation" />
    </item>
    <item row="6" column="0">
-    <widget class="QLabel" name="hueOffsetModeLabel">
+    <widget class="QLabel" name="bufferSecondsLabel">
      <property name="text">
-      <string>Hue Offset Mode</string>
+      <string>Buffer Seconds</string>
      </property>
     </widget>
    </item>
    <item row="6" column="1">
-    <widget class="QComboBox" name="hueOffsetMode" />
+    <widget class="QDoubleSpinBox" name="bufferSeconds" />
    </item>
    <item row="7" column="0">
     <widget class="QLabel" name="displaySecondsLabel">
@@ -80,6 +80,16 @@
    </item>
    <item row="7" column="1">
     <widget class="QDoubleSpinBox" name="displaySeconds" />
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="avgCountLabel">
+     <property name="text">
+      <string>Average Count</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QSpinBox" name="avgCount" />
    </item>
   </layout>
  </widget>

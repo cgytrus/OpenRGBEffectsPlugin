@@ -1,10 +1,10 @@
-#include "CgsLedWaveform.hpp"
+#include "CgsLedWaveformOld.hpp"
 #include "global_obs.hpp"
 
-REGISTER_EFFECT(CgsLedWaveform);
+REGISTER_EFFECT(CgsLedWaveformOld);
 
-CgsLedWaveform::~CgsLedWaveform() { }
-CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
+CgsLedWaveformOld::~CgsLedWaveformOld() { }
+CgsLedWaveformOld::CgsLedWaveformOld(QWidget* parent) : CgsLedEffect(parent) {
     EffectDetails.HasCustomSettings = true;
     SetSpeed(100);
 
@@ -43,14 +43,11 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
         m_colors.saturation = static_cast<float>(value);
     });
 
-    m_ui->hueOffsetMode->addItems({
-        "Signed",
-        "Absolute",
-        "Centered"
-    });
-    m_ui->hueOffsetMode->setCurrentIndex(static_cast<int>(m_hueOffsetMode));
-    this->connect(m_ui->hueOffsetMode, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [&](int value) {
-        m_hueOffsetMode = static_cast<HueOffsetMode>(value);
+    m_ui->bufferSeconds->setRange(0.0, std::numeric_limits<double>::infinity());
+    m_ui->bufferSeconds->setSingleStep(0.01);
+    m_ui->bufferSeconds->setValue(static_cast<double>(m_bufferSeconds));
+    this->connect(m_ui->bufferSeconds, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
+        m_bufferSeconds = static_cast<float>(value);
     });
 
     m_ui->displaySeconds->setRange(0.0, std::numeric_limits<double>::infinity());
@@ -59,87 +56,81 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
     this->connect(m_ui->displaySeconds, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_displaySeconds = static_cast<float>(value);
     });
+
+    m_ui->avgCount->setRange(0, 48000);
+    m_ui->avgCount->setSingleStep(1);
+    m_ui->avgCount->setValue(m_avgCount);
+    this->connect(m_ui->avgCount, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged), [&](int value) {
+        m_avgCount = value;
+    });
 }
 
-void CgsLedWaveform::load(json settings) {
+void CgsLedWaveformOld::load(json settings) {
     if (settings.contains("colors"))
         m_colors = settings["colors"];
+    if (settings.contains("bufferSeconds"))
+        m_bufferSeconds = settings["bufferSeconds"];
     if (settings.contains("displaySeconds"))
         m_displaySeconds = settings["displaySeconds"];
+    if (settings.contains("avgCount"))
+        m_avgCount = settings["avgCount"];
 }
 
-json CgsLedWaveform::save() {
+json CgsLedWaveformOld::save() {
     json settings;
     settings["colors"] = m_colors;
+    settings["bufferSeconds"] = m_bufferSeconds;
     settings["displaySeconds"] = m_displaySeconds;
+    settings["avgCount"] = m_avgCount;
     return settings;
 }
 
-void CgsLedWaveform::start() {
+void CgsLedWaveformOld::start() {
     obs::startMonoAudio(this, [&](float sample) {
-        if (this->getDisplayCount() == 0) {
-            m_samples.clear();
-            m_displayTail = 0;
-            m_bufferHead = 0;
+        if (m_samples.size() == 0)
             return;
-        }
         const std::lock_guard lock(m_samplesLock);
-        if (m_samples.size() != this->getDisplayCount()) {
-            m_samples.resize(this->getDisplayCount(), 0.0f);
-            m_displayTail = 0;
-            m_bufferHead = m_samples.size() - 1;
+        while (m_samples.size() > this->getBufferSize()) {
+            m_samples.erase(m_samples.begin());
+            m_displayTail--;
         }
-        m_samples[m_bufferHead] = sample;
-        m_bufferHead = (m_bufferHead + 1) % m_samples.size();
-        m_displayTail = (m_displayTail + 1) % m_samples.size();
+        sample = std::abs(sample);
+        if (m_samples.back().count >= m_avgCount) {
+            m_samples.push_back({ sample, 1, this->getTime() });
+        }
+        else {
+            auto& s = m_samples.back();
+            s.sum += sample;
+            s.count++;
+        }
     });
 
     const std::lock_guard lock(m_samplesLock);
     m_samples.clear();
-    m_samples.resize(this->getDisplayCount(), 0.0f);
-    m_displayTail = 0;
-    m_bufferHead = m_samples.size() - 1;
+    for (size_t i = 0; i < this->getBufferSize(); i++)
+        m_samples.push_back({ 0.0f, 0, 0.0f });
+    m_displayTail = m_samples.size();
 }
 
-void CgsLedWaveform::stop() {
+void CgsLedWaveformOld::stop() {
     obs::stopMonoAudio(this);
 }
 
-void CgsLedWaveform::StepEffect(std::vector<ControllerZone*> zones) {
+void CgsLedWaveformOld::StepEffect(std::vector<ControllerZone*> zones) {
     const std::lock_guard lock(m_samplesLock);
+    while (m_displayTail < m_samples.size() && this->getTime() >= m_samples[std::max<size_t>(m_displayTail, 0)].time)
+        m_displayTail++;
+    m_showDisplayTail = std::min(m_displayTail, m_samples.size());
     CgsLedEffect::StepEffect(zones);
 }
 
 static float lerpUnclamped(float a, float b, float t) { return a + (b - a) * t; }
 static float lerp(float a, float b, float t) { return t <= 0.0f ? a : t >= 1.0f ? b : lerpUnclamped(a, b, t); }
-RGBColor CgsLedWaveform::getColor(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
-    if (m_samples.empty())
-        return m_colors.get(x, width, t, 0.0f, 0.0f);
-    size_t head = m_bufferHead;
-    if (head < m_displayTail)
-        head += m_samples.size();
-    float progress = static_cast<float>(x + 1) / width;
-    float prevProgress = static_cast<float>(x) / width;
-    size_t prevIndex = static_cast<size_t>(lerp(m_displayTail, head, prevProgress));
-    size_t index = static_cast<size_t>(lerp(m_displayTail, head, progress));
-    float bin = 0.0f;
-    size_t count = 0;
-    for (size_t i = prevIndex + 1; i <= index; i++) {
-        bin += m_samples[i % m_samples.size()];
-        count++;
-    }
-    bin /= std::max<size_t>(count, 1);
-    bin = std::clamp(bin, -1.0f, 1.0f);
-    switch (m_hueOffsetMode) {
-        case HueOffsetMode::Signed:
-            break;
-        case HueOffsetMode::Absolute:
-            bin = std::abs(bin);
-            break;
-        case HueOffsetMode::Centered:
-            bin += 1.0f;
-            bin /= 2.0f;
-            break;
-    }
-    return m_colors.get(x, width, t, bin, std::abs(bin));
+RGBColor CgsLedWaveformOld::getColor(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
+    float progress = static_cast<float>(x) / width * this->getDisplayCount();
+    size_t index = (std::max<size_t>(m_showDisplayTail - this->getDisplayCount(), 0) + static_cast<size_t>(progress)) % m_samples.size();
+    size_t nextIndex = (index + 1) % m_samples.size();
+    float bin = lerp(m_samples[index].getValue(), m_samples[nextIndex].getValue(), progress - index);
+    bin = std::clamp(bin, 0.0f, 1.0f);
+    return m_colors.get(x, width, t, bin, bin);
 }

@@ -365,6 +365,7 @@ SOURCES +=                                                                      
     Effects/CgsLedFire/CgsLedFire.cpp \
     Effects/CgsLedStandby/CgsLedStandby.cpp \
     Effects/CgsLedWaveform/CgsLedWaveform.cpp \
+    Effects/CgsLedWaveformOld/CgsLedWaveformOld.cpp \
     Effects/Ambient/Ambient.cpp                                                                 \
     Effects/Ambient/RectangleSelector.cpp                                                       \
     Effects/AmbientObs/AmbientObs.cpp                                                           \
@@ -441,6 +442,7 @@ HEADERS +=                                                                      
     Effects/CgsLedFire/CgsLedFire.hpp \
     Effects/CgsLedStandby/CgsLedStandby.hpp \
     Effects/CgsLedWaveform/CgsLedWaveform.hpp \
+    Effects/CgsLedWaveformOld/CgsLedWaveformOld.hpp \
     Effects/Ambient/Ambient.h                                                                   \
     Effects/Ambient/RectangleSelector.h                                                         \
     Effects/AmbientObs/AmbientObs.hpp                                                           \
@@ -518,6 +520,7 @@ FORMS +=                                                                        
     Effects/CgsLedFire/CgsLedFire.ui \
     Effects/CgsLedStandby/CgsLedStandby.ui \
     Effects/CgsLedWaveform/CgsLedWaveform.ui \
+    Effects/CgsLedWaveformOld/CgsLedWaveformOld.ui \
     Effects/Ambient/Ambient.ui                                                                  \
     Effects/AmbientObs/AmbientObs.ui                                                            \
     Effects/AudioBubbles/AudioBubbles.ui                                                        \
