@@ -57,24 +57,26 @@ public: \
     ~className(); \
     EFFECT_REGISTERER(#className, "CG's LED " name, "CG's LED", [](){ return new className; }); \
     void LoadCustomSettings(json settings) { \
-        auto* gammaCorrection = dynamic_cast<QCheckBox*>(m_ui->gridLayout->itemAt(0)->widget()); \
-        gammaCorrection->setCheckState(this->getGammaCorrection() ? Qt::CheckState::Checked : Qt::CheckState::Unchecked); \
+        if (m_gammaCorrectionCheckbox) \
+            m_gammaCorrectionCheckbox->setCheckState(this->getGammaCorrection() ? Qt::CheckState::Checked : Qt::CheckState::Unchecked); \
+        CgsLedEffect::LoadCustomSettings(settings); \
     } \
 private: \
+    QCheckBox* m_gammaCorrectionCheckbox = nullptr; \
     std::unique_ptr<Ui::className> m_ui = ([&]() { \
         auto ui = std::make_unique<Ui::className>(); \
         ui->setupUi(this); \
-        auto* gammaCorrection = new QCheckBox("Gamma Correction"); \
+        m_gammaCorrectionCheckbox = new QCheckBox("Gamma Correction"); \
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed); \
         sizePolicy.setHorizontalStretch(0); \
         sizePolicy.setVerticalStretch(0); \
-        sizePolicy.setHeightForWidth(gammaCorrection->sizePolicy().hasHeightForWidth()); \
-        gammaCorrection->setSizePolicy(sizePolicy); \
-        gammaCorrection->setCheckState(this->getGammaCorrection() ? Qt::CheckState::Checked : Qt::CheckState::Unchecked); \
-        this->connect(gammaCorrection, static_cast<void(QCheckBox::*)(int)>(&QCheckBox::stateChanged), [&](int value) { \
+        sizePolicy.setHeightForWidth(m_gammaCorrectionCheckbox->sizePolicy().hasHeightForWidth()); \
+        m_gammaCorrectionCheckbox->setSizePolicy(sizePolicy); \
+        m_gammaCorrectionCheckbox->setCheckState(this->getGammaCorrection() ? Qt::CheckState::Checked : Qt::CheckState::Unchecked); \
+        this->connect(m_gammaCorrectionCheckbox, static_cast<void(QCheckBox::*)(int)>(&QCheckBox::stateChanged), [&](int value) { \
             this->setGammaCorrection(value == Qt::CheckState::Checked); \
         }); \
-        ui->gridLayout->addWidget(gammaCorrection, 0, 0, 1, 1); \
+        ui->gridLayout->addWidget(m_gammaCorrectionCheckbox, 0, 0, 1, 1); \
         EffectDetails.EffectClassName = #className; \
         EffectDetails.EffectName = "CG's LED " name; \
         EffectDetails.EffectDescription = ""; \
