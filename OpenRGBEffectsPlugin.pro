@@ -368,7 +368,7 @@ SOURCES +=                                                                      
     Effects/CgsLedWaveformOld/CgsLedWaveformOld.cpp \
     Effects/Ambient/Ambient.cpp                                                                 \
     Effects/Ambient/RectangleSelector.cpp                                                       \
-    Effects/AmbientObs/AmbientObs.cpp                                                           \
+    Effects/CgsLedAmbilight/CgsLedAmbilight.cpp                                                           \
     Effects/AudioBubbles/AudioBubbles.cpp                                                       \
     Effects/AudioParty/AudioParty.cpp                                                           \
     Effects/AudioSine/AudioSine.cpp                                                             \
@@ -445,7 +445,7 @@ HEADERS +=                                                                      
     Effects/CgsLedWaveformOld/CgsLedWaveformOld.hpp \
     Effects/Ambient/Ambient.h                                                                   \
     Effects/Ambient/RectangleSelector.h                                                         \
-    Effects/AmbientObs/AmbientObs.hpp                                                           \
+    Effects/CgsLedAmbilight/CgsLedAmbilight.hpp                                                           \
     Effects/AudioBubbles/AudioBubbles.h                                                         \
     Effects/AudioParty/AudioParty.h                                                             \
     Effects/AudioSine/AudioSine.h                                                               \
@@ -522,7 +522,7 @@ FORMS +=                                                                        
     Effects/CgsLedWaveform/CgsLedWaveform.ui \
     Effects/CgsLedWaveformOld/CgsLedWaveformOld.ui \
     Effects/Ambient/Ambient.ui                                                                  \
-    Effects/AmbientObs/AmbientObs.ui                                                            \
+    Effects/CgsLedAmbilight/CgsLedAmbilight.ui                                                            \
     Effects/AudioBubbles/AudioBubbles.ui                                                        \
     Effects/AudioParty/AudioParty.ui                                                            \
     Effects/AudioSine/AudioSine.ui                                                              \

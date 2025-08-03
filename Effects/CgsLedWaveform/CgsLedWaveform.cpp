@@ -107,14 +107,9 @@ void CgsLedWaveform::stop() {
     obs::stopMonoAudio(this);
 }
 
-void CgsLedWaveform::StepEffect(std::vector<ControllerZone*> zones) {
-    const std::lock_guard lock(m_samplesLock);
-    CgsLedEffect::StepEffect(zones);
-}
-
 static float lerpUnclamped(float a, float b, float t) { return a + (b - a) * t; }
 static float lerp(float a, float b, float t) { return t <= 0.0f ? a : t >= 1.0f ? b : lerpUnclamped(a, b, t); }
-RGBColor CgsLedWaveform::getColor(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
+RGBColor CgsLedWaveform::draw(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
     if (m_samples.empty())
         return m_colors.get(x, width, t, 0.0f, 0.0f);
     size_t head = m_bufferHead;

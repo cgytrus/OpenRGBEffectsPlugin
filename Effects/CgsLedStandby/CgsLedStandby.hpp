@@ -10,4 +10,7 @@ namespace Ui {
 class CgsLedStandby : public CgsLedEffect {
     Q_OBJECT
     CGS_LED_EFFECT(CgsLedStandby, "Standby")
+
+protected:
+    virtual RGBColor draw(unsigned int x, unsigned int y, unsigned int width, unsigned int height, float t) override;
 };

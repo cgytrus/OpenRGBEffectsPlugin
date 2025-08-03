@@ -19,15 +19,15 @@ class CgsLedWaveformOld : public CgsLedEffect {
     Q_OBJECT
     CGS_LED_EFFECT(CgsLedWaveformOld, "Waveform Old")
 
-public:
-    virtual void StepEffect(std::vector<ControllerZone*> zones) override;
-
 protected:
     virtual void load(json settings) override;
     virtual json save() override;
 
     virtual void start() override;
     virtual void stop() override;
+
+    virtual void draw(std::vector<ControllerZone*> zones) override;
+    virtual RGBColor draw(unsigned int x, unsigned int y, unsigned int width, unsigned int height, float t) override;
 
 private:
     music_colors_t m_colors = {};

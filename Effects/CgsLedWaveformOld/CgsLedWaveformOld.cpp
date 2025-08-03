@@ -116,17 +116,17 @@ void CgsLedWaveformOld::stop() {
     obs::stopMonoAudio(this);
 }
 
-void CgsLedWaveformOld::StepEffect(std::vector<ControllerZone*> zones) {
+void CgsLedWaveformOld::draw(std::vector<ControllerZone*> zones) {
     const std::lock_guard lock(m_samplesLock);
     while (m_displayTail < m_samples.size() && this->getTime() >= m_samples[std::max<size_t>(m_displayTail, 0)].time)
         m_displayTail++;
     m_showDisplayTail = std::min(m_displayTail, m_samples.size());
-    CgsLedEffect::StepEffect(zones);
+    CgsLedEffect::draw(zones);
 }
 
 static float lerpUnclamped(float a, float b, float t) { return a + (b - a) * t; }
 static float lerp(float a, float b, float t) { return t <= 0.0f ? a : t >= 1.0f ? b : lerpUnclamped(a, b, t); }
-RGBColor CgsLedWaveformOld::getColor(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
+RGBColor CgsLedWaveformOld::draw(unsigned int x, unsigned int, unsigned int width, unsigned int, float t) {
     float progress = static_cast<float>(x) / width * this->getDisplayCount();
     size_t index = (std::max<size_t>(m_showDisplayTail - this->getDisplayCount(), 0) + static_cast<size_t>(progress)) % m_samples.size();
     size_t nextIndex = (index + 1) % m_samples.size();

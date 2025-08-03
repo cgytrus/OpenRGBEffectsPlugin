@@ -60,8 +60,6 @@ public: \
         auto* gammaCorrection = dynamic_cast<QCheckBox*>(m_ui->gridLayout->itemAt(0)->widget()); \
         gammaCorrection->setCheckState(this->getGammaCorrection() ? Qt::CheckState::Checked : Qt::CheckState::Unchecked); \
     } \
-protected: \
-    RGBColor getColor(unsigned int x, unsigned int y, unsigned int width, unsigned int height, float t) override; \
 private: \
     std::unique_ptr<Ui::className> m_ui = ([&]() { \
         auto ui = std::make_unique<Ui::className>(); \
@@ -106,38 +104,14 @@ public:
     }
 
     virtual void StepEffect(std::vector<ControllerZone*> zones) {
-        for (const auto& zone : zones) {
-            bool isPreview = dynamic_cast<LivePreviewController*>(zone->controller);
-            if (zone->type() == ZONE_TYPE_SINGLE || zone->type() == ZONE_TYPE_LINEAR) {
-                auto width = zone->leds_count();
-                for (unsigned int x = 0; x < width; x++) {
-                    auto color = getColor(x, 0, width, 1, m_time);
-                    if (!isPreview && m_gammaCorrection)
-                        color = applyGamma(color);
-                    zone->SetLED(x, color, Brightness, Temperature, Tint);
-                }
-            }
-            else if (zone->type() == ZONE_TYPE_MATRIX) {
-                auto width = zone->matrix_map_width();
-                auto height = zone->matrix_map_height();
-                for (unsigned int y = 0; y < height; y++) {
-                    for (unsigned int x = 0; x < width; x++) {
-                        auto i = zone->map()[(y * width) + x];
-                        auto color = getColor(x, y, width, height, m_time);
-                        if (!isPreview && m_gammaCorrection)
-                            color = applyGamma(color);
-                        zone->SetLED(i, color, Brightness, Temperature, Tint);
-                    }
-                }
-            }
-        }
+        this->draw(zones);
         m_time += Speed / 100.0f / FPS;
     }
 
     virtual void LoadCustomSettings(json settings) {
         if (settings.contains("gammaCorrection"))
             m_gammaCorrection = settings["gammaCorrection"];
-        load(settings);
+        this->load(settings);
         this->onShouldUpdateUi();
     }
     json SaveCustomSettings() {
@@ -160,7 +134,59 @@ protected:
     virtual void start() { }
     virtual void stop() { }
 
-    virtual RGBColor getColor(unsigned int, unsigned int, unsigned int, unsigned int, float) { return 0; }
+    virtual void draw(std::vector<ControllerZone*> zones) {
+        for (const auto& zone : zones) {
+            bool isPreview = this->zoneIsPreview(zone);
+            auto width = this->zoneWidth(zone);
+            auto height = this->zoneHeight(zone);
+            for (unsigned int y = 0; y < height; y++) {
+                for (unsigned int x = 0; x < width; x++) {
+                    auto i = this->zoneLed(zone, x, y);
+                    auto color = this->draw(x, y, width, height, m_time);
+                    color = this->gamma(color, isPreview);
+                    zone->SetLED(i, color, Brightness, Temperature, Tint);
+                }
+            }
+        }
+    }
+
+    virtual RGBColor draw(unsigned int, unsigned int, unsigned int, unsigned int, float) { return 0; }
+
+    inline bool zoneIsPreview(ControllerZone* zone) {
+        return zone->controller->type == DEVICE_TYPE_VIRTUAL && dynamic_cast<LivePreviewController*>(zone->controller);
+    }
+    inline unsigned int zoneWidth(ControllerZone* zone) {
+        if (zone->type() == ZONE_TYPE_SINGLE || zone->type() == ZONE_TYPE_LINEAR) {
+            return zone->leds_count();
+        }
+        else if (zone->type() == ZONE_TYPE_MATRIX) {
+            return zone->matrix_map_width();
+        }
+        return 0;
+    }
+    inline unsigned int zoneHeight(ControllerZone* zone) {
+        if (zone->type() == ZONE_TYPE_SINGLE || zone->type() == ZONE_TYPE_LINEAR) {
+            return 1;
+        }
+        else if (zone->type() == ZONE_TYPE_MATRIX) {
+            return zone->matrix_map_height();
+        }
+        return 0;
+    }
+    inline unsigned int zoneLed(ControllerZone* zone, unsigned int x, unsigned int y) {
+        if (zone->type() == ZONE_TYPE_SINGLE || zone->type() == ZONE_TYPE_LINEAR) {
+            return x;
+        }
+        else if (zone->type() == ZONE_TYPE_MATRIX) {
+            auto width = zone->matrix_map_width();
+            return zone->map()[(y * width) + x];
+        }
+        return 0;
+    }
+
+    RGBColor gamma(RGBColor x, bool noGamma) {
+        return !noGamma && m_gammaCorrection ? applyGamma(x) : x;
+    }
 
 private:
     float m_time = 0.0f;
