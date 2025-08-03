@@ -15,7 +15,7 @@ static inline constexpr RGBColor rgb(float r, float g, float b) {
 
 static inline RGBColor hsv(float h, float s, float v) {
     hsv_t x {
-        static_cast<unsigned int>(std::fmodf(h, 360.0f)),
+        static_cast<unsigned int>(std::fmodf(std::fmodf(h, 360.0f) + 360.0f, 360.0f)),
         static_cast<unsigned char>(s * 255.0f),
         static_cast<unsigned char>(v * 255.0f)
     };
