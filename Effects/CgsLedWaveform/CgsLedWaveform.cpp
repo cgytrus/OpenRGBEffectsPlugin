@@ -49,6 +49,8 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
     this->connect(m_ui->displaySeconds, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged), [&](double value) {
         m_displaySeconds = static_cast<float>(value);
     });
+
+    this->onShouldUpdateUi();
 }
 
 void CgsLedWaveform::onShouldUpdateUi() {

@@ -84,7 +84,6 @@ private: \
         EffectDetails.MaxSpeed = 200; \
         EffectDetails.MinSpeed = 1; \
         EffectDetails.HasCustomSettings = true; \
-        this->onShouldUpdateUi(); \
         return std::move(ui); \
     })();
 
@@ -165,5 +164,5 @@ protected:
 
 private:
     float m_time = 0.0f;
-    bool m_gammaCorrection = false;
+    bool m_gammaCorrection = true;
 };
