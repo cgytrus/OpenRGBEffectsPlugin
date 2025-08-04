@@ -32,6 +32,7 @@ private:
     music_colors_t m_colors = {};
     HueOffsetMode m_hueOffsetMode = HueOffsetMode::Signed;
     float m_displaySeconds = 0.15f;
+    float m_volume = 1.0f;
 
     size_t getDisplayCount() { return 48000 * m_displaySeconds; }
 

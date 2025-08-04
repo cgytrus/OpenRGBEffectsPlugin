@@ -50,6 +50,13 @@ CgsLedWaveform::CgsLedWaveform(QWidget* parent) : CgsLedEffect(parent) {
         m_displaySeconds = static_cast<float>(value);
     });
 
+    m_ui->volume->setOrientation(Qt::Orientation::Horizontal);
+    m_ui->volume->setRange(0, 500);
+    m_ui->volume->setSingleStep(1);
+    this->connect(m_ui->volume, static_cast<void(QAbstractSlider::*)(int)>(&QAbstractSlider::valueChanged), [&](int value) {
+        m_volume = value / 100.0f;
+    });
+
     this->onShouldUpdateUi();
 }
 
@@ -61,6 +68,7 @@ void CgsLedWaveform::onShouldUpdateUi() {
     m_ui->saturation->setValue(static_cast<double>(m_colors.saturation));
     m_ui->hueOffsetMode->setCurrentIndex(static_cast<int>(m_hueOffsetMode));
     m_ui->displaySeconds->setValue(static_cast<double>(m_displaySeconds));
+    m_ui->volume->setValue(static_cast<int>(m_volume * 100.0f));
 }
 
 void CgsLedWaveform::load(json settings) {
@@ -68,12 +76,15 @@ void CgsLedWaveform::load(json settings) {
         m_colors = settings["colors"];
     if (settings.contains("displaySeconds"))
         m_displaySeconds = settings["displaySeconds"];
+    if (settings.contains("volume"))
+        m_volume = settings["volume"];
 }
 
 json CgsLedWaveform::save() {
     json settings;
     settings["colors"] = m_colors;
     settings["displaySeconds"] = m_displaySeconds;
+    settings["volume"] = m_volume;
     return settings;
 }
 
@@ -141,5 +152,6 @@ RGBColor CgsLedWaveform::draw(unsigned int x, unsigned int, unsigned int width, 
             bin /= 2.0f;
             break;
     }
+    bin *= m_volume;
     return m_colors.get(x, width, t, bin, std::abs(bin));
 }
